@@ -2,48 +2,48 @@
 title: Wskazówki dotyczące formatowania kodu F#
 description: 'Poznaj wskazówki dotyczące formatowania kodu F #.'
 ms.date: 11/04/2019
-ms.openlocfilehash: dde69c573f1ef58d398ae47676b9403f588680b6
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: a65600a6c685929aef8582e49caded6340fb09e2
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617272"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309706"
 ---
-# <a name="f-code-formatting-guidelines"></a><span data-ttu-id="e4ba1-103">Wskazówki dotyczące formatowania kodu F#</span><span class="sxs-lookup"><span data-stu-id="e4ba1-103">F# code formatting guidelines</span></span>
+# <a name="f-code-formatting-guidelines"></a><span data-ttu-id="8b81e-103">Wskazówki dotyczące formatowania kodu F#</span><span class="sxs-lookup"><span data-stu-id="8b81e-103">F# code formatting guidelines</span></span>
 
-<span data-ttu-id="e4ba1-104">Ten artykuł zawiera wskazówki dotyczące sposobu formatowania kodu w taki sposób, aby kod języka F #:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-104">This article offers guidelines for how to format your code so that your F# code is:</span></span>
+<span data-ttu-id="8b81e-104">Ten artykuł zawiera wskazówki dotyczące sposobu formatowania kodu w taki sposób, aby kod języka F #:</span><span class="sxs-lookup"><span data-stu-id="8b81e-104">This article offers guidelines for how to format your code so that your F# code is:</span></span>
 
-* <span data-ttu-id="e4ba1-105">Bardziej czytelne</span><span class="sxs-lookup"><span data-stu-id="e4ba1-105">More legible</span></span>
-* <span data-ttu-id="e4ba1-106">Zgodnie z konwencjami stosowanymi przez narzędzia formatowania w programie Visual Studio i innych edytorach</span><span class="sxs-lookup"><span data-stu-id="e4ba1-106">In accordance with conventions applied by formatting tools in Visual Studio and other editors</span></span>
-* <span data-ttu-id="e4ba1-107">Podobnie jak w przypadku innych kodów online</span><span class="sxs-lookup"><span data-stu-id="e4ba1-107">Similar to other code online</span></span>
+* <span data-ttu-id="8b81e-105">Bardziej czytelne</span><span class="sxs-lookup"><span data-stu-id="8b81e-105">More legible</span></span>
+* <span data-ttu-id="8b81e-106">Zgodnie z konwencjami stosowanymi przez narzędzia formatowania w programie Visual Studio i innych edytorach</span><span class="sxs-lookup"><span data-stu-id="8b81e-106">In accordance with conventions applied by formatting tools in Visual Studio and other editors</span></span>
+* <span data-ttu-id="8b81e-107">Podobnie jak w przypadku innych kodów online</span><span class="sxs-lookup"><span data-stu-id="8b81e-107">Similar to other code online</span></span>
 
-<span data-ttu-id="e4ba1-108">Wytyczne te są oparte na [kompleksowym przewodniku w zakresie stosowania Konwencji formatowania języka F #](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) przez [Anh-obornik Phan](https://github.com/dungpa).</span><span class="sxs-lookup"><span data-stu-id="e4ba1-108">These guidelines are based on [A comprehensive guide to F# Formatting Conventions](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) by [Anh-Dung Phan](https://github.com/dungpa).</span></span>
+<span data-ttu-id="8b81e-108">Wytyczne te są oparte na [kompleksowym przewodniku w zakresie stosowania Konwencji formatowania języka F #](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) przez [Anh-obornik Phan](https://github.com/dungpa).</span><span class="sxs-lookup"><span data-stu-id="8b81e-108">These guidelines are based on [A comprehensive guide to F# Formatting Conventions](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) by [Anh-Dung Phan](https://github.com/dungpa).</span></span>
 
-## <a name="general-rules-for-indentation"></a><span data-ttu-id="e4ba1-109">Ogólne reguły wcięć</span><span class="sxs-lookup"><span data-stu-id="e4ba1-109">General rules for indentation</span></span>
+## <a name="general-rules-for-indentation"></a><span data-ttu-id="8b81e-109">Ogólne reguły wcięć</span><span class="sxs-lookup"><span data-stu-id="8b81e-109">General rules for indentation</span></span>
 
-<span data-ttu-id="e4ba1-110">F # domyślnie używa znacznego białego odstępu.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-110">F# uses significant white space by default.</span></span> <span data-ttu-id="e4ba1-111">W poniższych wytycznych zawarto informacje na temat sposobu Juggle niektórych wyzwań.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-111">The following guidelines are intended to provide guidance as to how to juggle some challenges this can impose.</span></span>
+<span data-ttu-id="8b81e-110">F # domyślnie używa znacznego białego odstępu.</span><span class="sxs-lookup"><span data-stu-id="8b81e-110">F# uses significant white space by default.</span></span> <span data-ttu-id="8b81e-111">W poniższych wytycznych zawarto informacje na temat sposobu Juggle niektórych wyzwań.</span><span class="sxs-lookup"><span data-stu-id="8b81e-111">The following guidelines are intended to provide guidance as to how to juggle some challenges this can impose.</span></span>
 
-### <a name="using-spaces"></a><span data-ttu-id="e4ba1-112">Używanie spacji</span><span class="sxs-lookup"><span data-stu-id="e4ba1-112">Using spaces</span></span>
+### <a name="using-spaces"></a><span data-ttu-id="8b81e-112">Używanie spacji</span><span class="sxs-lookup"><span data-stu-id="8b81e-112">Using spaces</span></span>
 
-<span data-ttu-id="e4ba1-113">Gdy jest wymagane wcięcie, należy użyć spacji, a nie tabulacji.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-113">When indentation is required, you must use spaces, not tabs.</span></span> <span data-ttu-id="e4ba1-114">Wymagane jest co najmniej jedno miejsce.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-114">At least one space is required.</span></span> <span data-ttu-id="e4ba1-115">Organizacja może tworzyć standardy kodowania, aby określić liczbę spacji do użycia w przypadku wcięcia; dwa, trzy lub cztery spacje wcięcia na każdym poziomie, gdzie występuje wcięcie jest typowe.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-115">Your organization can create coding standards to specify the number of spaces to use for indentation; two, three, or four spaces of indentation at each level where indentation occurs is typical.</span></span>
+<span data-ttu-id="8b81e-113">Gdy jest wymagane wcięcie, należy użyć spacji, a nie tabulacji.</span><span class="sxs-lookup"><span data-stu-id="8b81e-113">When indentation is required, you must use spaces, not tabs.</span></span> <span data-ttu-id="8b81e-114">Wymagane jest co najmniej jedno miejsce.</span><span class="sxs-lookup"><span data-stu-id="8b81e-114">At least one space is required.</span></span> <span data-ttu-id="8b81e-115">Organizacja może tworzyć standardy kodowania, aby określić liczbę spacji do użycia w przypadku wcięcia; dwa, trzy lub cztery spacje wcięcia na każdym poziomie, gdzie występuje wcięcie jest typowe.</span><span class="sxs-lookup"><span data-stu-id="8b81e-115">Your organization can create coding standards to specify the number of spaces to use for indentation; two, three, or four spaces of indentation at each level where indentation occurs is typical.</span></span>
 
-<span data-ttu-id="e4ba1-116">**Zalecamy użycie czterech spacji na wcięcie.**</span><span class="sxs-lookup"><span data-stu-id="e4ba1-116">**We recommend four spaces per indentation.**</span></span>
+<span data-ttu-id="8b81e-116">**Zalecamy użycie czterech spacji na wcięcie.**</span><span class="sxs-lookup"><span data-stu-id="8b81e-116">**We recommend four spaces per indentation.**</span></span>
 
-<span data-ttu-id="e4ba1-117">Oznacza to, że wcięcie programów jest subiektywne.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-117">That said, indentation of programs is a subjective matter.</span></span> <span data-ttu-id="e4ba1-118">Różnice są prawidłowe, ale pierwsza reguła, którą należy wykonać, jest *spójna z wcięciem*.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-118">Variations are OK, but the first rule you should follow is *consistency of indentation*.</span></span> <span data-ttu-id="e4ba1-119">Wybierz ogólnie zaakceptowany styl wcięcia i używaj go systematycznie w całej bazie kodu.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-119">Choose a generally accepted style of indentation and use it systematically throughout your codebase.</span></span>
+<span data-ttu-id="8b81e-117">Oznacza to, że wcięcie programów jest subiektywne.</span><span class="sxs-lookup"><span data-stu-id="8b81e-117">That said, indentation of programs is a subjective matter.</span></span> <span data-ttu-id="8b81e-118">Różnice są prawidłowe, ale pierwsza reguła, którą należy wykonać, jest *spójna z wcięciem*.</span><span class="sxs-lookup"><span data-stu-id="8b81e-118">Variations are OK, but the first rule you should follow is *consistency of indentation*.</span></span> <span data-ttu-id="8b81e-119">Wybierz ogólnie zaakceptowany styl wcięcia i używaj go systematycznie w całej bazie kodu.</span><span class="sxs-lookup"><span data-stu-id="8b81e-119">Choose a generally accepted style of indentation and use it systematically throughout your codebase.</span></span>
 
-## <a name="formatting-white-space"></a><span data-ttu-id="e4ba1-120">Formatowanie białego znaku</span><span class="sxs-lookup"><span data-stu-id="e4ba1-120">Formatting white space</span></span>
+## <a name="formatting-white-space"></a><span data-ttu-id="8b81e-120">Formatowanie białego znaku</span><span class="sxs-lookup"><span data-stu-id="8b81e-120">Formatting white space</span></span>
 
-<span data-ttu-id="e4ba1-121">W języku F # jest rozróżniana wielkość liter.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-121">F# is white space sensitive.</span></span> <span data-ttu-id="e4ba1-122">Chociaż większość semantyki z białego znaku jest objęta odpowiednimi wcięciami, należy wziąć pod uwagę pewne inne zagadnienia.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-122">Although most semantics from white space are covered by proper indentation, there are some other things to consider.</span></span>
+<span data-ttu-id="8b81e-121">W języku F # jest rozróżniana wielkość liter.</span><span class="sxs-lookup"><span data-stu-id="8b81e-121">F# is white space sensitive.</span></span> <span data-ttu-id="8b81e-122">Chociaż większość semantyki z białego znaku jest objęta odpowiednimi wcięciami, należy wziąć pod uwagę pewne inne zagadnienia.</span><span class="sxs-lookup"><span data-stu-id="8b81e-122">Although most semantics from white space are covered by proper indentation, there are some other things to consider.</span></span>
 
-### <a name="formatting-operators-in-arithmetic-expressions"></a><span data-ttu-id="e4ba1-123">Operatory formatowania w wyrażeniach arytmetycznych</span><span class="sxs-lookup"><span data-stu-id="e4ba1-123">Formatting operators in arithmetic expressions</span></span>
+### <a name="formatting-operators-in-arithmetic-expressions"></a><span data-ttu-id="8b81e-123">Operatory formatowania w wyrażeniach arytmetycznych</span><span class="sxs-lookup"><span data-stu-id="8b81e-123">Formatting operators in arithmetic expressions</span></span>
 
-<span data-ttu-id="e4ba1-124">Zawsze używaj białych znaków wokół binarnych wyrażeń arytmetycznych:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-124">Always use white space around binary arithmetic expressions:</span></span>
+<span data-ttu-id="8b81e-124">Zawsze używaj białych znaków wokół binarnych wyrażeń arytmetycznych:</span><span class="sxs-lookup"><span data-stu-id="8b81e-124">Always use white space around binary arithmetic expressions:</span></span>
 
 ```fsharp
 let subtractThenAdd x = x - 1 + 3
 ```
 
-<span data-ttu-id="e4ba1-125">Operatory jednoargumentowe `-` powinny zawsze występować bezpośrednio po nich wartość negacji:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-125">Unary `-` operators should always be immediately followed by the value they are negating:</span></span>
+<span data-ttu-id="8b81e-125">Operatory jednoargumentowe `-` powinny zawsze występować bezpośrednio po nich wartość negacji:</span><span class="sxs-lookup"><span data-stu-id="8b81e-125">Unary `-` operators should always be immediately followed by the value they are negating:</span></span>
 
 ```fsharp
 // OK
@@ -53,18 +53,18 @@ let negate x = -x
 let negateBad x = - x
 ```
 
-<span data-ttu-id="e4ba1-126">Dodanie znaku odstępu, gdy `-` operator może prowadzić do pomyłki dla innych.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-126">Adding a white-space character after the `-` operator can lead to confusion for others.</span></span>
+<span data-ttu-id="8b81e-126">Dodanie znaku odstępu, gdy `-` operator może prowadzić do pomyłki dla innych.</span><span class="sxs-lookup"><span data-stu-id="8b81e-126">Adding a white-space character after the `-` operator can lead to confusion for others.</span></span>
 
-<span data-ttu-id="e4ba1-127">Podsumowując, ważne jest, aby zawsze:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-127">In summary, it's important to always:</span></span>
+<span data-ttu-id="8b81e-127">Podsumowując, ważne jest, aby zawsze:</span><span class="sxs-lookup"><span data-stu-id="8b81e-127">In summary, it's important to always:</span></span>
 
-* <span data-ttu-id="e4ba1-128">Otocz operatory binarne z białym znakiem</span><span class="sxs-lookup"><span data-stu-id="e4ba1-128">Surround binary operators with white space</span></span>
-* <span data-ttu-id="e4ba1-129">Nie pozostawiaj pustego odstępu po operatorze jednoargumentowym</span><span class="sxs-lookup"><span data-stu-id="e4ba1-129">Never have trailing white space after a unary operator</span></span>
+* <span data-ttu-id="8b81e-128">Otocz operatory binarne z białym znakiem</span><span class="sxs-lookup"><span data-stu-id="8b81e-128">Surround binary operators with white space</span></span>
+* <span data-ttu-id="8b81e-129">Nie pozostawiaj pustego odstępu po operatorze jednoargumentowym</span><span class="sxs-lookup"><span data-stu-id="8b81e-129">Never have trailing white space after a unary operator</span></span>
 
-<span data-ttu-id="e4ba1-130">Wytyczne binarnego operatora arytmetycznego są szczególnie ważne.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-130">The binary arithmetic operator guideline is especially important.</span></span> <span data-ttu-id="e4ba1-131">Nie można ująć operatora binarnego `-` , gdy jest on połączony z pewnymi opcjami formatowania, może prowadzić do interpretowania go jako jednoargumentowy `-` .</span><span class="sxs-lookup"><span data-stu-id="e4ba1-131">Failing to surround a binary `-` operator, when combined with certain formatting choices, could lead to interpreting it as a unary `-`.</span></span>
+<span data-ttu-id="8b81e-130">Wytyczne binarnego operatora arytmetycznego są szczególnie ważne.</span><span class="sxs-lookup"><span data-stu-id="8b81e-130">The binary arithmetic operator guideline is especially important.</span></span> <span data-ttu-id="8b81e-131">Nie można ująć operatora binarnego `-` , gdy jest on połączony z pewnymi opcjami formatowania, może prowadzić do interpretowania go jako jednoargumentowy `-` .</span><span class="sxs-lookup"><span data-stu-id="8b81e-131">Failing to surround a binary `-` operator, when combined with certain formatting choices, could lead to interpreting it as a unary `-`.</span></span>
 
-### <a name="surround-a-custom-operator-definition-with-white-space"></a><span data-ttu-id="e4ba1-132">Umieść niestandardową definicję operatora z białym znakiem</span><span class="sxs-lookup"><span data-stu-id="e4ba1-132">Surround a custom operator definition with white space</span></span>
+### <a name="surround-a-custom-operator-definition-with-white-space"></a><span data-ttu-id="8b81e-132">Umieść niestandardową definicję operatora z białym znakiem</span><span class="sxs-lookup"><span data-stu-id="8b81e-132">Surround a custom operator definition with white space</span></span>
 
-<span data-ttu-id="e4ba1-133">Zawsze używaj białego znaku, aby obsłużyć definicję operatora:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-133">Always use white space to surround an operator definition:</span></span>
+<span data-ttu-id="8b81e-133">Zawsze używaj białego znaku, aby obsłużyć definicję operatora:</span><span class="sxs-lookup"><span data-stu-id="8b81e-133">Always use white space to surround an operator definition:</span></span>
 
 ```fsharp
 // OK
@@ -74,11 +74,11 @@ let ( !> ) x f = f x
 let (!>) x f = f x
 ```
 
-<span data-ttu-id="e4ba1-134">Dla dowolnego operatora niestandardowego, który rozpoczyna się od `*` i który ma więcej niż jeden znak, należy dodać białe miejsce na początku definicji, aby uniknąć niejednoznaczności kompilatora.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-134">For any custom operator that starts with `*` and that has more than one character, you need to add a white space to the beginning of the definition to avoid a compiler ambiguity.</span></span> <span data-ttu-id="e4ba1-135">Z tego względu zalecamy, aby po prostu ująć definicje wszystkich operatorów z pojedynczym znakiem odstępu.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-135">Because of this, we recommend that you simply surround the definitions of all operators with a single white-space character.</span></span>
+<span data-ttu-id="8b81e-134">Dla dowolnego operatora niestandardowego, który rozpoczyna się od `*` i który ma więcej niż jeden znak, należy dodać białe miejsce na początku definicji, aby uniknąć niejednoznaczności kompilatora.</span><span class="sxs-lookup"><span data-stu-id="8b81e-134">For any custom operator that starts with `*` and that has more than one character, you need to add a white space to the beginning of the definition to avoid a compiler ambiguity.</span></span> <span data-ttu-id="8b81e-135">Z tego względu zalecamy, aby po prostu ująć definicje wszystkich operatorów z pojedynczym znakiem odstępu.</span><span class="sxs-lookup"><span data-stu-id="8b81e-135">Because of this, we recommend that you simply surround the definitions of all operators with a single white-space character.</span></span>
 
-### <a name="surround-function-parameter-arrows-with-white-space"></a><span data-ttu-id="e4ba1-136">Strzałki parametru funkcji przestrzenny z białym znakiem</span><span class="sxs-lookup"><span data-stu-id="e4ba1-136">Surround function parameter arrows with white space</span></span>
+### <a name="surround-function-parameter-arrows-with-white-space"></a><span data-ttu-id="8b81e-136">Strzałki parametru funkcji przestrzenny z białym znakiem</span><span class="sxs-lookup"><span data-stu-id="8b81e-136">Surround function parameter arrows with white space</span></span>
 
-<span data-ttu-id="e4ba1-137">Podczas definiowania sygnatury funkcji należy użyć białego `->` znaku wokół symbolu:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-137">When defining the signature of a function, use white space around the `->` symbol:</span></span>
+<span data-ttu-id="8b81e-137">Podczas definiowania sygnatury funkcji należy użyć białego `->` znaku wokół symbolu:</span><span class="sxs-lookup"><span data-stu-id="8b81e-137">When defining the signature of a function, use white space around the `->` symbol:</span></span>
 
 ```fsharp
 // OK
@@ -88,9 +88,9 @@ type MyFun = int -> int -> string
 type MyFunBad = int->int->string
 ```
 
-### <a name="surround-function-arguments-with-white-space"></a><span data-ttu-id="e4ba1-138">Argumenty funkcji przestrzenny z białym znakiem</span><span class="sxs-lookup"><span data-stu-id="e4ba1-138">Surround function arguments with white space</span></span>
+### <a name="surround-function-arguments-with-white-space"></a><span data-ttu-id="8b81e-138">Argumenty funkcji przestrzenny z białym znakiem</span><span class="sxs-lookup"><span data-stu-id="8b81e-138">Surround function arguments with white space</span></span>
 
-<span data-ttu-id="e4ba1-139">Podczas definiowania funkcji należy używać odstępów wokół każdego argumentu.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-139">When defining a function, use white space around each argument.</span></span>
+<span data-ttu-id="8b81e-139">Podczas definiowania funkcji należy używać odstępów wokół każdego argumentu.</span><span class="sxs-lookup"><span data-stu-id="8b81e-139">When defining a function, use white space around each argument.</span></span>
 
 ```fsharp
 // OK
@@ -100,34 +100,43 @@ let myFun (a: decimal) b c = a + b + c
 let myFunBad (a:decimal)(b)c = a + b + c
 ```
 
-### <a name="place-parameters-on-a-new-line-for-long-member-definitions"></a><span data-ttu-id="e4ba1-140">Umieść parametry w nowym wierszu dla długich definicji elementu członkowskiego</span><span class="sxs-lookup"><span data-stu-id="e4ba1-140">Place parameters on a new line for long member definitions</span></span>
+### <a name="place-parameters-on-a-new-line-for-long-member-definitions"></a><span data-ttu-id="8b81e-140">Umieść parametry w nowym wierszu dla długich definicji elementu członkowskiego</span><span class="sxs-lookup"><span data-stu-id="8b81e-140">Place parameters on a new line for long member definitions</span></span>
 
-<span data-ttu-id="e4ba1-141">W przypadku bardzo długiej definicji elementu członkowskiego należy umieścić parametry w nowych wierszach i wciąć je o jeden zakres.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-141">If you have a very long member definition, place the parameters on new lines and indent them one scope.</span></span>
+<span data-ttu-id="8b81e-141">Jeśli masz bardzo długą definicję elementu członkowskiego, umieść parametry w nowych wierszach i Zwiększ wcięcie w celu dopasowania do poziomu wcięcia kolejnego parametru.</span><span class="sxs-lookup"><span data-stu-id="8b81e-141">If you have a very long member definition, place the parameters on new lines and indent them to match the indentation level of the subsequent parameter.</span></span>
 
 ```fsharp
 type C() =
-    member _.LongMethodWithLotsOfParameters(
-        aVeryLongType: AVeryLongTypeThatYouNeedToUse
-        aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse
-        aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
+    member _.LongMethodWithLotsOfParameters(aVeryLongType: AVeryLongTypeThatYouNeedToUse,
+                                            aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse,
+                                            aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
         // ... the body of the method follows
 ```
 
-<span data-ttu-id="e4ba1-142">Dotyczy to również konstruktorów:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-142">This also applies to constructors:</span></span>
+<span data-ttu-id="8b81e-142">Dotyczy to również konstruktorów:</span><span class="sxs-lookup"><span data-stu-id="8b81e-142">This also applies to constructors:</span></span>
 
 ```fsharp
-type C(
-    aVeryLongType: AVeryLongTypeThatYouNeedToUse
-    aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse
-    aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
+type C(aVeryLongType: AVeryLongTypeThatYouNeedToUse,
+       aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse,
+       aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
     // ... the body of the class follows
 ```
 
-### <a name="type-annotations"></a><span data-ttu-id="e4ba1-143">Adnotacje typu</span><span class="sxs-lookup"><span data-stu-id="e4ba1-143">Type annotations</span></span>
+<span data-ttu-id="8b81e-143">Jeśli istnieje jawna adnotacja typu zwracanego, może być na końcu `)` i przed `=` lub w nowym wierszu.</span><span class="sxs-lookup"><span data-stu-id="8b81e-143">If there is an explicit return type annotation, it can either be at the end of the `)` and before the `=`, or on a new line.</span></span> <span data-ttu-id="8b81e-144">Jeśli typ zwracany ma również długą nazwę, ostatni może być lepszy:</span><span class="sxs-lookup"><span data-stu-id="8b81e-144">If the return type also has a long name, the latter might be preferable:</span></span>
 
-#### <a name="right-pad-function-argument-type-annotations"></a><span data-ttu-id="e4ba1-144">Adnotacje typu argumentów funkcji po prawej stronie</span><span class="sxs-lookup"><span data-stu-id="e4ba1-144">Right-pad function argument type annotations</span></span>
+```fsharp
+type C() =
+    member _.LongMethodWithLotsOfParameters(aVeryLongType: AVeryLongTypeThatYouNeedToUse,
+                                            aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse,
+                                            aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse)
+                                            : AVeryLongReturnType =
+        // ... the body of the method follows
+```
 
-<span data-ttu-id="e4ba1-145">Podczas definiowania argumentów z adnotacjami typu, użyj odstępu po `:` symbolu:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-145">When defining arguments with type annotations, use white space after the `:` symbol:</span></span>
+### <a name="type-annotations"></a><span data-ttu-id="8b81e-145">Adnotacje typu</span><span class="sxs-lookup"><span data-stu-id="8b81e-145">Type annotations</span></span>
+
+#### <a name="right-pad-function-argument-type-annotations"></a><span data-ttu-id="8b81e-146">Adnotacje typu argumentów funkcji po prawej stronie</span><span class="sxs-lookup"><span data-stu-id="8b81e-146">Right-pad function argument type annotations</span></span>
+
+<span data-ttu-id="8b81e-147">Podczas definiowania argumentów z adnotacjami typu, użyj odstępu po `:` symbolu:</span><span class="sxs-lookup"><span data-stu-id="8b81e-147">When defining arguments with type annotations, use white space after the `:` symbol:</span></span>
 
 ```fsharp
 // OK
@@ -137,9 +146,9 @@ let complexFunction (a: int) (b: int) c = a + b + c
 let complexFunctionBad (a :int) (b :int) (c:int) = a + b + c
 ```
 
-#### <a name="surround-return-type-annotations-with-white-space"></a><span data-ttu-id="e4ba1-146">Otocz adnotacje typu zwracanego z białym znakiem</span><span class="sxs-lookup"><span data-stu-id="e4ba1-146">Surround return type annotations with white space</span></span>
+#### <a name="surround-return-type-annotations-with-white-space"></a><span data-ttu-id="8b81e-148">Otocz adnotacje typu zwracanego z białym znakiem</span><span class="sxs-lookup"><span data-stu-id="8b81e-148">Surround return type annotations with white space</span></span>
 
-<span data-ttu-id="e4ba1-147">W przypadku funkcji lub adnotacji typu wartości (typ zwracany w przypadku funkcji) Użyj odstępu przed i po `:` symbolu:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-147">In a let-bound function or value type annotation (return type in the case of a function), use white space before and after the `:` symbol:</span></span>
+<span data-ttu-id="8b81e-149">W przypadku funkcji lub adnotacji typu wartości (typ zwracany w przypadku funkcji) Użyj odstępu przed i po `:` symbolu:</span><span class="sxs-lookup"><span data-stu-id="8b81e-149">In a let-bound function or value type annotation (return type in the case of a function), use white space before and after the `:` symbol:</span></span>
 
 ```fsharp
 // OK
@@ -151,16 +160,16 @@ let expensiveToComputeBad2 :int = 2
 let myFunBad (a: decimal) b c:decimal = a + b + c
 ```
 
-## <a name="formatting-blank-lines"></a><span data-ttu-id="e4ba1-148">Formatowanie pustych wierszy</span><span class="sxs-lookup"><span data-stu-id="e4ba1-148">Formatting blank lines</span></span>
+## <a name="formatting-blank-lines"></a><span data-ttu-id="8b81e-150">Formatowanie pustych wierszy</span><span class="sxs-lookup"><span data-stu-id="8b81e-150">Formatting blank lines</span></span>
 
-* <span data-ttu-id="e4ba1-149">Rozdziel funkcję najwyższego poziomu i definicje klas z dwoma pustymi wierszami.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-149">Separate top-level function and class definitions with two blank lines.</span></span>
-* <span data-ttu-id="e4ba1-150">Definicje metod wewnątrz klasy są oddzielone pojedynczym pustym wierszem.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-150">Method definitions inside a class are separated by a single blank line.</span></span>
-* <span data-ttu-id="e4ba1-151">Dodatkowe puste wiersze mogą być używane (oszczędnie) do oddzielenia grup powiązanych funkcji.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-151">Extra blank lines may be used (sparingly) to separate groups of related functions.</span></span> <span data-ttu-id="e4ba1-152">Puste wiersze można pominąć między zestawem powiązanych z jednym wierszem (na przykład zestawem implementacji fikcyjnej).</span><span class="sxs-lookup"><span data-stu-id="e4ba1-152">Blank lines may be omitted between a bunch of related one-liners (for example, a set of dummy implementations).</span></span>
-* <span data-ttu-id="e4ba1-153">Używaj pustych wierszy w funkcjach, oszczędnie, aby wskazać sekcje logiczne.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-153">Use blank lines in functions, sparingly, to indicate logical sections.</span></span>
+* <span data-ttu-id="8b81e-151">Rozdziel funkcję najwyższego poziomu i definicje klas z dwoma pustymi wierszami.</span><span class="sxs-lookup"><span data-stu-id="8b81e-151">Separate top-level function and class definitions with two blank lines.</span></span>
+* <span data-ttu-id="8b81e-152">Definicje metod wewnątrz klasy są oddzielone pojedynczym pustym wierszem.</span><span class="sxs-lookup"><span data-stu-id="8b81e-152">Method definitions inside a class are separated by a single blank line.</span></span>
+* <span data-ttu-id="8b81e-153">Dodatkowe puste wiersze mogą być używane (oszczędnie) do oddzielenia grup powiązanych funkcji.</span><span class="sxs-lookup"><span data-stu-id="8b81e-153">Extra blank lines may be used (sparingly) to separate groups of related functions.</span></span> <span data-ttu-id="8b81e-154">Puste wiersze można pominąć między zestawem powiązanych z jednym wierszem (na przykład zestawem implementacji fikcyjnej).</span><span class="sxs-lookup"><span data-stu-id="8b81e-154">Blank lines may be omitted between a bunch of related one-liners (for example, a set of dummy implementations).</span></span>
+* <span data-ttu-id="8b81e-155">Używaj pustych wierszy w funkcjach, oszczędnie, aby wskazać sekcje logiczne.</span><span class="sxs-lookup"><span data-stu-id="8b81e-155">Use blank lines in functions, sparingly, to indicate logical sections.</span></span>
 
-## <a name="formatting-comments"></a><span data-ttu-id="e4ba1-154">Formatowanie komentarzy</span><span class="sxs-lookup"><span data-stu-id="e4ba1-154">Formatting comments</span></span>
+## <a name="formatting-comments"></a><span data-ttu-id="8b81e-156">Formatowanie komentarzy</span><span class="sxs-lookup"><span data-stu-id="8b81e-156">Formatting comments</span></span>
 
-<span data-ttu-id="e4ba1-155">Zwykle Preferuj wiele komentarzy o podwójnym ukośniku w komentarzach bloku w stylu ML.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-155">Generally prefer multiple double-slash comments over ML-style block comments.</span></span>
+<span data-ttu-id="8b81e-157">Zwykle Preferuj wiele komentarzy o podwójnym ukośniku w komentarzach bloku w stylu ML.</span><span class="sxs-lookup"><span data-stu-id="8b81e-157">Generally prefer multiple double-slash comments over ML-style block comments.</span></span>
 
 ```fsharp
 // Prefer this style of comments when you want
@@ -172,17 +181,17 @@ let myFunBad (a: decimal) b c:decimal = a + b + c
 *)
 ```
 
-<span data-ttu-id="e4ba1-156">Komentarze wbudowane powinny rozpoczynać się wielką literą.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-156">Inline comments should capitalize the first letter.</span></span>
+<span data-ttu-id="8b81e-158">Komentarze wbudowane powinny rozpoczynać się wielką literą.</span><span class="sxs-lookup"><span data-stu-id="8b81e-158">Inline comments should capitalize the first letter.</span></span>
 
 ```fsharp
 let f x = x + 1 // Increment by one.
 ```
 
-## <a name="naming-conventions"></a><span data-ttu-id="e4ba1-157">Konwencje nazewnictwa</span><span class="sxs-lookup"><span data-stu-id="e4ba1-157">Naming conventions</span></span>
+## <a name="naming-conventions"></a><span data-ttu-id="8b81e-159">Konwencje nazewnictwa</span><span class="sxs-lookup"><span data-stu-id="8b81e-159">Naming conventions</span></span>
 
-### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a><span data-ttu-id="e4ba1-158">Użyj camelCase dla wartości powiązanych z klasą, powiązanych z wyrażeniami i funkcji, które są powiązane z wzorcem</span><span class="sxs-lookup"><span data-stu-id="e4ba1-158">Use camelCase for class-bound, expression-bound, and pattern-bound values and functions</span></span>
+### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a><span data-ttu-id="8b81e-160">Użyj camelCase dla wartości powiązanych z klasą, powiązanych z wyrażeniami i funkcji, które są powiązane z wzorcem</span><span class="sxs-lookup"><span data-stu-id="8b81e-160">Use camelCase for class-bound, expression-bound, and pattern-bound values and functions</span></span>
 
-<span data-ttu-id="e4ba1-159">Jest to typowy i zaakceptowany styl języka F # do używania camelCase dla wszystkich nazw związanych ze zmiennymi lokalnymi lub dopasowaniami wzorców i definicjami funkcji.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-159">It is common and accepted F# style to use camelCase for all names bound as local variables or in pattern matches and function definitions.</span></span>
+<span data-ttu-id="8b81e-161">Jest to typowy i zaakceptowany styl języka F # do używania camelCase dla wszystkich nazw związanych ze zmiennymi lokalnymi lub dopasowaniami wzorców i definicjami funkcji.</span><span class="sxs-lookup"><span data-stu-id="8b81e-161">It is common and accepted F# style to use camelCase for all names bound as local variables or in pattern matches and function definitions.</span></span>
 
 ```fsharp
 // OK
@@ -195,7 +204,7 @@ let addIAndJ I J = I+J
 let AddIAndJ i j = i + j
 ```
 
-<span data-ttu-id="e4ba1-160">W klasach należy również użyć funkcji camelCase.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-160">Locally bound functions in classes should also use camelCase.</span></span>
+<span data-ttu-id="8b81e-162">W klasach należy również użyć funkcji camelCase.</span><span class="sxs-lookup"><span data-stu-id="8b81e-162">Locally bound functions in classes should also use camelCase.</span></span>
 
 ```fsharp
 type MyClass() =
@@ -209,9 +218,9 @@ type MyClass() =
     member x.Result = doSomething()
 ```
 
-### <a name="use-camelcase-for-module-bound-public-functions"></a><span data-ttu-id="e4ba1-161">Użyj camelCase dla funkcji publicznych powiązanych z modułem</span><span class="sxs-lookup"><span data-stu-id="e4ba1-161">Use camelCase for module-bound public functions</span></span>
+### <a name="use-camelcase-for-module-bound-public-functions"></a><span data-ttu-id="8b81e-163">Użyj camelCase dla funkcji publicznych powiązanych z modułem</span><span class="sxs-lookup"><span data-stu-id="8b81e-163">Use camelCase for module-bound public functions</span></span>
 
-<span data-ttu-id="e4ba1-162">Gdy funkcja powiązana z modułem jest częścią publicznego interfejsu API, powinna używać camelCase:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-162">When a module-bound function is part of a public API, it should use camelCase:</span></span>
+<span data-ttu-id="8b81e-164">Gdy funkcja powiązana z modułem jest częścią publicznego interfejsu API, powinna używać camelCase:</span><span class="sxs-lookup"><span data-stu-id="8b81e-164">When a module-bound function is part of a public API, it should use camelCase:</span></span>
 
 ```fsharp
 module MyAPI =
@@ -220,22 +229,22 @@ module MyAPI =
     let publicFunctionTwo param1 param2 param3 = ...
 ```
 
-### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a><span data-ttu-id="e4ba1-163">Używanie camelCase do wewnętrznych i prywatnych wartości i funkcji powiązanych z modułem</span><span class="sxs-lookup"><span data-stu-id="e4ba1-163">Use camelCase for internal and private module-bound values and functions</span></span>
+### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a><span data-ttu-id="8b81e-165">Używanie camelCase do wewnętrznych i prywatnych wartości i funkcji powiązanych z modułem</span><span class="sxs-lookup"><span data-stu-id="8b81e-165">Use camelCase for internal and private module-bound values and functions</span></span>
 
-<span data-ttu-id="e4ba1-164">Użyj camelCase dla prywatnych wartości związanych z modułem, w tym następujących:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-164">Use camelCase for private module-bound values, including the following:</span></span>
+<span data-ttu-id="8b81e-166">Użyj camelCase dla prywatnych wartości związanych z modułem, w tym następujących:</span><span class="sxs-lookup"><span data-stu-id="8b81e-166">Use camelCase for private module-bound values, including the following:</span></span>
 
-* <span data-ttu-id="e4ba1-165">Funkcje ad hoc w skryptach</span><span class="sxs-lookup"><span data-stu-id="e4ba1-165">Ad hoc functions in scripts</span></span>
+* <span data-ttu-id="8b81e-167">Funkcje ad hoc w skryptach</span><span class="sxs-lookup"><span data-stu-id="8b81e-167">Ad hoc functions in scripts</span></span>
 
-* <span data-ttu-id="e4ba1-166">Wartości tworzące wewnętrzną implementację modułu lub typu</span><span class="sxs-lookup"><span data-stu-id="e4ba1-166">Values making up the internal implementation of a module or type</span></span>
+* <span data-ttu-id="8b81e-168">Wartości tworzące wewnętrzną implementację modułu lub typu</span><span class="sxs-lookup"><span data-stu-id="8b81e-168">Values making up the internal implementation of a module or type</span></span>
 
 ```fsharp
 let emailMyBossTheLatestResults =
     ...
 ```
 
-### <a name="use-camelcase-for-parameters"></a><span data-ttu-id="e4ba1-167">Użyj camelCase dla parametrów</span><span class="sxs-lookup"><span data-stu-id="e4ba1-167">Use camelCase for parameters</span></span>
+### <a name="use-camelcase-for-parameters"></a><span data-ttu-id="8b81e-169">Użyj camelCase dla parametrów</span><span class="sxs-lookup"><span data-stu-id="8b81e-169">Use camelCase for parameters</span></span>
 
-<span data-ttu-id="e4ba1-168">Wszystkie parametry powinny używać camelCase zgodnie z konwencjami nazewnictwa platformy .NET.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-168">All parameters should use camelCase in accordance with .NET naming conventions.</span></span>
+<span data-ttu-id="8b81e-170">Wszystkie parametry powinny używać camelCase zgodnie z konwencjami nazewnictwa platformy .NET.</span><span class="sxs-lookup"><span data-stu-id="8b81e-170">All parameters should use camelCase in accordance with .NET naming conventions.</span></span>
 
 ```fsharp
 module MyModule =
@@ -245,9 +254,9 @@ type MyClass() =
     member this.MyMethod(paramOne, paramTwo) = ...
 ```
 
-### <a name="use-pascalcase-for-modules"></a><span data-ttu-id="e4ba1-169">Korzystanie z PascalCase dla modułów</span><span class="sxs-lookup"><span data-stu-id="e4ba1-169">Use PascalCase for modules</span></span>
+### <a name="use-pascalcase-for-modules"></a><span data-ttu-id="8b81e-171">Korzystanie z PascalCase dla modułów</span><span class="sxs-lookup"><span data-stu-id="8b81e-171">Use PascalCase for modules</span></span>
 
-<span data-ttu-id="e4ba1-170">Wszystkie moduły (najwyższego poziomu, wewnętrzne, prywatne, zagnieżdżone) powinny używać PascalCase.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-170">All modules (top-level, internal, private, nested) should use PascalCase.</span></span>
+<span data-ttu-id="8b81e-172">Wszystkie moduły (najwyższego poziomu, wewnętrzne, prywatne, zagnieżdżone) powinny używać PascalCase.</span><span class="sxs-lookup"><span data-stu-id="8b81e-172">All modules (top-level, internal, private, nested) should use PascalCase.</span></span>
 
 ```fsharp
 module MyTopLevelModule
@@ -259,9 +268,9 @@ module Helpers =
     ...
 ```
 
-### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a><span data-ttu-id="e4ba1-171">Użyj PascalCase dla deklaracji typu, elementów członkowskich i etykiet</span><span class="sxs-lookup"><span data-stu-id="e4ba1-171">Use PascalCase for type declarations, members, and labels</span></span>
+### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a><span data-ttu-id="8b81e-173">Użyj PascalCase dla deklaracji typu, elementów członkowskich i etykiet</span><span class="sxs-lookup"><span data-stu-id="8b81e-173">Use PascalCase for type declarations, members, and labels</span></span>
 
-<span data-ttu-id="e4ba1-172">Klasy, interfejsy, struktury, wyliczenia, Delegaty, rekordy i związki rozłączne powinny mieć nazwę z PascalCase.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-172">Classes, interfaces, structs, enumerations, delegates, records, and discriminated unions should all be named with PascalCase.</span></span> <span data-ttu-id="e4ba1-173">Elementy członkowskie w typach i etykietach dla rekordów i Unii rozłącznych powinny również używać PascalCase.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-173">Members within types and labels for records and discriminated unions should also use PascalCase.</span></span>
+<span data-ttu-id="8b81e-174">Klasy, interfejsy, struktury, wyliczenia, Delegaty, rekordy i związki rozłączne powinny mieć nazwę z PascalCase.</span><span class="sxs-lookup"><span data-stu-id="8b81e-174">Classes, interfaces, structs, enumerations, delegates, records, and discriminated unions should all be named with PascalCase.</span></span> <span data-ttu-id="8b81e-175">Elementy członkowskie w typach i etykietach dla rekordów i Unii rozłącznych powinny również używać PascalCase.</span><span class="sxs-lookup"><span data-stu-id="8b81e-175">Members within types and labels for records and discriminated unions should also use PascalCase.</span></span>
 
 ```fsharp
 type IMyInterface =
@@ -279,19 +288,19 @@ type SchoolPerson =
     | Administrator
 ```
 
-### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a><span data-ttu-id="e4ba1-174">Użyj PascalCase dla konstrukcji wewnętrznych dla platformy .NET</span><span class="sxs-lookup"><span data-stu-id="e4ba1-174">Use PascalCase for constructs intrinsic to .NET</span></span>
+### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a><span data-ttu-id="8b81e-176">Użyj PascalCase dla konstrukcji wewnętrznych dla platformy .NET</span><span class="sxs-lookup"><span data-stu-id="8b81e-176">Use PascalCase for constructs intrinsic to .NET</span></span>
 
-<span data-ttu-id="e4ba1-175">Przestrzenie nazw, wyjątki, zdarzenia i projekty/ `.dll` nazwy powinny również używać PascalCase.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-175">Namespaces, exceptions, events, and project/`.dll` names should also use PascalCase.</span></span> <span data-ttu-id="e4ba1-176">Nie tylko robi to, że użycie z innych języków .NET jest bardziej naturalne dla użytkowników, jest również spójne z konwencjami nazewnictwa platformy .NET, które prawdopodobnie występują.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-176">Not only does this make consumption from other .NET languages feel more natural to consumers, it's also consistent with .NET naming conventions that you are likely to encounter.</span></span>
+<span data-ttu-id="8b81e-177">Przestrzenie nazw, wyjątki, zdarzenia i projekty/ `.dll` nazwy powinny również używać PascalCase.</span><span class="sxs-lookup"><span data-stu-id="8b81e-177">Namespaces, exceptions, events, and project/`.dll` names should also use PascalCase.</span></span> <span data-ttu-id="8b81e-178">Nie tylko robi to, że użycie z innych języków .NET jest bardziej naturalne dla użytkowników, jest również spójne z konwencjami nazewnictwa platformy .NET, które prawdopodobnie występują.</span><span class="sxs-lookup"><span data-stu-id="8b81e-178">Not only does this make consumption from other .NET languages feel more natural to consumers, it's also consistent with .NET naming conventions that you are likely to encounter.</span></span>
 
-### <a name="avoid-underscores-in-names"></a><span data-ttu-id="e4ba1-177">Unikaj podkreśleń w nazwach</span><span class="sxs-lookup"><span data-stu-id="e4ba1-177">Avoid underscores in names</span></span>
+### <a name="avoid-underscores-in-names"></a><span data-ttu-id="8b81e-179">Unikaj podkreśleń w nazwach</span><span class="sxs-lookup"><span data-stu-id="8b81e-179">Avoid underscores in names</span></span>
 
-<span data-ttu-id="e4ba1-178">Historycznie Niektóre biblioteki języka F # używały podkreśleń w nazwach.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-178">Historically, some F# libraries have used underscores in names.</span></span> <span data-ttu-id="e4ba1-179">Nie jest to jednak już powszechnie akceptowane, częściowo ponieważ koliduje z konwencjami nazewnictwa platformy .NET.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-179">However, this is no longer widely accepted, partly because it clashes with .NET naming conventions.</span></span> <span data-ttu-id="e4ba1-180">Tak samo, niektórzy programiści F # używają podkreśleń silnie, częściowo z przyczyn historycznych, a tolerancja i istotność są ważne.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-180">That said, some F# programmers use underscores heavily, partly for historical reasons, and tolerance and respect is important.</span></span> <span data-ttu-id="e4ba1-181">Należy jednak pamiętać, że styl często nie jest używany przez inne osoby, które mają możliwość wyboru, czy należy z niego korzystać.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-181">However, be aware that the style is often disliked by others who have a choice about whether to use it.</span></span>
+<span data-ttu-id="8b81e-180">Historycznie Niektóre biblioteki języka F # używały podkreśleń w nazwach.</span><span class="sxs-lookup"><span data-stu-id="8b81e-180">Historically, some F# libraries have used underscores in names.</span></span> <span data-ttu-id="8b81e-181">Nie jest to jednak już powszechnie akceptowane, częściowo ponieważ koliduje z konwencjami nazewnictwa platformy .NET.</span><span class="sxs-lookup"><span data-stu-id="8b81e-181">However, this is no longer widely accepted, partly because it clashes with .NET naming conventions.</span></span> <span data-ttu-id="8b81e-182">Tak samo, niektórzy programiści F # używają podkreśleń silnie, częściowo z przyczyn historycznych, a tolerancja i istotność są ważne.</span><span class="sxs-lookup"><span data-stu-id="8b81e-182">That said, some F# programmers use underscores heavily, partly for historical reasons, and tolerance and respect is important.</span></span> <span data-ttu-id="8b81e-183">Należy jednak pamiętać, że styl często nie jest używany przez inne osoby, które mają możliwość wyboru, czy należy z niego korzystać.</span><span class="sxs-lookup"><span data-stu-id="8b81e-183">However, be aware that the style is often disliked by others who have a choice about whether to use it.</span></span>
 
-<span data-ttu-id="e4ba1-182">Jeden wyjątek obejmuje współdziałanie ze składnikami macierzystymi, w których znaki podkreślenia są wspólne.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-182">One exception includes interoperating with native components, where underscores are common.</span></span>
+<span data-ttu-id="8b81e-184">Jeden wyjątek obejmuje współdziałanie ze składnikami macierzystymi, w których znaki podkreślenia są wspólne.</span><span class="sxs-lookup"><span data-stu-id="8b81e-184">One exception includes interoperating with native components, where underscores are common.</span></span>
 
-### <a name="use-standard-f-operators"></a><span data-ttu-id="e4ba1-183">Użyj standardowych operatorów języka F #</span><span class="sxs-lookup"><span data-stu-id="e4ba1-183">Use standard F# operators</span></span>
+### <a name="use-standard-f-operators"></a><span data-ttu-id="8b81e-185">Użyj standardowych operatorów języka F #</span><span class="sxs-lookup"><span data-stu-id="8b81e-185">Use standard F# operators</span></span>
 
-<span data-ttu-id="e4ba1-184">Następujące operatory są zdefiniowane w standardowej bibliotece F # i powinny być używane zamiast definiować odpowiedniki.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-184">The following operators are defined in the F# standard library and should be used instead of defining equivalents.</span></span> <span data-ttu-id="e4ba1-185">Przy użyciu tych operatorów zaleca się, aby kod był bardziej czytelny i idiomatyczne.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-185">Using these operators is recommended as it tends to make code more readable and idiomatic.</span></span> <span data-ttu-id="e4ba1-186">Deweloperzy z tłem w OCaml lub innym języku programowania funkcjonalnego mogą być przyzwyczajoni do różnych idiomy.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-186">Developers with a background in OCaml or other functional programming language may be accustomed to different idioms.</span></span> <span data-ttu-id="e4ba1-187">Poniższa lista zawiera podsumowanie zalecanych operatorów języka F #.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-187">The following list summarizes the recommended F# operators.</span></span>
+<span data-ttu-id="8b81e-186">Następujące operatory są zdefiniowane w standardowej bibliotece F # i powinny być używane zamiast definiować odpowiedniki.</span><span class="sxs-lookup"><span data-stu-id="8b81e-186">The following operators are defined in the F# standard library and should be used instead of defining equivalents.</span></span> <span data-ttu-id="8b81e-187">Przy użyciu tych operatorów zaleca się, aby kod był bardziej czytelny i idiomatyczne.</span><span class="sxs-lookup"><span data-stu-id="8b81e-187">Using these operators is recommended as it tends to make code more readable and idiomatic.</span></span> <span data-ttu-id="8b81e-188">Deweloperzy z tłem w OCaml lub innym języku programowania funkcjonalnego mogą być przyzwyczajoni do różnych idiomy.</span><span class="sxs-lookup"><span data-stu-id="8b81e-188">Developers with a background in OCaml or other functional programming language may be accustomed to different idioms.</span></span> <span data-ttu-id="8b81e-189">Poniższa lista zawiera podsumowanie zalecanych operatorów języka F #.</span><span class="sxs-lookup"><span data-stu-id="8b81e-189">The following list summarizes the recommended F# operators.</span></span>
 
 ```fsharp
 x |> f // Forward pipeline
@@ -311,23 +320,23 @@ x &&& y // Bitwise and, also for working with “flags” enumeration
 x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 ```
 
-### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a><span data-ttu-id="e4ba1-188">Użyj składni prefiksu dla typów ogólnych ( `Foo<T>` ) w preferencjach do przyrostkowej składni ( `T Foo` )</span><span class="sxs-lookup"><span data-stu-id="e4ba1-188">Use prefix syntax for generics (`Foo<T>`) in preference to postfix syntax (`T Foo`)</span></span>
+### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a><span data-ttu-id="8b81e-190">Użyj składni prefiksu dla typów ogólnych ( `Foo<T>` ) w preferencjach do przyrostkowej składni ( `T Foo` )</span><span class="sxs-lookup"><span data-stu-id="8b81e-190">Use prefix syntax for generics (`Foo<T>`) in preference to postfix syntax (`T Foo`)</span></span>
 
-<span data-ttu-id="e4ba1-189">F # dziedziczy styl przyrostka (na przykład), a `int list` także styl (na przykład `list<int>` ).</span><span class="sxs-lookup"><span data-stu-id="e4ba1-189">F# inherits both the postfix ML style of naming generic types (for example, `int list`) as well as the prefix .NET style (for example, `list<int>`).</span></span> <span data-ttu-id="e4ba1-190">Preferuj styl .NET, z wyjątkiem pięciu określonych typów:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-190">Prefer the .NET style, except for five specific types:</span></span>
+<span data-ttu-id="8b81e-191">F # dziedziczy styl przyrostka (na przykład), a `int list` także styl (na przykład `list<int>` ).</span><span class="sxs-lookup"><span data-stu-id="8b81e-191">F# inherits both the postfix ML style of naming generic types (for example, `int list`) as well as the prefix .NET style (for example, `list<int>`).</span></span> <span data-ttu-id="8b81e-192">Preferuj styl .NET, z wyjątkiem pięciu określonych typów:</span><span class="sxs-lookup"><span data-stu-id="8b81e-192">Prefer the .NET style, except for five specific types:</span></span>
 
-1. <span data-ttu-id="e4ba1-191">Dla list języka F # Użyj przyrostkowej formy: `int list` zamiast `list<int>` .</span><span class="sxs-lookup"><span data-stu-id="e4ba1-191">For F# Lists, use the postfix form: `int list` rather than `list<int>`.</span></span>
-2. <span data-ttu-id="e4ba1-192">W przypadku opcji języka F # należy użyć przyrostkowej formy: `int option` zamiast `option<int>` .</span><span class="sxs-lookup"><span data-stu-id="e4ba1-192">For F# Options, use the postfix form: `int option` rather than `option<int>`.</span></span>
-3. <span data-ttu-id="e4ba1-193">W przypadku opcji wartości języka F # Użyj przyrostkowej formy: `int voption` zamiast `voption<int>` .</span><span class="sxs-lookup"><span data-stu-id="e4ba1-193">For F# Value Options, use the postfix form: `int voption` rather than `voption<int>`.</span></span>
-4. <span data-ttu-id="e4ba1-194">W przypadku tablic języka F # należy użyć nazwy składni `int[]` zamiast `int array` lub `array<int>` .</span><span class="sxs-lookup"><span data-stu-id="e4ba1-194">For F# arrays, use the syntactic name `int[]` rather than `int array` or `array<int>`.</span></span>
-5. <span data-ttu-id="e4ba1-195">W przypadku komórek referencyjnych Użyj `int ref` zamiast `ref<int>` lub `Ref<int>` .</span><span class="sxs-lookup"><span data-stu-id="e4ba1-195">For Reference Cells, use `int ref` rather than `ref<int>` or `Ref<int>`.</span></span>
+1. <span data-ttu-id="8b81e-193">Dla list języka F # Użyj przyrostkowej formy: `int list` zamiast `list<int>` .</span><span class="sxs-lookup"><span data-stu-id="8b81e-193">For F# Lists, use the postfix form: `int list` rather than `list<int>`.</span></span>
+2. <span data-ttu-id="8b81e-194">W przypadku opcji języka F # należy użyć przyrostkowej formy: `int option` zamiast `option<int>` .</span><span class="sxs-lookup"><span data-stu-id="8b81e-194">For F# Options, use the postfix form: `int option` rather than `option<int>`.</span></span>
+3. <span data-ttu-id="8b81e-195">W przypadku opcji wartości języka F # Użyj przyrostkowej formy: `int voption` zamiast `voption<int>` .</span><span class="sxs-lookup"><span data-stu-id="8b81e-195">For F# Value Options, use the postfix form: `int voption` rather than `voption<int>`.</span></span>
+4. <span data-ttu-id="8b81e-196">W przypadku tablic języka F # należy użyć nazwy składni `int[]` zamiast `int array` lub `array<int>` .</span><span class="sxs-lookup"><span data-stu-id="8b81e-196">For F# arrays, use the syntactic name `int[]` rather than `int array` or `array<int>`.</span></span>
+5. <span data-ttu-id="8b81e-197">W przypadku komórek referencyjnych Użyj `int ref` zamiast `ref<int>` lub `Ref<int>` .</span><span class="sxs-lookup"><span data-stu-id="8b81e-197">For Reference Cells, use `int ref` rather than `ref<int>` or `Ref<int>`.</span></span>
 
-<span data-ttu-id="e4ba1-196">Dla wszystkich innych typów Użyj formy prefiksu.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-196">For all other types, use the prefix form.</span></span>
+<span data-ttu-id="8b81e-198">Dla wszystkich innych typów Użyj formy prefiksu.</span><span class="sxs-lookup"><span data-stu-id="8b81e-198">For all other types, use the prefix form.</span></span>
 
-## <a name="formatting-tuples"></a><span data-ttu-id="e4ba1-197">Formatowanie krotek</span><span class="sxs-lookup"><span data-stu-id="e4ba1-197">Formatting tuples</span></span>
+## <a name="formatting-tuples"></a><span data-ttu-id="8b81e-199">Formatowanie krotek</span><span class="sxs-lookup"><span data-stu-id="8b81e-199">Formatting tuples</span></span>
 
-<span data-ttu-id="e4ba1-198">Tworzenie wystąpienia spójnej kolekcji musi być ujęte w nawiasy, a w tym przecinku należy następować pojedyncze miejsce, na przykład: `(1, 2)` , `(x, y, z)` .</span><span class="sxs-lookup"><span data-stu-id="e4ba1-198">A tuple instantiation should be parenthesized, and the delimiting commas within it should be followed by a single space, for example: `(1, 2)`, `(x, y, z)`.</span></span>
+<span data-ttu-id="8b81e-200">Tworzenie wystąpienia spójnej kolekcji musi być ujęte w nawiasy, a w tym przecinku należy następować pojedyncze miejsce, na przykład: `(1, 2)` , `(x, y, z)` .</span><span class="sxs-lookup"><span data-stu-id="8b81e-200">A tuple instantiation should be parenthesized, and the delimiting commas within it should be followed by a single space, for example: `(1, 2)`, `(x, y, z)`.</span></span>
 
-<span data-ttu-id="e4ba1-199">Jest on powszechnie akceptowany w celu pomijania nawiasów we wzorcu dopasowania spójnych krotek:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-199">It is commonly accepted to omit parentheses in pattern matching of tuples:</span></span>
+<span data-ttu-id="8b81e-201">Jest on powszechnie akceptowany w celu pomijania nawiasów we wzorcu dopasowania spójnych krotek:</span><span class="sxs-lookup"><span data-stu-id="8b81e-201">It is commonly accepted to omit parentheses in pattern matching of tuples:</span></span>
 
 ```fsharp
 let (x, y) = z // Destructuring
@@ -340,7 +349,7 @@ match x, y with
 | x, y -> 1
 ```
 
-<span data-ttu-id="e4ba1-200">Jest również często akceptowane do pomijania nawiasów, jeśli Krotka jest wartością zwracaną funkcji:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-200">It is also commonly accepted to omit parentheses if the tuple is the return value of a function:</span></span>
+<span data-ttu-id="8b81e-202">Jest również często akceptowane do pomijania nawiasów, jeśli Krotka jest wartością zwracaną funkcji:</span><span class="sxs-lookup"><span data-stu-id="8b81e-202">It is also commonly accepted to omit parentheses if the tuple is the return value of a function:</span></span>
 
 ```fsharp
 // OK
@@ -350,11 +359,11 @@ let update model msg =
     | _ -> model, [ msg ]
 ```
 
-<span data-ttu-id="e4ba1-201">W obszarze Podsumowanie zaleca się Tworzenie wystąpień spójnych krotek, ale w przypadku używania krotek w celu dopasowania do wzorca lub wartości zwracanej jest on traktowany jako drobny, aby uniknąć nawiasów.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-201">In summary, prefer parenthesized tuple instantiations, but when using tuples for pattern matching or a return value, it is considered fine to avoid parentheses.</span></span>
+<span data-ttu-id="8b81e-203">W obszarze Podsumowanie zaleca się Tworzenie wystąpień spójnych krotek, ale w przypadku używania krotek w celu dopasowania do wzorca lub wartości zwracanej jest on traktowany jako drobny, aby uniknąć nawiasów.</span><span class="sxs-lookup"><span data-stu-id="8b81e-203">In summary, prefer parenthesized tuple instantiations, but when using tuples for pattern matching or a return value, it is considered fine to avoid parentheses.</span></span>
 
-## <a name="formatting-discriminated-union-declarations"></a><span data-ttu-id="e4ba1-202">Formatowanie deklaracji związku rozłącznych</span><span class="sxs-lookup"><span data-stu-id="e4ba1-202">Formatting discriminated union declarations</span></span>
+## <a name="formatting-discriminated-union-declarations"></a><span data-ttu-id="8b81e-204">Formatowanie deklaracji związku rozłącznych</span><span class="sxs-lookup"><span data-stu-id="8b81e-204">Formatting discriminated union declarations</span></span>
 
-<span data-ttu-id="e4ba1-203">Wcięcie `|` w definicji typu według czterech spacji:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-203">Indent `|` in type definition by four spaces:</span></span>
+<span data-ttu-id="8b81e-205">Wcięcie `|` w definicji typu według czterech spacji:</span><span class="sxs-lookup"><span data-stu-id="8b81e-205">Indent `|` in type definition by four spaces:</span></span>
 
 ```fsharp
 // OK
@@ -370,9 +379,9 @@ type Volume =
 | ImperialPint of float
 ```
 
-## <a name="formatting-discriminated-unions"></a><span data-ttu-id="e4ba1-204">Formatowanie związków rozłącznych</span><span class="sxs-lookup"><span data-stu-id="e4ba1-204">Formatting discriminated unions</span></span>
+## <a name="formatting-discriminated-unions"></a><span data-ttu-id="8b81e-206">Formatowanie związków rozłącznych</span><span class="sxs-lookup"><span data-stu-id="8b81e-206">Formatting discriminated unions</span></span>
 
-<span data-ttu-id="e4ba1-205">Utworzone przez siebie związki rozłączne, które dzielą się między wiele wierszy, powinny dawać zawarte dane nowe zakresy z wcięciem:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-205">Instantiated Discriminated Unions that split across multiple lines should give contained data a new scope with indentation:</span></span>
+<span data-ttu-id="8b81e-207">Utworzone przez siebie związki rozłączne, które dzielą się między wiele wierszy, powinny dawać zawarte dane nowe zakresy z wcięciem:</span><span class="sxs-lookup"><span data-stu-id="8b81e-207">Instantiated Discriminated Unions that split across multiple lines should give contained data a new scope with indentation:</span></span>
 
 ```fsharp
 let tree1 =
@@ -381,7 +390,7 @@ let tree1 =
          BinaryNode(BinaryValue 3, BinaryValue 4))
 ```
 
-<span data-ttu-id="e4ba1-206">Nawias zamykający może również znajdować się w nowym wierszu:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-206">The closing parenthesis can also be on a new line:</span></span>
+<span data-ttu-id="8b81e-208">Nawias zamykający może również znajdować się w nowym wierszu:</span><span class="sxs-lookup"><span data-stu-id="8b81e-208">The closing parenthesis can also be on a new line:</span></span>
 
 ```fsharp
 let tree1 =
@@ -391,9 +400,9 @@ let tree1 =
     )
 ```
 
-## <a name="formatting-record-declarations"></a><span data-ttu-id="e4ba1-207">Formatowanie deklaracji rekordu</span><span class="sxs-lookup"><span data-stu-id="e4ba1-207">Formatting record declarations</span></span>
+## <a name="formatting-record-declarations"></a><span data-ttu-id="8b81e-209">Formatowanie deklaracji rekordu</span><span class="sxs-lookup"><span data-stu-id="8b81e-209">Formatting record declarations</span></span>
 
-<span data-ttu-id="e4ba1-208">Zwiększ wcięcie `{` w definicji typu o cztery spacje i uruchom listę pól w tym samym wierszu:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-208">Indent `{` in type definition by four spaces and start the field list on the same line:</span></span>
+<span data-ttu-id="8b81e-210">Zwiększ wcięcie `{` w definicji typu o cztery spacje i uruchom listę pól w tym samym wierszu:</span><span class="sxs-lookup"><span data-stu-id="8b81e-210">Indent `{` in type definition by four spaces and start the field list on the same line:</span></span>
 
 ```fsharp
 // OK
@@ -419,7 +428,7 @@ type PostalAddress =
     }
 ```
 
-<span data-ttu-id="e4ba1-209">Umieszczenie tokenu otwierającego w nowym wierszu, a token zamykający w nowym wierszu jest preferowany, Jeśli deklarujesz implementacje interfejsów lub składowe w rekordzie:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-209">Placing the opening token on a new line and the closing token on a new line is preferable if you are declaring interface implementations or members on the record:</span></span>
+<span data-ttu-id="8b81e-211">Umieszczenie tokenu otwierającego w nowym wierszu, a token zamykający w nowym wierszu jest preferowany, Jeśli deklarujesz implementacje interfejsów lub składowe w rekordzie:</span><span class="sxs-lookup"><span data-stu-id="8b81e-211">Placing the opening token on a new line and the closing token on a new line is preferable if you are declaring interface implementations or members on the record:</span></span>
 
 ```fsharp
 // Declaring additional members on PostalAddress
@@ -438,15 +447,15 @@ type MyRecord =
     interface IMyInterface
 ```
 
-## <a name="formatting-records"></a><span data-ttu-id="e4ba1-210">Formatowanie rekordów</span><span class="sxs-lookup"><span data-stu-id="e4ba1-210">Formatting records</span></span>
+## <a name="formatting-records"></a><span data-ttu-id="8b81e-212">Formatowanie rekordów</span><span class="sxs-lookup"><span data-stu-id="8b81e-212">Formatting records</span></span>
 
-<span data-ttu-id="e4ba1-211">Krótkie rekordy można napisać w jednym wierszu:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-211">Short records can be written in one line:</span></span>
+<span data-ttu-id="8b81e-213">Krótkie rekordy można napisać w jednym wierszu:</span><span class="sxs-lookup"><span data-stu-id="8b81e-213">Short records can be written in one line:</span></span>
 
 ```fsharp
 let point = { X = 1.0; Y = 0.0 }
 ```
 
-<span data-ttu-id="e4ba1-212">Rekordy, które są dłuższe, powinny używać nowych wierszy do etykiet:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-212">Records that are longer should use new lines for labels:</span></span>
+<span data-ttu-id="8b81e-214">Rekordy, które są dłuższe, powinny używać nowych wierszy do etykiet:</span><span class="sxs-lookup"><span data-stu-id="8b81e-214">Records that are longer should use new lines for labels:</span></span>
 
 ```fsharp
 let rainbow =
@@ -454,10 +463,10 @@ let rainbow =
       Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-<span data-ttu-id="e4ba1-213">Umieszczenie tokenu otwierającego w nowym wierszu, zawartości z zakładkami w jednym zakresie, a token zamykający w nowym wierszu jest preferowany, jeśli:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-213">Placing the opening token on a new line, the contents tabbed over one scope, and the closing token on a new line is preferable if you are:</span></span>
+<span data-ttu-id="8b81e-215">Umieszczenie tokenu otwierającego w nowym wierszu, zawartości z zakładkami w jednym zakresie, a token zamykający w nowym wierszu jest preferowany, jeśli:</span><span class="sxs-lookup"><span data-stu-id="8b81e-215">Placing the opening token on a new line, the contents tabbed over one scope, and the closing token on a new line is preferable if you are:</span></span>
 
-* <span data-ttu-id="e4ba1-214">Przenoszenie rekordów wokół kodu z różnymi zakresami wcięć</span><span class="sxs-lookup"><span data-stu-id="e4ba1-214">Moving records around in code with different indentation scopes</span></span>
-* <span data-ttu-id="e4ba1-215">Przeprzewody do funkcji</span><span class="sxs-lookup"><span data-stu-id="e4ba1-215">Piping them into a function</span></span>
+* <span data-ttu-id="8b81e-216">Przenoszenie rekordów wokół kodu z różnymi zakresami wcięć</span><span class="sxs-lookup"><span data-stu-id="8b81e-216">Moving records around in code with different indentation scopes</span></span>
+* <span data-ttu-id="8b81e-217">Przeprzewody do funkcji</span><span class="sxs-lookup"><span data-stu-id="8b81e-217">Piping them into a function</span></span>
 
 ```fsharp
 let rainbow =
@@ -487,19 +496,19 @@ let foo a =
         })
 ```
 
-<span data-ttu-id="e4ba1-216">Te same reguły dotyczą elementów list i tablic.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-216">The same rules apply for list and array elements.</span></span>
+<span data-ttu-id="8b81e-218">Te same reguły dotyczą elementów list i tablic.</span><span class="sxs-lookup"><span data-stu-id="8b81e-218">The same rules apply for list and array elements.</span></span>
 
-## <a name="formatting-copy-and-update-record-expressions"></a><span data-ttu-id="e4ba1-217">Formatowanie wyrażeń kopiowania i aktualizacji</span><span class="sxs-lookup"><span data-stu-id="e4ba1-217">Formatting copy-and-update record expressions</span></span>
+## <a name="formatting-copy-and-update-record-expressions"></a><span data-ttu-id="8b81e-219">Formatowanie wyrażeń kopiowania i aktualizacji</span><span class="sxs-lookup"><span data-stu-id="8b81e-219">Formatting copy-and-update record expressions</span></span>
 
-<span data-ttu-id="e4ba1-218">Wyrażenie rekordu kopiowania i aktualizacji jest nadal rekordem, więc stosuje się do nich podobne wskazówki.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-218">A copy-and-update record expression is still a record, so similar guidelines apply.</span></span>
+<span data-ttu-id="8b81e-220">Wyrażenie rekordu kopiowania i aktualizacji jest nadal rekordem, więc stosuje się do nich podobne wskazówki.</span><span class="sxs-lookup"><span data-stu-id="8b81e-220">A copy-and-update record expression is still a record, so similar guidelines apply.</span></span>
 
-<span data-ttu-id="e4ba1-219">Krótkie wyrażenia mogą zmieścić się w jednym wierszu:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-219">Short expressions can fit on one line:</span></span>
+<span data-ttu-id="8b81e-221">Krótkie wyrażenia mogą zmieścić się w jednym wierszu:</span><span class="sxs-lookup"><span data-stu-id="8b81e-221">Short expressions can fit on one line:</span></span>
 
 ```fsharp
 let point2 = { point with X = 1; Y = 2 }
 ```
 
-<span data-ttu-id="e4ba1-220">Dłuższe wyrażenia powinny używać nowych wierszy:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-220">Longer expressions should use new lines:</span></span>
+<span data-ttu-id="8b81e-222">Dłuższe wyrażenia powinny używać nowych wierszy:</span><span class="sxs-lookup"><span data-stu-id="8b81e-222">Longer expressions should use new lines:</span></span>
 
 ```fsharp
 let rainbow2 =
@@ -508,7 +517,7 @@ let rainbow2 =
         Lackeys = [ "Zippy"; "George"; "Bungle" ] }
 ```
 
-<span data-ttu-id="e4ba1-221">Podobnie jak w przypadku wskazówek dotyczących rekordu, możesz chcieć oddzielić osobne wiersze dla nawiasów klamrowych i wciąć jeden zakres z prawej strony wyrażenia.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-221">And as with the record guidance, you may want to dedicate separate lines for the braces and indent one scope to the right with the expression.</span></span> <span data-ttu-id="e4ba1-222">W niektórych specjalnych przypadkach, takich jak Zawijanie wartości z opcjonalną bez nawiasów, może być konieczne pozostawienie nawiasu klamrowego w jednej linii:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-222">In some special cases, such as wrapping a value with an optional without parentheses, you may need to keep a brace on one line:</span></span>
+<span data-ttu-id="8b81e-223">Podobnie jak w przypadku wskazówek dotyczących rekordu, możesz chcieć oddzielić osobne wiersze dla nawiasów klamrowych i wciąć jeden zakres z prawej strony wyrażenia.</span><span class="sxs-lookup"><span data-stu-id="8b81e-223">And as with the record guidance, you may want to dedicate separate lines for the braces and indent one scope to the right with the expression.</span></span> <span data-ttu-id="8b81e-224">W niektórych specjalnych przypadkach, takich jak Zawijanie wartości z opcjonalną bez nawiasów, może być konieczne pozostawienie nawiasu klamrowego w jednej linii:</span><span class="sxs-lookup"><span data-stu-id="8b81e-224">In some special cases, such as wrapping a value with an optional without parentheses, you may need to keep a brace on one line:</span></span>
 
 ```fsharp
 type S = { F1: int; F2: string }
@@ -525,18 +534,18 @@ let newState =
     }
 ```
 
-## <a name="formatting-lists-and-arrays"></a><span data-ttu-id="e4ba1-223">Formatowanie list i tablic</span><span class="sxs-lookup"><span data-stu-id="e4ba1-223">Formatting lists and arrays</span></span>
+## <a name="formatting-lists-and-arrays"></a><span data-ttu-id="8b81e-225">Formatowanie list i tablic</span><span class="sxs-lookup"><span data-stu-id="8b81e-225">Formatting lists and arrays</span></span>
 
-<span data-ttu-id="e4ba1-224">Pisz `x :: l` ze spacjami wokół `::` operatora ( `::` jest operatorem wrostkowe, dlatego jest ujęty w spacje).</span><span class="sxs-lookup"><span data-stu-id="e4ba1-224">Write `x :: l` with spaces around the `::` operator (`::` is an infix operator, hence surrounded by spaces).</span></span>
+<span data-ttu-id="8b81e-226">Pisz `x :: l` ze spacjami wokół `::` operatora ( `::` jest operatorem wrostkowe, dlatego jest ujęty w spacje).</span><span class="sxs-lookup"><span data-stu-id="8b81e-226">Write `x :: l` with spaces around the `::` operator (`::` is an infix operator, hence surrounded by spaces).</span></span>
 
-<span data-ttu-id="e4ba1-225">Lista i tablice zadeklarowane w jednym wierszu powinny zawierać spację po nawiasie otwierającym i przed nawiasem zamykającym:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-225">List and arrays declared on a single line should have a space after the opening bracket and before the closing bracket:</span></span>
+<span data-ttu-id="8b81e-227">Lista i tablice zadeklarowane w jednym wierszu powinny zawierać spację po nawiasie otwierającym i przed nawiasem zamykającym:</span><span class="sxs-lookup"><span data-stu-id="8b81e-227">List and arrays declared on a single line should have a space after the opening bracket and before the closing bracket:</span></span>
 
 ```fsharp
 let xs = [ 1; 2; 3 ]
 let ys = [| 1; 2; 3; |]
 ```
 
-<span data-ttu-id="e4ba1-226">Zawsze używaj co najmniej jednego miejsca między dwoma odrębnymi operatorami w nawiasach klamrowych.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-226">Always use at least one space between two distinct brace-like operators.</span></span> <span data-ttu-id="e4ba1-227">Na przykład pozostaw spację między a `[` i `{` .</span><span class="sxs-lookup"><span data-stu-id="e4ba1-227">For example, leave a space between a `[` and a `{`.</span></span>
+<span data-ttu-id="8b81e-228">Zawsze używaj co najmniej jednego miejsca między dwoma odrębnymi operatorami w nawiasach klamrowych.</span><span class="sxs-lookup"><span data-stu-id="8b81e-228">Always use at least one space between two distinct brace-like operators.</span></span> <span data-ttu-id="8b81e-229">Na przykład pozostaw spację między a `[` i `{` .</span><span class="sxs-lookup"><span data-stu-id="8b81e-229">For example, leave a space between a `[` and a `{`.</span></span>
 
 ```fsharp
 // OK
@@ -554,9 +563,9 @@ let ys = [| 1; 2; 3; |]
  { IngredientName = "Lemon"; Quantity = 1 }]
 ```
 
-<span data-ttu-id="e4ba1-228">Te same wytyczne dotyczą list lub tablic krotek.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-228">The same guideline applies for lists or arrays of tuples.</span></span>
+<span data-ttu-id="8b81e-230">Te same wytyczne dotyczą list lub tablic krotek.</span><span class="sxs-lookup"><span data-stu-id="8b81e-230">The same guideline applies for lists or arrays of tuples.</span></span>
 
-<span data-ttu-id="e4ba1-229">Listy i tablice, które dzielą się między wiele wierszy, są zgodne z podobną regułą jako rekordy:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-229">Lists and arrays that split across multiple lines follow a similar rule as records do:</span></span>
+<span data-ttu-id="8b81e-231">Listy i tablice, które dzielą się między wiele wierszy, są zgodne z podobną regułą jako rekordy:</span><span class="sxs-lookup"><span data-stu-id="8b81e-231">Lists and arrays that split across multiple lines follow a similar rule as records do:</span></span>
 
 ```fsharp
 let pascalsTriangle =
@@ -573,9 +582,9 @@ let pascalsTriangle =
     |]
 ```
 
-<span data-ttu-id="e4ba1-230">Podobnie jak w przypadku rekordów, deklarowanie otwierających i zamykających nawiasów w osobnym wierszu spowoduje, że przenoszenie kodu i potoki do funkcji są łatwiejsze.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-230">And as with records, declaring the opening and closing brackets on their own line will make moving code around and piping into functions easier.</span></span>
+<span data-ttu-id="8b81e-232">Podobnie jak w przypadku rekordów, deklarowanie otwierających i zamykających nawiasów w osobnym wierszu spowoduje, że przenoszenie kodu i potoki do funkcji są łatwiejsze.</span><span class="sxs-lookup"><span data-stu-id="8b81e-232">And as with records, declaring the opening and closing brackets on their own line will make moving code around and piping into functions easier.</span></span>
 
-<span data-ttu-id="e4ba1-231">Podczas tworzenia tablic i list programistycznych należy preferować, `->` `do ... yield` gdy wartość jest zawsze generowana:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-231">When generating arrays and lists programmatically, prefer `->` over `do ... yield` when a value is always generated:</span></span>
+<span data-ttu-id="8b81e-233">Podczas tworzenia tablic i list programistycznych należy preferować, `->` `do ... yield` gdy wartość jest zawsze generowana:</span><span class="sxs-lookup"><span data-stu-id="8b81e-233">When generating arrays and lists programmatically, prefer `->` over `do ... yield` when a value is always generated:</span></span>
 
 ```fsharp
 // Preferred
@@ -585,7 +594,7 @@ let squares = [ for x in 1..10 -> x * x ]
 let squares' = [ for x in 1..10 do yield x * x ]
 ```
 
-<span data-ttu-id="e4ba1-232">W przypadku starszych wersji języka F # wymagane jest określenie `yield` w sytuacjach, w których dane mogą być generowane warunkowo lub mogą być oceniane kolejne wyrażenia.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-232">Older versions of the F# language required specifying `yield` in situations where data may be generated conditionally, or there may be consecutive expressions to be evaluated.</span></span> <span data-ttu-id="e4ba1-233">Wolisz pominąć te `yield` słowa kluczowe, chyba że musisz skompilować przy użyciu starszej wersji języka F #:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-233">Prefer omitting these `yield` keywords unless you must compile with an older F# language version:</span></span>
+<span data-ttu-id="8b81e-234">W przypadku starszych wersji języka F # wymagane jest określenie `yield` w sytuacjach, w których dane mogą być generowane warunkowo lub mogą być oceniane kolejne wyrażenia.</span><span class="sxs-lookup"><span data-stu-id="8b81e-234">Older versions of the F# language required specifying `yield` in situations where data may be generated conditionally, or there may be consecutive expressions to be evaluated.</span></span> <span data-ttu-id="8b81e-235">Wolisz pominąć te `yield` słowa kluczowe, chyba że musisz skompilować przy użyciu starszej wersji języka F #:</span><span class="sxs-lookup"><span data-stu-id="8b81e-235">Prefer omitting these `yield` keywords unless you must compile with an older F# language version:</span></span>
 
 ```fsharp
 // Preferred
@@ -615,17 +624,17 @@ let daysOfWeek' includeWeekend =
     ]
 ```
 
-<span data-ttu-id="e4ba1-234">W niektórych przypadkach `do...yield` może pomóc w czytelności.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-234">In some cases, `do...yield` may aid in readability.</span></span> <span data-ttu-id="e4ba1-235">Te przypadki, chociaż należy rozważyć, powinny być brane pod uwagę.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-235">These cases, though subjective, should be taken into consideration.</span></span>
+<span data-ttu-id="8b81e-236">W niektórych przypadkach `do...yield` może pomóc w czytelności.</span><span class="sxs-lookup"><span data-stu-id="8b81e-236">In some cases, `do...yield` may aid in readability.</span></span> <span data-ttu-id="8b81e-237">Te przypadki, chociaż należy rozważyć, powinny być brane pod uwagę.</span><span class="sxs-lookup"><span data-stu-id="8b81e-237">These cases, though subjective, should be taken into consideration.</span></span>
 
-## <a name="formatting-if-expressions"></a><span data-ttu-id="e4ba1-236">Formatowanie wyrażeń if</span><span class="sxs-lookup"><span data-stu-id="e4ba1-236">Formatting if expressions</span></span>
+## <a name="formatting-if-expressions"></a><span data-ttu-id="8b81e-238">Formatowanie wyrażeń if</span><span class="sxs-lookup"><span data-stu-id="8b81e-238">Formatting if expressions</span></span>
 
-<span data-ttu-id="e4ba1-237">Wcięcia warunkowe są zależne od rozmiarów wyrażeń, które je tworzą.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-237">Indentation of conditionals depends on the sizes of the expressions that make them up.</span></span> <span data-ttu-id="e4ba1-238">Jeśli `cond` `e1` i `e2` są krótkie, wystarczy napisać je w jednym wierszu:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-238">If `cond`, `e1` and `e2` are short, simply write them on one line:</span></span>
+<span data-ttu-id="8b81e-239">Wcięcia warunkowe są zależne od rozmiarów wyrażeń, które je tworzą.</span><span class="sxs-lookup"><span data-stu-id="8b81e-239">Indentation of conditionals depends on the sizes of the expressions that make them up.</span></span> <span data-ttu-id="8b81e-240">Jeśli `cond` `e1` i `e2` są krótkie, wystarczy napisać je w jednym wierszu:</span><span class="sxs-lookup"><span data-stu-id="8b81e-240">If `cond`, `e1` and `e2` are short, simply write them on one line:</span></span>
 
 ```fsharp
 if cond then e1 else e2
 ```
 
-<span data-ttu-id="e4ba1-239">Jeśli jeden `cond` `e1` lub `e2` więcej, ale nie wiele wierszy:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-239">If either `cond`, `e1` or `e2` are longer, but not multi-line:</span></span>
+<span data-ttu-id="8b81e-241">Jeśli jeden `cond` `e1` lub `e2` więcej, ale nie wiele wierszy:</span><span class="sxs-lookup"><span data-stu-id="8b81e-241">If either `cond`, `e1` or `e2` are longer, but not multi-line:</span></span>
 
 ```fsharp
 if cond
@@ -633,7 +642,7 @@ then e1
 else e2
 ```
 
-<span data-ttu-id="e4ba1-240">Jeśli dowolne wyrażenie ma wiele wierszy:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-240">If any of the expressions are multi-line:</span></span>
+<span data-ttu-id="8b81e-242">Jeśli dowolne wyrażenie ma wiele wierszy:</span><span class="sxs-lookup"><span data-stu-id="8b81e-242">If any of the expressions are multi-line:</span></span>
 
 ```fsharp
 if cond then
@@ -642,7 +651,7 @@ else
     e2
 ```
 
-<span data-ttu-id="e4ba1-241">Wiele warunkowych z `elif` i `else` ma wcięcia w tym samym zakresie co `if` :</span><span class="sxs-lookup"><span data-stu-id="e4ba1-241">Multiple conditionals with `elif` and `else` are indented at the same scope as the `if`:</span></span>
+<span data-ttu-id="8b81e-243">Wiele warunkowych z `elif` i `else` ma wcięcia w tym samym zakresie co `if` :</span><span class="sxs-lookup"><span data-stu-id="8b81e-243">Multiple conditionals with `elif` and `else` are indented at the same scope as the `if`:</span></span>
 
 ```fsharp
 if cond1 then e1
@@ -651,9 +660,9 @@ elif cond3 then e3
 else e4
 ```
 
-### <a name="pattern-matching-constructs"></a><span data-ttu-id="e4ba1-242">Konstrukcje dopasowania wzorca</span><span class="sxs-lookup"><span data-stu-id="e4ba1-242">Pattern matching constructs</span></span>
+### <a name="pattern-matching-constructs"></a><span data-ttu-id="8b81e-244">Konstrukcje dopasowania wzorca</span><span class="sxs-lookup"><span data-stu-id="8b81e-244">Pattern matching constructs</span></span>
 
-<span data-ttu-id="e4ba1-243">Użyj `|` dla każdej klauzuli dopasowania bez wcięcia.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-243">Use a `|` for each clause of a match with no indentation.</span></span> <span data-ttu-id="e4ba1-244">Jeśli wyrażenie jest krótkie, można rozważyć użycie pojedynczej linii, jeśli każde Podwyrażenie jest również proste.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-244">If the expression is short, you can consider using a single line if each subexpression is also simple.</span></span>
+<span data-ttu-id="8b81e-245">Użyj `|` dla każdej klauzuli dopasowania bez wcięcia.</span><span class="sxs-lookup"><span data-stu-id="8b81e-245">Use a `|` for each clause of a match with no indentation.</span></span> <span data-ttu-id="8b81e-246">Jeśli wyrażenie jest krótkie, można rozważyć użycie pojedynczej linii, jeśli każde Podwyrażenie jest również proste.</span><span class="sxs-lookup"><span data-stu-id="8b81e-246">If the expression is short, you can consider using a single line if each subexpression is also simple.</span></span>
 
 ```fsharp
 // OK
@@ -669,7 +678,7 @@ match l with
     | [] -> failwith "Couldn't find David"
 ```
 
-<span data-ttu-id="e4ba1-245">Jeśli wyrażenie po prawej stronie strzałki dopasowania do wzorca jest zbyt duże, przenieś je do poniższego wiersza, z wcięciem jeden krok z `match` / `|` .</span><span class="sxs-lookup"><span data-stu-id="e4ba1-245">If the expression on the right of the pattern matching arrow is too large, move it to the following line, indented one step from the `match`/`|`.</span></span>
+<span data-ttu-id="8b81e-247">Jeśli wyrażenie po prawej stronie strzałki dopasowania do wzorca jest zbyt duże, przenieś je do poniższego wiersza, z wcięciem jeden krok z `match` / `|` .</span><span class="sxs-lookup"><span data-stu-id="8b81e-247">If the expression on the right of the pattern matching arrow is too large, move it to the following line, indented one step from the `match`/`|`.</span></span>
 
 ```fsharp
 match lam with
@@ -681,7 +690,7 @@ match lam with
 
 ```
 
-<span data-ttu-id="e4ba1-246">Dopasowanie wzorców funkcji anonimowych, zaczynające `function` się od, nie powinno być zwykle zbyt dalekie.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-246">Pattern matching of anonymous functions, starting by `function`, should generally not indent too far.</span></span> <span data-ttu-id="e4ba1-247">Na przykład wcięcie jednego z zakresów w następujący sposób jest następujące:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-247">For example, indenting one scope as follows is fine:</span></span>
+<span data-ttu-id="8b81e-248">Dopasowanie wzorców funkcji anonimowych, zaczynające `function` się od, nie powinno być zwykle zbyt dalekie.</span><span class="sxs-lookup"><span data-stu-id="8b81e-248">Pattern matching of anonymous functions, starting by `function`, should generally not indent too far.</span></span> <span data-ttu-id="8b81e-249">Na przykład wcięcie jednego z zakresów w następujący sposób jest następujące:</span><span class="sxs-lookup"><span data-stu-id="8b81e-249">For example, indenting one scope as follows is fine:</span></span>
 
 ```fsharp
 lambdaList
@@ -691,7 +700,7 @@ lambdaList
     | Var v -> 1)
 ```
 
-<span data-ttu-id="e4ba1-248">Dopasowanie wzorca w funkcjach zdefiniowanych przez `let` lub `let rec` powinno mieć wcięcia cztery spacje po uruchomieniu `let` , nawet jeśli `function` jest używane słowo kluczowe:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-248">Pattern matching in functions defined by `let` or `let rec` should be indented four spaces after starting of `let`, even if `function` keyword is used:</span></span>
+<span data-ttu-id="8b81e-250">Dopasowanie wzorca w funkcjach zdefiniowanych przez `let` lub `let rec` powinno mieć wcięcia cztery spacje po uruchomieniu `let` , nawet jeśli `function` jest używane słowo kluczowe:</span><span class="sxs-lookup"><span data-stu-id="8b81e-250">Pattern matching in functions defined by `let` or `let rec` should be indented four spaces after starting of `let`, even if `function` keyword is used:</span></span>
 
 ```fsharp
 let rec sizeLambda acc = function
@@ -700,11 +709,11 @@ let rec sizeLambda acc = function
     | Var v -> succ acc
 ```
 
-<span data-ttu-id="e4ba1-249">Nie zaleca się wyrównywania strzałek.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-249">We do not recommend aligning arrows.</span></span>
+<span data-ttu-id="8b81e-251">Nie zaleca się wyrównywania strzałek.</span><span class="sxs-lookup"><span data-stu-id="8b81e-251">We do not recommend aligning arrows.</span></span>
 
-## <a name="formatting-trywith-expressions"></a><span data-ttu-id="e4ba1-250">Formatowanie wyrażeń try/with</span><span class="sxs-lookup"><span data-stu-id="e4ba1-250">Formatting try/with expressions</span></span>
+## <a name="formatting-trywith-expressions"></a><span data-ttu-id="8b81e-252">Formatowanie wyrażeń try/with</span><span class="sxs-lookup"><span data-stu-id="8b81e-252">Formatting try/with expressions</span></span>
 
-<span data-ttu-id="e4ba1-251">Dopasowanie wzorca dla typu wyjątku powinno być wcięte na tym samym poziomie co `with` .</span><span class="sxs-lookup"><span data-stu-id="e4ba1-251">Pattern matching on the exception type should be indented at the same level as `with`.</span></span>
+<span data-ttu-id="8b81e-253">Dopasowanie wzorca dla typu wyjątku powinno być wcięte na tym samym poziomie co `with` .</span><span class="sxs-lookup"><span data-stu-id="8b81e-253">Pattern matching on the exception type should be indented at the same level as `with`.</span></span>
 
 ```fsharp
 try
@@ -719,11 +728,11 @@ with
     printfn "A second that was a multiple of 3"
 ```
 
-## <a name="formatting-function-parameter-application"></a><span data-ttu-id="e4ba1-252">Formatowanie aplikacji parametrów funkcji</span><span class="sxs-lookup"><span data-stu-id="e4ba1-252">Formatting function parameter application</span></span>
+## <a name="formatting-function-parameter-application"></a><span data-ttu-id="8b81e-254">Formatowanie aplikacji parametrów funkcji</span><span class="sxs-lookup"><span data-stu-id="8b81e-254">Formatting function parameter application</span></span>
 
-<span data-ttu-id="e4ba1-253">Ogólnie rzecz biorąc, większość aplikacji parametrów funkcji jest wykonywana w tym samym wierszu.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-253">In general, most function parameter application is done on the same line.</span></span>
+<span data-ttu-id="8b81e-255">Ogólnie rzecz biorąc, większość aplikacji parametrów funkcji jest wykonywana w tym samym wierszu.</span><span class="sxs-lookup"><span data-stu-id="8b81e-255">In general, most function parameter application is done on the same line.</span></span>
 
-<span data-ttu-id="e4ba1-254">Jeśli chcesz zastosować parametry do funkcji w nowym wierszu, Zwiększ wcięcie według jednego zakresu.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-254">If you wish to apply parameters to a function on a new line, indent them by one scope.</span></span>
+<span data-ttu-id="8b81e-256">Jeśli chcesz zastosować parametry do funkcji w nowym wierszu, Zwiększ wcięcie według jednego zakresu.</span><span class="sxs-lookup"><span data-stu-id="8b81e-256">If you wish to apply parameters to a function on a new line, indent them by one scope.</span></span>
 
 ```fsharp
 // OK
@@ -743,7 +752,7 @@ let printVolumes x =
         (convertVolumeImperialPint x)
 ```
 
-<span data-ttu-id="e4ba1-255">Te same wskazówki dotyczą wyrażeń lambda jako argumentów funkcji.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-255">The same guidelines apply for lambda expressions as function arguments.</span></span> <span data-ttu-id="e4ba1-256">Jeśli treść wyrażenia lambda, treść może mieć inny wiersz, wcięcie według jednego zakresu</span><span class="sxs-lookup"><span data-stu-id="e4ba1-256">If the body of a lambda expression, the body can have another line, indented by one scope</span></span>
+<span data-ttu-id="8b81e-257">Te same wskazówki dotyczą wyrażeń lambda jako argumentów funkcji.</span><span class="sxs-lookup"><span data-stu-id="8b81e-257">The same guidelines apply for lambda expressions as function arguments.</span></span> <span data-ttu-id="8b81e-258">Jeśli treść wyrażenia lambda, treść może mieć inny wiersz, wcięcie według jednego zakresu</span><span class="sxs-lookup"><span data-stu-id="8b81e-258">If the body of a lambda expression, the body can have another line, indented by one scope</span></span>
 
 ```fsharp
 let printListWithOffset a list1 =
@@ -759,13 +768,13 @@ let printListWithOffset a list1 =
         list1
 ```
 
-<span data-ttu-id="e4ba1-257">Jednakże jeśli treść wyrażenia lambda ma więcej niż jeden wiersz, Rozważ umieszczenie go w osobnej funkcji, a nie ma zastosowania jednowierszowej konstrukcji jako pojedynczego argumentu do funkcji.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-257">However, if the body of a lambda expression is more than one line, consider factoring it out into a separate function rather than have a multi-line construct applied as a single argument to a function.</span></span>
+<span data-ttu-id="8b81e-259">Jednakże jeśli treść wyrażenia lambda ma więcej niż jeden wiersz, Rozważ umieszczenie go w osobnej funkcji, a nie ma zastosowania jednowierszowej konstrukcji jako pojedynczego argumentu do funkcji.</span><span class="sxs-lookup"><span data-stu-id="8b81e-259">However, if the body of a lambda expression is more than one line, consider factoring it out into a separate function rather than have a multi-line construct applied as a single argument to a function.</span></span>
 
-### <a name="formatting-infix-operators"></a><span data-ttu-id="e4ba1-258">Formatowanie operatorów wrostkowe</span><span class="sxs-lookup"><span data-stu-id="e4ba1-258">Formatting infix operators</span></span>
+### <a name="formatting-infix-operators"></a><span data-ttu-id="8b81e-260">Formatowanie operatorów wrostkowe</span><span class="sxs-lookup"><span data-stu-id="8b81e-260">Formatting infix operators</span></span>
 
-<span data-ttu-id="e4ba1-259">Oddziel operatory spacjami.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-259">Separate operators by spaces.</span></span> <span data-ttu-id="e4ba1-260">Oczywiste wyjątki od tej reguły to `!` Operatory i `.` .</span><span class="sxs-lookup"><span data-stu-id="e4ba1-260">Obvious exceptions to this rule are the `!` and `.` operators.</span></span>
+<span data-ttu-id="8b81e-261">Oddziel operatory spacjami.</span><span class="sxs-lookup"><span data-stu-id="8b81e-261">Separate operators by spaces.</span></span> <span data-ttu-id="8b81e-262">Oczywiste wyjątki od tej reguły to `!` Operatory i `.` .</span><span class="sxs-lookup"><span data-stu-id="8b81e-262">Obvious exceptions to this rule are the `!` and `.` operators.</span></span>
 
-<span data-ttu-id="e4ba1-261">Wyrażenia wrostkowe są prawidłowe dla zestawień w tej samej kolumnie:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-261">Infix expressions are OK to lineup on same column:</span></span>
+<span data-ttu-id="8b81e-263">Wyrażenia wrostkowe są prawidłowe dla zestawień w tej samej kolumnie:</span><span class="sxs-lookup"><span data-stu-id="8b81e-263">Infix expressions are OK to lineup on same column:</span></span>
 
 ```fsharp
 acc +
@@ -777,9 +786,9 @@ let function1 arg1 arg2 arg3 arg4 =
     arg3 + arg4
 ```
 
-### <a name="formatting-pipeline-operators"></a><span data-ttu-id="e4ba1-262">Formatowanie operatorów potoku</span><span class="sxs-lookup"><span data-stu-id="e4ba1-262">Formatting pipeline operators</span></span>
+### <a name="formatting-pipeline-operators"></a><span data-ttu-id="8b81e-264">Formatowanie operatorów potoku</span><span class="sxs-lookup"><span data-stu-id="8b81e-264">Formatting pipeline operators</span></span>
 
-<span data-ttu-id="e4ba1-263">Operatory potoku `|>` powinny się znaleźć pod wyrażeniami, w których działają.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-263">Pipeline `|>` operators should go underneath the expressions they operate on.</span></span>
+<span data-ttu-id="8b81e-265">Operatory potoku `|>` powinny się znaleźć pod wyrażeniami, w których działają.</span><span class="sxs-lookup"><span data-stu-id="8b81e-265">Pipeline `|>` operators should go underneath the expressions they operate on.</span></span>
 
 ```fsharp
 // Preferred approach
@@ -802,9 +811,9 @@ let methods2 = System.AppDomain.CurrentDomain.GetAssemblies()
             |> Array.concat
 ```
 
-### <a name="formatting-modules"></a><span data-ttu-id="e4ba1-264">Formatowanie modułów</span><span class="sxs-lookup"><span data-stu-id="e4ba1-264">Formatting modules</span></span>
+### <a name="formatting-modules"></a><span data-ttu-id="8b81e-266">Formatowanie modułów</span><span class="sxs-lookup"><span data-stu-id="8b81e-266">Formatting modules</span></span>
 
-<span data-ttu-id="e4ba1-265">Dla kodu w module lokalnym należy zastosować wcięcie względem modułu, ale nie ma wcięcia kodu w module najwyższego poziomu.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-265">Code in a local module must be indented relative to the module, but code in a top-level module should not be indented.</span></span> <span data-ttu-id="e4ba1-266">Elementy przestrzeni nazw nie muszą mieć wcięcia.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-266">Namespace elements do not have to be indented.</span></span>
+<span data-ttu-id="8b81e-267">Dla kodu w module lokalnym należy zastosować wcięcie względem modułu, ale nie ma wcięcia kodu w module najwyższego poziomu.</span><span class="sxs-lookup"><span data-stu-id="8b81e-267">Code in a local module must be indented relative to the module, but code in a top-level module should not be indented.</span></span> <span data-ttu-id="8b81e-268">Elementy przestrzeni nazw nie muszą mieć wcięcia.</span><span class="sxs-lookup"><span data-stu-id="8b81e-268">Namespace elements do not have to be indented.</span></span>
 
 ```fsharp
 // A is a top-level module.
@@ -822,9 +831,9 @@ module A2 =
     let function2 a b = a * a - b * b
 ```
 
-### <a name="formatting-object-expressions-and-interfaces"></a><span data-ttu-id="e4ba1-267">Formatowanie wyrażeń i interfejsów obiektów</span><span class="sxs-lookup"><span data-stu-id="e4ba1-267">Formatting object expressions and interfaces</span></span>
+### <a name="formatting-object-expressions-and-interfaces"></a><span data-ttu-id="8b81e-269">Formatowanie wyrażeń i interfejsów obiektów</span><span class="sxs-lookup"><span data-stu-id="8b81e-269">Formatting object expressions and interfaces</span></span>
 
-<span data-ttu-id="e4ba1-268">Wyrażenia i interfejsy obiektów powinny być wyrównane w taki sam sposób, jak w przypadku `member` wcięć z czterech spacji.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-268">Object expressions and interfaces should be aligned in the same way with `member` being indented after four spaces.</span></span>
+<span data-ttu-id="8b81e-270">Wyrażenia i interfejsy obiektów powinny być wyrównane w taki sam sposób, jak w przypadku `member` wcięć z czterech spacji.</span><span class="sxs-lookup"><span data-stu-id="8b81e-270">Object expressions and interfaces should be aligned in the same way with `member` being indented after four spaces.</span></span>
 
 ```fsharp
 let comparer =
@@ -836,9 +845,9 @@ let comparer =
               reversed.CompareTo (rev s2) }
 ```
 
-### <a name="formatting-white-space-in-expressions"></a><span data-ttu-id="e4ba1-269">Formatowanie białych znaków w wyrażeniach</span><span class="sxs-lookup"><span data-stu-id="e4ba1-269">Formatting white space in expressions</span></span>
+### <a name="formatting-white-space-in-expressions"></a><span data-ttu-id="8b81e-271">Formatowanie białych znaków w wyrażeniach</span><span class="sxs-lookup"><span data-stu-id="8b81e-271">Formatting white space in expressions</span></span>
 
-<span data-ttu-id="e4ba1-270">Unikaj nadmiarowego odstępu w wyrażeniach języka F #.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-270">Avoid extraneous white space in F# expressions.</span></span>
+<span data-ttu-id="8b81e-272">Unikaj nadmiarowego odstępu w wyrażeniach języka F #.</span><span class="sxs-lookup"><span data-stu-id="8b81e-272">Avoid extraneous white space in F# expressions.</span></span>
 
 ```fsharp
 // OK
@@ -848,7 +857,7 @@ spam (ham.[1])
 spam ( ham.[ 1 ] )
 ```
 
-<span data-ttu-id="e4ba1-271">Argumenty nazwane nie mogą również zawierać spacji otaczających `=` :</span><span class="sxs-lookup"><span data-stu-id="e4ba1-271">Named arguments should also not have space surrounding the `=`:</span></span>
+<span data-ttu-id="8b81e-273">Argumenty nazwane nie mogą również zawierać spacji otaczających `=` :</span><span class="sxs-lookup"><span data-stu-id="8b81e-273">Named arguments should also not have space surrounding the `=`:</span></span>
 
 ```fsharp
 // OK
@@ -858,9 +867,9 @@ let makeStreamReader x = new System.IO.StreamReader(path=x)
 let makeStreamReader x = new System.IO.StreamReader(path = x)
 ```
 
-## <a name="formatting-attributes"></a><span data-ttu-id="e4ba1-272">Formatowanie atrybutów</span><span class="sxs-lookup"><span data-stu-id="e4ba1-272">Formatting attributes</span></span>
+## <a name="formatting-attributes"></a><span data-ttu-id="8b81e-274">Formatowanie atrybutów</span><span class="sxs-lookup"><span data-stu-id="8b81e-274">Formatting attributes</span></span>
 
-<span data-ttu-id="e4ba1-273">[Atrybuty](../language-reference/attributes.md) są umieszczane powyżej konstrukcji:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-273">[Attributes](../language-reference/attributes.md) are placed above a construct:</span></span>
+<span data-ttu-id="8b81e-275">[Atrybuty](../language-reference/attributes.md) są umieszczane powyżej konstrukcji:</span><span class="sxs-lookup"><span data-stu-id="8b81e-275">[Attributes](../language-reference/attributes.md) are placed above a construct:</span></span>
 
 ```fsharp
 [<SomeAttribute>]
@@ -876,9 +885,9 @@ type MyRecord =
       Label2: string }
 ```
 
-### <a name="formatting-attributes-on-parameters"></a><span data-ttu-id="e4ba1-274">Formatowanie atrybutów dla parametrów</span><span class="sxs-lookup"><span data-stu-id="e4ba1-274">Formatting attributes on parameters</span></span>
+### <a name="formatting-attributes-on-parameters"></a><span data-ttu-id="8b81e-276">Formatowanie atrybutów dla parametrów</span><span class="sxs-lookup"><span data-stu-id="8b81e-276">Formatting attributes on parameters</span></span>
 
-<span data-ttu-id="e4ba1-275">Atrybuty mogą być również umieszczane w parametrach.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-275">Attributes can also be placed on parameters.</span></span> <span data-ttu-id="e4ba1-276">W takim przypadku należy umieścić w tym samym wierszu co parametr i przed nazwą:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-276">In this case, place then on the same line as the parameter and before the name:</span></span>
+<span data-ttu-id="8b81e-277">Atrybuty mogą być również umieszczane w parametrach.</span><span class="sxs-lookup"><span data-stu-id="8b81e-277">Attributes can also be placed on parameters.</span></span> <span data-ttu-id="8b81e-278">W takim przypadku należy umieścić w tym samym wierszu co parametr i przed nazwą:</span><span class="sxs-lookup"><span data-stu-id="8b81e-278">In this case, place then on the same line as the parameter and before the name:</span></span>
 
 ```fsharp
 // Defines a class that takes an optional value as input defaulting to false.
@@ -886,9 +895,9 @@ type C() =
     member _.M([<Optional; DefaultParameterValue(false)>] doSomething: bool)
 ```
 
-### <a name="formatting-multiple-attributes"></a><span data-ttu-id="e4ba1-277">Formatowanie wielu atrybutów</span><span class="sxs-lookup"><span data-stu-id="e4ba1-277">Formatting multiple attributes</span></span>
+### <a name="formatting-multiple-attributes"></a><span data-ttu-id="8b81e-279">Formatowanie wielu atrybutów</span><span class="sxs-lookup"><span data-stu-id="8b81e-279">Formatting multiple attributes</span></span>
 
-<span data-ttu-id="e4ba1-278">W przypadku zastosowania wielu atrybutów do konstrukcji, która nie jest parametrem, powinny one zostać umieszczone w taki sposób, że istnieje jeden atrybut na wiersz:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-278">When multiple attributes are applied to a construct that is not a parameter, they should be placed such that there is one attribute per line:</span></span>
+<span data-ttu-id="8b81e-280">W przypadku zastosowania wielu atrybutów do konstrukcji, która nie jest parametrem, powinny one zostać umieszczone w taki sposób, że istnieje jeden atrybut na wiersz:</span><span class="sxs-lookup"><span data-stu-id="8b81e-280">When multiple attributes are applied to a construct that is not a parameter, they should be placed such that there is one attribute per line:</span></span>
 
 ```fsharp
 [<Struct>]
@@ -898,11 +907,11 @@ type MyRecord =
       Label2: string }
 ```
 
-<span data-ttu-id="e4ba1-279">Gdy zastosowano do parametru, muszą one znajdować się w tym samym wierszu i oddzielić `;` separatorem.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-279">When applied to a parameter, they must be on the same line and separated by a `;` separator.</span></span>
+<span data-ttu-id="8b81e-281">Gdy zastosowano do parametru, muszą one znajdować się w tym samym wierszu i oddzielić `;` separatorem.</span><span class="sxs-lookup"><span data-stu-id="8b81e-281">When applied to a parameter, they must be on the same line and separated by a `;` separator.</span></span>
 
-## <a name="formatting-literals"></a><span data-ttu-id="e4ba1-280">Literały formatowania</span><span class="sxs-lookup"><span data-stu-id="e4ba1-280">Formatting literals</span></span>
+## <a name="formatting-literals"></a><span data-ttu-id="8b81e-282">Literały formatowania</span><span class="sxs-lookup"><span data-stu-id="8b81e-282">Formatting literals</span></span>
 
-<span data-ttu-id="e4ba1-281">[Literały F #](../language-reference/literals.md) używające `Literal` atrybutu powinny umieścić atrybut w osobnym wierszu i używać PascalCase nazw:</span><span class="sxs-lookup"><span data-stu-id="e4ba1-281">[F# literals](../language-reference/literals.md) using the `Literal` attribute should place the attribute on its own line and use PascalCase naming:</span></span>
+<span data-ttu-id="8b81e-283">[Literały F #](../language-reference/literals.md) używające `Literal` atrybutu powinny umieścić atrybut w osobnym wierszu i używać PascalCase nazw:</span><span class="sxs-lookup"><span data-stu-id="8b81e-283">[F# literals](../language-reference/literals.md) using the `Literal` attribute should place the attribute on its own line and use PascalCase naming:</span></span>
 
 ```fsharp
 [<Literal>]
@@ -912,4 +921,4 @@ let Path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 let MyUrl = "www.mywebsitethatiamworkingwith.com"
 ```
 
-<span data-ttu-id="e4ba1-282">Należy unikać umieszczania atrybutu w tym samym wierszu, w którym znajduje się wartość.</span><span class="sxs-lookup"><span data-stu-id="e4ba1-282">Avoid placing the attribute on the same line as the value.</span></span>
+<span data-ttu-id="8b81e-284">Należy unikać umieszczania atrybutu w tym samym wierszu, w którym znajduje się wartość.</span><span class="sxs-lookup"><span data-stu-id="8b81e-284">Avoid placing the attribute on the same line as the value.</span></span>

@@ -2,15 +2,15 @@
 title: ASP.NET Core istotne zmiany
 titleSuffix: ''
 description: Wyświetla listę istotnych zmian w ASP.NET Core.
-ms.date: 07/13/2020
+ms.date: 07/14/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 75f33e7d6d76206ebe46b1a229ccb152d79ddc61
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: b73492e0c2f60c2b214984d3987de1e9e6530847
+ms.sourcegitcommit: d4f7ba08f2a45a9dbef53be597eed6d4a9410f29
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309563"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86402007"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core istotne zmiany
 
@@ -71,6 +71,7 @@ Następujące istotne zmiany zostały udokumentowane na tej stronie:
 - [MVC: zmieniono typy na wewnętrzne](#mvc-pubternal-types-changed-to-internal)
 - [MVC: Usunięto podkładkę zgodności z interfejsem API sieci Web](#mvc-web-api-compatibility-shim-removed)
 - [Razor: Kompilacja środowiska uruchomieniowego została przeniesiona do pakietu](#razor-runtime-compilation-moved-to-a-package)
+- [Zabezpieczenia: kodowanie nazwy pliku cookie zostało usunięte](#security-cookie-name-encoding-removed)
 - [Bezpieczeństwo: Zaktualizowano wersje pakietów NuGet IdentityModel](#security-identitymodel-nuget-package-versions-updated)
 - [Stan sesji: Usunięto przestarzałe interfejsy API](#session-state-obsolete-apis-removed)
 - [Współdzielona struktura: usuwanie zestawu z Microsoft. AspNetCore. App](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)
@@ -138,6 +139,10 @@ Następujące istotne zmiany zostały udokumentowane na tej stronie:
 ***
 
 [!INCLUDE[Localization: ResourceManagerWithCultureStringLocalizer class and WithCulture interface member removed](~/includes/core-changes/aspnetcore/5.0/localization-members-removed.md)]
+
+***
+
+[!INCLUDE[Security: Cookie name encoding removed](~/includes/core-changes/aspnetcore/5.0/security-cookie-name-encoding-removed.md)]
 
 ***
 

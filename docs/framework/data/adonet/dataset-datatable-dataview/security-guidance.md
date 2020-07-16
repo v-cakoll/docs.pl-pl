@@ -3,12 +3,12 @@ title: Wskazówki dotyczące zabezpieczeń zestawów danych i DataTable
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: c6b32afeadccc3fd22d6611d282840233280440f
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: f78b52ede4ec76599d761e5188f39c3e9dae2a4f
+ms.sourcegitcommit: 98548968e89739a37625e72ddbd535fe1e11121e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86382459"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405295"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Wskazówki dotyczące zabezpieczeń zestawów danych i DataTable
 
@@ -195,7 +195,8 @@ Gdy tryb inspekcji jest włączony, można użyć _App.config_ , aby połączyć
 
 Aby uzyskać więcej informacji na temat `TraceSource` i `TraceListener` , zobacz dokument [How to: use TraceSource and filters with Trace detektors](/dotnet/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners).
 
-**Uwaga**: uruchamianie aplikacji w trybie inspekcji nie jest dostępne w programie .NET Core ani w programie .NET 5,0 i nowszych wersjach.
+> [!NOTE]
+> Uruchamianie aplikacji w trybie inspekcji nie jest dostępne w programie .NET Core ani w programie .NET 5,0 i nowszych wersjach.
 
 <a name="ratr"></a>
 
@@ -207,7 +208,7 @@ Jeśli aplikacja musi usunąć wszystkie ograniczenia dotyczące ograniczania ty
 * Dostępne opcje zależą od struktury docelowej aplikacji.
 
 > [!WARNING]
-> Usunięcie wszystkich ograniczeń dotyczących typów może spowodować powstanie otworu zabezpieczeń wewnątrz aplikacji. W przypadku korzystania z tego mechanizmu upewnij się, że aplikacja nie używa lub **nie** `DataSet` `DataTable` odczytuje niezaufanych danych wejściowych. Aby uzyskać więcej informacji, zobacz [CVE-2020-1147](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-1147) i w poniższej sekcji zatytułowanej [bezpieczeństwo w odniesieniu do niezaufanych danych wejściowych](#swr).
+> Usunięcie wszystkich ograniczeń dotyczących typów może spowodować powstanie otworu zabezpieczeń wewnątrz aplikacji. W przypadku korzystania z tego mechanizmu upewnij się, że aplikacja nie używa lub **nie** `DataSet` `DataTable` odczytuje niezaufanych danych wejściowych. Aby uzyskać więcej informacji, zobacz [CVE-2020-1147](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1147) i w poniższej sekcji zatytułowanej [bezpieczeństwo w odniesieniu do niezaufanych danych wejściowych](#swr).
 
 #### <a name="through-appcontext-configuration-net-framework-46---48-net-core-21-and-later-net-50-and-later"></a>Za poorednictwem konfiguracji AppContext (.NET Framework 4,6-4,8, .NET Core 2,1 i nowszych, .NET 5,0 i nowsze)
 
@@ -463,7 +464,8 @@ public class MyClass
 
 Deserializacja a `DataSet` lub `DataTable` w ten sposób z niezaufanego obiektu BLOB JSON nie jest bezpieczna. Ten wzorzec jest narażony na atak typu "odmowa usługi". Atak może ulec awarii lub nie reagować.
 
-**Uwaga**: Firma Microsoft nie gwarantuje ani nie obsługuje implementacji bibliotek innych firm, takich jak _Newtonsoft.Json_. Te informacje są dostarczane w celu zapewnienia kompletności i są dokładne od momentu tego zapisu.
+> [!NOTE]
+> Firma Microsoft nie gwarantuje ani nie obsługuje implementacji bibliotek innych firm, takich jak _Newtonsoft.Json_. Te informacje są dostarczane w celu zapewnienia kompletności i są dokładne od momentu tego zapisu.
 
 ## <a name="deserialize-a-dataset-or-datatable-via-binaryformatter"></a>Deserializacja zestawu danych lub DataTable za pośrednictwem BinaryFormatter
 

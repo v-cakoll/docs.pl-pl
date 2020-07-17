@@ -31,7 +31,7 @@
               href: iceegen-getsectioncreate-method.md
             - name: 'GetSectionDataLen, metoda'
               href: iceegen-getsectiondatalen-method.md
-            - name: 'GetString, metoda'
+            - name: GetString — Metoda
               href: iceegen-getstring-method.md
             - name: 'GetStringSection, metoda'
               href: iceegen-getstringsection-method.md
@@ -115,7 +115,7 @@
           items:
             - name: 'DefineScope, metoda'
               href: imetadatadispenser-definescope-method.md
-            - name: 'OpenScope, metoda'
+            - name: OpenScope — Metoda
               href: imetadatadispenser-openscope-method.md
             - name: 'OpenScopeOnMemory, metoda'
               href: imetadatadispenser-openscopeonmemory-method.md
@@ -143,7 +143,7 @@
               href: imetadataemit-definecustomattribute-method.md
             - name: 'DefineEvent, metoda'
               href: imetadataemit-defineevent-method.md
-            - name: 'DefineField, metoda'
+            - name: DefineField — Metoda
               href: imetadataemit-definefield-method.md
             - name: 'DefineImportMember, metoda'
               href: imetadataemit-defineimportmember-method.md
@@ -264,7 +264,7 @@
           items:
             - name: 'IsTokenMarked, metoda'
               href: imetadatafilter-istokenmarked-method.md
-            - name: 'MarkToken, metoda'
+            - name: MarkToken — Metoda
               href: imetadatafilter-marktoken-method.md
             - name: 'UnmarkAll, metoda'
               href: imetadatafilter-unmarkall-method.md
@@ -331,7 +331,7 @@
               href: imetadataimport-findtypedefbyname-method.md
             - name: 'FindTypeRef, metoda'
               href: imetadataimport-findtyperef-method.md
-            - name: 'GetClassLayout, metoda'
+            - name: GetClassLayout — Metoda
               href: imetadataimport-getclasslayout-method.md
             - name: 'GetCustomAttributeByName, metoda'
               href: imetadataimport-getcustomattributebyname-method.md
@@ -349,7 +349,7 @@
               href: imetadataimport-getmemberprops-method.md
             - name: 'GetMemberRefProps, metoda'
               href: imetadataimport-getmemberrefprops-method.md
-            - name: 'GetMethodProps, metoda'
+            - name: GetMethodProps — Metoda
               href: imetadataimport-getmethodprops-method.md
             - name: 'GetMethodSemantics, metoda'
               href: imetadataimport-getmethodsemantics-method.md
@@ -385,7 +385,7 @@
               href: imetadataimport-gettyperefprops-method.md
             - name: 'GetTypeSpecFromToken, metoda'
               href: imetadataimport-gettypespecfromtoken-method.md
-            - name: 'GetUserString, metoda'
+            - name: GetUserString — Metoda
               href: imetadataimport-getuserstring-method.md
             - name: 'IsGlobal, metoda'
               href: imetadataimport-isglobal-method.md
@@ -412,7 +412,7 @@
               href: imetadataimport2-getmethodspecprops-method.md
             - name: 'GetPEKind, metoda'
               href: imetadataimport2-getpekind-method.md
-            - name: 'GetVersionString, metoda'
+            - name: GetVersionString — Metoda
               href: imetadataimport2-getversionstring-method.md
         - name: IMetaDataInfo — Interfejs
           href: imetadatainfo-interface.md
@@ -448,7 +448,7 @@
               href: imetadatatables-getnumtables-method.md
             - name: 'GetRow, metoda'
               href: imetadatatables-getrow-method.md
-            - name: 'GetString, metoda'
+            - name: GetString — Metoda
               href: imetadatatables-getstring-method.md
             - name: 'GetStringHeapSize, metoda'
               href: imetadatatables-getstringheapsize-method.md

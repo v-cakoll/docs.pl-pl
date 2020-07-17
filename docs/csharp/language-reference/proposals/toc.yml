@@ -1,6 +1,6 @@
 - name: Specyfikacje najnowszych funkcji
   items:
-    - name: 'Propozycje specyfikacji języka C# 7.0'
+    - name: Propozycje specyfikacji języka C# 7.0
       items:
         - name: Dopasowanie do wzorca
           href: ../../../../_csharplang/proposals/csharp-7.0/pattern-matching.md
@@ -14,7 +14,7 @@
           href: ../../../../_csharplang/proposals/csharp-7.0/binary-literals.md
         - name: Separatory cyfr
           href: ../../../../_csharplang/proposals/csharp-7.0/digit-separators.md
-    - name: 'Propozycje specyfikacji języka C# 7.1'
+    - name: Propozycje specyfikacji języka C# 7.1
       items:
         - name: Metoda główna Async
           href: ../../../../_csharplang/proposals/csharp-7.1/async-main.md
@@ -24,7 +24,7 @@
           href: ../../../../_csharplang/proposals/csharp-7.1/infer-tuple-names.md
         - name: Dopasowywanie wzorca do typów ogólnych
           href: ../../../../_csharplang/proposals/csharp-7.1/generics-pattern-match.md
-    - name: 'Propozycje specyfikacji języka C# 7.2'
+    - name: Propozycje specyfikacji języka C# 7.2
       items:
         - name: Odwołania tylko do odczytu
           href: ../../../../_csharplang/proposals/csharp-7.2/readonly-ref.md
@@ -38,7 +38,7 @@
           href: ../../../../_csharplang/proposals/csharp-7.2/conditional-ref.md
         - name: Separator cyfry wiodącej
           href: ../../../../_csharplang/proposals/csharp-7.2/leading-separator.md
-    - name: 'Propozycje specyfikacji języka C# 7.3'
+    - name: Propozycje specyfikacji języka C# 7.3
       items:
         - name: Niezarządzane ograniczenia typu ogólnego
           href: ../../../../_csharplang/proposals/csharp-7.3/blittable.md
@@ -58,7 +58,7 @@
           href: ../../../../_csharplang/proposals/csharp-7.3/tuple-equality.md
         - name: Ulepszone kandydujące metody rozwiązywania przeciążenia
           href: ../../../../_csharplang/proposals/csharp-7.3/improved-overload-candidates.md
-    - name: 'Propozycje specyfikacji języka C# 8.0'
+    - name: Propozycje specyfikacji języka C# 8.0
       items:
         - name: Typy referencyjne dopuszczające wartość null — propozycja
           href: ../../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md

@@ -1,4 +1,4 @@
-- name: 'Specyfikacja języka C# 6.0 (wersja robocza)'
+- name: Specyfikacja języka C# 6.0 (wersja robocza)
   items:
     - name: Wprowadzenie
       href: ../../../../_csharplang/spec/introduction.md

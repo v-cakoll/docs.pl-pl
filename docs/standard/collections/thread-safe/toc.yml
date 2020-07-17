@@ -5,15 +5,15 @@
       href: blockingcollection-overview.md
     - name: Kiedy należy używać kolekcji bezpiecznych wątkowo
       href: when-to-use-a-thread-safe-collection.md
-    - name: 'Porady: dodawanie i pobieranie elementów osobno z kolekcji BlockingCollection'
+    - name: 'Instrukcje: Dodawanie i pobieranie elementów osobno w ramach kolekcji BlockingCollection'
       href: how-to-add-and-take-items.md
-    - name: 'Porady: używanie ForEach do usuwanie elementów BlockingCollection'
+    - name: 'Instrukcje: Używanie metody ForEach do usuwania elementów z kolekcji BlockingCollection'
       href: how-to-use-foreach-to-remove.md
-    - name: 'Porady: dodawanie i usuwanie elementów ConcurrentDictionary'
+    - name: 'Instrukcje: Dodawanie elementów do kolekcji ConcurrentDictionary i ich usuwanie'
       href: how-to-add-and-remove-items.md
-    - name: 'Porady: dodawanie do kolekcji funkcji blokujących i ograniczających'
+    - name: 'Instrukcje: Dodawanie funkcji blokujących i ograniczających do kolekcji'
       href: how-to-add-bounding-and-blocking.md
-    - name: 'Porady: użycie tablic kolekcji blokujących w potoku'
+    - name: 'Instrukcje: Używanie tablic kolekcji blokujących w potoku'
       href: how-to-use-arrays-of-blockingcollections.md
-    - name: 'Porady: tworzenie puli obiektów przy użyciu ConcurrentBag'
+    - name: 'Instrukcje: Tworzenie puli obiektów przy użyciu obiektu ConcurrentBag'
       href: how-to-create-an-object-pool.md

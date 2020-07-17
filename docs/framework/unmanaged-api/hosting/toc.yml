@@ -187,41 +187,41 @@
               items:
                 - name: CloseEnum — Metoda
                   href: icorruntimehost-closeenum-method.md
-                - name: CreateDomain — Metoda
+                - name: 'CreateDomain, metoda'
                   href: icorruntimehost-createdomain-method.md
-                - name: CreateDomainSetup — Metoda
+                - name: 'CreateDomainSetup, metoda'
                   href: icorruntimehost-createdomainsetup-method.md
-                - name: CreateDomainEx — Metoda
+                - name: 'CreateDomainEx, metoda'
                   href: icorruntimehost-createdomainex-method.md
-                - name: CreateEvidence — Metoda
+                - name: 'CreateEvidence, metoda'
                   href: icorruntimehost-createevidence-method.md
-                - name: CreateLogicalThreadState — Metoda
+                - name: 'CreateLogicalThreadState, metoda'
                   href: icorruntimehost-createlogicalthreadstate-method.md
-                - name: CurrentDomain — Metoda
+                - name: 'CurrentDomain, metoda'
                   href: icorruntimehost-currentdomain-method.md
-                - name: DeleteLogicalThreadState — Metoda
+                - name: 'DeleteLogicalThreadState, metoda'
                   href: icorruntimehost-deletelogicalthreadstate-method.md
-                - name: EnumDomains — Metoda
+                - name: 'EnumDomains, metoda'
                   href: icorruntimehost-enumdomains-method.md
-                - name: GetConfiguration — Metoda
+                - name: 'GetConfiguration, metoda'
                   href: icorruntimehost-getconfiguration-method.md
-                - name: GetDefaultDomain — Metoda
+                - name: 'GetDefaultDomain, metoda'
                   href: icorruntimehost-getdefaultdomain-method.md
-                - name: LocksHeldByLogicalThread — Metoda
+                - name: 'LocksHeldByLogicalThread, metoda'
                   href: icorruntimehost-locksheldbylogicalthread-method.md
-                - name: MapFile — Metoda
+                - name: 'MapFile, metoda'
                   href: icorruntimehost-mapfile-method.md
-                - name: NextDomain — Metoda
+                - name: 'NextDomain, metoda'
                   href: icorruntimehost-nextdomain-method.md
                 - name: Start — Metoda
                   href: icorruntimehost-start-method.md
                 - name: Stop — Metoda
                   href: icorruntimehost-stop-method.md
-                - name: SwitchInLogicalThreadState — Metoda
+                - name: 'SwitchInLogicalThreadState, metoda'
                   href: icorruntimehost-switchinlogicalthreadstate-method.md
-                - name: SwitchOutLogicalThreadState — Metoda
+                - name: 'SwitchOutLogicalThreadState, metoda'
                   href: icorruntimehost-switchoutlogicalthreadstate-method.md
-                - name: UnloadDomain — Metoda
+                - name: 'UnloadDomain, metoda'
                   href: icorruntimehost-unloaddomain-method.md
         - name: Interfejsy hostingu środowiska CLR
           href: clr-hosting-interfaces.md
@@ -229,141 +229,141 @@
             - name: IActionOnCLREvent — Interfejs
               href: iactiononclrevent-interface.md
               items:
-                - name: OnEvent — Metoda
+                - name: 'OnEvent, metoda'
                   href: iactiononclrevent-onevent-method.md
             - name: IApartmentCallback — Interfejs
               href: iapartmentcallback-interface.md
               items:
-                - name: DoCallback — Metoda
+                - name: 'DoCallback, metoda'
                   href: iapartmentcallback-docallback-method.md
             - name: IAppDomainBinding — Interfejs
               href: iappdomainbinding-interface.md
               items:
-                - name: OnAppDomain — Metoda
+                - name: 'OnAppDomain, metoda'
                   href: iappdomainbinding-onappdomain-method.md
             - name: ICatalogServices — Interfejs
               href: icatalogservices-interface.md
               items:
-                - name: Autodone — Metoda
+                - name: 'Autodone, metoda'
                   href: icatalogservices-autodone-method.md
-                - name: NotAutodone — Metoda
+                - name: 'NotAutodone, metoda'
                   href: icatalogservices-notautodone-method.md
             - name: ICLRAssemblyIdentityManager — Interfejs
               href: iclrassemblyidentitymanager-interface.md
               items:
-                - name: GetBindingIdentityFromFile — Metoda
+                - name: 'GetBindingIdentityFromFile, metoda'
                   href: iclrassemblyidentitymanager-getbindingidentityfromfile-method.md
-                - name: GetBindingIdentityFromStream — Metoda
+                - name: 'GetBindingIdentityFromStream, metoda'
                   href: iclrassemblyidentitymanager-getbindingidentityfromstream-method.md
-                - name: GetCLRAssemblyReferenceList — Metoda
+                - name: 'GetCLRAssemblyReferenceList, metoda'
                   href: iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md
-                - name: GetProbingAssembliesFromReference — Metoda
+                - name: 'GetProbingAssembliesFromReference, metoda'
                   href: iclrassemblyidentitymanager-getprobingassembliesfromreference-method.md
-                - name: GetReferencedAssembliesFromFile — Metoda
+                - name: 'GetReferencedAssembliesFromFile, metoda'
                   href: iclrassemblyidentitymanager-getreferencedassembliesfromfile-method.md
-                - name: GetReferencedAssembliesFromStream — Metoda
+                - name: 'GetReferencedAssembliesFromStream, metoda'
                   href: iclrassemblyidentitymanager-getreferencedassembliesfromstream-method.md
-                - name: IsStronglyNamed — Metoda
+                - name: 'IsStronglyNamed, metoda'
                   href: iclrassemblyidentitymanager-isstronglynamed-method.md
             - name: ICLRAssemblyReferenceList — Interfejs
               href: iclrassemblyreferencelist-interface.md
               items:
-                - name: IsAssemblyReferenceInList — Metoda
+                - name: 'IsAssemblyReferenceInList, metoda'
                   href: iclrassemblyreferencelist-isassemblyreferenceinlist-method.md
-                - name: IsStringAssemblyReferenceInList — Metoda
+                - name: 'IsStringAssemblyReferenceInList, metoda'
                   href: iclrassemblyreferencelist-isstringassemblyreferenceinlist-method.md
             - name: ICLRControl — Interfejs
               href: iclrcontrol-interface.md
               items:
-                - name: GetCLRManager — Metoda
+                - name: 'GetCLRManager, metoda'
                   href: iclrcontrol-getclrmanager-method.md
-                - name: SetAppDomainManagerType — Metoda
+                - name: 'SetAppDomainManagerType, metoda'
                   href: iclrcontrol-setappdomainmanagertype-method.md
             - name: ICLRDebugManager — Interfejs
               href: iclrdebugmanager-interface.md
               items:
-                - name: BeginConnection — Metoda
+                - name: 'BeginConnection, metoda'
                   href: iclrdebugmanager-beginconnection-method.md
-                - name: EndConnection — Metoda
+                - name: 'EndConnection, metoda'
                   href: iclrdebugmanager-endconnection-method.md
-                - name: GetDacl — Metoda
+                - name: 'GetDacl, metoda'
                   href: iclrdebugmanager-getdacl-method.md
                 - name: IsDebuggerAttached — Metoda
                   href: iclrdebugmanager-isdebuggerattached-method.md
-                - name: SetConnectionTasks — Metoda
+                - name: 'SetConnectionTasks, metoda'
                   href: iclrdebugmanager-setconnectiontasks-method.md
-                - name: SetDacl — Metoda
+                - name: 'SetDacl, metoda'
                   href: iclrdebugmanager-setdacl-method.md
-                - name: SetSymbolReadingPolicy — Metoda
+                - name: 'SetSymbolReadingPolicy, metoda'
                   href: iclrdebugmanager-setsymbolreadingpolicy-method.md
             - name: ICLRErrorReportingManager — Interfejs
               href: iclrerrorreportingmanager-interface.md
               items:
-                - name: BeginCustomDump — Metoda
+                - name: 'BeginCustomDump, metoda'
                   href: iclrerrorreportingmanager-begincustomdump-method.md
-                - name: EndCustomDump — Metoda
+                - name: 'EndCustomDump, metoda'
                   href: iclrerrorreportingmanager-endcustomdump-method.md
-                - name: GetBucketParametersForCurrentException — Metoda
+                - name: 'GetBucketParametersForCurrentException, metoda'
                   href: iclrerrorreportingmanager-getbucketparametersforcurrentexception-method.md
             - name: ICLRGCManager — Interfejs
               href: iclrgcmanager-interface.md
               items:
                 - name: Collect — Metoda
                   href: iclrgcmanager-collect-method.md
-                - name: GetStats — Metoda
+                - name: 'GetStats, metoda'
                   href: iclrgcmanager-getstats-method.md
                 - name: SetGCStartupLimits — Metoda
                   href: iclrgcmanager-setgcstartuplimits-method.md
             - name: ICLRHostBindingPolicyManager — Interfejs
               href: iclrhostbindingpolicymanager-interface.md
               items:
-                - name: EvaluatePolicy — Metoda
+                - name: 'EvaluatePolicy, metoda'
                   href: iclrhostbindingpolicymanager-evaluatepolicy-method.md
-                - name: ModifyApplicationPolicy — Metoda
+                - name: 'ModifyApplicationPolicy, metoda'
                   href: iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md
             - name: ICLRHostProtectionManager — Interfejs
               href: iclrhostprotectionmanager-interface.md
               items:
                 - name: SetEagerSerializeGrantSets
                   href: iclrhostprotectionmanager-seteagerserializegrantsets-method.md
-                - name: SetProtectedCategories — Metoda
+                - name: 'SetProtectedCategories, metoda'
                   href: iclrhostprotectionmanager-setprotectedcategories-method.md
             - name: ICLRIoCompletionManager — Interfejs
               href: iclriocompletionmanager-interface.md
               items:
-                - name: OnComplete — Metoda
+                - name: 'OnComplete, metoda'
                   href: iclriocompletionmanager-oncomplete-method.md
             - name: ICLRMemoryNotificationCallback — Interfejs
               href: iclrmemorynotificationcallback-interface.md
               items:
-                - name: OnMemoryNotification — Metoda
+                - name: 'OnMemoryNotification, metoda'
                   href: iclrmemorynotificationcallback-onmemorynotification-method.md
             - name: ICLROnEventManager — Interfejs
               href: iclroneventmanager-interface.md
               items:
-                - name: RegisterActionOnEvent — Metoda
+                - name: 'RegisterActionOnEvent, metoda'
                   href: iclroneventmanager-registeractiononevent-method.md
-                - name: UnregisterActionOnEvent — Metoda
+                - name: 'UnregisterActionOnEvent, metoda'
                   href: iclroneventmanager-unregisteractiononevent-method.md
             - name: ICLRPolicyManager — Interfejs
               href: iclrpolicymanager-interface.md
               items:
-                - name: SetActionOnFailure — Metoda
+                - name: 'SetActionOnFailure, metoda'
                   href: iclrpolicymanager-setactiononfailure-method.md
-                - name: SetActionOnTimeout — Metoda
+                - name: 'SetActionOnTimeout, metoda'
                   href: iclrpolicymanager-setactionontimeout-method.md
-                - name: SetDefaultAction — Metoda
+                - name: 'SetDefaultAction, metoda'
                   href: iclrpolicymanager-setdefaultaction-method.md
-                - name: SetTimeout — Metoda
+                - name: 'SetTimeout, metoda'
                   href: iclrpolicymanager-settimeout-method.md
-                - name: SetTimeoutAndAction — Metoda
+                - name: 'SetTimeoutAndAction, metoda'
                   href: iclrpolicymanager-settimeoutandaction-method.md
-                - name: SetUnhandledExceptionPolicy — Metoda
+                - name: 'SetUnhandledExceptionPolicy, metoda'
                   href: iclrpolicymanager-setunhandledexceptionpolicy-method.md
             - name: ICLRProbingAssemblyEnum — Interfejs
               href: iclrprobingassemblyenum-interface.md
               items:
-                - name: Get — Metoda
+                - name: 'Get, metoda'
                   href: iclrprobingassemblyenum-get-method.md
             - name: ICLRReferenceAssemblyEnum — Interfejs
               href: iclrreferenceassemblyenum-interface.md
@@ -373,68 +373,68 @@
             - name: ICLRRuntimeHost — Interfejs
               href: iclrruntimehost-interface.md
               items:
-                - name: ExecuteApplication — Metoda
+                - name: 'ExecuteApplication, metoda'
                   href: iclrruntimehost-executeapplication-method.md
-                - name: ExecuteInAppDomain — Metoda
+                - name: 'ExecuteInAppDomain, metoda'
                   href: iclrruntimehost-executeinappdomain-method.md
-                - name: ExecuteInDefaultAppDomain — Metoda
+                - name: 'ExecuteInDefaultAppDomain, metoda'
                   href: iclrruntimehost-executeindefaultappdomain-method.md
-                - name: GetCLRControl — Metoda
+                - name: 'GetCLRControl, metoda'
                   href: iclrruntimehost-getclrcontrol-method.md
-                - name: GetCurrentAppDomainId — Metoda
+                - name: 'GetCurrentAppDomainId, metoda'
                   href: iclrruntimehost-getcurrentappdomainid-method.md
-                - name: SetHostControl — Metoda
+                - name: 'SetHostControl, metoda'
                   href: iclrruntimehost-sethostcontrol-method.md
                 - name: Start — Metoda
                   href: iclrruntimehost-start-method.md
                 - name: Stop — Metoda
                   href: iclrruntimehost-stop-method.md
-                - name: UnloadAppDomain — Metoda
+                - name: 'UnloadAppDomain, metoda'
                   href: iclrruntimehost-unloadappdomain-method.md
             - name: ICLRSyncManager — Interfejs
               href: iclrsyncmanager-interface.md
               items:
-                - name: CreateRWLockOwnerIterator — Metoda
+                - name: 'CreateRWLockOwnerIterator, metoda'
                   href: iclrsyncmanager-createrwlockowneriterator-method.md
-                - name: DeleteRWLockOwnerIterator — Metoda
+                - name: 'DeleteRWLockOwnerIterator, metoda'
                   href: iclrsyncmanager-deleterwlockowneriterator-method.md
-                - name: GetMonitorOwner — Metoda
+                - name: 'GetMonitorOwner, metoda'
                   href: iclrsyncmanager-getmonitorowner-method.md
-                - name: GetRWLockOwnerNext — Metoda
+                - name: 'GetRWLockOwnerNext, metoda'
                   href: iclrsyncmanager-getrwlockownernext-method.md
             - name: ICLRTask — Interfejs
               href: iclrtask-interface.md
               items:
                 - name: Abort — Metoda
                   href: iclrtask-abort-method.md
-                - name: ExitTask — Metoda
+                - name: 'ExitTask, metoda'
                   href: iclrtask-exittask-method.md
-                - name: GetMemStats — Metoda
+                - name: 'GetMemStats, metoda'
                   href: iclrtask-getmemstats-method.md
-                - name: LocksHeld — Metoda
+                - name: 'LocksHeld, metoda'
                   href: iclrtask-locksheld-method.md
-                - name: NeedsPriorityScheduling — Metoda
+                - name: 'NeedsPriorityScheduling, metoda'
                   href: iclrtask-needspriorityscheduling-method.md
-                - name: 'Reset, metoda'
+                - name: Reset — Metoda
                   href: iclrtask-reset-method.md
                 - name: RudeAbort — Metoda
                   href: iclrtask-rudeabort-method.md
-                - name: SetTaskIdentifier — Metoda
+                - name: 'SetTaskIdentifier, metoda'
                   href: iclrtask-settaskidentifier-method.md
-                - name: SwitchIn — Metoda
+                - name: 'SwitchIn, metoda'
                   href: iclrtask-switchin-method.md
-                - name: SwitchOut — Metoda
+                - name: 'SwitchOut, metoda'
                   href: iclrtask-switchout-method.md
-                - name: YieldTask — Metoda
+                - name: 'YieldTask, metoda'
                   href: iclrtask-yieldtask-method.md
             - name: ICLRTaskManager — Interfejs
               href: iclrtaskmanager-interface.md
               items:
-                - name: CreateTask — Metoda
+                - name: 'CreateTask, metoda'
                   href: iclrtaskmanager-createtask-method.md
                 - name: GetCurrentTask — Metoda
                   href: iclrtaskmanager-getcurrenttask-method.md
-                - name: GetCurrentTaskType — Metoda
+                - name: 'GetCurrentTaskType, metoda'
                   href: iclrtaskmanager-getcurrenttasktype-method.md
                 - name: SetLocale — Metoda
                   href: iclrtaskmanager-setlocale-method.md
@@ -450,153 +450,153 @@
             - name: ICorConfiguration — Interfejs
               href: icorconfiguration-interface.md
               items:
-                - name: AddDebuggerSpecialThread — Metoda
+                - name: 'AddDebuggerSpecialThread, metoda'
                   href: icorconfiguration-adddebuggerspecialthread-method.md
-                - name: SetDebuggerThreadControl — Metoda
+                - name: 'SetDebuggerThreadControl, metoda'
                   href: icorconfiguration-setdebuggerthreadcontrol-method.md
-                - name: SetGCHostControl — Metoda
+                - name: 'SetGCHostControl, metoda'
                   href: icorconfiguration-setgchostcontrol-method.md
-                - name: SetGCThreadControl — Metoda
+                - name: 'SetGCThreadControl, metoda'
                   href: icorconfiguration-setgcthreadcontrol-method.md
             - name: ICorThreadpool — Interfejs
               href: icorthreadpool-interface.md
               items:
-                - name: CorBindIoCompletionCallback — Metoda
+                - name: 'CorBindIoCompletionCallback, metoda'
                   href: icorthreadpool-corbindiocompletioncallback-method.md
-                - name: CorCallOrQueueUserWorkItem — Metoda
+                - name: 'CorCallOrQueueUserWorkItem, metoda'
                   href: icorthreadpool-corcallorqueueuserworkitem-method.md
-                - name: CorChangeTimer — Metoda
+                - name: 'CorChangeTimer, metoda'
                   href: icorthreadpool-corchangetimer-method.md
-                - name: CorCreateTimer — Metoda
+                - name: 'CorCreateTimer, metoda'
                   href: icorthreadpool-corcreatetimer-method.md
-                - name: CorDeleteTimer — Metoda
+                - name: 'CorDeleteTimer, metoda'
                   href: icorthreadpool-cordeletetimer-method.md
-                - name: CorGetAvailableThreads — Metoda
+                - name: 'CorGetAvailableThreads, metoda'
                   href: icorthreadpool-corgetavailablethreads-method.md
-                - name: CorGetMaxThreads — Metoda
+                - name: 'CorGetMaxThreads, metoda'
                   href: icorthreadpool-corgetmaxthreads-method.md
-                - name: CorQueueUserWorkItem — Metoda
+                - name: 'CorQueueUserWorkItem, metoda'
                   href: icorthreadpool-corqueueuserworkitem-method.md
-                - name: CorRegisterWaitForSingleObject — Metoda
+                - name: 'CorRegisterWaitForSingleObject, metoda'
                   href: icorthreadpool-corregisterwaitforsingleobject-method.md
-                - name: CorSetMaxThreads — Metoda
+                - name: 'CorSetMaxThreads, metoda'
                   href: icorthreadpool-corsetmaxthreads-method.md
-                - name: CorUnregisterWait — Metoda
+                - name: 'CorUnregisterWait, metoda'
                   href: icorthreadpool-corunregisterwait-method.md
             - name: IDebuggerInfo — Interfejs
               href: idebuggerinfo-interface.md
               items:
-                - name: IsDebuggerAttached — Metoda
+                - name: 'IsDebuggerAttached, metoda'
                   href: idebuggerinfo-isdebuggerattached-method.md
             - name: IDebuggerThreadControl — Interfejs
               href: idebuggerthreadcontrol-interface.md
               items:
-                - name: ReleaseAllRuntimeThreads — Metoda
+                - name: 'ReleaseAllRuntimeThreads, metoda'
                   href: idebuggerthreadcontrol-releaseallruntimethreads-method.md
-                - name: StartBlockingForDebugger — Metoda
+                - name: 'StartBlockingForDebugger, metoda'
                   href: idebuggerthreadcontrol-startblockingfordebugger-method.md
-                - name: ThreadIsBlockingForDebugger — Metoda
+                - name: 'ThreadIsBlockingForDebugger, metoda'
                   href: idebuggerthreadcontrol-threadisblockingfordebugger-method.md
             - name: IGCHost — Interfejs
               href: igchost-interface.md
               items:
-                - name: Collect — Metoda
+                - name: 'Collect, metoda'
                   href: igchost-collect-method.md
                 - name: GetStats — Metoda
                   href: igchost-getstats-method.md
-                - name: GetThreadStats — Metoda
+                - name: 'GetThreadStats, metoda'
                   href: igchost-getthreadstats-method.md
-                - name: SetGCStartupLimits — Metoda
+                - name: 'SetGCStartupLimits, metoda'
                   href: igchost-setgcstartuplimits-method.md
-                - name: SetVirtualMemLimit — Metoda
+                - name: 'SetVirtualMemLimit, metoda'
                   href: igchost-setvirtualmemlimit-method.md
             - name: IGCHost2 — Interfejs
               href: igchost2-interface.md
               items:
-                - name: SetGCStartupLimitsEx — Metoda
+                - name: 'SetGCStartupLimitsEx, metoda'
                   href: igchost2-setgcstartuplimitsex-method.md
             - name: IGCHostControl — Interfejs
               href: igchostcontrol-interface.md
               items:
-                - name: RequestVirtualMemLimit — Metoda
+                - name: 'RequestVirtualMemLimit, metoda'
                   href: igchostcontrol-requestvirtualmemlimit-method.md
             - name: IGCThreadControl — Interfejs
               href: igcthreadcontrol-interface.md
               items:
                 - name: SuspensionEnding — Metoda
                   href: igcthreadcontrol-suspensionending-method.md
-                - name: SuspensionStarting — Metoda
+                - name: 'SuspensionStarting, metoda'
                   href: igcthreadcontrol-suspensionstarting-method.md
                 - name: ThreadIsBlockingForSuspension — Metoda
                   href: igcthreadcontrol-threadisblockingforsuspension-method.md
             - name: IHostAssemblyManager — Interfejs
               href: ihostassemblymanager-interface.md
               items:
-                - name: GetAssemblyStore — Metoda
+                - name: 'GetAssemblyStore, metoda'
                   href: ihostassemblymanager-getassemblystore-method.md
-                - name: GetNonHostStoreAssemblies — Metoda
+                - name: 'GetNonHostStoreAssemblies, metoda'
                   href: ihostassemblymanager-getnonhoststoreassemblies-method.md
             - name: IHostAssemblyStore — Interfejs
               href: ihostassemblystore-interface.md
               items:
-                - name: ProvideAssembly — Metoda
+                - name: 'ProvideAssembly, metoda'
                   href: ihostassemblystore-provideassembly-method.md
-                - name: ProvideModule — Metoda
+                - name: 'ProvideModule, metoda'
                   href: ihostassemblystore-providemodule-method.md
             - name: IHostAutoEvent — Interfejs
               href: ihostautoevent-interface.md
               items:
                 - name: Set — Metoda
                   href: ihostautoevent-set-method.md
-                - name: Wait — Metoda
+                - name: 'Wait, metoda'
                   href: ihostautoevent-wait-method.md
             - name: IHostControl — Interfejs
               href: ihostcontrol-interface.md
               items:
-                - name: GetHostManager — Metoda
+                - name: 'GetHostManager, metoda'
                   href: ihostcontrol-gethostmanager-method.md
-                - name: SetAppDomainManager — Metoda
+                - name: 'SetAppDomainManager, metoda'
                   href: ihostcontrol-setappdomainmanager-method.md
             - name: IHostCrst — Interfejs
               href: ihostcrst-interface.md
               items:
-                - name: Enter — Metoda
+                - name: 'Enter, metoda'
                   href: ihostcrst-enter-method.md
-                - name: Leave — Metoda
+                - name: 'Leave, metoda'
                   href: ihostcrst-leave-method.md
-                - name: SetSpinCount — Metoda
+                - name: 'SetSpinCount, metoda'
                   href: ihostcrst-setspincount-method.md
-                - name: TryEnter — Metoda
+                - name: 'TryEnter, metoda'
                   href: ihostcrst-tryenter-method.md
             - name: IHostGCManager — Interfejs
               href: ihostgcmanager-interface.md
               items:
-                - name: SuspensionEnding — Metoda
+                - name: 'SuspensionEnding, metoda'
                   href: ihostgcmanager-suspensionending-method.md
-                - name: SuspensionStarting — Metoda
+                - name: 'SuspensionStarting, metoda'
                   href: ihostgcmanager-suspensionstarting-method.md
-                - name: ThreadIsBlockingForSuspension — Metoda
+                - name: 'ThreadIsBlockingForSuspension, metoda'
                   href: ihostgcmanager-threadisblockingforsuspension-method.md
             - name: IHostIoCompletionManager — Interfejs
               href: ihostiocompletionmanager-interface.md
               items:
-                - name: Bind — Metoda
+                - name: 'Bind, metoda'
                   href: ihostiocompletionmanager-bind-method.md
-                - name: CloseIoCompletionPort — Metoda
+                - name: 'CloseIoCompletionPort, metoda'
                   href: ihostiocompletionmanager-closeiocompletionport-method.md
-                - name: CreateIoCompletionPort — Metoda
+                - name: 'CreateIoCompletionPort, metoda'
                   href: ihostiocompletionmanager-createiocompletionport-method.md
                 - name: GetAvailableThreads — Metoda
                   href: ihostiocompletionmanager-getavailablethreads-method.md
-                - name: GetHostOverlappedSize — Metoda
+                - name: 'GetHostOverlappedSize, metoda'
                   href: ihostiocompletionmanager-gethostoverlappedsize-method.md
                 - name: GetMaxThreads — Metoda
                   href: ihostiocompletionmanager-getmaxthreads-method.md
                 - name: GetMinThreads — Metoda
                   href: ihostiocompletionmanager-getminthreads-method.md
-                - name: InitializeHostOverlapped — Metoda
+                - name: 'InitializeHostOverlapped, metoda'
                   href: ihostiocompletionmanager-initializehostoverlapped-method.md
-                - name: SetCLRIoCompletionManager — Metoda
+                - name: 'SetCLRIoCompletionManager, metoda'
                   href: ihostiocompletionmanager-setclriocompletionmanager-method.md
                 - name: SetMaxThreads — Metoda
                   href: ihostiocompletionmanager-setmaxthreads-method.md
@@ -607,237 +607,237 @@
               items:
                 - name: Alloc — Metoda
                   href: ihostmalloc-alloc-method.md
-                - name: DebugAlloc — Metoda
+                - name: 'DebugAlloc, metoda'
                   href: ihostmalloc-debugalloc-method.md
-                - name: Free — Metoda
+                - name: 'Free, metoda'
                   href: ihostmalloc-free-method.md
             - name: IHostManualEvent — Interfejs
               href: ihostmanualevent-interface.md
               items:
-                - name: 'Reset, metoda'
+                - name: Reset — Metoda
                   href: ihostmanualevent-reset-method.md
-                - name: Set — Metoda
+                - name: 'Set, metoda'
                   href: ihostmanualevent-set-method.md
                 - name: Wait — Metoda
                   href: ihostmanualevent-wait-method.md
             - name: IHostMemoryManager — Interfejs
               href: ihostmemorymanager-interface.md
               items:
-                - name: AcquiredVirtualAddressSpace — Metoda
+                - name: 'AcquiredVirtualAddressSpace, metoda'
                   href: ihostmemorymanager-acquiredvirtualaddressspace-method.md
-                - name: CreateMAlloc — Metoda
+                - name: 'CreateMAlloc, metoda'
                   href: ihostmemorymanager-createmalloc-method.md
-                - name: GetMemoryLoad — Metoda
+                - name: 'GetMemoryLoad, metoda'
                   href: ihostmemorymanager-getmemoryload-method.md
-                - name: NeedsVirtualAddressSpace — Metoda
+                - name: 'NeedsVirtualAddressSpace, metoda'
                   href: ihostmemorymanager-needsvirtualaddressspace-method.md
-                - name: RegisterMemoryNotificationCallback — Metoda
+                - name: 'RegisterMemoryNotificationCallback, metoda'
                   href: ihostmemorymanager-registermemorynotificationcallback-method.md
-                - name: ReleasedVirtualAddressSpace — Metoda
+                - name: 'ReleasedVirtualAddressSpace, metoda'
                   href: ihostmemorymanager-releasedvirtualaddressspace-method.md
-                - name: VirtualAlloc — Metoda
+                - name: 'VirtualAlloc, metoda'
                   href: ihostmemorymanager-virtualalloc-method.md
-                - name: VirtualFree — Metoda
+                - name: 'VirtualFree, metoda'
                   href: ihostmemorymanager-virtualfree-method.md
-                - name: VirtualProtect — Metoda
+                - name: 'VirtualProtect, metoda'
                   href: ihostmemorymanager-virtualprotect-method.md
-                - name: VirtualQuery — Metoda
+                - name: 'VirtualQuery, metoda'
                   href: ihostmemorymanager-virtualquery-method.md
             - name: IHostPolicyManager — Interfejs
               href: ihostpolicymanager-interface.md
               items:
-                - name: OnDefaultAction — Metoda
+                - name: 'OnDefaultAction, metoda'
                   href: ihostpolicymanager-ondefaultaction-method.md
-                - name: OnFailure — Metoda
+                - name: 'OnFailure, metoda'
                   href: ihostpolicymanager-onfailure-method.md
-                - name: OnTimeout — Metoda
+                - name: 'OnTimeout, metoda'
                   href: ihostpolicymanager-ontimeout-method.md
             - name: IHostSecurityContext — Interfejs
               href: ihostsecuritycontext-interface.md
               items:
-                - name: Capture — Metoda
+                - name: 'Capture, metoda'
                   href: ihostsecuritycontext-capture-method.md
             - name: IHostSecurityManager — Interfejs
               href: ihostsecuritymanager-interface.md
               items:
-                - name: GetSecurityContext — Metoda
+                - name: 'GetSecurityContext, metoda'
                   href: ihostsecuritymanager-getsecuritycontext-method.md
-                - name: ImpersonateLoggedOnUser — Metoda
+                - name: 'ImpersonateLoggedOnUser, metoda'
                   href: ihostsecuritymanager-impersonateloggedonuser-method.md
-                - name: OpenThreadToken — Metoda
+                - name: 'OpenThreadToken, metoda'
                   href: ihostsecuritymanager-openthreadtoken-method.md
-                - name: RevertToSelf — Metoda
+                - name: 'RevertToSelf, metoda'
                   href: ihostsecuritymanager-reverttoself-method.md
-                - name: SetSecurityContext — Metoda
+                - name: 'SetSecurityContext, metoda'
                   href: ihostsecuritymanager-setsecuritycontext-method.md
-                - name: SetThreadToken — Metoda
+                - name: 'SetThreadToken, metoda'
                   href: ihostsecuritymanager-setthreadtoken-method.md
             - name: IHostSemaphore — Interfejs
               href: ihostsemaphore-interface.md
               items:
-                - name: ReleaseSemaphore — Metoda
+                - name: 'ReleaseSemaphore, metoda'
                   href: ihostsemaphore-releasesemaphore-method.md
                 - name: Wait — Metoda
                   href: ihostsemaphore-wait-method.md
             - name: IHostSyncManager — Interfejs
               href: ihostsyncmanager-interface.md
               items:
-                - name: CreateAutoEvent — Metoda
+                - name: 'CreateAutoEvent, metoda'
                   href: ihostsyncmanager-createautoevent-method.md
-                - name: CreateCrst — Metoda
+                - name: 'CreateCrst, metoda'
                   href: ihostsyncmanager-createcrst-method.md
-                - name: CreateCrstWithSpinCount — Metoda
+                - name: 'CreateCrstWithSpinCount, metoda'
                   href: ihostsyncmanager-createcrstwithspincount-method.md
-                - name: CreateManualEvent — Metoda
+                - name: 'CreateManualEvent, metoda'
                   href: ihostsyncmanager-createmanualevent-method.md
-                - name: CreateMonitorEvent — Metoda
+                - name: 'CreateMonitorEvent, metoda'
                   href: ihostsyncmanager-createmonitorevent-method.md
-                - name: CreateRWLockReaderEvent — Metoda
+                - name: 'CreateRWLockReaderEvent, metoda'
                   href: ihostsyncmanager-createrwlockreaderevent-method.md
-                - name: CreateRWLockWriterEvent — Metoda
+                - name: 'CreateRWLockWriterEvent, metoda'
                   href: ihostsyncmanager-createrwlockwriterevent-method.md
-                - name: CreateSemaphore — Metoda
+                - name: 'CreateSemaphore, metoda'
                   href: ihostsyncmanager-createsemaphore-method.md
-                - name: SetCLRSyncManager — Metoda
+                - name: 'SetCLRSyncManager, metoda'
                   href: ihostsyncmanager-setclrsyncmanager-method.md
             - name: IHostTask — Interfejs
               href: ihosttask-interface.md
               items:
-                - name: Alert — Metoda
+                - name: 'Alert, metoda'
                   href: ihosttask-alert-method.md
-                - name: GetPriority — Metoda
+                - name: 'GetPriority, metoda'
                   href: ihosttask-getpriority-method.md
-                - name: Join — Metoda
+                - name: 'Join, metoda'
                   href: ihosttask-join-method.md
-                - name: SetCLRTask — Metoda
+                - name: 'SetCLRTask, metoda'
                   href: ihosttask-setclrtask-method.md
-                - name: SetPriority — Metoda
+                - name: 'SetPriority, metoda'
                   href: ihosttask-setpriority-method.md
-                - name: Start — Metoda
+                - name: 'Start, metoda'
                   href: ihosttask-start-method.md
             - name: IHostTaskManager — Interfejs
               href: ihosttaskmanager-interface.md
               items:
-                - name: BeginDelayAbort — Metoda
+                - name: 'BeginDelayAbort, metoda'
                   href: ihosttaskmanager-begindelayabort-method.md
-                - name: BeginThreadAffinity — Metoda
+                - name: 'BeginThreadAffinity, metoda'
                   href: ihosttaskmanager-beginthreadaffinity-method.md
-                - name: CallNeedsHostHook — Metoda
+                - name: 'CallNeedsHostHook, metoda'
                   href: ihosttaskmanager-callneedshosthook-method.md
                 - name: CreateTask — Metoda
                   href: ihosttaskmanager-createtask-method.md
-                - name: EndDelayAbort — Metoda
+                - name: 'EndDelayAbort, metoda'
                   href: ihosttaskmanager-enddelayabort-method.md
-                - name: EndThreadAffinity — Metoda
+                - name: 'EndThreadAffinity, metoda'
                   href: ihosttaskmanager-endthreadaffinity-method.md
-                - name: EnterRuntime — Metoda
+                - name: 'EnterRuntime, metoda'
                   href: ihosttaskmanager-enterruntime-method.md
-                - name: GetCurrentTask — Metoda
+                - name: 'GetCurrentTask, metoda'
                   href: ihosttaskmanager-getcurrenttask-method.md
-                - name: GetStackGuarantee — Metoda
+                - name: 'GetStackGuarantee, metoda'
                   href: ihosttaskmanager-getstackguarantee-method.md
-                - name: LeaveRuntime — Metoda
+                - name: 'LeaveRuntime, metoda'
                   href: ihosttaskmanager-leaveruntime-method.md
-                - name: ReverseEnterRuntime — Metoda
+                - name: 'ReverseEnterRuntime, metoda'
                   href: ihosttaskmanager-reverseenterruntime-method.md
-                - name: ReverseLeaveRuntime — Metoda
+                - name: 'ReverseLeaveRuntime, metoda'
                   href: ihosttaskmanager-reverseleaveruntime-method.md
-                - name: SetCLRTaskManager — Metoda
+                - name: 'SetCLRTaskManager, metoda'
                   href: ihosttaskmanager-setclrtaskmanager-method.md
-                - name: SetLocale — Metoda
+                - name: 'SetLocale, metoda'
                   href: ihosttaskmanager-setlocale-method.md
-                - name: SetStackGuarantee — Metoda
+                - name: 'SetStackGuarantee, metoda'
                   href: ihosttaskmanager-setstackguarantee-method.md
-                - name: SetUILocale — Metoda
+                - name: 'SetUILocale, metoda'
                   href: ihosttaskmanager-setuilocale-method.md
-                - name: Sleep — Metoda
+                - name: 'Sleep, metoda'
                   href: ihosttaskmanager-sleep-method.md
-                - name: SwitchToTask — Metoda
+                - name: 'SwitchToTask, metoda'
                   href: ihosttaskmanager-switchtotask-method.md
             - name: IHostThreadPoolManager — Interfejs
               href: ihostthreadpoolmanager-interface.md
               items:
-                - name: GetAvailableThreads — Metoda
+                - name: 'GetAvailableThreads, metoda'
                   href: ihostthreadpoolmanager-getavailablethreads-method.md
-                - name: GetMaxThreads — Metoda
+                - name: 'GetMaxThreads, metoda'
                   href: ihostthreadpoolmanager-getmaxthreads-method.md
-                - name: GetMinThreads — Metoda
+                - name: 'GetMinThreads, metoda'
                   href: ihostthreadpoolmanager-getminthreads-method.md
-                - name: QueueUserWorkItem — Metoda
+                - name: 'QueueUserWorkItem, metoda'
                   href: ihostthreadpoolmanager-queueuserworkitem-method.md
-                - name: SetMaxThreads — Metoda
+                - name: 'SetMaxThreads, metoda'
                   href: ihostthreadpoolmanager-setmaxthreads-method.md
-                - name: SetMinThreads — Metoda
+                - name: 'SetMinThreads, metoda'
                   href: ihostthreadpoolmanager-setminthreads-method.md
             - name: IManagedObject — Interfejs
               href: imanagedobject-interface.md
               items:
-                - name: GetObjectIdentity — Metoda
+                - name: 'GetObjectIdentity, metoda'
                   href: imanagedobject-getobjectidentity-method.md
-                - name: GetSerializedBuffer — Metoda
+                - name: 'GetSerializedBuffer, metoda'
                   href: imanagedobject-getserializedbuffer-method.md
             - name: IObjectHandle — Interfejs
               href: iobjecthandle-interface.md
               items:
-                - name: Unwrap — Metoda
+                - name: 'Unwrap, metoda'
                   href: iobjecthandle-unwrap-method.md
             - name: ITypeName — Interfejs
               href: itypename-interface.md
               items:
-                - name: GetAssemblyName — Metoda
+                - name: 'GetAssemblyName, metoda'
                   href: itypename-getassemblyname-method.md
-                - name: GetModifierLength — Metoda
+                - name: 'GetModifierLength, metoda'
                   href: itypename-getmodifierlength-method.md
-                - name: GetModifiers — Metoda
+                - name: 'GetModifiers, metoda'
                   href: itypename-getmodifiers-method.md
-                - name: GetNameCount — Metoda
+                - name: 'GetNameCount, metoda'
                   href: itypename-getnamecount-method.md
-                - name: GetNames — Metoda
+                - name: 'GetNames, metoda'
                   href: itypename-getnames-method.md
-                - name: GetTypeArgumentCount — Metoda
+                - name: 'GetTypeArgumentCount, metoda'
                   href: itypename-gettypeargumentcount-method.md
-                - name: GetTypeArguments — Metoda
+                - name: 'GetTypeArguments, metoda'
                   href: itypename-gettypearguments-method.md
             - name: ITypeNameBuilder — Interfejs
               href: itypenamebuilder-interface.md
               items:
-                - name: AddArray — Metoda
+                - name: 'AddArray, metoda'
                   href: itypenamebuilder-addarray-method.md
-                - name: AddAssemblySpec — Metoda
+                - name: 'AddAssemblySpec, metoda'
                   href: itypenamebuilder-addassemblyspec-method.md
-                - name: AddByRef — Metoda
+                - name: 'AddByRef, metoda'
                   href: itypenamebuilder-addbyref-method.md
-                - name: AddName — Metoda
+                - name: 'AddName, metoda'
                   href: itypenamebuilder-addname-method.md
-                - name: AddPointer — Metoda
+                - name: 'AddPointer, metoda'
                   href: itypenamebuilder-addpointer-method.md
-                - name: AddSzArray — Metoda
+                - name: 'AddSzArray, metoda'
                   href: itypenamebuilder-addszarray-method.md
-                - name: Clear — Metoda
+                - name: 'Clear, metoda'
                   href: itypenamebuilder-clear-method.md
-                - name: CloseGenericArgument — Metoda
+                - name: 'CloseGenericArgument, metoda'
                   href: itypenamebuilder-closegenericargument-method.md
-                - name: CloseGenericArguments — Metoda
+                - name: 'CloseGenericArguments, metoda'
                   href: itypenamebuilder-closegenericarguments-method.md
-                - name: OpenGenericArgument — Metoda
+                - name: 'OpenGenericArgument, metoda'
                   href: itypenamebuilder-opengenericargument-method.md
-                - name: OpenGenericArguments — Metoda
+                - name: 'OpenGenericArguments, metoda'
                   href: itypenamebuilder-opengenericarguments-method.md
-                - name: ToString — Metoda
+                - name: 'ToString, metoda'
                   href: itypenamebuilder-tostring-method.md
             - name: ITypeNameFactory — Interfejs
               href: itypenamefactory-interface.md
               items:
-                - name: GetTypeNameBuilder — Metoda
+                - name: 'GetTypeNameBuilder, metoda'
                   href: itypenamefactory-gettypenamebuilder-method.md
-                - name: ParseTypeName — Metoda
+                - name: 'ParseTypeName, metoda'
                   href: itypenamefactory-parsetypename-method.md
             - name: IValidator — Interfejs
               href: ivalidator-interface.md
               items:
-                - name: FormatEventInfo — Metoda
+                - name: 'FormatEventInfo, metoda'
                   href: ivalidator-formateventinfo-method.md
-                - name: Validate — Metoda
+                - name: 'Validate, metoda'
                   href: ivalidator-validate-method.md
         - name: Interfejsy hostingu środowiska CLR dodane w programie .NET Framework 4 i 4.5
           href: clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md
@@ -845,18 +845,18 @@
             - name: ICLRAppDomainResourceMonitor — Interfejs
               href: iclrappdomainresourcemonitor-interface.md
               items:
-                - name: GetCurrentAllocated — Metoda
+                - name: 'GetCurrentAllocated, metoda'
                   href: iclrappdomainresourcemonitor-getcurrentallocated-method.md
-                - name: GetCurrentSurvived — Metoda
+                - name: 'GetCurrentSurvived, metoda'
                   href: iclrappdomainresourcemonitor-getcurrentsurvived-method.md
-                - name: GetCurrentCpuTime — Metoda
+                - name: 'GetCurrentCpuTime, metoda'
                   href: iclrappdomainresourcemonitor-getcurrentcputime-method.md
             - name: ICLRDomainManager — Interfejs
               href: iclrdomainmanager-interface.md
               items:
                 - name: SetAppDomainManagerType — Metoda
                   href: iclrdomainmanager-setappdomainmanagertype-method.md
-                - name: SetPropertiesForDefaultAppDomain — Metoda
+                - name: 'SetPropertiesForDefaultAppDomain, metoda'
                   href: iclrdomainmanager-setpropertiesfordefaultappdomain-method.md
             - name: ICLRGCManager2 — Interfejs
               href: iclrgcmanager2-interface.md
@@ -866,104 +866,104 @@
             - name: ICLRMetaHost — Interfejs
               href: iclrmetahost-interface.md
               items:
-                - name: EnumerateInstalledRuntimes — Metoda
+                - name: 'EnumerateInstalledRuntimes, metoda'
                   href: iclrmetahost-enumerateinstalledruntimes-method.md
-                - name: EnumerateLoadedRuntimes — Metoda
+                - name: 'EnumerateLoadedRuntimes, metoda'
                   href: iclrmetahost-enumerateloadedruntimes-method.md
                 - name: 'ExitProcess, metoda'
                   href: iclrmetahost-exitprocess-method.md
-                - name: GetRuntime — Metoda
+                - name: 'GetRuntime, metoda'
                   href: iclrmetahost-getruntime-method.md
-                - name: GetVersionFromFile — Metoda
+                - name: 'GetVersionFromFile, metoda'
                   href: iclrmetahost-getversionfromfile-method.md
-                - name: QueryLegacyV2RuntimeBinding — Metoda
+                - name: 'QueryLegacyV2RuntimeBinding, metoda'
                   href: iclrmetahost-querylegacyv2runtimebinding-method.md
-                - name: RequestRuntimeLoadedNotification — Metoda
+                - name: 'RequestRuntimeLoadedNotification, metoda'
                   href: iclrmetahost-requestruntimeloadednotification-method.md
             - name: ICLRMetaHostPolicy — Interfejs
               href: iclrmetahostpolicy-interface.md
               items:
-                - name: GetRequestedRuntime — Metoda
+                - name: 'GetRequestedRuntime, metoda'
                   href: iclrmetahostpolicy-getrequestedruntime-method.md
             - name: ICLRRuntimeInfo — Interfejs
               href: iclrruntimeinfo-interface.md
               items:
-                - name: BindAsLegacyV2Runtime — Metoda
+                - name: 'BindAsLegacyV2Runtime, metoda'
                   href: iclrruntimeinfo-bindaslegacyv2runtime-method.md
-                - name: GetDefaultStartupFlags — Metoda
+                - name: 'GetDefaultStartupFlags, metoda'
                   href: iclrruntimeinfo-getdefaultstartupflags-method.md
-                - name: GetInterface — Metoda
+                - name: 'GetInterface, metoda'
                   href: iclrruntimeinfo-getinterface-method.md
-                - name: GetProcAddress — Metoda
+                - name: 'GetProcAddress, metoda'
                   href: iclrruntimeinfo-getprocaddress-method.md
-                - name: GetRuntimeDirectory — Metoda
+                - name: 'GetRuntimeDirectory, metoda'
                   href: iclrruntimeinfo-getruntimedirectory-method.md
                 - name: 'GetVersionString, metoda'
                   href: iclrruntimeinfo-getversionstring-method.md
-                - name: IsLoadable — Metoda
+                - name: 'IsLoadable, metoda'
                   href: iclrruntimeinfo-isloadable-method.md
-                - name: IsLoaded — Metoda
+                - name: 'IsLoaded, metoda'
                   href: iclrruntimeinfo-isloaded-method.md
-                - name: IsStarted — Metoda
+                - name: 'IsStarted, metoda'
                   href: iclrruntimeinfo-isstarted-method.md
-                - name: LoadErrorString — Metoda
+                - name: 'LoadErrorString, metoda'
                   href: iclrruntimeinfo-loaderrorstring-method.md
-                - name: LoadLibrary — Metoda
+                - name: 'LoadLibrary, metoda'
                   href: iclrruntimeinfo-loadlibrary-method.md
-                - name: SetDefaultStartupFlags — Metoda
+                - name: 'SetDefaultStartupFlags, metoda'
                   href: iclrruntimeinfo-setdefaultstartupflags-method.md
             - name: ICLRStrongName — Interfejs
               href: iclrstrongname-interface.md
               items:
-                - name: GetHashFromAssemblyFile — Metoda
+                - name: 'GetHashFromAssemblyFile, metoda'
                   href: iclrstrongname-gethashfromassemblyfile-method.md
-                - name: GetHashFromAssemblyFileW — Metoda
+                - name: 'GetHashFromAssemblyFileW, metoda'
                   href: iclrstrongname-gethashfromassemblyfilew-method.md
-                - name: GetHashFromBlob — Metoda
+                - name: 'GetHashFromBlob, metoda'
                   href: iclrstrongname-gethashfromblob-method.md
-                - name: GetHashFromFile — Metoda
+                - name: 'GetHashFromFile, metoda'
                   href: iclrstrongname-gethashfromfile-method.md
-                - name: GetHashFromFileW — Metoda
+                - name: 'GetHashFromFileW, metoda'
                   href: iclrstrongname-gethashfromfilew-method.md
-                - name: GetHashFromHandle — Metoda
+                - name: 'GetHashFromHandle, metoda'
                   href: iclrstrongname-gethashfromhandle-method.md
-                - name: StrongNameCompareAssemblies — Metoda
+                - name: 'StrongNameCompareAssemblies, metoda'
                   href: iclrstrongname-strongnamecompareassemblies-method.md
-                - name: StrongNameFreeBuffer — Metoda
+                - name: 'StrongNameFreeBuffer, metoda'
                   href: iclrstrongname-strongnamefreebuffer-method.md
-                - name: StrongNameGetBlob — Metoda
+                - name: 'StrongNameGetBlob, metoda'
                   href: iclrstrongname-strongnamegetblob-method.md
-                - name: StrongNameGetBlobFromImage — Metoda
+                - name: 'StrongNameGetBlobFromImage, metoda'
                   href: iclrstrongname-strongnamegetblobfromimage-method.md
-                - name: StrongNameGetPublicKey — Metoda
+                - name: 'StrongNameGetPublicKey, metoda'
                   href: iclrstrongname-strongnamegetpublickey-method.md
-                - name: StrongNameHashSize — Metoda
+                - name: 'StrongNameHashSize, metoda'
                   href: iclrstrongname-strongnamehashsize-method.md
-                - name: StrongNameKeyDelete — Metoda
+                - name: 'StrongNameKeyDelete, metoda'
                   href: iclrstrongname-strongnamekeydelete-method.md
-                - name: StrongNameKeyGen — Metoda
+                - name: 'StrongNameKeyGen, metoda'
                   href: iclrstrongname-strongnamekeygen-method.md
-                - name: StrongNameKeyGenEx — Metoda
+                - name: 'StrongNameKeyGenEx, metoda'
                   href: iclrstrongname-strongnamekeygenex-method.md
-                - name: StrongNameKeyInstall — Metoda
+                - name: 'StrongNameKeyInstall, metoda'
                   href: iclrstrongname-strongnamekeyinstall-method.md
-                - name: StrongNameSignatureGeneration — Metoda
+                - name: 'StrongNameSignatureGeneration, metoda'
                   href: iclrstrongname-strongnamesignaturegeneration-method.md
-                - name: StrongNameSignatureGenerationEx — Metoda
+                - name: 'StrongNameSignatureGenerationEx, metoda'
                   href: iclrstrongname-strongnamesignaturegenerationex-method.md
-                - name: StrongNameSignatureSize — Metoda
+                - name: 'StrongNameSignatureSize, metoda'
                   href: iclrstrongname-strongnamesignaturesize-method.md
-                - name: StrongNameSignatureVerification — Metoda
+                - name: 'StrongNameSignatureVerification, metoda'
                   href: iclrstrongname-strongnamesignatureverification-method.md
-                - name: StrongNameSignatureVerificationEx — Metoda
+                - name: 'StrongNameSignatureVerificationEx, metoda'
                   href: iclrstrongname-strongnamesignatureverificationex-method.md
-                - name: StrongNameSignatureVerificationFromImage — Metoda
+                - name: 'StrongNameSignatureVerificationFromImage, metoda'
                   href: iclrstrongname-strongnamesignatureverificationfromimage-method.md
-                - name: StrongNameTokenFromAssembly — Metoda
+                - name: 'StrongNameTokenFromAssembly, metoda'
                   href: iclrstrongname-strongnametokenfromassembly-method.md
-                - name: StrongNameTokenFromAssemblyEx — Metoda
+                - name: 'StrongNameTokenFromAssemblyEx, metoda'
                   href: iclrstrongname-strongnametokenfromassemblyex-method.md
-                - name: StrongNameTokenFromPublicKey — Metoda
+                - name: 'StrongNameTokenFromPublicKey, metoda'
                   href: iclrstrongname-strongnametokenfrompublickey-method.md
             - name: ICLRStrongName2 — Interfejs
               href: iclrstrongname2-interface.md
@@ -975,9 +975,9 @@
             - name: ICLRTask2 — Interfejs
               href: iclrtask2-interface.md
               items:
-                - name: BeginPreventAsyncAbort — Metoda
+                - name: 'BeginPreventAsyncAbort, metoda'
                   href: iclrtask2-beginpreventasyncabort-method.md
-                - name: EndPreventAsyncAbort — Metoda
+                - name: 'EndPreventAsyncAbort, metoda'
                   href: iclrtask2-endpreventasyncabort-method.md
     - name: Hosting — Struktury
       href: hosting-structures.md

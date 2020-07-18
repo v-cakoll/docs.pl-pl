@@ -1,14 +1,14 @@
 ---
 title: Ustawienia konfiguracji modułu wyrzucania elementów bezużytecznych
 description: Informacje o ustawieniach czasu wykonywania w celu skonfigurowania sposobu, w jaki moduł zbierający elementy bezużyteczne zarządza pamięcią dla aplikacji platformy .NET Core.
-ms.date: 01/09/2020
+ms.date: 07/10/2020
 ms.topic: reference
-ms.openlocfilehash: 0ce2f70204463c1525ef7d29de21ddf5384d0238
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 6ae5b7447fb0df4978ea9dcaa5e76fcc7a6cc4ca
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202099"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441413"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Opcje konfiguracji czasu wykonywania dla wyrzucania elementów bezużytecznych
 
@@ -20,7 +20,7 @@ Ustawienia są ułożone w grupach na tej stronie. Ustawienia w ramach każdej g
 >
 > - Te ustawienia mogą być również dynamicznie zmieniane przez aplikację w trakcie działania, więc wszystkie ustawione ustawienia czasu wykonywania mogą zostać zastąpione.
 > - Niektóre ustawienia, takie jak [poziom opóźnienia](../../standard/garbage-collection/latency.md), są zazwyczaj ustawiane tylko za pomocą interfejsu API w czasie projektowania. Takie ustawienia zostały pominięte na tej stronie.
-> - W przypadku wartości liczbowych Użyj notacji dziesiętnej dla ustawień w pliku *runtimeconfig. JSON* i notacji szesnastkowej dla ustawień zmiennych środowiskowych. W przypadku wartości szesnastkowych można je określić z prefiksem "0x" lub bez niego.
+> - W przypadku wartości liczbowych Użyj notacji dziesiętnej dla ustawień w *runtimeconfig.jsw* notacji plik i szesnastkowy dla ustawień zmiennych środowiskowych. W przypadku wartości szesnastkowych można je określić z prefiksem "0x" lub bez niego.
 
 ## <a name="flavors-of-garbage-collection"></a>Typy wyrzucania elementów bezużytecznych
 
@@ -37,14 +37,14 @@ Użyj następujących ustawień, aby wybrać typy wyrzucania elementów bezużyt
 
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
-| **runtimeconfig. JSON** | `System.GC.Server` | `false`-Stacja robocza<br/>`true`— serwer | .NET Core 1,0 |
+| **runtimeconfig.jsna** | `System.GC.Server` | `false`-Stacja robocza<br/>`true`— serwer | .NET Core 1,0 |
 | **Właściwość programu MSBuild** | `ServerGarbageCollection` | `false`-Stacja robocza<br/>`true`— serwer | .NET Core 1,0 |
 | **Zmienna środowiskowa** | `COMPlus_gcServer` | `0`-Stacja robocza<br/>`1`— serwer | .NET Core 1,0 |
-| **App. config dla .NET Framework** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false`-Stacja robocza<br/>`true`— serwer |  |
+| **app.config .NET Framework** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false`-Stacja robocza<br/>`true`— serwer |  |
 
 ### <a name="examples"></a>Przykłady
 
-plik *runtimeconfig. JSON* :
+*runtimeconfig.js* pliku:
 
 ```json
 {
@@ -76,14 +76,14 @@ Plik projektu:
 
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
-| **runtimeconfig. JSON** | `System.GC.Concurrent` | `true`-w tle GC<br/>`false`-niewspółbieżne GC | .NET Core 1,0 |
+| **runtimeconfig.jsna** | `System.GC.Concurrent` | `true`-w tle GC<br/>`false`-niewspółbieżne GC | .NET Core 1,0 |
 | **Właściwość programu MSBuild** | `ConcurrentGarbageCollection` | `true`-w tle GC<br/>`false`-niewspółbieżne GC | .NET Core 1,0 |
 | **Zmienna środowiskowa** | `COMPlus_gcConcurrent` | `1`-w tle GC<br/>`0`-niewspółbieżne GC | .NET Core 1,0 |
-| **App. config dla .NET Framework** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true`-w tle GC<br/>`false`-niewspółbieżne GC |  |
+| **app.config .NET Framework** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true`-w tle GC<br/>`false`-niewspółbieżne GC |  |
 
 ### <a name="examples"></a>Przykłady
 
-plik *runtimeconfig. JSON* :
+*runtimeconfig.js* pliku:
 
 ```json
 {
@@ -123,9 +123,9 @@ Aby uzyskać więcej informacji na temat niektórych z tych ustawień, zapoznaj 
 
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
-| **runtimeconfig. JSON** | `System.GC.HeapCount` | *wartość dziesiętna* | .NET Core 3.0 |
+| **runtimeconfig.jsna** | `System.GC.HeapCount` | *wartość dziesiętna* | .NET Core 3.0 |
 | **Zmienna środowiskowa** | `COMPlus_GCHeapCount` | *wartość szesnastkowa* | .NET Core 3.0 |
-| **App. config dla .NET Framework** | [GCHeapCount](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md) | *wartość dziesiętna* | .NET Framework 4.6.2 |
+| **app.config .NET Framework** | [GCHeapCount](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md) | *wartość dziesiętna* | .NET Framework 4.6.2 |
 
 Przykład:
 
@@ -140,7 +140,7 @@ Przykład:
 ```
 
 > [!TIP]
-> Jeśli ustawiasz opcję w *runtimeconfig. JSON*, określ wartość dziesiętną. Jeśli ustawiasz opcję jako zmienną środowiskową, określ wartość szesnastkową. Na przykład aby ograniczyć liczbę stert do 16, wartości dla pliku JSON i 0x10 lub 10 dla zmiennej środowiskowej.
+> Jeśli ustawiasz opcję w *runtimeconfig.jsna*, określ wartość dziesiętną. Jeśli ustawiasz opcję jako zmienną środowiskową, określ wartość szesnastkową. Na przykład aby ograniczyć liczbę stert do 16, wartości dla pliku JSON i 0x10 lub 10 dla zmiennej środowiskowej.
 
 ### <a name="systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask"></a>System. GC. HeapAffinitizeMask/COMPlus_GCHeapAffinitizeMask
 
@@ -151,9 +151,9 @@ Przykład:
 
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
-| **runtimeconfig. JSON** | `System.GC.HeapAffinitizeMask` | *wartość dziesiętna* | .NET Core 3.0 |
+| **runtimeconfig.jsna** | `System.GC.HeapAffinitizeMask` | *wartość dziesiętna* | .NET Core 3.0 |
 | **Zmienna środowiskowa** | `COMPlus_GCHeapAffinitizeMask` | *wartość szesnastkowa* | .NET Core 3.0 |
-| **App. config dla .NET Framework** | [GCHeapAffinitizeMask](../../framework/configure-apps/file-schema/runtime/gcheapaffinitizemask-element.md) | *wartość dziesiętna* | .NET Framework 4.6.2 |
+| **app.config .NET Framework** | [GCHeapAffinitizeMask](../../framework/configure-apps/file-schema/runtime/gcheapaffinitizemask-element.md) | *wartość dziesiętna* | .NET Framework 4.6.2 |
 
 Przykład:
 
@@ -178,7 +178,7 @@ Przykład:
 
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
-| **runtimeconfig. JSON** | `System.GC.GCHeapAffinitizeRanges` | Rozdzielana przecinkami lista numerów procesorów lub zakresów numerów procesorów.<br/>Przykład UNIX: "1-10, 12, 50-52, 70"<br/>Przykład systemu Windows: "0:1-10, 0:12, 1:50-52, 1:70" | .NET Core 3.0 |
+| **runtimeconfig.jsna** | `System.GC.GCHeapAffinitizeRanges` | Rozdzielana przecinkami lista numerów procesorów lub zakresów numerów procesorów.<br/>Przykład UNIX: "1-10, 12, 50-52, 70"<br/>Przykład systemu Windows: "0:1-10, 0:12, 1:50-52, 1:70" | .NET Core 3.0 |
 | **Zmienna środowiskowa** | `COMPlus_GCHeapAffinitizeRanges` | Rozdzielana przecinkami lista numerów procesorów lub zakresów numerów procesorów.<br/>Przykład UNIX: "1-10, 12, 50-52, 70"<br/>Przykład systemu Windows: "0:1-10, 0:12, 1:50-52, 1:70" | .NET Core 3.0 |
 
 Przykład:
@@ -205,9 +205,9 @@ Przykład:
 
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
-| **runtimeconfig. JSON** | Nie dotyczy | Nie dotyczy | Nie dotyczy |
+| **runtimeconfig.jsna** | Brak | Brak | Brak |
 | **Zmienna środowiskowa** | `COMPlus_GCCpuGroup` | `0`-wyłączone<br/>`1`-włączone | .NET Core 1,0 |
-| **App. config dla .NET Framework** | [GCCpuGroup](../../framework/configure-apps/file-schema/runtime/gccpugroup-element.md) | `false`-wyłączone<br/>`true`-włączone |  |
+| **app.config .NET Framework** | [GCCpuGroup](../../framework/configure-apps/file-schema/runtime/gccpugroup-element.md) | `false`-wyłączone<br/>`true`-włączone |  |
 
 > [!NOTE]
 > Aby skonfigurować środowisko uruchomieniowe języka wspólnego (CLR) do dystrybucji wątków z puli wątków we wszystkich grupach procesora, Włącz opcję [Thread_UseAllCpuGroups elementu](../../framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md) . W przypadku aplikacji platformy .NET Core można włączyć tę opcję, ustawiając wartość `COMPlus_Thread_UseAllCpuGroups` zmiennej środowiskowej na `1` .
@@ -220,9 +220,9 @@ Przykład:
 
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
-| **runtimeconfig. JSON** | `System.GC.NoAffinitize` | `false`-koligacji<br/>`true`-nie koligacji | .NET Core 3.0 |
+| **runtimeconfig.jsna** | `System.GC.NoAffinitize` | `false`-koligacji<br/>`true`-nie koligacji | .NET Core 3.0 |
 | **Zmienna środowiskowa** | `COMPlus_GCNoAffinitize` | `0`-koligacji<br/>`1`-nie koligacji | .NET Core 3.0 |
-| **App. config dla .NET Framework** | [GCNoAffinitize](../../framework/configure-apps/file-schema/runtime/gcnoaffinitize-element.md) | `false`-koligacji<br/>`true`-nie koligacji | .NET Framework 4.6.2 |
+| **app.config .NET Framework** | [GCNoAffinitize](../../framework/configure-apps/file-schema/runtime/gcnoaffinitize-element.md) | `false`-koligacji<br/>`true`-nie koligacji | .NET Framework 4.6.2 |
 
 Przykład:
 
@@ -240,6 +240,7 @@ Przykład:
 
 - Określa maksymalny rozmiar zatwierdzeń w bajtach dla sterty GC i księgowości GC.
 - To ustawienie dotyczy tylko komputerów 64-bitowych.
+- To ustawienie jest ignorowane, jeśli skonfigurowano [limity sterty dla poszczególnych obiektów](#per-object-heap-limits) .
 - Wartość domyślna, która stosuje się tylko w niektórych przypadkach, jest większa niż 20 MB lub 75% limitu pamięci w kontenerze. Wartość domyślna ma zastosowanie, jeśli:
 
   - Proces jest uruchomiony wewnątrz kontenera o określonym limicie pamięci.
@@ -247,7 +248,7 @@ Przykład:
 
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
-| **runtimeconfig. JSON** | `System.GC.HeapHardLimit` | *wartość dziesiętna* | .NET Core 3.0 |
+| **runtimeconfig.jsna** | `System.GC.HeapHardLimit` | *wartość dziesiętna* | .NET Core 3.0 |
 | **Zmienna środowiskowa** | `COMPlus_GCHeapHardLimit` | *wartość szesnastkowa* | .NET Core 3.0 |
 
 Przykład:
@@ -263,7 +264,7 @@ Przykład:
 ```
 
 > [!TIP]
-> Jeśli ustawiasz opcję w *runtimeconfig. JSON*, określ wartość dziesiętną. Jeśli ustawiasz opcję jako zmienną środowiskową, określ wartość szesnastkową. Na przykład aby określić stały limit sterty wynoszący 200 mebibytes (MiB), wartości byłyby 209715200 dla pliku JSON i 0xC800000 lub C800000 dla zmiennej środowiskowej.
+> Jeśli ustawiasz opcję w *runtimeconfig.jsna*, określ wartość dziesiętną. Jeśli ustawiasz opcję jako zmienną środowiskową, określ wartość szesnastkową. Na przykład aby określić stały limit sterty wynoszący 200 mebibytes (MiB), wartości byłyby 209715200 dla pliku JSON i 0xC800000 lub C800000 dla zmiennej środowiskowej.
 
 ### <a name="systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent"></a>System. GC. HeapHardLimitPercent/COMPlus_GCHeapHardLimitPercent
 
@@ -271,6 +272,7 @@ Przykład:
 - Jeśli zostanie również ustawiona wartość [System. GC. HeapHardLimit](#systemgcheaphardlimitcomplus_gcheaphardlimit) , to ustawienie jest ignorowane.
 - To ustawienie dotyczy tylko komputerów 64-bitowych.
 - Jeśli proces jest uruchomiony wewnątrz kontenera o określonym limicie pamięci, wartość procentowa jest obliczana jako wartość procentowa tego limitu pamięci.
+- To ustawienie jest ignorowane, jeśli skonfigurowano [limity sterty dla poszczególnych obiektów](#per-object-heap-limits) .
 - Wartość domyślna, która jest stosowana tylko w niektórych przypadkach, jest mniejsza z 20 MB lub 75% limitu pamięci dla kontenera. Wartość domyślna ma zastosowanie, jeśli:
 
   - Proces jest uruchomiony wewnątrz kontenera o określonym limicie pamięci.
@@ -278,7 +280,7 @@ Przykład:
 
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
-| **runtimeconfig. JSON** | `System.GC.HeapHardLimitPercent` | *wartość dziesiętna* | .NET Core 3.0 |
+| **runtimeconfig.jsna** | `System.GC.HeapHardLimitPercent` | *wartość dziesiętna* | .NET Core 3.0 |
 | **Zmienna środowiskowa** | `COMPlus_GCHeapHardLimitPercent` | *wartość szesnastkowa* | .NET Core 3.0 |
 
 Przykład:
@@ -294,7 +296,41 @@ Przykład:
 ```
 
 > [!TIP]
-> Jeśli ustawiasz opcję w *runtimeconfig. JSON*, określ wartość dziesiętną. Jeśli ustawiasz opcję jako zmienną środowiskową, określ wartość szesnastkową. Na przykład aby ograniczyć użycie sterty do 30%, wartości byłyby 30 dla pliku JSON i 0x1E lub 1E dla zmiennej środowiskowej.
+> Jeśli ustawiasz opcję w *runtimeconfig.jsna*, określ wartość dziesiętną. Jeśli ustawiasz opcję jako zmienną środowiskową, określ wartość szesnastkową. Na przykład aby ograniczyć użycie sterty do 30%, wartości byłyby 30 dla pliku JSON i 0x1E lub 1E dla zmiennej środowiskowej.
+
+### <a name="per-object-heap-limits"></a>Limity sterty dla poszczególnych obiektów
+
+Można określić możliwość użycia sterty w pamięci podręcznej na podstawie sterty dla poszczególnych obiektów. Różne sterty to sterta dużego obiektu (LOH), sterta małego obiektu (raport o niewielkich obiektach) i przypięty stos obiektów (POH).
+
+#### <a name="complus_gcheaphardlimitsoh-complus_gcheaphardlimitloh-complus_gcheaphardlimitpoh"></a>COMPLUS_GCHeapHardLimitSOH, COMPLUS_GCHeapHardLimitLOH, COMPLUS_GCHeapHardLimitPOH
+
+- W przypadku określenia wartości dla dowolnego z parametrów, `COMPLUS_GCHeapHardLimitSOH` `COMPLUS_GCHeapHardLimitLOH` lub `COMPLUS_GCHeapHardLimitPOH` , należy również określić wartość dla `COMPLUS_GCHeapHardLimitSOH` i `COMPLUS_GCHeapHardLimitLOH` . Jeśli tego nie zrobisz, nie będzie można zainicjować środowiska uruchomieniowego.
+- Wartość domyślna dla `COMPLUS_GCHeapHardLimitPOH` jest równa 0. `COMPLUS_GCHeapHardLimitSOH`i `COMPLUS_GCHeapHardLimitLOH` nie mają wartości domyślnych.
+
+| | Nazwa ustawienia | Wartości | Wprowadzona wersja |
+| - | - | - | - |
+| **Zmienna środowiskowa** | `COMPLUS_GCHeapHardLimitSOH` | *wartość szesnastkowa* | .NET 5,0 |
+| **Zmienna środowiskowa** | `COMPLUS_GCHeapHardLimitLOH` | *wartość szesnastkowa* | .NET 5,0 |
+| **Zmienna środowiskowa** | `COMPLUS_GCHeapHardLimitPOH` | *wartość szesnastkowa* | .NET 5,0 |
+
+> [!TIP]
+> Jeśli ustawiasz opcję jako zmienną środowiskową, określ wartość szesnastkową. Na przykład, aby określić stały limit sterty wynoszący 200 mebibytes (MiB), wartość będzie 0xC800000 lub C800000.
+
+#### <a name="complus_gcheaphardlimitsohpercent-complus_gcheaphardlimitlohpercent-complus_gcheaphardlimitpohpercent"></a>COMPLUS_GCHeapHardLimitSOHPercent, COMPLUS_GCHeapHardLimitLOHPercent, COMPLUS_GCHeapHardLimitPOHPercent
+
+- W przypadku określenia wartości dla dowolnego z parametrów, `COMPLUS_GCHeapHardLimitSOHPercent` `COMPLUS_GCHeapHardLimitLOHPercent` lub `COMPLUS_GCHeapHardLimitPOHPercent` , należy również określić wartość dla `COMPLUS_GCHeapHardLimitSOHPercent` i `COMPLUS_GCHeapHardLimitLOHPercent` . Jeśli tego nie zrobisz, nie będzie można zainicjować środowiska uruchomieniowego.
+- Te ustawienia są ignorowane `COMPLUS_GCHeapHardLimitSOH` w przypadku, gdy `COMPLUS_GCHeapHardLimitLOH` `COMPLUS_GCHeapHardLimitPOH` są określone.
+- Wartość 1 oznacza, że GC używa 1% całkowitej pamięci fizycznej dla sterty obiektu.
+- Każda wartość musi być większa niż zero i mniejsza niż 100. Ponadto suma trzech wartości procentowych musi być mniejsza niż 100. W przeciwnym razie nie będzie można zainicjować środowiska uruchomieniowego.
+
+| | Nazwa ustawienia | Wartości | Wprowadzona wersja |
+| - | - | - | - |
+| **Zmienna środowiskowa** | `COMPLUS_GCHeapHardLimitSOHPercent` | *wartość szesnastkowa* | .NET 5,0 |
+| **Zmienna środowiskowa** | `COMPLUS_GCHeapHardLimitLOHPercent` | *wartość szesnastkowa* | .NET 5,0 |
+| **Zmienna środowiskowa** | `COMPLUS_GCHeapHardLimitPOHPercent` | *wartość szesnastkowa* | .NET 5,0 |
+
+> [!TIP]
+> Jeśli ustawiasz opcję jako zmienną środowiskową, określ wartość szesnastkową. Na przykład, aby ograniczyć użycie sterty do 30%, wartość będzie 0x1E lub 1E.
 
 ### <a name="systemgcretainvmcomplus_gcretainvm"></a>System. GC. RetainVM/COMPlus_GCRetainVM
 
@@ -303,13 +339,13 @@ Przykład:
 
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
-| **runtimeconfig. JSON** | `System.GC.RetainVM` | `false`— wydanie do systemu operacyjnego<br/>`true`— Umieść w stanie wstrzymania | .NET Core 1,0 |
+| **runtimeconfig.jsna** | `System.GC.RetainVM` | `false`— wydanie do systemu operacyjnego<br/>`true`— Umieść w stanie wstrzymania | .NET Core 1,0 |
 | **Właściwość programu MSBuild** | `RetainVMGarbageCollection` | `false`— wydanie do systemu operacyjnego<br/>`true`— Umieść w stanie wstrzymania | .NET Core 1,0 |
 | **Zmienna środowiskowa** | `COMPlus_GCRetainVM` | `0`— wydanie do systemu operacyjnego<br/>`1`— Umieść w stanie wstrzymania | .NET Core 1,0 |
 
 ### <a name="examples"></a>Przykłady
 
-plik *runtimeconfig. JSON* :
+*runtimeconfig.js* pliku:
 
 ```json
 {
@@ -343,7 +379,7 @@ Plik projektu:
 
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
-| **runtimeconfig. JSON** | Nie dotyczy | Nie dotyczy | Nie dotyczy |
+| **runtimeconfig.jsna** | Brak | Brak | Brak |
 | **Zmienna środowiskowa** | `COMPlus_GCLargePages` | `0`-wyłączone<br/>`1`-włączone | .NET Core 3.0 |
 
 ## <a name="large-objects"></a>Duże obiekty
@@ -356,9 +392,9 @@ Plik projektu:
 
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
-| **runtimeconfig. JSON** | Nie dotyczy | Nie dotyczy | Nie dotyczy |
+| **runtimeconfig.jsna** | Brak | Brak | Brak |
 | **Zmienna środowiskowa** | `COMPlus_gcAllowVeryLargeObjects` | `1`-włączone<br/> `0`-wyłączone | .NET Core 1,0 |
-| **App. config dla .NET Framework** | [gcAllowVeryLargeObjects](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | `1`-włączone<br/> `0`-wyłączone | .NET Framework 4.5 |
+| **app.config .NET Framework** | [gcAllowVeryLargeObjects](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | `1`-włączone<br/> `0`-wyłączone | .NET Framework 4.5 |
 
 ## <a name="large-object-heap-threshold"></a>Próg sterty dla dużego obiektu
 
@@ -370,9 +406,9 @@ Plik projektu:
 
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
-| **runtimeconfig. JSON** | `System.GC.LOHThreshold` | *wartość dziesiętna* | .NET Core 1,0 |
+| **runtimeconfig.jsna** | `System.GC.LOHThreshold` | *wartość dziesiętna* | .NET Core 1,0 |
 | **Zmienna środowiskowa** | `COMPlus_GCLOHThreshold` | *wartość szesnastkowa* | .NET Core 1,0 |
-| **App. config dla .NET Framework** | [GCLOHThreshold](../../framework/configure-apps/file-schema/runtime/gclohthreshold-element.md) | *wartość dziesiętna* |  .NET Framework 4.8 |
+| **app.config .NET Framework** | [GCLOHThreshold](../../framework/configure-apps/file-schema/runtime/gclohthreshold-element.md) | *wartość dziesiętna* |  .NET Framework 4.8 |
 
 Przykład:
 
@@ -387,7 +423,7 @@ Przykład:
 ```
 
 > [!TIP]
-> Jeśli ustawiasz opcję w *runtimeconfig. JSON*, określ wartość dziesiętną. Jeśli ustawiasz opcję jako zmienną środowiskową, określ wartość szesnastkową. Na przykład, aby ustawić rozmiar progu 120 000 bajtów, wartości byłyby 120000 dla pliku JSON oraz 0x1D4C0 lub 1D4C0 dla zmiennej środowiskowej.
+> Jeśli ustawiasz opcję w *runtimeconfig.jsna*, określ wartość dziesiętną. Jeśli ustawiasz opcję jako zmienną środowiskową, określ wartość szesnastkową. Na przykład, aby ustawić rozmiar progu 120 000 bajtów, wartości byłyby 120000 dla pliku JSON oraz 0x1D4C0 lub 1D4C0 dla zmiennej środowiskowej.
 
 ## <a name="standalone-gc"></a>Autonomiczna GC
 
@@ -398,5 +434,5 @@ Przykład:
 
 | | Nazwa ustawienia | Wartości | Wprowadzona wersja |
 | - | - | - | - |
-| **runtimeconfig. JSON** | Nie dotyczy | Nie dotyczy | Nie dotyczy |
+| **runtimeconfig.jsna** | Brak | Brak | Brak |
 | **Zmienna środowiskowa** | `COMPlus_GCName` | *string_path* | .NET Core 2.0 |

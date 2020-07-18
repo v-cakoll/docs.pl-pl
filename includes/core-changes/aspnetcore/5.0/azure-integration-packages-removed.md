@@ -1,58 +1,58 @@
 ---
-ms.openlocfilehash: d8506893f5b3eefa6f46dc9f773e43b125ee5210
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: 19ccdb634d4e53ea66c032502f2adb70423ab121
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291632"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416264"
 ---
-### <a name="azure-microsoft-prefixed-azure-integration-packages-removed"></a>Platforma Azure: usunięto pakiety integracji platformy Azure z prefiksem platformy Microsoft
+### <a name="azure-microsoft-prefixed-azure-integration-packages-removed"></a>Azure: Usunięto wstępnie ustalone pakiety integracji platformy Azure
 
-Następujące `Microsoft.*` pakiety, które zapewniają integrację między ASP.NET Core i Azure SDK nie są zawarte w ASP.NET Core 5.0:
+Następujące `Microsoft.*` pakiety zapewniające integrację między ASP.NET Core i zestawami SDK platformy Azure nie są uwzględnione w ASP.NET Core 5,0:
 
-* [Microsoft.Extensions.Configuration.AzureKeyVault](https://www.nuget.org/packages/Microsoft.Extensions.Configuration.AzureKeyVault/), który integruje [usługę Azure Key Vault](/azure/key-vault/) z systemem [konfiguracji](/aspnet/core/fundamentals/configuration/).
-* [Microsoft.AspNetCore.DataProtection.AzureKeyVault](https://www.nuget.org/packages/Microsoft.AspNetCore.DataProtection.AzureKeyVault/), który integruje usługę Azure Key Vault z [ASP.NET core data protection system](/aspnet/core/security/data-protection/introduction).
-* [Microsoft.AspNetCore.DataProtection.AzureStorage](https://www.nuget.org/packages/Microsoft.AspNetCore.DataProtection.AzureStorage/), który integruje [usługę Azure Blob Storage](/azure/storage/blobs/) z ASP.NET podstawowym systemem ochrony danych.
+* [Microsoft.Extensions.Configwersja. AzureKeyVault](https://www.nuget.org/packages/Microsoft.Extensions.Configuration.AzureKeyVault/), która integruje [Azure Key Vault](/azure/key-vault/) do [systemu konfiguracji](/aspnet/core/fundamentals/configuration/).
+* [Microsoft. AspNetCore. dataprotection. AzureKeyVault](https://www.nuget.org/packages/Microsoft.AspNetCore.DataProtection.AzureKeyVault/), który integruje Azure Key Vault z [ASP.NET Core systemem ochrony danych](/aspnet/core/security/data-protection/introduction).
+* [Microsoft. AspNetCore. dataprotection. AzureStorage](https://www.nuget.org/packages/Microsoft.AspNetCore.DataProtection.AzureStorage/), który integruje [BLOB Storage platformy Azure](/azure/storage/blobs/) z systemem ochrony danych ASP.NET Core.
 
-Aby do dyskusji na ten temat, zobacz [dotnet/aspnetcore#19570](https://github.com/dotnet/aspnetcore/issues/19570).
+Aby zapoznać się z omówieniem tego problemu, zobacz [dotnet/aspnetcore # 19570](https://github.com/dotnet/aspnetcore/issues/19570).
 
-#### <a name="version-introduced"></a>Wprowadzono wersję
+#### <a name="version-introduced"></a>Wprowadzona wersja
 
-5.0 Wersja zapoznawcza 1
+5,0 wersja zapoznawcza 1
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-Pakiety `Microsoft.*` zintegrowane usługi platformy Azure z interfejsów API konfiguracji i ochrony danych.
+`Microsoft.*`Pakiety zintegrowane z usługami platformy Azure z interfejsami API konfiguracji i ochrony danych.
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
 Nowe `Azure.*` pakiety integrują usługi platformy Azure z interfejsami API konfiguracji i ochrony danych.
 
-#### <a name="reason-for-change"></a>Powód zmiany
+#### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Zmiana została wniesiena, ponieważ pakiety `Microsoft.*` były:
+Wprowadzono zmianę, ponieważ `Microsoft.*` pakiety:
 
-* Przy użyciu przestarzałych wersji narzędzia Azure SDK. Proste aktualizacje nie były możliwe, ponieważ nowe wersje zestawu SDK platformy Azure zawierały zmiany wyłudania informacji.
-* Powiązany z harmonogramem wydania .NET Core. Przeniesienie własności pakietów do zespołu zestawu Azure SDK umożliwia aktualizacje pakietów w miarę aktualizowannia zestawu Azure SDK.
+* Korzystanie z nieaktualnych wersji zestawu Azure SDK. Proste aktualizacje nie były możliwe, ponieważ nowe wersje zestawu Azure SDK obejmowały istotne zmiany.
+* Powiązane z harmonogramem wersji platformy .NET Core. Przeniesienie własności pakietów do zespołu zestawu Azure SDK umożliwia aktualizowanie pakietów w miarę aktualizowania zestawu Azure SDK.
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-W ASP.NET projektów Core 2.1 lub nowszych, zastąp stare `Microsoft.*` nowymi `Azure.*` pakietami.
+W ASP.NET Core 2,1 lub nowszych projektach Zastąp stary `Microsoft.*` z nowymi `Azure.*` pakietami.
 
-| Stary | Nowa |
+| Starsze | Nowy |
 |--|--|
-| `Microsoft.AspNetCore.DataProtection.AzureKeyVault` | [Usługa Azure.AspNetCore.DataProtection.Keys](https://www.nuget.org/packages/Azure.AspNetCore.DataProtection.Keys) |
-| `Microsoft.AspNetCore.DataProtection.AzureStorage` | [Obiekty blob Azure.AspNetCore.DataProtection.Blob](https://www.nuget.org/packages/Azure.AspNetCore.DataProtection.Blobs) |
-| `Microsoft.Extensions.Configuration.AzureKeyVault` | [Usługi Azure.Extensions.Configuration.Secrets](https://www.nuget.org/packages/Azure.Extensions.Configuration.Secrets) |
+| `Microsoft.AspNetCore.DataProtection.AzureKeyVault` | [Azure. Extensions. AspNetCore. dataprotection. Keys](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.DataProtection.Keys) |
+| `Microsoft.AspNetCore.DataProtection.AzureStorage` | [Azure. Extensions. AspNetCore. dataprotection. Blobs](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.DataProtection.Blobs) |
+| `Microsoft.Extensions.Configuration.AzureKeyVault` | [Azure.Extensions.AspNetCore.Configwersja. Klucz](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.Configuration.Secrets) |
 
-Nowe pakiety używają nowej wersji zestawu SDK platformy Azure, która zawiera przełomowe zmiany. Ogólne wzorce użycia pozostają niezmienione. Niektóre przeciążenia i opcje mogą się różnić, aby dostosować się do zmian w podstawowych interfejsach API zestawów SDK platformy Azure.
+Nowe pakiety korzystają z nowej wersji zestawu Azure SDK, która zawiera istotne zmiany. Wzorce użycia ogólne nie są zmieniane. Niektóre przeciążenia i opcje mogą się różnić w zależności od zmian w bazowych interfejsach API zestawu Azure SDK.
 
 Stare pakiety będą:
 
-* Bądź obsługiwany przez zespół ASP.NET Core przez cały okres istnienia .NET Core 2.1 i 3.1.
-* Nie należy uwzględniać w .NET 5.
+* Być obsługiwane przez zespół ASP.NET Core w okresie istnienia .NET Core 2,1 i 3,1.
+* Nie jest uwzględniony w programie .NET 5.
 
-Podczas uaktualniania projektu do platformy .NET `Azure.*` 5, przejście do pakietów w celu utrzymania obsługi.
+Podczas uaktualniania projektu do programu .NET 5 Przejdź do pakietów, `Azure.*` Aby zachować pomoc techniczną.
 
 #### <a name="category"></a>Kategoria
 

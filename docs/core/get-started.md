@@ -5,12 +5,12 @@ author: adegeo
 ms.author: adegeo
 ms.date: 12/03/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 5cfd9925f4ee93ef4ebe15ebf16febdfb98aaa9a
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: ddbee0764897b511cac0c4142354ba995d94a2b6
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325008"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416057"
 ---
 # <a name="get-started-with-net-core"></a>Wprowadzenie do platformy .NET Core
 
@@ -75,7 +75,7 @@ Zacznij opracowywać aplikacje platformy .NET Core, wykonując następujące Sam
 - [Rozpoczynanie pracy z platformą .NET Core w systemie macOS przy użyciu programu Visual Studio Code](./tutorials/using-on-macos.md)
 - [Rozpoczynanie pracy z platformą .NET Core przy użyciu wiersza polecenia](./tutorials/cli-create-console-app.md)
 - [Rozpoczynanie pracy z platformą .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac](./tutorials/using-on-mac-vs.md)
-- [Tworzenie kompletnego rozwiązania .NET Core w systemie macOS przy użyciu Visual Studio dla komputerów Mac](./tutorials/using-on-mac-vs-full-solution.md)
+- [Kompilowanie biblioteki .NET Standard w macOS przy użyciu Visual Studio dla komputerów Mac](tutorials/library-with-visual-studio-mac.md)
 
 |   |   |
 |---|---|

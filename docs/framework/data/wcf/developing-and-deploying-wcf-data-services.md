@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 1dc9f3d261738a6dff0339c094c7aba5e32680ee
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 7519dce8ed17bc623173f30222296ffaa42b4341
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200057"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416063"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Opracowywanie i wdrażanie Usługi danych programu WCF
 
@@ -28,11 +28,11 @@ W przypadku używania Usługi danych programu WCF do tworzenia usługi danych, k
 
 2. **Utworzenie usługi danych**
 
-     Najbardziej podstawowa usługa danych uwidacznia klasę, która dziedziczy z <xref:System.Data.Services.DataService%601> klasy, z typem `T` , który jest kwalifikowana nazwaną przestrzenią nazw kontenera jednostek. Aby uzyskać więcej informacji, zobacz [definiowanie usługi danych programu WCF](defining-wcf-data-services.md).
+     Najbardziej podstawowa usługa danych uwidacznia klasę, która dziedziczy z <xref:System.Data.Services.DataService%601> klasy, z typem, `T` który jest kwalifikowana nazwaną przestrzenią nazw kontenera jednostek. Aby uzyskać więcej informacji, zobacz [definiowanie usługi danych programu WCF](defining-wcf-data-services.md).
 
 3. **Konfigurowanie usługi danych**
 
-     Domyślnie Usługi danych programu WCF wyłącza dostęp do zasobów, które są udostępniane przez kontener jednostek. <xref:System.Data.Services.DataServiceConfiguration> Interfejs umożliwia skonfigurowanie dostępu do zasobów i usług, określenie obsługiwanej wersji usługi OData oraz zdefiniowanie innych zachowań obejmujących wiele usług, takich jak zachowania wsadowe lub maksymalna liczba jednostek, które mogą zostać zwrócone w ramach pojedynczego źródła odpowiedzi. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usługi danych](configuring-the-data-service-wcf-data-services.md).
+     Domyślnie Usługi danych programu WCF wyłącza dostęp do zasobów, które są udostępniane przez kontener jednostek. <xref:System.Data.Services.DataServiceConfiguration>Interfejs umożliwia skonfigurowanie dostępu do zasobów i usług, określenie obsługiwanej wersji usługi OData oraz zdefiniowanie innych zachowań obejmujących wiele usług, takich jak zachowania wsadowe lub maksymalna liczba jednostek, które mogą zostać zwrócone w ramach pojedynczego źródła odpowiedzi. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usługi danych](configuring-the-data-service-wcf-data-services.md).
 
 W tym artykule opisano głównie opracowywanie i wdrażanie usług danych przy użyciu programu Visual Studio. Aby uzyskać informacje na temat elastyczności zapewnianej przez Usługi danych programu WCF w celu udostępnienia danych jako źródła strumieniowego OData, zobacz [definiowanie usługi danych programu WCF](defining-wcf-data-services.md).
 
@@ -55,7 +55,7 @@ W przypadku tworzenia usługi danych programu WCF jako aplikacji ASP.NET lub wit
 
     - Dostęp do tego serwera można uzyskać tylko na komputerze lokalnym.
 
-    - Ten serwer nasłuchuje `localhost` na określonym porcie, a nie na porcie 80, który jest domyślnym portem dla komunikatów http. Aby uzyskać więcej informacji, zobacz [serwery sieci Web w programie Visual Studio for ASP.NET — projekty sieci Web](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
+    - Ten serwer nasłuchuje na `localhost` określonym porcie, a nie na porcie 80, który jest domyślnym portem dla komunikatów http. Aby uzyskać więcej informacji, zobacz [serwery sieci Web w programie Visual Studio for ASP.NET — projekty sieci Web](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
 
     - Ten serwer uruchamia usługę danych w kontekście bieżącego konta użytkownika. Na przykład jeśli korzystasz z programu jako użytkownik na poziomie administratora, usługa danych uruchomiona na serwerze deweloperskim programu Visual Studio będzie mieć uprawnienia na poziomie administratora. Może to spowodować, że usługa danych będzie mogła uzyskać dostęp do zasobów, do których nie ma praw dostępu w przypadku jej wdrożenia na serwerze IIS.
 
@@ -63,14 +63,14 @@ W przypadku tworzenia usługi danych programu WCF jako aplikacji ASP.NET lub wit
 
     - Ten serwer nie obsługuje fragmentarycznych strumieni HTTP, które są domyślnie wysyłane przez klienta Usługi danych programu WCF podczas uzyskiwania dostępu do dużych danych binarnych z usługi danych. Aby uzyskać więcej informacji, zobacz [dostawca przesyłania strumieniowego](streaming-provider-wcf-data-services.md).
 
-    - Ten serwer ma problemy z przetwarzaniem znaku kropki (`.`) w adresie URL, mimo że ten znak jest obsługiwany przez usługi danych programu WCF w wartościach klucza.
+    - Ten serwer ma problemy z przetwarzaniem znaku kropki ( `.` ) w adresie URL, mimo że ten znak jest obsługiwany przez usługi danych programu WCF w wartościach klucza.
 
     > [!TIP]
     > Mimo że można użyć programu Visual Studio Development Server do testowania usług danych podczas opracowywania, należy przetestować je ponownie po wdrożeniu na serwerze sieci Web, na którym są uruchomione usługi IIS.
 
 3. **Środowisko deweloperskie platformy Azure**
 
-     Narzędzia systemu Azure dla programu Visual Studio obejmują zintegrowany zestaw narzędzi do tworzenia usług platformy Azure w programie Visual Studio. Za pomocą tych narzędzi można opracowywać usługi danych, które można wdrożyć na platformie Azure, i można przetestować usługę danych na komputerze lokalnym przed wdrożeniem. Użyj tych narzędzi podczas korzystania z programu Visual Studio do tworzenia usługi danych działającej na platformie Azure. Aby uzyskać informacje na temat instalowania narzędzi, zobacz [Azure Tools for Visual Studio 2015](../../../azure/sdk/vs2015-install.md). Aby uzyskać więcej informacji na temat tworzenia usługi danych działającej na platformie Azure, zobacz po wdrożeniu [usługi OData na platformie Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
+     Narzędzia systemu Azure dla programu Visual Studio obejmują zintegrowany zestaw narzędzi do tworzenia usług platformy Azure w programie Visual Studio. Za pomocą tych narzędzi można opracowywać usługi danych, które można wdrożyć na platformie Azure, i można przetestować usługę danych na komputerze lokalnym przed wdrożeniem. Użyj tych narzędzi podczas korzystania z programu Visual Studio do tworzenia usługi danych działającej na platformie Azure. Aby uzyskać informacje na temat instalowania narzędzi, zobacz [Azure Tools for Visual Studio 2015](../../../azure/vs2015-install.md). Aby uzyskać więcej informacji na temat tworzenia usługi danych działającej na platformie Azure, zobacz po wdrożeniu [usługi OData na platformie Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
 
 ### <a name="development-tips"></a>Porady dotyczące projektowania
 
@@ -80,7 +80,7 @@ Podczas tworzenia usługi danych należy wziąć pod uwagę następujące kwesti
 
 - Program inspekcji HTTP może być przydatny podczas debugowania usługi danych, umożliwiając inspekcję zawartości komunikatów żądania i odpowiedzi. Dowolnego analizatora pakietów sieciowych, który może wyświetlać pakiety nieprzetworzone, można używać do inspekcji żądań HTTP i odpowiedzi z usługi danych.
 
-- Podczas debugowania usługi danych warto uzyskać więcej informacji o błędzie z usługi danych niż podczas zwykłej operacji. Możesz uzyskać dodatkowe informacje o <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> błędzie z usługi danych, ustawiając właściwość w <xref:System.Data.Services.DataServiceConfiguration> na `true` i ustawiając <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> Właściwość <xref:System.ServiceModel.Description.ServiceDebugBehavior> atrybutu w klasie usługi danych na. `true` Aby uzyskać więcej informacji, zobacz [usługi danych programu WCF debugowania](https://docs.microsoft.com/archive/blogs/phaniraj/debugging-wcf-data-services). Możesz również włączyć śledzenie w programie WCF, aby wyświetlić wyjątki wywoływane w warstwie komunikatów HTTP. Aby uzyskać więcej informacji, zobacz [Konfigurowanie śledzenia](../../wcf/diagnostics/tracing/configuring-tracing.md).
+- Podczas debugowania usługi danych warto uzyskać więcej informacji o błędzie z usługi danych niż podczas zwykłej operacji. Możesz uzyskać dodatkowe informacje o błędzie z usługi danych, ustawiając <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> Właściwość w <xref:System.Data.Services.DataServiceConfiguration> na `true` i ustawiając <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> właściwość atrybutu w <xref:System.ServiceModel.Description.ServiceDebugBehavior> klasie usługi danych na `true` . Aby uzyskać więcej informacji, zobacz [usługi danych programu WCF debugowania](https://docs.microsoft.com/archive/blogs/phaniraj/debugging-wcf-data-services). Możesz również włączyć śledzenie w programie WCF, aby wyświetlić wyjątki wywoływane w warstwie komunikatów HTTP. Aby uzyskać więcej informacji, zobacz [Konfigurowanie śledzenia](../../wcf/diagnostics/tracing/configuring-tracing.md).
 
 - Usługa danych jest zazwyczaj opracowana jako projekt aplikacji ASP.NET, ale można również utworzyć usługę danych jako projekt witryny sieci Web ASP.NET w programie Visual Studio. Aby uzyskać informacje o różnicach między dwoma typami projektów, zobacz [projekty aplikacji sieci Web a projekty witryn sieci Web w programie Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110)).
 
@@ -115,7 +115,7 @@ Usługa danych programu WCF zapewnia elastyczność, jeśli chodzi o wybór proc
 
 - **Azure**
 
-     Usługę danych można wdrożyć na platformie Azure przy użyciu [narzędzi platformy Azure dla programu Visual Studio](../../../azure/sdk/vs2015-install.md). Aby uzyskać więcej informacji na temat wdrażania usługi danych na platformie Azure, zobacz [wdrażanie usługi OData na platformie Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
+     Usługę danych można wdrożyć na platformie Azure przy użyciu [narzędzi platformy Azure dla programu Visual Studio](../../../azure/vs2015-install.md). Aby uzyskać więcej informacji na temat wdrażania usługi danych na platformie Azure, zobacz [wdrażanie usługi OData na platformie Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
 
 ### <a name="deployment-considerations"></a>Uwagi dotyczące wdrażania
 

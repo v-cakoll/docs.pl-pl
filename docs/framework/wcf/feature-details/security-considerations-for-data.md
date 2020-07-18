@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 8cb7ee2ea2418602d944c3c08cec2b9279dca3b9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 530bb54936f97f1d7460d63cfa316c760cbd449d
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601065"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441820"
 ---
 # <a name="security-considerations-for-data"></a>Zagadnienia związane z zabezpieczeniami danych
 
@@ -48,7 +48,7 @@ Rozważ następujące kwestie:
 
 ## <a name="preventing-denial-of-service-attacks"></a>Zapobieganie atakom typu "odmowa usługi"
 
-### <a name="quotas"></a>Przydziały
+### <a name="quotas"></a>Limity przydziału
 
 Spowodowanie przydzielenia przez stronę otrzymującej znacznej ilości pamięci jest potencjalny atak typu "odmowa usługi". Chociaż ta sekcja koncentruje się na problemach z użyciem pamięci, wynikających z dużych komunikatów, mogą wystąpić inne ataki. Na przykład komunikaty mogą wykorzystywać nieproporcjonalną ilość czasu przetwarzania.
 
@@ -284,7 +284,7 @@ Tę sytuację można uniknąć, wiedząc o następujących kwestiach:
 
 <xref:System.Runtime.Serialization.NetDataContractSerializer>Jest to aparat serializacji, który używa ścisłego sprzężenia do typów. Jest to podobne do <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> i <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> . Oznacza to, że określa typ do wystąpienia, odczytując zestaw .NET Framework i nazwę typu z danych przychodzących. Chociaż jest częścią usługi WCF, nie ma żadnego podanego sposobu podłączania w tym aparacie serializacji; należy napisać kod niestandardowy. Usługa `NetDataContractSerializer` jest świadczona głównie w celu ułatwienia migracji .NET Framework komunikacji zdalnej do usługi WCF. Aby uzyskać więcej informacji, zobacz sekcję dotyczącą [serializacji i deserializacji](serialization-and-deserialization.md).
 
-Ponieważ sam komunikat może wskazywać, że każdy typ może być ładowany, <xref:System.Runtime.Serialization.NetDataContractSerializer> mechanizm jest z natury niezabezpieczony i powinien być używany tylko z zaufanymi danymi. Istnieje możliwość zapewnienia bezpieczeństwa przez zapisanie bezpiecznego, nieograniczonego typu, który umożliwia ładowanie tylko bezpiecznych typów (przy użyciu <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> Właściwości).
+Ponieważ sam komunikat może wskazywać, że każdy typ może być ładowany, <xref:System.Runtime.Serialization.NetDataContractSerializer> mechanizm jest z natury niezabezpieczony i powinien być używany tylko z zaufanymi danymi. Aby uzyskać więcej informacji, zobacz [Przewodnik po zabezpieczeniach BinaryFormatter](/dotnet/standard/serialization/binaryformatter-security-guide).
 
 Nawet w przypadku użycia z zaufanymi danymi dane przychodzące mogą niewystarczająco określić typ do załadowania, zwłaszcza jeśli <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> Właściwość jest ustawiona na <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> . Każda osoba mająca dostęp do katalogu aplikacji lub globalnej pamięci podręcznej zestawów może zastąpić złośliwy typ zamiast tego, który powinien zostać załadowany. Zawsze upewnij się, że zabezpieczenia katalogu aplikacji i globalnej pamięci podręcznej zestawów zostały prawidłowo ustawione.
 
@@ -324,7 +324,7 @@ Należy zwrócić uwagę na następujące kwestie dotyczące zagrożeń związan
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>i <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> obsługują serializację prywatnych, chronionych, wewnętrznych i publicznych składowych w trybie pełnego zaufania. Jednak w częściowej relacji zaufania tylko publiczne składowe mogą być serializowane. <xref:System.Security.SecurityException>Występuje, gdy aplikacja próbuje serializować niepublicznego elementu członkowskiego.
 
-    Aby zezwolić na Serializowanie wewnętrznych lub chronionych wewnętrznych elementów członkowskich w częściowej relacji zaufania, użyj <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu Assembly. Ten atrybut umożliwia zestawowi zadeklarować, że jego wewnętrzne elementy członkowskie są widoczne dla innego zestawu. W tym przypadku zestaw, który chce mieć zaszeregowaną wewnętrzną składową, deklaruje, że jego wewnętrzne elementy członkowskie są widoczne dla System. Runtime. Serialization. dll.
+    Aby zezwolić na Serializowanie wewnętrznych lub chronionych wewnętrznych elementów członkowskich w częściowej relacji zaufania, użyj <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu Assembly. Ten atrybut umożliwia zestawowi zadeklarować, że jego wewnętrzne elementy członkowskie są widoczne dla innego zestawu. W tym przypadku zestaw, który chce mieć zaszeregowaną wewnętrzną składową, deklaruje, że jego wewnętrzne elementy członkowskie są widoczne do System.Runtime.Serialization.dll.
 
     Zaletą tego podejścia jest to, że nie wymaga ścieżki generowania kodu z podwyższonym poziomem uprawnień.
 
@@ -354,7 +354,7 @@ Należy zauważyć kilka innych problemów dotyczących zarządzania stanem obie
 
 ## <a name="schema-import"></a>Importowanie schematu
 
-Zwykle proces importowania schematu do generowania typów odbywa się tylko w czasie projektowania, na przykład w przypadku korzystania z narzędzia do obsługi [metadanych ServiceModel (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) w usłudze sieci Web w celu wygenerowania klasy klienta. Jednak w bardziej zaawansowanych scenariuszach możesz przetwarzać schemat w czasie wykonywania. Należy pamiętać, że takie działanie może ujawnić ryzyko wystąpienia zagrożeń typu "odmowa usługi". Importowanie niektórych schematów może zająć dużo czasu. Nie należy używać <xref:System.Xml.Serialization.XmlSerializer> składnika importowania schematu w takich scenariuszach, jeśli schematy są prawdopodobnie pochodzące z niezaufanego źródła.
+Zwykle proces importowania schematu do generowania typów odbywa się tylko w czasie projektowania, na przykład podczas korzystania z narzędzia do obsługi [metadanych ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) w usłudze sieci Web w celu wygenerowania klasy klienta. Jednak w bardziej zaawansowanych scenariuszach możesz przetwarzać schemat w czasie wykonywania. Należy pamiętać, że takie działanie może ujawnić ryzyko wystąpienia zagrożeń typu "odmowa usługi". Importowanie niektórych schematów może zająć dużo czasu. Nie należy używać <xref:System.Xml.Serialization.XmlSerializer> składnika importowania schematu w takich scenariuszach, jeśli schematy są prawdopodobnie pochodzące z niezaufanego źródła.
 
 ## <a name="threats-specific-to-aspnet-ajax-integration"></a>Zagrożenia związane z integracją ASP.NET AJAX
 
@@ -382,7 +382,7 @@ WCF to elastyczny i dostosowywalny system. Większość zawartości tego tematu 
 
 - Ogólnie rzecz biorąc, w przypadku użycia dowolnego składnika, który akceptuje limit przydziału, należy zapoznać się z jego wpływem na zabezpieczenia i ustawić bezpieczną wartość.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.XmlDictionaryReader>

@@ -19,38 +19,19 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: b9915faff2593cc51868c20e1a83a05ffca9f548
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 0de0c7e9843ca8a97392733a68367b1dae8de232
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325937"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416386"
 ---
-# <a name="isolated-storage"></a>Izolowany magazyn
-<a name="top"></a>W przypadku aplikacji klasycznych magazyn izolowany jest mechanizmem magazynu danych, który zapewnia izolację i bezpieczeństwo przez definiowanie ustandaryzowanych metod kojarzenia kodu z zapisanymi danymi. Standaryzacja oferuje także inne korzyści. Administratorzy mogą używać narzędzi przeznaczonych do wykonywania operacji na wydzielonej pamięci masowej w celu konfigurowania ilości miejsca przeznaczonego na pliki, ustawiania zasad zabezpieczeń i usuwania nieużywanych danych. Dzięki wydzielonej pamięci masowej kod nie wymaga unikatowych ścieżek określających bezpieczne lokalizacje w systemie plików, a dane są chronione przed innymi aplikacjami, które mają dostęp tylko do wydzielonej pamięci masowej. Ustalona informacja, która wskazuje, gdzie jest zlokalizowany obszar pamięci aplikacji nie jest potrzebna.
+# <a name="isolated-storage"></a>Wydzielona pamięć masowa
+
+W przypadku aplikacji klasycznych magazyn izolowany jest mechanizmem magazynu danych, który zapewnia izolację i bezpieczeństwo przez definiowanie ustandaryzowanych metod kojarzenia kodu z zapisanymi danymi. Standaryzacja oferuje także inne korzyści. Administratorzy mogą używać narzędzi przeznaczonych do wykonywania operacji na wydzielonej pamięci masowej w celu konfigurowania ilości miejsca przeznaczonego na pliki, ustawiania zasad zabezpieczeń i usuwania nieużywanych danych. Dzięki wydzielonej pamięci masowej kod nie wymaga unikatowych ścieżek określających bezpieczne lokalizacje w systemie plików, a dane są chronione przed innymi aplikacjami, które mają dostęp tylko do wydzielonej pamięci masowej. Ustalona informacja, która wskazuje, gdzie jest zlokalizowany obszar pamięci aplikacji nie jest potrzebna.
 
 > [!IMPORTANT]
 > Izolowany magazyn nie jest dostępny dla aplikacji ze sklepu Windows 8. x. Zamiast tego należy użyć klas danych aplikacji w `Windows.Storage` przestrzeniach nazw uwzględnionych w interfejsie API środowisko wykonawcze systemu Windows do przechowywania lokalnych danych i plików. Aby uzyskać więcej informacji, zobacz [dane aplikacji](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) w centrum deweloperów systemu Windows.
-
-Ten temat zawiera następujące sekcje:
-
-- [Przedziały i magazyny danych](#data_compartments_and_stores)
-
-- [Limity izolowanych magazynów](#quotas)
-
-- [Bezpieczny dostęp](#secure_access)
-
-- [Dopuszczalne użycie i zagrożenia zabezpieczeń](#allowed_usage)
-
-- [Lokalizacje izolowanych magazynów](#isolated_storage_locations)
-
-- [Tworzenia, wyliczania i usuwania izolowanych magazynów](#isolated_storage_tasks)
-
-- [Scenariusze izolowanych magazynów](#scenarios_for_isolated_storage)
-
-- [Tematy pokrewne](#related_topics)
-
-- [Tematy pomocy](#reference)
 
 <a name="data_compartments_and_stores"></a>
 
@@ -114,11 +95,11 @@ __Ta sekcja ma zastosowanie do następujących platform:__
 - .NET Core 2.1 +
 - .NET 5.0 +
 
-.NET Framework i .NET Core oferują [izolowany magazyn](/dotnet/standard/io/isolated-storage) jako mechanizm utrwalania danych dla użytkownika, aplikacji lub składnika. Jest to starszy składnik przeznaczony głównie do realizacji przestarzałych scenariuszy zabezpieczeń dostępu do kodu.
+.NET Framework i .NET Core oferują izolowany magazyn jako mechanizm utrwalania danych dla użytkownika, aplikacji lub składnika. Jest to starszy składnik przeznaczony głównie do realizacji przestarzałych scenariuszy zabezpieczeń dostępu do kodu.
 
 Do odczytywania danych między granicami zaufania można używać różnych izolowanych interfejsów API i narzędzi magazynu. Na przykład odczyt danych z zakresu całego komputera może agregować dane z innych, prawdopodobnie mniej zaufanych kont użytkowników na komputerze. Składniki lub aplikacje odczytane z oddzielonych na cały komputer zakresów magazynu powinny mieć świadomość skutków odczytu tych danych.
 
-### <a name="security-sensitive-apis-which-can-read-from-the-machine-wide-scope"></a>Zależne od zabezpieczeń interfejsy API, które mogą odczytywać z zakresu całego komputera
+### <a name="security-sensitive-apis-that-can-read-from-the-machine-wide-scope"></a>Zależne od zabezpieczeń interfejsy API, które mogą odczytywać z zakresu całego komputera
 
 Składniki lub aplikacje, które wywołują dowolne z następujących interfejsów API, Odczytaj z zakresu całego komputera:
 
@@ -129,7 +110,7 @@ Składniki lub aplikacje, które wywołują dowolne z następujących interfejs�
 * [IsolatedStorageFile. GetStore](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getstore), przekazywanie zakresu zawierającego flagę IsolatedStorageScope. Machine
 * [IsolatedStorageFile. Remove](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.remove), przekazywanie zakresu zawierającego `IsolatedStorageScope.Machine` flagę
 
-Działanie [Narzędzia izolowanego magazynu](/dotnet/framework/tools/storeadm-exe-isolated-storage-tool) `storeadm.exe` ma wpływ na to `/machine` , jak pokazano w poniższym kodzie:
+Działanie [Narzędzia izolowanego magazynu](../../framework/tools/storeadm-exe-isolated-storage-tool.md) `storeadm.exe` ma wpływ na to `/machine` , jak pokazano w poniższym kodzie:
 
 ```txt
 storeadm.exe /machine [any-other-switches]
@@ -252,7 +233,7 @@ Wiele aplikacji używa bazy danych do przechowywania i izolowania danych; w taki
 
 <a name="related_topics"></a>
 
-## <a name="related-topics"></a>Tematy pokrewne
+## <a name="related-articles"></a>Pokrewne artykuły:
 
 |Tytuł|Opis|
 |-----------|-----------------|

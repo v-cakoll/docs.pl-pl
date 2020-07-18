@@ -1,15 +1,15 @@
 ---
-title: Instalowanie dystrybucji .NET Core i Linux
+title: Zainstaluj program .NET Core w dystrybucji systemu Linux
 description: Dowiedz się więcej o tym, jakie dystrybucje systemu Linux obsługują instalowanie programu .NET Core w systemie Linux.
 author: adegeo
 ms.author: adegeo
 ms.date: 06/01/2020
-ms.openlocfilehash: 06a90d7fecfe9f25d26caccb2fe3aedec0176f64
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: c827dfbb05a7d49ee18209ef2c8b5613f45a4578
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803095"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441414"
 ---
 # <a name="install-net-core-on-linux"></a>Instalowanie programu .NET Core w systemie Linux
 
@@ -31,7 +31,7 @@ Następujące wersje programu .NET Core nie są ❌ już obsługiwane. Pliki do 
 
 - 3.0
 - 2.2
-- 2.0
+- 2,0
 
 Te nieobsługiwane wersje nie są szczegółowo opisane w poniższych sekcjach, a przebieg może się różnić w przypadku próby ich zainstalowania.
 
@@ -100,7 +100,7 @@ Poniższa tabela zawiera listę obecnie obsługiwanych wersji programu .NET Core
 |--------------------------|---------------|---------------|----------------|
 | ✔️ [32](linux-fedora.md#fedora-32-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 — wersja zapoznawcza |
 | ✔️ [31](linux-fedora.md#fedora-31-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 — wersja zapoznawcza |
-| ❌ [30](linux-fedora.md#fedora-30-) | ✔️ 2,1        | ✔️ 3,1        | ❌wersja zapoznawcza 5,0 |
+| ❌[30](linux-fedora.md#fedora-30-) | ✔️ 2,1        | ✔️ 3,1        | ❌wersja zapoznawcza 5,0 |
 | ❌[29](linux-fedora.md#fedora-29-) | ✔️ 2,1        | ✔️ 3,1        | ❌wersja zapoznawcza 5,0 |
 | ❌[28](linux-fedora.md#fedora-28-) | ✔️ 2,1        | ❌3,1        | ❌wersja zapoznawcza 5,0 |
 | ❌[27](linux-fedora.md#fedora-27-) | ✔️ 2,1        | ❌3,1        | ❌wersja zapoznawcza 5,0 |

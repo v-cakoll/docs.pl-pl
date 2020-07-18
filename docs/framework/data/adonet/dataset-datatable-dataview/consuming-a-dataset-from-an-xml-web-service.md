@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: 2c8924ee3374489dded7e819ecde8e4d9da750bb
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: e6dc32274cc3b0d7ec9d66a837a422c87fb2468b
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374389"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416207"
 ---
 # <a name="consume-a-dataset-from-an-xml-web-service"></a>Korzystanie z zestawu danych z usługi sieci Web XML
 
@@ -19,7 +19,7 @@ ms.locfileid: "86374389"
  Poniższy przykład pokazuje, jak utworzyć usługę sieci Web XML i klienta, który używa **zestawu danych** do transportowania danych relacyjnych (w tym zmodyfikowanych danych) i rozwiązać wszelkie aktualizacje z powrotem do oryginalnego źródła danych.  
   
 > [!NOTE]
-> Przesyłanie `DataSet` lub `DataTable` wystąpienia w ramach wywołań usługi sieci Web XML nie jest bezpieczne, jeśli dane wejściowe nie są zaufane. Aby uzyskać więcej informacji, zobacz [wskazówki dotyczące zabezpieczeń zestawów danych i DataTable](/dotnet/framework/data/adonet/dataset-datatable-dataview/security-guidance).
+> Przesyłanie `DataSet` lub `DataTable` wystąpienia w ramach wywołań usługi sieci Web XML nie jest bezpieczne, jeśli dane wejściowe nie są zaufane. Aby uzyskać więcej informacji, zobacz [wskazówki dotyczące zabezpieczeń zestawów danych i DataTable](security-guidance.md).
 > Zalecamy również, aby podczas tworzenia usługi sieci Web XML zawsze uwzględnić implikacje związane z bezpieczeństwem. Aby uzyskać informacje na temat zabezpieczania usługi sieci Web XML, zobacz [Zabezpieczanie usług sieci Web XML utworzonych za pomocą ASP.NET](/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100)).  
   
 ## <a name="create-an-xml-web-service"></a>Tworzenie usługi sieci Web XML
@@ -263,7 +263,7 @@ ms.locfileid: "86374389"
     csc client.cs -r:sample.dll -r:System.dll -r:System.Data.dll -r:System.Xml.dll -r:System.Web.Services.dll  
     ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [ADO.NET](../index.md)
 - [Elementy DataSet, DataTable i DataView](index.md)

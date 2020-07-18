@@ -3,12 +3,12 @@ title: Wskazówki dotyczące zabezpieczeń zestawów danych i DataTable
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: f78b52ede4ec76599d761e5188f39c3e9dae2a4f
-ms.sourcegitcommit: 98548968e89739a37625e72ddbd535fe1e11121e
+ms.openlocfilehash: 2fbac625ae0049fc4c363977dc1d3fbcfb376025
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405295"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416193"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Wskazówki dotyczące zabezpieczeń zestawów danych i DataTable
 
@@ -193,7 +193,7 @@ Gdy tryb inspekcji jest włączony, można użyć _App.config_ , aby połączyć
 </configuration>
 ```
 
-Aby uzyskać więcej informacji na temat `TraceSource` i `TraceListener` , zobacz dokument [How to: use TraceSource and filters with Trace detektors](/dotnet/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners).
+Aby uzyskać więcej informacji na temat `TraceSource` i `TraceListener` , zobacz dokument [How to: use TraceSource and filters with Trace detektors](../../../debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md).
 
 > [!NOTE]
 > Uruchamianie aplikacji w trybie inspekcji nie jest dostępne w programie .NET Core ani w programie .NET 5,0 i nowszych wersjach.
@@ -236,7 +236,7 @@ W ASP.NET `<AppContextSwitchOverrides>` element nie jest dostępny. Zamiast tego
 </configuration>
 ```
 
-Aby uzyskać więcej informacji, zobacz [\<AppContextSwitchOverrides>](/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element) element.
+Aby uzyskać więcej informacji, zobacz [\<AppContextSwitchOverrides>](../../../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) element.
 
 W przypadku platformy .NET Core, .NET 5 i ASP.NET Core to ustawienie jest kontrolowane przez _runtimeconfig.jsna_, jak pokazano w poniższym kodzie JSON:
 
@@ -308,7 +308,7 @@ DataSet customers = new DataSet();
 adapter.Fill(customers, "Customers");
 ```
 
-(Przykładowy kod jest częścią większego przykładu znalezionego podczas [wypełniania zestawu danych z elementu DataAdapter](/dotnet/framework/data/adonet/populating-a-dataset-from-a-dataadapter)).
+(Przykładowy kod jest częścią większego przykładu znalezionego podczas [wypełniania zestawu danych z elementu DataAdapter](../populating-a-dataset-from-a-dataadapter.md)).
 
 > Większość aplikacji może uprościć i założyć, że ich warstwa bazy danych jest zaufana. Niemniej jednak w wykonywaćniu aplikacji do [modelowania zagrożeń](https://www.microsoft.com/securityengineering/sdl/threatmodeling) model zagrożeń może być uważany za granicę zaufania między aplikacją a warstwą bazy danych (serwera). Korzystanie z uwierzytelniania [wzajemnego](/sql/relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections) i uwierzytelniania usługi [AAD](/azure/azure-sql/database/authentication-aad-overview) między klientem a serwerem jest jednym ze sposobów, aby pomóc w rozwiązywaniu ryzyka związanego z tym. W pozostałej części tej sekcji omówiono możliwy wynik połączenia klienta z niezaufanym serwerem.
 
@@ -487,4 +487,4 @@ Rozważ zastępowanie modelu obiektów, aby użyć [Entity Framework](/ef). Enti
 * Program udostępnia [zróżnicowany ekosystem](/ef/core/providers/) dostawców baz danych, co ułatwia tworzenie zapytań w bazie danych przy użyciu modeli obiektów Entity Framework.
 * Oferuje wbudowane zabezpieczenia podczas deserializacji danych z niezaufanych źródeł.
 
-W przypadku aplikacji korzystających z `.aspx` punktów końcowych protokołu SOAP Rozważ zmianę tych punktów końcowych na potrzeby korzystania z [platformy WCF](/dotnet/framework/wcf/). WCF to bardziej zaproponowana wymiana `.asmx` usług sieci Web. Punkty końcowe WCF [mogą być udostępniane za pośrednictwem protokołu SOAP](/dotnet/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients) w celu zapewnienia zgodności z istniejącymi wywołaniami.
+W przypadku aplikacji korzystających z `.aspx` punktów końcowych protokołu SOAP Rozważ zmianę tych punktów końcowych na potrzeby korzystania z [platformy WCF](/dotnet/framework/wcf/). WCF to bardziej zaproponowana wymiana `.asmx` usług sieci Web. Punkty końcowe WCF [mogą być udostępniane za pośrednictwem protokołu SOAP](../../../wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) w celu zapewnienia zgodności z istniejącymi wywołaniami.

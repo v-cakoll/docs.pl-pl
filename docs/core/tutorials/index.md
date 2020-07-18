@@ -4,12 +4,12 @@ description: Postępuj zgodnie z samouczkami dotyczącymi uczenia się platformy
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: a685b7d8d6c849cfea061a997780b9cafeb6d938
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c26d3e2e55723fed98f2013fe7131d2b06f910d2
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283731"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415934"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Poznaj narzędzia platformy .NET Core i zestaw .NET Core SDK, korzystając z tych samouczków
 
@@ -42,7 +42,7 @@ Wybierz te samouczki, jeśli chcesz użyć Visual Studio Code lub innego edytora
 ## <a name="use-visual-studio-for-mac"></a>Korzystanie z programu Visual Studio dla komputerów Mac
 
 - [tworzenie aplikacji konsoli](using-on-mac-vs.md)
-- [Tworzenie i testowanie jednostkowe biblioteki](using-on-mac-vs-full-solution.md)
+- [Tworzenie i testowanie jednostkowe biblioteki](library-with-visual-studio-mac.md)
 - [Instalowanie i używanie pakietu](/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
 
 ## <a name="advanced-topics"></a>Tematy zaawansowane

@@ -2,16 +2,16 @@
 title: Tworzenie biblioteki klas .NET Standard przy użyciu Visual Studio dla komputerów Mac
 description: Dowiedz się, jak utworzyć bibliotekę klas .NET Standard przy użyciu Visual Studio dla komputerów Mac.
 ms.date: 06/08/2020
-ms.openlocfilehash: 3a107fff2fd6aef5e06d9af3eac334fbf5688fa5
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 8e1e4ca3bc1b12d889b847d80318f3d6cd1bbe46
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84713743"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416008"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-for-mac"></a>Samouczek: Tworzenie biblioteki .NET Standard przy użyciu Visual Studio dla komputerów Mac
 
-W tym samouczku utworzysz prostą bibliotekę klas, która zawiera pojedynczą metodę obsługi ciągów. Implementuje ją jako [metodę rozszerzenia](../../csharp/programming-guide/classes-and-structs/extension-methods.md) , aby można było wywołać ją tak, jakby była elementem członkowskim <xref:System.String> klasy.
+W tym samouczku utworzysz bibliotekę klas, która zawiera jedną metodę obsługi ciągów. Implementuje ją jako [metodę rozszerzenia](../../csharp/programming-guide/classes-and-structs/extension-methods.md) , aby można było wywołać ją tak, jakby była elementem członkowskim <xref:System.String> klasy.
 
 *Biblioteka klas* definiuje typy i metody, które są wywoływane przez aplikację. Biblioteka klas przeznaczona dla .NET Standard 2,1 może być używana przez aplikację, która jest przeznaczona dla dowolnej implementacji platformy .NET, która obsługuje wersję 2,1 .NET Standard. Po zakończeniu biblioteki klas można ją rozpowszechnić jako składnik innej firmy lub jako składnik pakietu z jedną lub wieloma aplikacjami.
 
@@ -23,7 +23,7 @@ W tym samouczku utworzysz prostą bibliotekę klas, która zawiera pojedynczą m
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-* [Zainstaluj program Visual Studio dla komputerów Mac w wersji 8,6 lub nowszej](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Wybierz opcję zainstalowania platformy .NET Core. Instalowanie platformy Xamarin jest opcjonalne w przypadku programowania .NET Core. Więcej informacji zawierają następujące zasoby:
+* [Zainstaluj program Visual Studio dla komputerów Mac w wersji 8,6 lub nowszej](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Wybierz opcję zainstalowania platformy .NET Core. Instalowanie platformy Xamarin jest opcjonalne w przypadku programowania .NET Core. Więcej informacji można znaleźć w następujących zasobach:
 
   * [Samouczek: instalowanie Visual Studio dla komputerów Mac](/visualstudio/mac/installation).
   * [Obsługiwane wersje macOS](../install/dependencies.md?pivots=os-macos).
@@ -45,7 +45,7 @@ Rozwiązanie programu Visual Studio służy jako kontener dla jednego lub wielu 
 
    :::image type="content" source="media/library-with-visual-studio-mac/choose-net-std-21.png" alt-text="Wybierz .NET Standard 2,1":::
 
-1. Nadaj projektowi nazwę "StringLibrary" i rozwiązanie "ClassLibraryProjects". Pozostaw opcję **Utwórz katalog projektu w wybranym katalogu rozwiązania** . Wybierz przycisk **Utwórz**.
+1. Nadaj projektowi nazwę "StringLibrary" i rozwiązanie "ClassLibraryProjects". Pozostaw opcję **Utwórz katalog projektu w wybranym katalogu rozwiązania** . Wybierz pozycję **Utwórz**.
 
    :::image type="content" source="media/library-with-visual-studio-mac/visual-studio-mac-new-project-options.png" alt-text="Opcje okna dialogowego Visual Studio dla komputerów Mac nowego projektu":::
 
@@ -97,7 +97,7 @@ Początkowo nowy projekt aplikacji konsolowej nie ma dostępu do biblioteki klas
 
 1. W oknie dialogowym **odwołania** wybierz pozycję **StringLibrary** , a następnie wybierz pozycję **OK**.
 
-## <a name="run-the-app"></a>Uruchomienie aplikacji
+## <a name="run-the-app"></a>Uruchamianie aplikacji
 
 1. <kbd>naciśnij klawisz Ctrl</kbd>i kliknij projekt pokazu i wybierz polecenie **Uruchom projekt** z menu kontekstowego.
 

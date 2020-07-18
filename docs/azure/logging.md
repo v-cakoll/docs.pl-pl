@@ -5,12 +5,12 @@ ms.date: 03/20/2020
 ms.custom: azure-sdk-dotnet
 ms.author: casoper
 author: camsoper
-ms.openlocfilehash: 5a1fb35aeca034a7cdd1caa813a3839919a5f926
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 0b255713bc9c13e0cbdaeb25a3d0fe46e91e815d
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174962"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416025"
 ---
 # <a name="logging-with-the-azure-sdk-for-net"></a>Rejestrowanie przy użyciu zestawu Azure SDK dla platformy .NET
 
@@ -31,7 +31,7 @@ Wpis dziennika żądania HTTP:
 
 - Unikatowy identyfikator
 - Metoda HTTP
-- Identyfikator URI
+- URI
 - Wychodzące nagłówki żądań
 
 Wpis dziennika odpowiedzi HTTP:
@@ -70,7 +70,7 @@ using AzureEventSourceListener listener = AzureEventSourceListener.CreateConsole
 
 ### <a name="log-to-diagnostic-traces"></a>Rejestruj do śladów diagnostycznych
 
-W przypadku implementacji detektorów śledzenia można użyć metody, `CreateTraceLogger` Aby zalogować się do standardowego mechanizmu śledzenia zdarzeń .NET ( [`System.Diagnostics.Tracing`](/dotnet/api/system.diagnostics.tracing) ). Aby uzyskać więcej informacji na temat śledzenia zdarzeń w programie .NET, zobacz [detektory śledzenia](/dotnet/framework/debug-trace-profile/trace-listeners). Ten przykład określa poziom dziennika pełny:
+W przypadku implementacji detektorów śledzenia można użyć metody, `CreateTraceLogger` Aby zalogować się do standardowego mechanizmu śledzenia zdarzeń .NET ( [`System.Diagnostics.Tracing`](/dotnet/api/system.diagnostics.tracing) ). Aby uzyskać więcej informacji na temat śledzenia zdarzeń w programie .NET, zobacz [detektory śledzenia](../framework/debug-trace-profile/trace-listeners.md). Ten przykład określa poziom dziennika pełny:
 
 ```csharp
 using AzureEventSourceListener listener = AzureEventSourceListener.CreateTraceLogger(EventLevel.Verbose);
@@ -99,4 +99,4 @@ using AzureEventSourceListener listener = new AzureEventSourceListener((e, messa
 - [Włączanie rejestrowania diagnostycznego dla aplikacji w Azure App Service](/azure/app-service/troubleshoot-diagnostic-logs)
 - Przejrzyj opcje [rejestrowania i inspekcji zabezpieczeń platformy Azure](/azure/security/fundamentals/log-audit)
 - Dowiedz się, jak korzystać z [dzienników platformy Azure](/azure/azure-monitor/platform/platform-logs-overview)
-- Przeczytaj więcej na temat [rejestrowania i śledzenia w programie .NET Core](/dotnet/core/diagnostics/logging-tracing)
+- Przeczytaj więcej na temat [rejestrowania i śledzenia w programie .NET Core](../core/diagnostics/logging-tracing.md)

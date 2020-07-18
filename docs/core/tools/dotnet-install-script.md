@@ -2,12 +2,12 @@
 title: dotnet-install scripts
 description: Więcej informacji na temat skryptów programu dotnet-Install w celu zainstalowania zestaw .NET Core SDK i udostępnionego środowiska uruchomieniowego.
 ms.date: 04/30/2020
-ms.openlocfilehash: d03877d76212f7b22de0a1075cf50fc75bd104b6
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: cecfbb86c4a2863161d3df7c78201fa8057abfe5
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324425"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415921"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet — informacje o skryptach instalacji
 
@@ -82,7 +82,7 @@ Domyślnie skrypty instalacyjne pobierają zestaw SDK i instalują go. Jeśli ch
 
 Domyślnie skrypt dodaje lokalizację instalacji do $PATH bieżącej sesji. Zastąp to zachowanie domyślne, określając `-NoPath|--no-path` argument. Skrypt nie ustawi `DOTNET_ROOT` zmiennej środowiskowej.
 
-Przed uruchomieniem skryptu Zainstaluj wymagane [zależności](../install/dependencies.md).
+Przed uruchomieniem skryptu Zainstaluj wymagane [zależności](../install/windows.md#dependencies).
 
 Można zainstalować określoną wersję przy użyciu `-Version|--version` argumentu. Wersja musi być określona jako numer wersji trzech części, np `2.1.0` .. Jeśli wersja nie jest określona, skrypt instaluje `latest` wersję.
 
@@ -252,7 +252,7 @@ Skrypty instalacji nie aktualizują rejestru w systemie Windows. Po prostu pobie
   curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
   ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Wersje platformy .NET Core](https://github.com/dotnet/core/releases)
 - [Środowisko uruchomieniowe programu .NET Core i archiwum pobierania zestawu SDK](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

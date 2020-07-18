@@ -1,44 +1,45 @@
 ---
-title: 'Przewodnik po migracji do programu .NET Framework 4.8, 4.7, 4.6 i 4.5 '
+title: 'Przewodnik migracji do .NET Framework 4,8, 4,7, 4,6 i 4,5 '
+description: Przewodnik migracji do nowszych wersji .NET Framework, które obejmują zasoby dla nowych funkcji i zgodności aplikacji.
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
 helpviewer_keywords:
 - .NET Framework, migrating applications to
 - migration, .NET Framework
 ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
-ms.openlocfilehash: fbaee646f7adcfe1a53d4231790e4258fd95a892
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: a5b632824efacdb5e99228727b8751dc7f17d363
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102635"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86443419"
 ---
-# <a name="migrate-to-net-framework-48-47-46-and-45"></a>Migracja do programu .NET Framework 4.8, 4.7, 4.6 i 4.5
+# <a name="migrate-to-net-framework-48-47-46-and-45"></a>Migrowanie do .NET Framework 4,8, 4,7, 4,6 i 4,5
 
-Jeśli aplikacja została utworzona przy użyciu starszej wersji programu .NET Framework, można ją ogólnie uaktualnić do platformy .NET Framework 4.5 i jej wersji punktowych (4.5.1 i 4.5.2), .NET Framework 4.6 i jej punktu (4.6.1 i 4.6.2), .NET Framework 4.7 i jego wydania punktowe (4.7.1 i 4.7.2) lub .NET Framework 4.8 łatwo. Otwórz projekt w programie Visual Studio. Jeśli projekt został utworzony we wcześniejszej wersji programu Visual Studio, zostanie automatycznie otwarte okno dialogowe **Zgodność projektu.** Aby uzyskać więcej informacji na temat uaktualniania projektu w programie Visual Studio, zobacz [Port, Migrate i Upgrade Visual Studio Projects](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects) and Visual Studio [2019 Platform Targeting and Compatibility](/visualstudio/releases/2019/compatibility).
+Jeśli aplikacja została utworzona przy użyciu wcześniejszej wersji .NET Framework, można ją na ogół uaktualnić do .NET Framework 4,5 i jej wydań punktów (4.5.1 i 4.5.2), .NET Framework 4,6 i jej wydań punktów (4.6.1 i 4.6.2), .NET Framework 4,7 i jego wydań punktów (4.7.1 i 4.7.2), a także łatwo .NET Framework 4,8. Otwórz projekt w programie Visual Studio. Jeśli projekt został utworzony we wcześniejszej wersji programu Visual Studio, zostanie automatycznie otwarte okno dialogowe **Zgodność projektu** . Aby uzyskać więcej informacji na temat uaktualniania projektu w programie Visual Studio, zobacz [port, migrowanie i uaktualnianie projektów programu Visual Studio](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects) oraz [Określanie elementów docelowych i zgodności platformy Visual Studio 2019](/visualstudio/releases/2019/compatibility).
 
- Jednak niektóre zmiany w .NET Framework wymagają zmian w kodzie. Można również skorzystać z funkcji, które jest nowy w .NET Framework 4.5 i jego wydania punktowe, w .NET Framework 4.6 i jego wydania punktowe, w .NET Framework 4.7 i jego wydania punktowe lub w .NET Framework 4.8. Wprowadzanie tego typu zmian w aplikacji dla nowej wersji programu .NET Framework jest zwykle określane jako *migracja.* Jeśli aplikacja nie musi być migrowana, można ją uruchomić w systemie .NET Framework 4.5 lub nowszej wersji bez konieczności ponownego komppilowania.
+ Jednak niektóre zmiany w .NET Framework wymagają wprowadzenia zmian w kodzie. Możesz również skorzystać z zalet nowych funkcji dostępnych w .NET Framework 4,5 i jej wersjach, w .NET Framework 4,6 i jej wersjach punktów, w .NET Framework 4,7 i jego wersjach punktów lub w .NET Framework 4,8. Wprowadzenie zmian w aplikacji dla nowej wersji .NET Framework jest zwykle określane jako *migracja*. Jeśli aplikacja nie musi być migrowana, można uruchomić ją w .NET Framework 4,5 lub nowszej wersji bez konieczności jej ponownego kompilowania.
 
 ## <a name="migration-resources"></a>Zasoby dotyczące migracji
 
-Przejrzyj następujące dokumenty przed migracją aplikacji z wcześniejszych wersji programu .NET Framework do wersji 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 lub 4.8:
+Przed przeprowadzeniem migracji aplikacji z wcześniejszych wersji .NET Framework do wersji 4,5, 4.5.1, 4.5.2, 4,6, 4.6.1, 4.6.2, 4,7, 4.7.1, 4.7.2 lub 4,8:
 
-- Zobacz [wersje i zależności,](versions-and-dependencies.md) aby zrozumieć wersję CLR leżącą u podstaw każdej wersji programu .NET Framework i przejrzeć wskazówki dotyczące pomyślnego kierowania aplikacji.
+- Zapoznaj się z wersjami [i zależnościami](versions-and-dependencies.md) , aby zrozumieć wersję środowiska CLR dla każdej wersji .NET Framework i zapoznać się z wytycznymi dotyczącymi pomyślnego określania docelowych aplikacji.
 
-- Przejrzyj [zgodność aplikacji,](application-compatibility.md) aby dowiedzieć się więcej o czasie wykonywania i przekierowaniu zmian, które mogą mieć wpływ na aplikację i jak sobie z nimi radzić.
+- Przejrzyj temat [zgodność aplikacji](application-compatibility.md) , aby dowiedzieć się więcej o czasie wykonywania i przekierowaniu zmian, które mogą mieć wpływ na aplikację i jak je obsługiwać.
 
-- Przejrzyj, [co jest przestarzałe w bibliotece klas,](../whats-new/whats-obsolete.md) aby określić wszelkie typy lub elementy członkowskie w kodzie, które zostały przestarzałe, i zalecane alternatywy.
+- Sprawdź, [co jest przestarzałe w bibliotece klas](../whats-new/whats-obsolete.md) , aby określić wszelkie typy lub elementy członkowskie w kodzie, które były przestarzałe, a także zalecane alternatywy.
 
-- Zobacz [Co nowego, aby](../whats-new/index.md) zapoznać się z opisami nowych funkcji, które możesz dodać do aplikacji.
+- Zobacz, [co nowego](../whats-new/index.md) w opisach nowych funkcji, które można chcieć dodać do aplikacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Zgodność aplikacji](application-compatibility.md)
 - [Migracja z programu .NET Framework 1.1](migrating-from-the-net-framework-1-1.md)
-- [Zgodność z wersjami](version-compatibility.md)
+- [Zgodność wersji](version-compatibility.md)
 - [Wersje i zależności](versions-and-dependencies.md)
-- [Jak: Konfigurowanie aplikacji do obsługi wersji programu .NET Framework 4 lub nowszych](how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Instrukcje: Konfigurowanie aplikacji do obsługi .NET Framework 4 lub nowszej wersji](how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
 - [Co nowego](../whats-new/index.md)
 - [Przestarzałe elementy w ułatwieniach dostępu](../whats-new/whats-obsolete.md)
-- [Oficjalna polityka wsparcia .NET Framework](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
+- [.NET Framework oficjalne zasady pomocy technicznej](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
 - [Problemy podczas migracji programu .NET Framework 4](net-framework-4-migration-issues.md)

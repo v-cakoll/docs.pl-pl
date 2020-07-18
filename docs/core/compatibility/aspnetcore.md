@@ -2,15 +2,15 @@
 title: ASP.NET Core istotne zmiany
 titleSuffix: ''
 description: Wyświetla listę istotnych zmian w ASP.NET Core.
-ms.date: 07/14/2020
+ms.date: 07/15/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: b73492e0c2f60c2b214984d3987de1e9e6530847
-ms.sourcegitcommit: d4f7ba08f2a45a9dbef53be597eed6d4a9410f29
+ms.openlocfilehash: cea6771afdc05edc525e7d35f530f42e7b3bc1fa
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86402007"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441950"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core istotne zmiany
 
@@ -26,8 +26,10 @@ Następujące istotne zmiany zostały udokumentowane na tej stronie:
 - [Autoryzacja: Przeciążenie metody addauthorization przeniesiono do innego zestawu](#authorization-addauthorization-overload-moved-to-different-assembly)
 - [Autoryzacja: Usunięto IAllowAnonymous z AuthorizationFilterContext. filters](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
 - [Autoryzacja: implementacje IAuthorizationPolicyProvider wymagają nowej metody](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
+- [Autoryzacja: zasób w routingu punktu końcowego jest obiektem HttpContext](#authorization-resource-in-endpoint-routing-is-httpcontext)
 - [Azure: Usunięto wstępnie ustalone pakiety integracji platformy Azure](#azure-microsoft-prefixed-azure-integration-packages-removed)
 - [Blazor: nieznaczące odstępy są obcinane ze składników w czasie kompilacji](#blazor-insignificant-whitespace-trimmed-from-components-at-compile-time)
+- [Blazor: zmieniono platformę docelową pakietów NuGet](#blazor-target-framework-of-nuget-packages-changed)
 - [Buforowanie: Usunięto Właściwość CompactOnMemoryPressure](#caching-compactonmemorypressure-property-removed)
 - [Buforowanie: Microsoft. Extensions. buforowanie. SqlServer używa nowego pakietu SqlClient](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
 - [Buforowanie: typy ResponseCaching "pubternal" zostały zmienione na wewnętrzne](#caching-responsecaching-pubternal-types-changed-to-internal)
@@ -91,11 +93,19 @@ Następujące istotne zmiany zostały udokumentowane na tej stronie:
 
 ## <a name="aspnet-core-50"></a>ASP.NET Core 5,0
 
+[!INCLUDE[Authorization: Resource in endpoint routing is HttpContext](~/includes/core-changes/aspnetcore/5.0/authorization-resource-in-endpoint-routing.md)]
+
+***
+
 [!INCLUDE[Azure: Microsoft-prefixed Azure integration packages removed](~/includes/core-changes/aspnetcore/5.0/azure-integration-packages-removed.md)]
 
 ***
 
 [!INCLUDE[Blazor: Insignificant whitespace trimmed from components at compile time](~/includes/core-changes/aspnetcore/5.0/blazor-components-trim-insignificant-whitespace.md)]
+
+***
+
+[!INCLUDE[Blazor: Target framework of NuGet packages changed](~/includes/core-changes/aspnetcore/5.0/blazor-packages-target-framework-changed.md)]
 
 ***
 

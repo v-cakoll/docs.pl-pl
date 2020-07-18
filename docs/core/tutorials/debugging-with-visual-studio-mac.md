@@ -2,12 +2,12 @@
 title: Debugowanie aplikacji konsolowej .NET Core przy użyciu Visual Studio dla komputerów Mac
 description: Dowiedz się, jak debugować aplikację konsolową .NET Core przy użyciu programu Visual Studio Mac.
 ms.date: 06/08/2020
-ms.openlocfilehash: 4941605923a9897d481aca4ec31408ab62e873f3
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 7e2a25266fab40b5ef1d0a38b8bbf06a6843746b
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84713820"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416023"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-for-mac"></a>Samouczek: debugowanie aplikacji konsolowej .NET Core przy użyciu Visual Studio dla komputerów Mac
 
@@ -15,7 +15,7 @@ W tym samouczku przedstawiono narzędzia debugowania dostępne w Visual Studio d
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- Ten samouczek współpracuje z aplikacją konsolową utworzoną w temacie [Tworzenie aplikacji konsolowej platformy .NET Core w Visual Studio dla komputerów Mac](using-on-mac-vs.md).
+- Ten samouczek współpracuje z aplikacją konsolową utworzoną w temacie [Tworzenie aplikacji konsolowej platformy .NET Core w Visual Studio dla komputerów Mac](with-visual-studio-mac.md).
 
 ## <a name="use-debug-build-configuration"></a>Użyj konfiguracji kompilacji debugowania
 
@@ -27,7 +27,7 @@ Domyślnie program Visual Studio używa konfiguracji kompilacji debugowania, wi�
 
 1. Rozpocznij Visual Studio dla komputerów Mac.
 
-1. Otwórz projekt, który został utworzony w temacie [Tworzenie aplikacji konsolowej .NET Core w Visual Studio dla komputerów Mac](using-on-mac-vs.md).
+1. Otwórz projekt, który został utworzony w temacie [Tworzenie aplikacji konsolowej .NET Core w Visual Studio dla komputerów Mac](with-visual-studio-mac.md).
 
    Bieżąca konfiguracja kompilacji jest pokazywana na pasku narzędzi. Poniższy obraz paska narzędzi pokazuje, że program Visual Studio jest skonfigurowany do kompilowania wersji do debugowania aplikacji:
 

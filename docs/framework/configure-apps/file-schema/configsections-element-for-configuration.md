@@ -7,12 +7,12 @@ helpviewer_keywords:
 - configSections Element
 - <configSections> Element
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
-ms.openlocfilehash: 55116f1fe6fdffffea8f26d8a4de783c7305ada3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1e4bb7a7cfb0b140ca6d13c162708c3c30bd496d
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155352"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441690"
 ---
 # <a name="configsections-element-for-configuration"></a>\<configSections>, element dla \<configuration>
 
@@ -36,8 +36,6 @@ Brak
 | --- | ----------- |
 | [**\<section>**](section-element.md) | Zawiera deklarację sekcji konfiguracyjnej. |
 | [**\<sectionGroup>**](sectiongroup-element-for-configsections.md) | Definiuje przestrzeń nazw dla sekcji konfiguracyjnych. |
-| [**\<remove>**](remove-element-for-configsections.md) | Usuwa wstępnie zdefiniowaną sekcję lub grupę sekcji. |
-| [**\<clear>**](clear-element-for-configsections.md) | Czyści wszystkie wcześniej zdefiniowane sekcje i grupy sekcji. |
 
 ## <a name="remarks"></a>Uwagi
 
@@ -61,7 +59,7 @@ Poniższy przykład pokazuje, jak zdefiniować sekcję konfiguracyjną i zdefini
 
 ## <a name="configuration-file"></a>Plik konfiguracji
 
-Tego elementu można użyć w pliku konfiguracyjnym aplikacji, pliku konfiguracji komputera (*Machine. config*) i plikach *Web. config* , które nie znajdują się na poziomie katalogu aplikacji.
+Tego elementu można użyć w pliku konfiguracyjnym aplikacji, pliku konfiguracji komputera (*Machine.config*) i plikach *Web.config* , które nie znajdują się na poziomie katalogu aplikacji.
 
 ## <a name="see-also"></a>Zobacz także
 

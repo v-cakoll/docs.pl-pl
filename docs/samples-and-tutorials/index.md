@@ -4,12 +4,12 @@ description: Informacje na temat przykładów i samouczków dotyczących platfor
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 44ce0d740502686db1801db428a2f79c2250f8c0
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 367b2cbea24ac0da634051bf815c319f3679f79b
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507432"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86417329"
 ---
 # <a name="net-samples-and-tutorials"></a>Przykłady i samouczki dotyczące platformy .NET
 
@@ -17,7 +17,7 @@ Dokumentacja platformy .NET zawiera zestaw przykładów i samouczków, które po
 
 ## <a name="net-core"></a>.NET Core
 
-### <a name="samples"></a>Samples
+### <a name="samples"></a>Przykłady
 
 **[Testowanie jednostkowe w programie .NET Core przy użyciu testu dotnet](../core/testing/unit-testing-with-dotnet-test.md)**
 
@@ -39,7 +39,7 @@ Zobacz [samouczki ASP.NET Core](/aspnet/core/tutorials/). Wiele artykułów w do
 
 ## <a name="c-language"></a>C# — język
 
-### <a name="samples"></a>Samples
+### <a name="samples"></a>Przykłady
 
 **[Iteratory](../csharp/iterators.md)**
 
@@ -87,9 +87,9 @@ W tym samouczku przedstawiono wiele funkcji LINQ i elementów języka, które je
 
 W tym samouczku przedstawiono sposób tworzenia prostej aplikacji konsolowej platformy .NET Core przy użyciu Visual Studio dla komputerów Mac.
 
-**[Tworzenie kompletnego rozwiązania .NET Core w systemie macOS przy użyciu Visual Studio dla komputerów Mac](../core/tutorials/using-on-mac-vs-full-solution.md)**
+**[Utwórz bibliotekę .NET Standard w macOS przy użyciu Visual Studio dla komputerów Mac](../core/tutorials/library-with-visual-studio-mac.md)**
 
-W tym samouczku pokazano, jak utworzyć kompletne rozwiązanie .NET Core, które obejmuje bibliotekę wielokrotnego użytku i testy jednostkowe.
+W tym samouczku pokazano, jak utworzyć bibliotekę .NET Standard przy użyciu Visual Studio dla komputerów Mac.
 
 **[Tworzenie aplikacji .NET Core, która obsługuje wtyczki](../core/tutorials/creating-app-with-plugin-support.md)**
 

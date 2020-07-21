@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 1e78b920eb6a1eae870a425b91711ac9d87b6530
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: f216534140b6e207ac110bb54b3e4f93a8ac6b70
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84811682"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474023"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Opcje kompilatora C# w rozbiciu na kategorie
 
@@ -37,7 +37,7 @@ Poniższe opcje kompilatora są sortowane według kategorii. Aby zapoznać się 
 |[-preferreduilang](preferreduilang-compiler-option.md)|Określ język dla danych wyjściowych kompilatora.|
 |[-refout](refout-compiler-option.md)|Wygeneruj zestaw referencyjny jako uzupełnienie podstawowego zestawu.|
 |[-refonly](refonly-compiler-option.md)|Wygeneruj zestaw odniesienia zamiast zestawu podstawowego.|
-|[-target](target-compiler-option.md)|Określa format pliku wyjściowego przy użyciu jednej z pięciu opcji: [-target: appcontainerexe](target-appcontainerexe-compiler-option.md), [-target: exe](target-exe-compiler-option.md), [-target: Library](target-library-compiler-option.md), [-target: module](target-module-compiler-option.md), [-target: winexe](target-winexe-compiler-option.md)lub [-target: winmdobj](target-winmdobj-compiler-option.md).|
+|[-target](target-compiler-option.md)|Określa format pliku wyjściowego przy użyciu jednej z następujących opcji: [-target: appcontainerexe](target-appcontainerexe-compiler-option.md), [-target: exe](target-exe-compiler-option.md), [-target: Library](target-library-compiler-option.md), [-target: module](target-module-compiler-option.md), [-target: winexe](target-winexe-compiler-option.md)lub [-target: winmdobj](target-winmdobj-compiler-option.md).|
 |ModuleName\<string>|Określ nazwę modułu źródłowego|
 
 ## <a name="net-framework-assemblies"></a>Zestawy .NET Framework
@@ -63,7 +63,7 @@ Poniższe opcje kompilatora są sortowane według kategorii. Aby zapoznać się 
 |------------|-------------|
 |[-bugreport](bugreport-compiler-option.md)|Tworzy plik zawierający informacje, które ułatwiają zgłoszenie błędu.|
 |[-checked](checked-compiler-option.md)|Określa, czy arytmetyczne liczby całkowite, które przepływają granice typu danych, spowodują wyjątek w czasie wykonywania.|
-|[-debug](debug-compiler-option.md)|Nakazuje kompilatorowi emitowanie informacji o debugowaniu.|
+|[-Debuguj](debug-compiler-option.md)|Nakazuje kompilatorowi emitowanie informacji o debugowaniu.|
 |[-errorreport](errorreport-compiler-option.md)|Ustawia zachowanie raportowania błędów.|
 |[-fullpaths](fullpaths-compiler-option.md)|Określa ścieżkę bezwzględną do pliku w danych wyjściowych kompilatora.|
 |[-nowarn](nowarn-compiler-option.md)|Pomija generowanie określonych ostrzeżeń przez kompilator.|
@@ -82,7 +82,7 @@ Poniższe opcje kompilatora są sortowane według kategorii. Aby zapoznać się 
 
 |Opcja|Przeznaczenie|
 |------------|-------------|
-|[-Link](link-compiler-option.md)|Sprawia, że informacje o typie COM w określonych zestawach są dostępne dla projektu.|
+|[-link](link-compiler-option.md)|Sprawia, że informacje o typie COM w określonych zestawach są dostępne dla projektu.|
 |[-linkresource](linkresource-compiler-option.md)|Tworzy łącze do zarządzanego zasobu.|
 |[-zasób](resource-compiler-option.md)|Osadza zasób .NET Framework w pliku wyjściowym.|
 |[-win32icon](win32icon-compiler-option.md)|Określa plik. ico, który ma zostać wstawiony do pliku wyjściowego.|
@@ -115,7 +115,7 @@ Poniższe opcje kompilatora są sortowane według kategorii. Aby zapoznać się 
 |---|---|
 |-przyrostowe|Włącza kompilację przyrostową.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Opcje kompilatora C#](index.md)
 - [Opcje kompilatora C# w porządku alfabetycznym](listed-alphabetically.md)

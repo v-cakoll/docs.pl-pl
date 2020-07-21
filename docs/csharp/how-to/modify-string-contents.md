@@ -1,14 +1,15 @@
 ---
 title: Jak zmodyfikować zawartość ciągu — przewodnik w języku C#
+description: Zapoznaj się z przykładami kilku technik, aby zmodyfikować istniejącą zawartość ciągu w języku C#, która zwraca nowy obiekt ciągu.
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: e607a8a2e96a73f64463d75a75a2bfe3f518d118
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: ecce8857befc66353deea341d81f8c6e4313b951
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324167"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86473971"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Jak zmodyfikować zawartość ciągu w języku C\#
 
@@ -70,7 +71,7 @@ Ponieważ ciągi są niezmienne, poprzednie przykłady tworzą tymczasowe ciągi
 
 Można zmodyfikować ciąg w stałym bloku z niebezpiecznym kodem, ale **zdecydowanie** odradza się modyfikowanie zawartości ciągu po utworzeniu ciągu. Wykonanie tej czynności spowoduje uszkodzenie elementów na nieprzewidywalny sposób. Na przykład jeśli ktoś internił ciąg o tej samej zawartości co ty, otrzyma kopię i nie będzie oczekiwać, że modyfikujesz ciąg.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [.NET Framework wyrażeń regularnych](../../standard/base-types/regular-expressions.md)
 - [Język wyrażeń regularnych — Krótki przewodnik](../../standard/base-types/regular-expression-language-quick-reference.md)

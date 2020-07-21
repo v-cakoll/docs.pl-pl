@@ -1,16 +1,17 @@
 ---
 title: Zdarzenia ETW śledzenia JIT
+description: Zrozumienie zdarzeń ETW śledzenia just-in-Time (JIT). Te zdarzenia zbierają informacje dotyczące sukcesu lub niepowodzenia wywoływania JIT oraz wywołań zakończenia JIT.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT tracing events [.NET Framework]
 - ETW, JIT tracing events (CLR)
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
-ms.openlocfilehash: 37bfd09516589f3422ee005233e576b110ef1288
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 568fc942cd0e2188c530d2befb6260083757ec72
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716007"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474465"
 ---
 # <a name="jit-tracing-etw-events"></a>Zdarzenia ETW śledzenia JIT
 Te zdarzenia zbierają informacje dotyczące sukcesu lub niepowodzenia wywołań wywołania "just-in-Time (JIT) i" JIT ".
@@ -22,7 +23,7 @@ Te zdarzenia zbierają informacje dotyczące sukcesu lub niepowodzenia wywołań
   
 |Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword` (0x10)|Verbose (5)|  
+|`JITTracingKeyword`0x10|Verbose (5)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
@@ -38,7 +39,7 @@ Te zdarzenia zbierają informacje dotyczące sukcesu lub niepowodzenia wywołań
 |MethodBeingCompiledName|win: UnicodeString|Nazwa metody, która jest kompilowana.|  
 |MethodBeingCompiledNameSignature|win: UnicodeString|Sygnatura metody, która jest kompilowana.|  
 |InlinerNamespace|win: UnicodeString|Przestrzeń nazw metody kompilator JIT próbuje wygenerować kod dla.|  
-|Nieliniowa|win: UnicodeString|Nazwa metody, dla której kompilator próbuje wygenerować kod. Ta wartość może nie być taka sama jak `MethodBeingCompiledName`, jeśli kompilator próbuje wykonać kod wbudowany do `MethodBeingCompiledName` zamiast generowania wywołania do `InlinerName`.|  
+|Nieliniowa|win: UnicodeString|Nazwa metody, dla której kompilator próbuje wygenerować kod. Taka sytuacja może nie być taka sama jak w `MethodBeingCompiledName` przypadku, gdy kompilator próbuje wykonać kod wbudowany `MethodBeingCompiledName` zamiast generowania wywołania do `InlinerName` .|  
 |InlinerNameSignature|win: UnicodeString|Podpis dla elementu inline.|  
 |InlineeNamespace|win: UnicodeString|Przestrzeń nazw międzywierszowego elementu.|  
 |InlineeName|win: UnicodeString|Metoda, którą kompilator próbuje wykonać w wierszu (nie generuje wywołania do).|  
@@ -52,7 +53,7 @@ Te zdarzenia zbierają informacje dotyczące sukcesu lub niepowodzenia wywołań
   
 |Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword` (0x10)|Verbose (5)|  
+|`JITTracingKeyword`0x10|Verbose (5)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
@@ -68,12 +69,12 @@ Te zdarzenia zbierają informacje dotyczące sukcesu lub niepowodzenia wywołań
 |MethodBeingCompiledName|win: UnicodeString|Nazwa skompilowanej metody.|  
 |MethodBeingCompiledNameSignature|win: UnicodeString|Sygnatura metody, która jest kompilowana.|  
 |InlinerNamespace|win: UnicodeString|Przestrzeń nazw metody kompilator JIT próbuje wygenerować kod dla.|  
-|Nieliniowa|win: UnicodeString|Nazwa metody, dla której kompilator próbuje wygenerować kod. Ta wartość może nie być taka sama jak `MethodBeingCompiledName`, jeśli kompilator próbuje wykonać kod wbudowany do `MethodBeingCompiledName` zamiast generowania wywołania do `InlinerName`.|  
+|Nieliniowa|win: UnicodeString|Nazwa metody, dla której kompilator próbuje wygenerować kod. Taka sytuacja może nie być taka sama jak w `MethodBeingCompiledName` przypadku, gdy kompilator próbuje wykonać kod wbudowany `MethodBeingCompiledName` zamiast generowania wywołania do `InlinerName` .|  
 |InlinerNameSignature|win: UnicodeString|Podpis dla elementu inline.|  
 |InlineeNamespace|win: UnicodeString|Przestrzeń nazw międzywierszowego elementu.|  
 |InlineeName|win: UnicodeString|Metoda, którą kompilator próbuje wykonać w wierszu (nie generuje wywołania do).|  
 |InlineeNameSignature|win: UnicodeString|Podpis dla elementu inline.|  
-|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
 
 ## <a name="jit-tail-call-events"></a>Zdarzenia wywołania tail w trybie JIT  
   
@@ -82,7 +83,7 @@ Te zdarzenia zbierają informacje dotyczące sukcesu lub niepowodzenia wywołań
   
 |Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword` (0x10)|Verbose (5)|  
+|`JITTracingKeyword`0x10|Verbose (5)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
@@ -105,14 +106,14 @@ Te zdarzenia zbierają informacje dotyczące sukcesu lub niepowodzenia wywołań
 |CalleeNameSignature|win: UnicodeString|Podpis dla elementu wywoływanego.|  
 |TailPrefix|win: wartość logiczna|Prefiks wywołania tail.|  
 |FailReason|win: UnicodeString|Przyczyna wywołania tail nie powiodła się.|  
-|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
 ### <a name="methodjittailcallsucceeded-event"></a>Zdarzenie MethodJITTailCallSucceeded  
  W poniższej tabeli przedstawiono słowo kluczowe i poziom.  
   
 |Słowo kluczowe do podniesienia zdarzenia|Poziom|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword` (0x10)|Verbose (5)|  
+|`JITTracingKeyword`0x10|Verbose (5)|  
   
  W poniższej tabeli przedstawiono informacje o zdarzeniu.  
   
@@ -135,8 +136,8 @@ Te zdarzenia zbierają informacje dotyczące sukcesu lub niepowodzenia wywołań
 |CalleeNameSignature|win: UnicodeString|Podpis dla elementu wywoływanego.|  
 |TailPrefix|win: wartość logiczna|Prefiks wywołania tail.|  
 |TailCallType|win: UnicodeString|Typ wywołania tail.|  
-|ClrInstanceID|Win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zdarzenia CLR ETW](clr-etw-events.md)
+- [Zdarzenia ETW CLR](clr-etw-events.md)

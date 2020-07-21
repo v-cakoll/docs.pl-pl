@@ -1,5 +1,6 @@
 ---
 title: Emitowanie dynamicznych metod i zestawów
+description: Emituj metody dynamiczne i zestawy za pomocą przestrzeni nazw System. odbicie. Emituj, co umożliwia kompilatorowi lub narzędziu emitowanie metadanych i kodu MSIL w czasie wykonywania.
 ms.date: 08/30/2017
 helpviewer_keywords:
 - reflection emit
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - metadata, emit interfaces
 - reflection emit, overview
 - assemblies [.NET Framework], emitting dynamic assemblies
-ms.openlocfilehash: fda5a20eb7798086ec10415889454b4a8beba5f3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76d2a83943d9df06cc66cf86c6869f18fac2a12c
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180525"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475050"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Emitowanie dynamicznych metod i zestawów
 
@@ -49,7 +50,7 @@ Opisuje problemy z zabezpieczeniami związane z tworzeniem zestawów dynamicznyc
 
 [Zestawy kolekcjonowane do generowania typów dynamicznych](collectible-assemblies.md) Wprowadza zestawy kolekcjonowane, które są dynamicznymi zestawami, które można zwolnić bez zwalniania domeny aplikacji, w której zostały utworzone.
   
-## <a name="reference"></a>Dokumentacja  
+## <a name="reference"></a>Tematy pomocy  
 
 <xref:System.Reflection.Emit.OpCodes>  
 Kataloguje kody instrukcji MSIL, których można użyć do kompilowania treści metody.  

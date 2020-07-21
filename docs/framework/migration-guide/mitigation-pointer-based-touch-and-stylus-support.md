@@ -1,5 +1,6 @@
 ---
-title: 'Łagodzenie: Obsługa dotykowa i rysików oparta na wskaźnikach'
+title: 'Środki zaradcze: Obsługa dotykowa i pióra oparta na wskaźnikach'
+description: Dowiedz się więcej na temat skutków włączenia opcjonalnego stosu dotykowego/pióra WPF dla aplikacji WPF przeznaczonych dla .NET Framework 4,7.
 ms.date: 04/07/2017
 helpviewer_keywords:
 - retargeting changes
@@ -7,38 +8,38 @@ helpviewer_keywords:
 - WPF retargeting changes
 - WPF pointer-based touch and stylus stack
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
-ms.openlocfilehash: 023c38f66611bd0022699d3f62d90c3923585012
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d0c0effeaa727c615dddc3b92cdd34aafde65705
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77094478"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475427"
 ---
-# <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Łagodzenie: Obsługa dotykowa i rysików oparta na wskaźnikach
+# <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Środki zaradcze: Obsługa dotykowa i pióra oparta na wskaźnikach
 
-Aplikacje WPF, które są przeznaczone dla programu .NET Framework 4.7 i są `WM_POINTER`uruchomione w systemie Windows, począwszy od aktualizacji Windows 10 Creators Update, mogą włączyć opcjonalny stos WPF touch/pisak.
+Aplikacje WPF, które są przeznaczone dla .NET Framework 4,7 i działają w systemie Windows, począwszy od aktualizacji systemu Windows 10 Creators, mogą umożliwić opcjonalny `WM_POINTER` stos dotykowy/pióra WPF.
 
 ## <a name="impact"></a>Wpływ
 
-Deweloperzy, którzy nie jawnie włączyć wskaźnik oparte na obsłudze touch/pisaka powinny zobaczyć żadnych zmian w WPF touch/pisak zachowanie.
+Deweloperzy, którzy nie umożliwiają jawnie włączania obsługi dotykowej opartej na wskaźnikach, nie powinni zmieniać zachowań dotykowych i pióra WPF.
 
-Poniżej przedstawiono bieżące `WM_POINTER`znane problemy z opcjonalnym stosem dotykowym/pióra opartym na sobie:
+Poniżej przedstawiono bieżące znane problemy z opcjonalnym `WM_POINTER` stosem dotyk/piórem:
 
-- Brak obsługi pisma oduniającego w czasie rzeczywistym.
+- Brak obsługi pisma odręcznego w czasie rzeczywistym.
 
-   Podczas gdy wtyczek pisma od pisma od pisma od pisma od pisającego i pisaka nadal działają, są one przetwarzane w wątku interfejsu użytkownika, co może prowadzić do niskiej wydajności.
+   Podczas gdy wtyczki pisma odręcznego i pióra nadal działają, są przetwarzane w wątku interfejsu użytkownika, co może prowadzić do słabej wydajności.
 
-- Zmiany w zachowaniu spowodowane zmianami w promocji ze zdarzeń dotykowych/pisaka na zdarzenia myszy.
+- Zmiany behawioralne spowodowane zmianami w trakcie podwyższania poziomu zdarzeń dotknięcia/piórem do zdarzeń myszy.
 
-  - Manipulacja może zachowywać się inaczej.
+  - Manipulowanie może zachowywać się inaczej.
 
-  - Przeciąganie/upuszczanie nie będzie wyświetlane odpowiednie informacje zwrotne dla wprowadzania dotykowego. (Nie ma to wpływu na dane wejściowe pisaka).
+  - Wartość przeciągnij/upuść nie będzie zawierać odpowiedniej opinii na temat wprowadzania dotykowego. (Nie ma to wpływu na wprowadzanie piórem).
 
-  - Przeciągania/Upuszczania nie można już inicjować podczas zdarzeń dotykowych/pisaka.
+  - Nie można już inicjować przeciągania/upuszczania w przypadku zdarzeń dotykowych/pióra.
 
-      Może to potencjalnie spowodować, że aplikacja przestanie odpowiadać, dopóki nie zostanie wykryte dane wejściowe myszy. Zamiast tego deweloperzy powinni zainicjować przeciąganie i upuszczanie ze zdarzeń myszy.
+      Może to spowodować, że aplikacja przestanie odpowiadać, dopóki nie zostanie wykryta mysz. Zamiast tego deweloperzy powinni inicjować przeciąganie i upuszczanie ze zdarzeń myszy.
 
-## <a name="opting-in-to-wm_pointer-based-touchstylus-support"></a>Rezygnacja z obsługi WM_POINTER dotykowego/rysika
+## <a name="opting-in-to-wm_pointer-based-touchstylus-support"></a>Możliwość wypróbowania obsługi dotyku i pióra opartego na WM_POINTER
 
 Deweloperzy, którzy chcą włączyć ten stos, mogą dodać następujące elementy do pliku *app.config* aplikacji.
 
@@ -50,8 +51,8 @@ Deweloperzy, którzy chcą włączyć ten stos, mogą dodać następujące eleme
 </configuration>
 ```
 
-Usunięcie tego wpisu lub `false` ustawienie jego wartości na wyłączenia tego opcjonalnego stosu.
+Usunięcie tego wpisu lub ustawienie jego wartości powoduje `false` wyłączenie tego opcjonalnego stosu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Zgodność aplikacji](application-compatibility.md)

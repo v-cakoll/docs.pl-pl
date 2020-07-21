@@ -1,16 +1,17 @@
 ---
 title: Tablice jednowymiarowe — Przewodnik programowania w języku C#
+description: Utwórz tablicę jednowymiarową w języku C# przy użyciu operatora new określającego typ elementu tablicy i liczbę elementów.
 ms.date: 06/03/2020
 helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: e189253eedc21fa2d51e16407f04b034610bb57b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ada01262d57cbfebc8bfa1a5fee0639a10db5a4b
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410247"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474595"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Tablice jednowymiarowe (Przewodnik programowania w języku C#)
 
@@ -26,7 +27,7 @@ W tablicach mogą być przechowywane elementy określonego typu, takie jak Poni�
 
 ## <a name="array-initialization"></a>Inicjowanie tablicy
 
-Można zainicjować elementy tablicy, gdy deklarujesz tablicę. Specyfikator długości nie jest wymagany, ponieważ jest wywnioskowany przez liczbę elementów na liście inicjalizacji. Przykład:
+Można zainicjować elementy tablicy, gdy deklarujesz tablicę. Specyfikator długości nie jest wymagany, ponieważ jest wywnioskowany przez liczbę elementów na liście inicjalizacji. Na przykład:
 
 :::code language="csharp" source="snippets/SingleDimensionArrays.cs" id="IntInitialization":::
 
@@ -38,7 +39,7 @@ Można uniknąć `new` wyrażenia i typu tablicy podczas inicjowania tablicy po 
 
 :::code language="csharp" source="snippets/SingleDimensionArrays.cs" id="ShorthandInitialization":::
 
-Można zadeklarować zmienną tablicową bez jej tworzenia, ale należy użyć operatora, `new` gdy przypiszesz nową tablicę do tej zmiennej. Przykład:
+Można zadeklarować zmienną tablicową bez jej tworzenia, ale należy użyć operatora, `new` gdy przypiszesz nową tablicę do tej zmiennej. Na przykład:
 
 :::code language="csharp" source="snippets/SingleDimensionArrays.cs" id="DeclareAllocate":::
 
@@ -50,7 +51,7 @@ Rozważmy następującą deklarację tablicy:
 
 Wynik tej instrukcji zależy od tego, czy `SomeType` jest typem wartości czy typem referencyjnym. Jeśli jest to typ wartości, instrukcja tworzy tablicę zawierającą 10 elementów, z których każdy ma typ `SomeType` . Jeśli `SomeType` jest typem referencyjnym, instrukcja tworzy tablicę zawierającą 10 elementów, z których każdy jest zainicjowany do odwołania o wartości null. W obu wystąpieniach elementy są inicjowane do wartości domyślnej dla typu elementu. Aby uzyskać więcej informacji na temat typów wartości i typów referencyjnych, zobacz [typy wartości](../../language-reference/builtin-types/value-types.md) i [typy odwołań](../../language-reference/keywords/reference-types.md).
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Array>
 - [Tablice](./index.md)

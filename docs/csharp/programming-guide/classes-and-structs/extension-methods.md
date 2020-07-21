@@ -1,17 +1,18 @@
 ---
 title: Metody rozszerzenia — Przewodnik programowania w języku C#
+description: Metody rozszerzające w języku C# umożliwiają dodawanie metod do istniejących typów bez tworzenia nowego typu pochodnego, ponownej kompilacji lub modyfikacji pierwotnego typu.
 ms.date: 03/19/2020
 helpviewer_keywords:
 - methods [C#], adding to existing types
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 0f9c0f053e531a44640084a35dc5d8e844ee0b46
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: e57447c89749451862bbb80047ed74135a0eb752
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84803189"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474816"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Metody rozszerzeń (Przewodnik programowania w języku C#)
 
@@ -116,7 +117,7 @@ W przypadku implementowania metod rozszerzających dla danego typu należy pami�
 
 Dla zaimplementowanej biblioteki klas nie należy używać metod rozszerzenia, aby uniknąć zwiększenia numeru wersji zestawu. Jeśli chcesz dodać znaczną funkcjonalność do biblioteki, do której należy kod źródłowy, postępuj zgodnie ze wskazówkami dotyczącymi platformy .NET dotyczącymi wersji zestawu. Aby uzyskać więcej informacji, zobacz [przechowywanie wersji zestawu](../../../standard/assembly/versioning.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Równoległe przykłady programowania (zawierają wiele przykładowych metod rozszerzających)](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)

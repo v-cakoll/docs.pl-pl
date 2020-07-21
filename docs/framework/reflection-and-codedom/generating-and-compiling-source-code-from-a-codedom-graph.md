@@ -1,5 +1,6 @@
 ---
 title: Generowanie i kompilowanie kodu źródłowego z wykresu CodeDOM
+description: Generowanie i kompilowanie kodu źródłowego z wykresu CodeDOM w programie .NET. Użyj dostawcy kodu CodeDOM do wygenerowania kodu źródłowego i kompilowania zestawów.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -26,26 +27,26 @@ helpviewer_keywords:
 - compiling source code, multiple languages
 - CodeDOM, graphs
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
-ms.openlocfilehash: a8d3bf7363cb887834a1c251aead05c75e2e3fe8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 85654fe961f01ad7b8fb886d59a3de9ab0efe7aa
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130219"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474049"
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>Generowanie i kompilowanie kodu źródłowego z wykresu CodeDOM
-<xref:System.CodeDom.Compiler> Przestrzeń nazw udostępnia interfejsy do generowania kodu źródłowego z grafów obiektów CodeDOM i do zarządzania kompilacją z obsługiwanymi kompilatorami. Dostawca kodu może utworzyć kod źródłowy w określonym języku programowania zgodnie z wykresem CodeDOM. Klasa, która pochodzi od <xref:System.CodeDom.Compiler.CodeDomProvider> , zazwyczaj dostarcza metody do generowania i kompilowania kodu dla języka obsługiwanego przez dostawcę.  
+<xref:System.CodeDom.Compiler>Przestrzeń nazw udostępnia interfejsy do generowania kodu źródłowego z grafów obiektów CodeDOM i do zarządzania kompilacją z obsługiwanymi kompilatorami. Dostawca kodu może utworzyć kod źródłowy w określonym języku programowania zgodnie z wykresem CodeDOM. Klasa, która pochodzi od, <xref:System.CodeDom.Compiler.CodeDomProvider> zazwyczaj dostarcza metody do generowania i kompilowania kodu dla języka obsługiwanego przez dostawcę.  
   
 ## <a name="using-a-codedom-code-provider-to-generate-source-code"></a>Generowanie kodu źródłowego przy użyciu dostawcy kodu CodeDOM  
  Aby wygenerować kod źródłowy w określonym języku, potrzebny jest wykres CodeDOM, który reprezentuje strukturę kodu źródłowego do wygenerowania.  
   
- Poniższy przykład pokazuje, jak utworzyć wystąpienie obiektu <xref:Microsoft.CSharp.CSharpCodeProvider>:  
+ Poniższy przykład pokazuje, jak utworzyć wystąpienie obiektu <xref:Microsoft.CSharp.CSharpCodeProvider> :  
   
  [!code-cpp[CodeDomExample#21](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#21)]
  [!code-csharp[CodeDomExample#21](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#21)]
  [!code-vb[CodeDomExample#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#21)]  
   
- Wykres generowania kodu jest zwykle zawarty w <xref:System.CodeDom.CodeCompileUnit>. Aby wygenerować kod dla **CodeCompileUnit** zawierającego wykres CodeDOM, wywołaj <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> metodę dostawcy kodu. Ta metoda ma parametr <xref:System.IO.TextWriter> , który używa do generowania kodu źródłowego, więc czasami konieczne jest utworzenie elementu **TextWriter** , do którego można pisać. Poniższy przykład demonstruje generowanie kodu z **CodeCompileUnit** i zapisywanie wygenerowanego kodu źródłowego do pliku o nazwie HelloWorld.cs.  
+ Wykres generowania kodu jest zwykle zawarty w <xref:System.CodeDom.CodeCompileUnit> . Aby wygenerować kod dla **CodeCompileUnit** zawierającego wykres CodeDOM, wywołaj <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> metodę dostawcy kodu. Ta metoda ma parametr <xref:System.IO.TextWriter> , który używa do generowania kodu źródłowego, więc czasami konieczne jest utworzenie elementu **TextWriter** , do którego można pisać. Poniższy przykład demonstruje generowanie kodu z **CodeCompileUnit** i zapisywanie wygenerowanego kodu źródłowego do pliku o nazwie HelloWorld.cs.  
   
  [!code-cpp[CodeDomExample#22](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#22)]
  [!code-csharp[CodeDomExample#22](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#22)]
@@ -68,11 +69,11 @@ ms.locfileid: "73130219"
   
  Jeśli kompilujesz plik wykonywalny z wykresu CodeDOM, <xref:System.CodeDom.CodeEntryPointMethod> musi on być zdefiniowany w grafie. Jeśli istnieje wiele punktów wejścia kodu, może być konieczne ustawienie <xref:System.CodeDom.Compiler.CompilerParameters.MainClass%2A> właściwości **CompilerParameters** na nazwę klasy, która definiuje punkt wejścia do użycia.  
   
- Aby dołączyć informacje debugowania w wygenerowanym pliku wykonywalnym <xref:System.CodeDom.Compiler.CompilerParameters.IncludeDebugInformation%2A> , należy ustawić właściwość na **true**.  
+ Aby dołączyć informacje debugowania w wygenerowanym pliku wykonywalnym, należy ustawić <xref:System.CodeDom.Compiler.CompilerParameters.IncludeDebugInformation%2A> Właściwość na **true**.  
   
  Jeśli projekt odwołuje się do wszystkich zestawów, należy określić nazwy zestawów jako elementy w <xref:System.Collections.Specialized.StringCollection> jako <xref:System.CodeDom.Compiler.CompilerParameters.ReferencedAssemblies%2A> Właściwość **CompilerParameters** używanego podczas wywoływania kompilacji.  
   
- Można skompilować zestaw, który jest zapisywana w pamięci, a nie na dysku, <xref:System.CodeDom.Compiler.CompilerParameters.GenerateInMemory%2A> ustawiając właściwość na **true**. Gdy zestaw jest generowany w pamięci, kod może uzyskać odwołanie do wygenerowanego zestawu z <xref:System.CodeDom.Compiler.CompilerResults.CompiledAssembly%2A> właściwości. <xref:System.CodeDom.Compiler.CompilerResults> Jeśli zestaw jest zapisywana na dysku, można uzyskać ścieżkę do wygenerowanego zestawu z <xref:System.CodeDom.Compiler.CompilerResults.PathToAssembly%2A> właściwości **CompilerResults**.  
+ Można skompilować zestaw, który jest zapisywana w pamięci, a nie na dysku, ustawiając <xref:System.CodeDom.Compiler.CompilerParameters.GenerateInMemory%2A> Właściwość na **true**. Gdy zestaw jest generowany w pamięci, kod może uzyskać odwołanie do wygenerowanego zestawu z <xref:System.CodeDom.Compiler.CompilerResults.CompiledAssembly%2A> właściwości <xref:System.CodeDom.Compiler.CompilerResults> . Jeśli zestaw jest zapisywana na dysku, można uzyskać ścieżkę do wygenerowanego zestawu z <xref:System.CodeDom.Compiler.CompilerResults.PathToAssembly%2A> właściwości **CompilerResults**.  
   
  Aby określić niestandardowy ciąg argumentów wiersza polecenia, który ma być używany podczas wywoływania procesu kompilacji, należy ustawić ciąg we <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A> właściwości.  
   
@@ -80,7 +81,7 @@ ms.locfileid: "73130219"
   
  Aby połączyć plik zasobów Win32 do skompilowanego zestawu, należy określić nazwę pliku zasobów Win32 we <xref:System.CodeDom.Compiler.CompilerParameters.Win32Resource%2A> właściwości.  
   
- Aby określić poziom ostrzeżeń, dla którego ma zostać zatrzymana kompilacja, <xref:System.CodeDom.Compiler.CompilerParameters.WarningLevel%2A> należy ustawić właściwość na liczbę całkowitą reprezentującą poziom ostrzeżenia, przy którym ma zostać zatrzymana kompilacja. Możesz również skonfigurować kompilator, aby zatrzymać kompilację w przypadku wystąpienia ostrzeżeń przez ustawienie <xref:System.CodeDom.Compiler.CompilerParameters.TreatWarningsAsErrors%2A> właściwości na **wartość true**.  
+ Aby określić poziom ostrzeżeń, dla którego ma zostać zatrzymana kompilacja, należy ustawić <xref:System.CodeDom.Compiler.CompilerParameters.WarningLevel%2A> Właściwość na liczbę całkowitą reprezentującą poziom ostrzeżenia, przy którym ma zostać zatrzymana kompilacja. Możesz również skonfigurować kompilator, aby zatrzymać kompilację w przypadku wystąpienia ostrzeżeń przez ustawienie <xref:System.CodeDom.Compiler.CompilerParameters.TreatWarningsAsErrors%2A> właściwości na **wartość true**.  
   
  Poniższy przykład kodu demonstruje Kompilowanie pliku źródłowego przy użyciu dostawcy CodeDom pochodnego od <xref:System.CodeDom.Compiler.CodeDomProvider> klasy.  
   
@@ -91,7 +92,7 @@ ms.locfileid: "73130219"
 ## <a name="languages-with-initial-support"></a>Języki z zapoczątkową pomocą techniczną  
  .NET Framework zapewnia kompilatory kodu i generatory kodu dla następujących języków: C#, Visual Basic, C++ i JScript. Obsługę CodeDOM można rozszerzyć do innych języków przez implementację generatorów kodu specyficznych dla języka i kompilatorów kodu.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.CodeDom>
 - <xref:System.CodeDom.Compiler>

@@ -1,20 +1,21 @@
 ---
-title: Tablice — przewodnik programowania Języka C#
+title: Tablice — Przewodnik programowania w języku C#
+description: Przechowuj wiele zmiennych tego samego typu w strukturze danych tablicy w języku C#. Zadeklaruj tablicę, określając typ lub Określ obiekt do przechowywania dowolnego typu.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: bbabc84c144e5b3415c19f346b890782e251662c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e302ff2e4c2488c4899c4eb99a666d2d322119ce
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715054"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474738"
 ---
 # <a name="arrays-c-programming-guide"></a>Tablice (Przewodnik programowania w języku C#)
 
-Wiele zmiennych tego samego typu można przechowywać w strukturze danych tablicowych. Tablica deklaruje, określając typ jej elementów. Jeśli macierz ma przechowywać elementy dowolnego typu, `object` można określić jako jej typ. W ujednoliconym systemie typów Języka C#wszystkie typy, wstępnie zdefiniowane i zdefiniowane przez użytkownika, <xref:System.Object>typy odwołań i typy wartości dziedziczą bezpośrednio lub pośrednio z .
+Można przechowywać wiele zmiennych tego samego typu w strukturze danych tablicy. Należy zadeklarować tablicę, określając typ jej elementów. Jeśli chcesz, aby tablica była przechowywana elementów dowolnego typu, możesz określić `object` jako jej typ. W systemie ujednoliconego typu języka C# wszystkie typy, wstępnie zdefiniowane i zdefiniowane przez użytkownika, typy odwołań i typy wartości, dziedziczą bezpośrednio lub pośrednio z <xref:System.Object> .
 
 ```csharp
 type[] arrayName;
@@ -22,21 +23,21 @@ type[] arrayName;
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład tworzy tablice jednowymiarowe, wielowymiarowe i postrzępione:
+Poniższy przykład tworzy tablice jednowymiarowe, wielowymiarowe i nieregularne:
 
 [!code-csharp[csProgGuideArrays#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#1)]
 
-## <a name="array-overview"></a>Omówienie tablicy
+## <a name="array-overview"></a>Przegląd tablicy
 
 Tablica ma następujące właściwości:
 
-- Tablica może być [jednowymiarowa,](single-dimensional-arrays.md) [wielowymiarowa](multidimensional-arrays.md) lub [postrzępiona.](jagged-arrays.md)
-- Liczba wymiarów i długość każdego wymiaru są ustalane podczas tworzenia wystąpienia tablicy. Tych wartości nie można zmienić w okresie istnienia wystąpienia.
-- Wartości domyślne liczbowych elementów tablicy są ustawione na zero, a elementy odwołania są ustawione na null.
-- Postrzępiona tablica jest tablicą tablic i dlatego jej elementy `null`są typami odwołań i są inicjowane do .
-- Tablice są zerowe: tablica z `n` elementami `0` `n-1`jest indeksowana od do .
-- Elementy tablicy mogą być dowolnego typu, w tym typu tablicy.
-- Typy tablic są [typami odwołań](../../language-reference/keywords/reference-types.md) <xref:System.Array>wywodzącymi się z abstrakcyjnego typu podstawowego . Ponieważ ten typ <xref:System.Collections.IEnumerable> <xref:System.Collections.Generic.IEnumerable%601>implementuje i , można użyć [foreach](../../language-reference/keywords/foreach-in.md) iteracji na wszystkich tablicach w języku C#.
+- Tablica może być [Jednowymiarowa](single-dimensional-arrays.md), [wielowymiarowa](multidimensional-arrays.md) lub [nieregularna](jagged-arrays.md).
+- Liczba wymiarów i długość każdego wymiaru są ustalane podczas tworzenia wystąpienia tablicy. Nie można zmienić tych wartości w okresie istnienia wystąpienia.
+- Wartości domyślne elementów tablicy liczbowej są ustawiane na zero, a elementy odniesienia są ustawione na wartość null.
+- Tablica nieregularna jest tablicą tablic, dlatego jej elementy są typami odwołań i są inicjowane do `null` .
+- Tablice są indeksowane jako zero: tablica z `n` elementami jest indeksowana z `0` do `n-1` .
+- Elementy tablicy mogą być dowolnego typu, łącznie z typem tablicowym.
+- Typy tablic są [typami odwołań](../../language-reference/keywords/reference-types.md) pochodzącymi od abstrakcyjnego typu podstawowego <xref:System.Array> . Ponieważ ten typ implementuje <xref:System.Collections.IEnumerable> i <xref:System.Collections.Generic.IEnumerable%601> , można użyć iteracji [foreach](../../language-reference/keywords/foreach-in.md) dla wszystkich tablic w języku C#.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
@@ -48,7 +49,7 @@ Tablica ma następujące właściwości:
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../index.md)
 - [Kolekcje](../concepts/collections.md)

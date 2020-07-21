@@ -2,15 +2,15 @@
 title: ASP.NET Core istotne zmiany
 titleSuffix: ''
 description: Wyświetla listę istotnych zmian w ASP.NET Core.
-ms.date: 07/15/2020
+ms.date: 07/17/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: cea6771afdc05edc525e7d35f530f42e7b3bc1fa
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: 7a07df5194d5dc220b61d55a4457d90881ac9ddf
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86441950"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474829"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core istotne zmiany
 
@@ -60,6 +60,7 @@ Następujące istotne zmiany zostały udokumentowane na tej stronie:
 - [Kestrel: zmieniono domyślne wersje protokołu TLS](#kestrel-default-supported-tls-protocol-versions-changed)
 - [Kestrel: Usunięto pusty zestaw HTTPS](#kestrel-empty-https-assembly-removed)
 - [Kestrel: protokół HTTP/2 został wyłączony przy użyciu protokołu TLS dla niezgodnych wersji systemu Windows](#kestrel-http2-disabled-over-tls-on-incompatible-windows-versions)
+- [Kestrel: transport Libuv oznaczony jako przestarzały](#kestrel-libuv-transport-marked-as-obsolete)
 - [Kestrel: przeniesiono nagłówki przyczepki do nowej kolekcji](#kestrel-request-trailer-headers-moved-to-new-collection)
 - [Kestrel: transportowe zmiany warstwy abstrakcji](#kestrel-transport-abstractions-removed-and-made-public)
 - [Lokalizacja: interfejsy API oznaczone jako przestarzałe](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
@@ -137,6 +138,10 @@ Następujące istotne zmiany zostały udokumentowane na tej stronie:
 ***
 
 [!INCLUDE[Kestrel: HTTP/2 disabled over TLS on incompatible Windows versions](~/includes/core-changes/aspnetcore/5.0/kestrel-disables-http2-over-tls.md)]
+
+***
+
+[!INCLUDE[Kestrel: Libuv transport marked as obsolete](~/includes/core-changes/aspnetcore/5.0/kestrel-libuv-transport-obsolete.md)]
 
 ***
 

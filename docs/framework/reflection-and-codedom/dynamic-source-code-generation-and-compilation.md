@@ -1,5 +1,6 @@
 ---
 title: Dynamiczne generowanie i kompilacja kodu źródłowego
+description: Kompiluj i Generuj dynamiczny kod źródłowy w programie .NET przy użyciu Code Document Object Model (CodeDOM). Elementy CodeDOM są połączone z formularzem wykresu CodeDOM.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Code Document Object Model
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - source code in multiple languages
 - languages, multiple language support by CodeDOM
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
-ms.openlocfilehash: 7379bac07de9b78369d3742fa3288f6fea6a573f
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 3cdd89ac9745f6af133ca683afff64283f2727d1
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544982"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475102"
 ---
 # <a name="compile-and-generate-dynamic-source-code"></a>Kompiluj i Generuj dynamiczny kod źródłowy
 
@@ -23,11 +24,11 @@ ms.locfileid: "75544982"
   
 Aby reprezentować kod źródłowy, elementy CodeDOM są połączone ze sobą, aby utworzyć strukturę danych znaną jako wykres CodeDOM, który modeluje strukturę pewnego kodu źródłowego.  
   
-<xref:System.CodeDom?displayProperty=fullName> Przestrzeń nazw definiuje typy, które mogą reprezentować logiczną strukturę kodu źródłowego niezależnie od określonego języka programowania. <xref:System.CodeDom.Compiler?displayProperty=fullName> Przestrzeń nazw definiuje typy do generowania kodu źródłowego z wykresów CodeDOM i zarządzania kompilacją kodu źródłowego w obsługiwanych językach. Dostawcy lub deweloperzy kompilatora mogą rozciągnąć zestaw obsługiwanych języków.  
+<xref:System.CodeDom?displayProperty=fullName>Przestrzeń nazw definiuje typy, które mogą reprezentować logiczną strukturę kodu źródłowego niezależnie od określonego języka programowania. <xref:System.CodeDom.Compiler?displayProperty=fullName>Przestrzeń nazw definiuje typy do generowania kodu źródłowego z wykresów CodeDOM i zarządzania kompilacją kodu źródłowego w obsługiwanych językach. Dostawcy lub deweloperzy kompilatora mogą rozciągnąć zestaw obsługiwanych języków.  
   
 Modelowanie kodu źródłowego niezależne od języka może być przydatne, gdy program musi wygenerować kod źródłowy dla modelu programu w wielu językach lub dla nieokreślonego języka docelowego. Na przykład niektórzy projektanci używają języka CodeDOM jako interfejsu abstrakcji języka do tworzenia kodu źródłowego w prawidłowym języku programowania, jeśli dostępna jest obsługa języka CodeDOM.  
   
-.NET Framework obejmuje generatory kodu i kompilatory kodu dla <xref:Microsoft.CSharp.CSharpCodeProvider>, <xref:Microsoft.JScript.JScriptCodeProvider>i <xref:Microsoft.VisualBasic.VBCodeProvider>.  
+.NET Framework obejmuje generatory kodu i kompilatory kodu dla <xref:Microsoft.CSharp.CSharpCodeProvider> , <xref:Microsoft.JScript.JScriptCodeProvider> i <xref:Microsoft.VisualBasic.VBCodeProvider> .  
   
 ## <a name="in-this-section"></a>W tej sekcji
 
@@ -37,7 +38,7 @@ Modelowanie kodu źródłowego niezależne od języka może być przydatne, gdy 
   
 - [Generowanie kodu źródłowego i kompilowanie programu z wykresu CodeDOM](generating-and-compiling-source-code-from-a-codedom-graph.md)  
 
-  Opisuje sposób generowania kodu źródłowego i kompilowania wygenerowanego kodu z kompilatorem zewnętrznym przy użyciu klas `System.CodeDom.Compiler` zdefiniowanych w przestrzeni nazw.  
+  Opisuje sposób generowania kodu źródłowego i kompilowania wygenerowanego kodu z kompilatorem zewnętrznym przy użyciu klas zdefiniowanych w `System.CodeDom.Compiler` przestrzeni nazw.  
   
 - [Instrukcje: tworzenie pliku dokumentacji XML przy użyciu modelu CodeDOM](how-to-create-an-xml-documentation-file-using-codedom.md)  
 
@@ -47,7 +48,7 @@ Modelowanie kodu źródłowego niezależne od języka może być przydatne, gdy 
 
   Opisuje, jak używać CodeDOM do wygenerowania klasy zawierającej pola, właściwości, metodę, Konstruktor i punkt wejścia.  
   
-## <a name="reference"></a>Dokumentacja  
+## <a name="reference"></a>Tematy pomocy  
 
 - <xref:System.CodeDom>  
 

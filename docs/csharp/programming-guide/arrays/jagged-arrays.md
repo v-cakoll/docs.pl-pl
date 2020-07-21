@@ -1,73 +1,74 @@
 ---
-title: Postrzępione tablice — przewodnik programowania Języka C#
+title: Tablice nieregularne — Przewodnik programowania w języku C#
+description: Tablica nieregularna w języku C# jest tablicą, której elementy są tablicami różnych wymiarów i rozmiarów. Dowiedz się, jak deklarować i inicjować tablice nieregularne i uzyskiwać do nich dostęp.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: 56013f0143d5efcb31a476909cb6e92504ff0dbc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 40da9fbda34aef4e69ebf2ae20485e883b79f871
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705707"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474686"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>Tablice nieregularne (Przewodnik programowania w języku C#)
 
-Nieregularna tablica to ta, której elementy są tablicami. Elementy postrzępionej tablicy mogą mieć różne wymiary i rozmiary. Postrzępiona tablica jest czasami nazywana "tablicą tablic". W poniższych przykładach przedstawiono sposób deklarowania, inicjowania i uzyskiwania dostępu do tablic postrzępionych.  
+Nieregularna tablica to ta, której elementy są tablicami. Elementy tablicy nieregularnej mogą mieć różne wymiary i rozmiary. Tablica nieregularna jest czasami nazywana "tablicą tablic." W poniższych przykładach pokazano, jak deklarować, inicjować i uzyskiwać dostęp do tablic nieregularnych.  
   
- Poniżej przedstawiono deklarację tablicy jednowymiarowej, która ma trzy elementy, z których każdy jest jednowymiarową tablicą liczb całkowitych:  
+ Poniżej znajduje się deklaracja jednowymiarowej tablicy, która składa się z trzech elementów, z których każdy jest jednowymiarową tablicą liczb całkowitych:  
   
  [!code-csharp[csProgGuideArrays#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#19)]  
   
- Przed użyciem, `jaggedArray`jego elementy muszą zostać zainicjowane. Można zainicjować elementy w ten sposób:  
+ Zanim będzie można użyć `jaggedArray` , jego elementy muszą zostać zainicjowane. Można inicjować następujące elementy:  
   
  [!code-csharp[csProgGuideArrays#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#20)]  
   
- Każdy z elementów jest jednowymiarową tablicą liczb całkowitych. Pierwszy element jest tablicą 5 liczb całkowitych, drugi jest tablicą 4 liczb całkowitych, a trzeci jest tablicą 2 liczb całkowitych.  
+ Każdy element jest jednowymiarową tablicą liczb całkowitych. Pierwszy element jest tablicą 5 liczb całkowitych, a druga jest tablicą 4 liczb całkowitych, a trzecia jest tablicą 2 liczb całkowitych.  
   
- Możliwe jest również użycie inicjatorów do wypełnienia elementów tablicy wartościami, w którym to przypadku nie jest potrzebny rozmiar tablicy. Przykład:  
+ Istnieje również możliwość użycia inicjatorów do wypełnienia elementów tablicy wartościami, w tym przypadku nie jest potrzebny rozmiar tablicy. Na przykład:  
   
  [!code-csharp[csProgGuideArrays#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#21)]  
   
- Tablicę można również zainicjować przy deklaracji w ten sposób:  
+ Możesz również zainicjować tablicę w przypadku deklaracji takich jak:  
   
  [!code-csharp[csProgGuideArrays#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#22)]  
   
- Można użyć następującego skróconego formularza. Należy zauważyć, że `new` nie można pominąć operatora z inicjowania elementów, ponieważ nie ma domyślnej inicjalizacji dla elementów:  
+ Możesz użyć następującej formy skróconej. Należy zauważyć, że nie można pominąć `new` operatora z inicjowania elementów, ponieważ nie ma domyślnego inicjowania dla elementów:  
   
  [!code-csharp[csProgGuideArrays#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#23)]  
   
- Postrzępiona tablica jest tablicą tablic i dlatego jej elementy `null`są typami odwołań i są inicjowane do .  
+ Tablica nieregularna jest tablicą tablic, dlatego jej elementy są typami odwołań i są inicjowane do `null` .  
   
- Można uzyskać dostęp do poszczególnych elementów tablicy, takich jak te przykłady:  
+ Można uzyskać dostęp do poszczególnych elementów tablicy, takich jak następujące przykłady:  
   
  [!code-csharp[csProgGuideArrays#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#24)]  
   
- Możliwe jest mieszanie postrzępionych i wielowymiarowych tablic. Poniżej przedstawiono deklarację i inicjowanie jednowymiarowej tablicy postrzępionej, która zawiera trzy dwuwymiarowe elementy tablicy o różnych rozmiarach. Aby uzyskać więcej informacji na temat tablic dwuwymiarowych, zobacz [Tablice wielowymiarowe](./multidimensional-arrays.md).  
+ Możliwe jest mieszanie tablic nieregularnych i wielowymiarowych. Poniżej znajduje się deklaracja i Inicjalizacja jednowymiarowej tablicy nieregularnej, która zawiera 3 2-wymiarowe elementy tablicy o różnych rozmiarach. Aby uzyskać więcej informacji na temat tablic dwuwymiarowych, zobacz [wielowymiarowe tablice](./multidimensional-arrays.md).  
   
  [!code-csharp[csProgGuideArrays#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#25)]  
   
- Można uzyskać dostęp do poszczególnych elementów, jak pokazano `[1,0]` w tym przykładzie, `5`który wyświetla wartość elementu pierwszej tablicy (wartość):  
+ Można uzyskać dostęp do poszczególnych elementów, jak pokazano w tym przykładzie, który wyświetla wartość elementu `[1,0]` pierwszej tablicy (wartość `5` ):  
   
  [!code-csharp[csProgGuideArrays#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#26)]  
   
- Metoda `Length` zwraca liczbę tablic zawartych w tablicy postrzępionej. Na przykład przy założeniu, że zadeklarowano poprzednią tablicę, ten wiersz:  
+ Metoda `Length` zwraca liczbę tablic zawartych w tablicy nieregularnej. Na przykład przy założeniu, że zadeklarowano poprzednią tablicę, ten wiersz:  
   
  [!code-csharp[csProgGuideArrays#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#27)]  
   
- zwraca wartość 3.  
+ Zwraca wartość 3.  
   
 ## <a name="example"></a>Przykład
 
- W tym przykładzie tworzy tablicy, których elementy są same tablice. Każdy z elementów tablicy ma inny rozmiar.  
+ Ten przykład kompiluje tablicę, której elementy same są tablicami. Każdy jeden z elementów tablicy ma inny rozmiar.  
   
  [!code-csharp[csProgGuideArrays#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#18)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Array>
-- [Przewodnik programowania języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../index.md)
 - [Tablice](./index.md)
 - [Tablice jednowymiarowe](./single-dimensional-arrays.md)
 - [Tablice wielowymiarowe](./multidimensional-arrays.md)

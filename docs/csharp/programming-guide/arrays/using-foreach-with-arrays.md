@@ -1,35 +1,36 @@
 ---
-title: Korzystanie z foreach z tablicami - Przewodnik programowania C#
+title: Korzystanie z instrukcji foreach z tablicami — Przewodnik programowania w języku C#
+description: Instrukcja foreach w języku C# wykonuje iterację przez elementy tablicy. W przypadku tablic jednowymiarowych instrukcja foreach przetwarza elementy w celu zwiększenia kolejności indeksu.
 ms.date: 05/23/2018
 helpviewer_keywords:
 - arrays [C#], foreach
 - foreach statement [C#], using with arrays
 ms.assetid: 5f2da2a9-1f56-4de5-94cc-e07f4f7a0244
-ms.openlocfilehash: bb121b0f5d990ef6e596b34a45606e2abde6811a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d924a3ef3351cbb30b809a1542f35314ee721852
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705681"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474543"
 ---
-# <a name="using-foreach-with-arrays-c-programming-guide"></a>Korzystanie z foreach z tablicami (C# Programming Guide)
+# <a name="using-foreach-with-arrays-c-programming-guide"></a>Używanie instrukcji foreach z tablicami (Przewodnik programowania w języku C#)
 
-[Foreach](../../language-reference/keywords/foreach-in.md) instrukcji zapewnia prosty, czysty sposób iterate za pomocą elementów tablicy.
+Instrukcja [foreach](../../language-reference/keywords/foreach-in.md) zawiera prosty, czysty sposób wykonywania iteracji przez elementy tablicy.
 
-W przypadku tablic jednowymiarowych instrukcja `foreach` przetwarza elementy w rosnącej kolejności `Length - 1`indeksu, zaczynając od indeksu 0, a kończąc na indeksie:
+W przypadku tablic jednowymiarowych `foreach` instrukcja przetwarza elementy w kolejności rosnącego indeksu, rozpoczynając od indeksu 0 i kończąc na indeksie `Length - 1` :
 
  [!code-csharp[csProgGuideArrays#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#28)]
 
-W przypadku tablic wielowymiarowych elementy są przesuwane w taki sposób, że indeksy wymiaru najbardziej po prawej stronie są najpierw zwiększane, a następnie następny lewy wymiar itd.:
+W przypadku tablic wielowymiarowych elementy są przenoszone w taki sposób, że indeksy w wymiarze z prawej strony są najpierw zwiększane, następnie następny lewy wymiar i tak dalej, po lewej stronie:
 
  [!code-csharp[csProgGuideArrays#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#29)]
 
-Jednak w przypadku tablic wielowymiarowych za pomocą zagnieżdżonego [dla](../../language-reference/keywords/for.md) pętli daje większą kontrolę nad kolejnością przetwarzania elementów tablicy.
+Jednak w przypadku tablic wielowymiarowych użycie zagnieżdżonej pętli [for](../../language-reference/keywords/for.md) daje większą kontrolę nad kolejnością, w której mają być przetwarzane elementy tablicy.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Array>
-- [Przewodnik programowania języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../index.md)
 - [Tablice](index.md)
 - [Tablice jednowymiarowe](single-dimensional-arrays.md)
 - [Tablice wielowymiarowe](multidimensional-arrays.md)

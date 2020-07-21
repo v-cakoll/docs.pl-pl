@@ -1,13 +1,14 @@
 ---
 title: 'Ograniczenie: Deserializacja obiektów między domenami aplikacji'
+description: Dowiedz się, jak zdiagnozować i wyeliminować problem polegający na tym, że próba deserializacji obiektów w kontekście wywołania logicznego w domenach aplikacji zgłasza wyjątek.
 ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
-ms.openlocfilehash: e2d90a77cab699646bd31eaa162d1bd1744fd51b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 20ea0f2f0b49000b7d1993adb583a803d9f5be6c
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457926"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475245"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Ograniczenie: Deserializacja obiektów między domenami aplikacji
 W niektórych przypadkach, gdy aplikacja używa dwóch lub większej liczby domen aplikacji z różnymi bazami aplikacji, próba deserializacji obiektów w logicznym kontekście wywołań między różnymi domenami aplikacji zgłasza wyjątek.  
@@ -35,7 +36,7 @@ W niektórych przypadkach, gdy aplikacja używa dwóch lub większej liczby dome
   
 6. Ponieważ typy znajdujące się w logicznym kontekście wywołań nie mogą być rozpoznane w domyślnej domenie aplikacji, zgłaszany jest wyjątek.  
   
-## <a name="mitigation"></a>Środki zaradcze  
+## <a name="mitigation"></a>Ograniczanie ryzyka  
  Aby obejść ten problem, należy wykonać następujące czynności  
   
 1. Poszukaj wywołania `get_Evidence` w stosie wywołań gdy wyjątek jest zgłaszany. Może to być dowolny wyjątek z dużego podzbioru wyjątków, łącznie z <xref:System.IO.FileNotFoundException> i <xref:System.Runtime.Serialization.SerializationException>.  
@@ -46,6 +47,6 @@ W niektórych przypadkach, gdy aplikacja używa dwóch lub większej liczby dome
     System.Configuration.ConfigurationManager.GetSection("system.xml/xmlReader");  
     ```
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Zgodność aplikacji](application-compatibility.md)

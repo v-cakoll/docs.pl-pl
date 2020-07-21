@@ -1,5 +1,6 @@
 ---
 title: Zgodność wersji w .NET Framework
+description: Informacje o zgodności między wersjami .NET Framework, w tym zgodność z poprzednimi wersjami i wykonywanie równoczesne.
 ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: c3bc92b89a46fc947b4d7e67644930374eeab2e4
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: dfdc5a977b69af8aa3a0d33ed8b833745cf6bf11
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82796005"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475505"
 ---
 # <a name="version-compatibility"></a>Zgodność wersji
 
@@ -22,7 +23,7 @@ Zgodność z poprzednimi wersjami oznacza, że aplikacja opracowana dla konkretn
 
 Domyślnie aplikacja jest uruchamiana w wersji .NET Framework, dla której została skompilowana. Jeśli ta wersja nie jest obecna, a plik konfiguracji aplikacji nie definiuje obsługiwanych wersji, może wystąpić błąd inicjalizacji .NET Framework. W takim przypadku próba uruchomienia aplikacji nie powiedzie się.
 
-Aby zdefiniować konkretne wersje, na których działa aplikacja, Dodaj co najmniej jeden [ \<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) do pliku konfiguracji aplikacji. Każdy `<supportedRuntime>` element zawiera obsługiwaną wersję środowiska uruchomieniowego, z pierwszym określeniem najbardziej preferowanej wersji i ostatnim określeniem najmniejszej wersji.
+Aby zdefiniować konkretne wersje, na których działa aplikacja, Dodaj co najmniej jeden [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) element do pliku konfiguracji aplikacji. Każdy `<supportedRuntime>` element zawiera obsługiwaną wersję środowiska uruchomieniowego, z pierwszym określeniem najbardziej preferowanej wersji i ostatnim określeniem najmniejszej wersji.
 
 ```xml
 <configuration>
@@ -59,7 +60,7 @@ Jeśli aplikacja lub składnik nie działa zgodnie z oczekiwaniami w .NET Framew
 
 - Jeśli ponownie kompilujesz istniejący kod źródłowy do uruchamiania na .NET Framework 4,5 lub w jego wersjach, lub jeśli tworzysz nową wersję aplikacji lub składnika, który jest przeznaczony dla wersji .NET Framework 4,5 lub jej punktów z istniejącej bazy kodu źródłowego, sprawdź, [co jest przestarzałe w bibliotece klas](../whats-new/whats-obsolete.md) dla przestarzałych typów i członków, i zastosuj opisane obejście. (Poprzednio skompilowany kod będzie kontynuował pracę względem typów i elementów członkowskich, które zostały oznaczone jako przestarzałe.)
 
-- Jeśli określisz, że zmiana w .NET Framework 4,5 spowodowała uszkodzenie aplikacji, sprawdź [Schemat ustawień środowiska uruchomieniowego](../configure-apps/file-schema/runtime/index.md), a szczególnie [ \<element AppContextSwitchOverrides>](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md), aby określić, czy można użyć ustawienia środowiska uruchomieniowego w pliku konfiguracyjnym aplikacji, aby przywrócić poprzednie zachowanie.
+- Jeśli określisz, że zmiana w .NET Framework 4,5 spowodowała uszkodzenie aplikacji, sprawdź [Schemat ustawień środowiska uruchomieniowego](../configure-apps/file-schema/runtime/index.md), a szczególnie [ \<AppContextSwitchOverrides> element](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md), aby określić, czy można użyć ustawienia środowiska uruchomieniowego w pliku konfiguracyjnym aplikacji, aby przywrócić poprzednie zachowanie.
 
 - Jeśli występują problemy, które nie są udokumentowane, Otwórz problem w [witrynie społeczności deweloperów dla platformy .NET](https://developercommunity.visualstudio.com/spaces/61/index.html) lub Otwórz problem w [repozytorium GitHub Microsoft/dotnet](https://github.com/microsoft/dotnet/issues).
 

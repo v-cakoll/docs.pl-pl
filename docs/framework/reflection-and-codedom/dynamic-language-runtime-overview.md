@@ -1,5 +1,6 @@
 ---
 title: Omówienie środowiska uruchomieniowego języka dynamicznego | Microsoft Docs
+description: Zapoznaj się z omówieniem środowiska uruchomieniowego języka dynamicznego (DLR) w programie .NET. DLR to środowisko uruchomieniowe, które dodaje zestaw usług dla języków dynamicznych do środowiska CLR.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - dynamic language runtime
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - DLR
 - IronRuby
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
-ms.openlocfilehash: a38ed15769d1186ef78733d68d9d8b51b3eb262d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2272bc60af35e3cdec3e1a71bbc6516565b4ec6e
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446905"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475154"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Przegląd środowiska uruchomieniowego języka dynamicznego
 
 *Moduł uruchomieniowy języka dynamicznego* (DLR) to środowisko uruchomieniowe, które dodaje zestaw usług dla języków dynamicznych do środowiska uruchomieniowego języka wspólnego (CLR). DLR ułatwia opracowywanie dynamicznych języków do uruchamiania na .NET Framework i Dodawanie funkcji dynamicznych do statycznie wpisanych języków.
 
-Języki dynamiczne mogą identyfikować typ obiektu w czasie wykonywania, podczas gdy w językach statycznych, takich jak C# i Visual Basic (w przypadku używania `Option Explicit On`) należy określić typy obiektów w czasie projektowania. Przykłady języków dynamicznych to Lisp, Smalltalk, JavaScript, PHP, Ruby, Python, ColdFusion, Lua, Cobra i Groovy.
+Języki dynamiczne mogą identyfikować typ obiektu w czasie wykonywania, podczas gdy w językach statycznych, takich jak C# i Visual Basic (w przypadku używania `Option Explicit On` ) należy określić typy obiektów w czasie projektowania. Przykłady języków dynamicznych to Lisp, Smalltalk, JavaScript, PHP, Ruby, Python, ColdFusion, Lua, Cobra i Groovy.
 
 Większość języków dynamicznych zapewnia deweloperom następujące korzyści:
 
@@ -80,16 +81,16 @@ Przykłady języków opracowanych przy użyciu DLR obejmują następujące eleme
 
 - Drzewa wyrażeń. DLR używa drzew wyrażeń do reprezentowania semantyki języka. W tym celu DLR ma rozszerzone drzewa wyrażeń LINQ, aby obejmowały przepływ sterowania, przypisanie i inne węzły modelowania języka. Aby uzyskać więcej informacji, zobacz [drzewa wyrażeń (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) lub [drzewa wyrażeń (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md).
 
-- Wywołaj buforowanie lokacji. *Lokacja wywołania dynamicznego* to miejsce w kodzie, w którym można wykonać operację podobną `a + b` do `a.b()` lub dla obiektów dynamicznych. DLR przechowuje w pamięci podręcznej `a` cechy `b` i (zazwyczaj typy tych obiektów) oraz informacje o operacji. Jeśli taka operacja została wykonana wcześniej, DLR pobiera wszystkie niezbędne informacje z pamięci podręcznej do szybkiej wysyłki.
+- Wywołaj buforowanie lokacji. *Lokacja wywołania dynamicznego* to miejsce w kodzie, w którym można wykonać operację podobną do `a + b` lub `a.b()` dla obiektów dynamicznych. DLR przechowuje w pamięci podręcznej cechy `a` i `b` (zazwyczaj typy tych obiektów) oraz informacje o operacji. Jeśli taka operacja została wykonana wcześniej, DLR pobiera wszystkie niezbędne informacje z pamięci podręcznej do szybkiej wysyłki.
 
-- Współdziałanie obiektów dynamicznych. DLR zawiera zestaw klas i interfejsów, które reprezentują dynamiczne obiekty i operacje, które mogą być używane przez implementacje języka i autorów bibliotek dynamicznych. Te klasy i interfejsy obejmują <xref:System.Dynamic.IDynamicMetaObjectProvider>, <xref:System.Dynamic.DynamicMetaObject>, <xref:System.Dynamic.DynamicObject>, i <xref:System.Dynamic.ExpandoObject>.
+- Współdziałanie obiektów dynamicznych. DLR zawiera zestaw klas i interfejsów, które reprezentują dynamiczne obiekty i operacje, które mogą być używane przez implementacje języka i autorów bibliotek dynamicznych. Te klasy i interfejsy obejmują <xref:System.Dynamic.IDynamicMetaObjectProvider> , <xref:System.Dynamic.DynamicMetaObject> , <xref:System.Dynamic.DynamicObject> , i <xref:System.Dynamic.ExpandoObject> .
 
 DLR używa programu Binders w witrynach wywołań do komunikowania się nie tylko z .NET Framework, ale z innymi infrastrukturami i usługami, w tym Silverlight i COM. Obiekty wiążące hermetyzują semantykę języka i określają sposób wykonywania operacji w witrynie wywołania przy użyciu drzew wyrażeń. Umożliwia to dynamiczne i statycznie wpisane Języki, które używają DLR do udostępniania bibliotek i uzyskiwania dostępu do wszystkich technologii obsługiwanych przez DLR.
 
 ## <a name="dlr-documentation"></a>Dokumentacja DLR
  Aby uzyskać więcej informacji na temat korzystania z wersji typu open source DLR w celu dodania dynamicznego zachowania do języka lub dowiedzieć się, jak włączyć używanie języka dynamicznego z .NET Framework, zapoznaj się z dokumentacją repozytorium [IronLanguages/DLR](https://github.com/IronLanguages/dlr/tree/master/Docs) w witrynie GitHub.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>

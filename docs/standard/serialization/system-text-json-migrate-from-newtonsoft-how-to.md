@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: fe370b34d311816a815f3b2d419751ac7871f013
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 78a47b01cc8fba4cb45a686adad901784552c1c1
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "83703579"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865336"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Jak przeprowadzić migrację z Newtonsoft.Json do programuSystem.Text.Json
 
@@ -318,11 +318,27 @@ Aby przeprowadzić deserializacja nie powiodła się `Date` , jeśli w kodzie JS
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRequiredPropertyConverter.cs)]
 
-Zarejestrowanie tego konwertera niestandardowego przy [użyciu atrybutu klasy poco](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) lub poprzez [dodanie konwertera](system-text-json-converters-how-to.md#registration-sample---converters-collection) do <xref:System.Text.Json.JsonSerializerOptions.Converters> kolekcji.
+Zarejestruj ten konwerter niestandardowy, [dodając konwerter](system-text-json-converters-how-to.md#registration-sample---converters-collection) do <xref:System.Text.Json.JsonSerializerOptions.Converters?displayProperty=nameWithType> kolekcji.
 
-W przypadku przestrzegania tego wzorca nie należy przechodzić do obiektu options podczas rekursywnego wywoływania <xref:System.Text.Json.JsonSerializer.Serialize%2A> lub <xref:System.Text.Json.JsonSerializer.Deserialize%2A> . Obiekt Options zawiera <xref:System.Text.Json.JsonSerializerOptions.Converters%2A> kolekcję. Jeśli przekażesz go do `Serialize` lub `Deserialize` , konwerter niestandardowy wywołuje się do siebie, tworząc nieskończoną pętlę, która powoduje wyjątek przepełnienia stosu. Jeśli opcje domyślne nie są możliwe, Utwórz nowe wystąpienie opcji z ustawieniami, które są potrzebne. Takie podejście będzie powolne, ponieważ każde nowe wystąpienie pamięci podręcznej jest niezależne.
+Ten wzorzec cyklicznie wywołujący konwerter wymaga zarejestrowania konwertera przy użyciu, a <xref:System.Text.Json.JsonSerializerOptions> nie przy użyciu atrybutu. W przypadku zarejestrowania konwertera przy użyciu atrybutu, konwerter niestandardowy cyklicznie wywołuje się do samego siebie. Wynik jest pętlą nieskończoną kończącą się na wyjątek przepełnienia stosu.
 
-Poprzedni kod konwertera to uproszczony przykład. Dodatkowa logika powinna być wymagana, jeśli trzeba obsługiwać atrybuty (takie jak [[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) lub różne opcje (takie jak kodery niestandardowe). Ponadto przykładowy kod nie obsługuje właściwości, dla których ustawiono wartość domyślną w konstruktorze. To podejście nie różni się między następującymi scenariuszami:
+Podczas rejestrowania konwertera przy użyciu obiektu Options, unikaj pętli nieskończonej przez pominięcie jej w obiekcie Options podczas rekursywnego wywoływania <xref:System.Text.Json.JsonSerializer.Serialize%2A> lub <xref:System.Text.Json.JsonSerializer.Deserialize%2A> . Obiekt Options zawiera <xref:System.Text.Json.JsonSerializerOptions.Converters%2A> kolekcję. Jeśli przekażesz go do `Serialize` lub `Deserialize` , konwerter niestandardowy wywołuje się do siebie, tworząc nieskończoną pętlę, która powoduje wyjątek przepełnienia stosu. Jeśli opcje domyślne nie są możliwe, Utwórz nowe wystąpienie opcji z ustawieniami, które są potrzebne. Takie podejście będzie powolne, ponieważ każde nowe wystąpienie pamięci podręcznej jest niezależne.
+
+Istnieje alternatywny wzorzec, który może używać `JsonConverterAttribute` rejestracji w klasie do przekonwertowania. W tym podejściu kod konwertera wywołuje `Serialize` lub `Deserialize` na klasę, która dziedziczy z klasy, która ma zostać przekształcona. Klasa pochodna nie ma `JsonConverterAttribute` do niej zastosowania. W poniższym przykładzie tej alternatywy:
+
+* `WeatherForecastWithRequiredPropertyConverterAttribute`jest klasą, która ma zostać odszeregowana i ma `JsonConverterAttribute` do niej zastosowanie.
+* `WeatherForecastWithoutRequiredPropertyConverterAttribute`jest klasą pochodną, która nie ma atrybutu konwertera.
+* Kod w konwerterze wywołuje `Serialize` i `Deserialize` włączony, `WeatherForecastWithoutRequiredPropertyConverterAttribute` Aby uniknąć nieskończonej pętli. To podejście jest kosztem wydajności na potrzeby serializacji z powodu dodatkowego tworzenia wystąpienia obiektu i kopiowania wartości właściwości.
+
+Oto `WeatherForecast*` typy:
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithReqPptyConverterAttr)]
+
+A oto konwerter:
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRequiredPropertyConverterForAttributeRegistration.cs)]
+
+Wymagany konwerter właściwości wymaga dodatkowej logiki, jeśli trzeba obsługiwać atrybuty takie jak [[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) lub różne opcje, takie jak kodery niestandardowe. Ponadto przykładowy kod nie obsługuje właściwości, dla których ustawiono wartość domyślną w konstruktorze. To podejście nie różni się między następującymi scenariuszami:
 
 * Brak właściwości w kodzie JSON.
 * Właściwość typu niedopuszczający wartości null jest obecna w notacji JSON, ale wartość jest wartością domyślną dla tego typu, np. zero dla `int` .
@@ -391,7 +407,7 @@ Zarejestrowanie tego konwertera niestandardowego przy [użyciu atrybutu klasy](s
 Jeśli używasz niestandardowego konwertera, który następuje po powyższym przykładzie:
 
 * `OnDeserializing`Kod nie ma dostępu do nowego wystąpienia poco. Aby manipulować nowym wystąpieniem POCO na początku deserializacji, Umieść ten kod w konstruktorze POCO.
-* Nie przekazuj w obiekcie Options podczas rekursywnego wywoływania `Serialize` lub `Deserialize` . Obiekt Options zawiera `Converters` kolekcję. Jeśli przekażesz go do `Serialize` lub `Deserialize` , zostanie użyty konwerter, co powoduje nieskończoną pętlę powodującą wyjątek przepełnienia stosu.
+* Unikaj pętli nieskończonej przez zarejestrowanie konwertera w obiekcie Options i nieprzekazywanie w obiekcie Options podczas cyklicznego wywoływania `Serialize` lub `Deserialize` . Aby uzyskać więcej informacji, zapoznaj się z sekcją [wymagane właściwości](#required-properties) we wcześniejszej części tego artykułu.
 
 ### <a name="public-and-non-public-fields"></a>Pola publiczne i niepubliczne
 
@@ -472,7 +488,7 @@ public JsonElement LookAndLoad(JsonElement source)
 
 Poprzedzający kod oczekuje `JsonElement` , że zawiera `fileName` Właściwość. Plik JSON zostanie otwarty i zostanie utworzony `JsonDocument` . Metoda zakłada, że obiekt wywołujący chce współpracować z całym dokumentem, dlatego zwraca wartość `Clone` `RootElement` .
 
-Jeśli otrzymasz `JsonElement` i zwrócisz podrzędny element, nie trzeba zwracać `Clone` elementu podrzędnego. Obiekt wywołujący jest odpowiedzialny za utrzymanie aktywności, `JsonDocument` do której należy ten element `JsonElement` . Przykład:
+Jeśli otrzymasz `JsonElement` i zwrócisz podrzędny element, nie trzeba zwracać `Clone` elementu podrzędnego. Obiekt wywołujący jest odpowiedzialny za utrzymanie aktywności, `JsonDocument` do której należy ten element `JsonElement` . Na przykład:
 
 ```csharp
 public JsonElement ReturnFileName(JsonElement source)

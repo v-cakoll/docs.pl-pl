@@ -1,5 +1,6 @@
 ---
 title: Określanie w pełni kwalifikowanych nazw typów
+description: Aby uzyskać prawidłowe dane wejściowe operacji odbicia, należy użyć w pełni kwalifikowanych nazw typów, które mają specyfikacje nazw zestawów, specyfikacje przestrzeni nazw i nazwy typów.
 ms.date: 02/21/2019
 helpviewer_keywords:
 - names [.NET Framework], fully qualified type names
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-ms.openlocfilehash: 707c71482196d789ed9a88db34af048ec57734fb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ff33b6abd31a82c6b80aa794564c5c48648cde63
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130034"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865232"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Określanie w pełni kwalifikowanych nazw typów
 
-Musisz określić nazwy typów, aby mieć prawidłowe dane wejściowe różnych operacji odbicia. W pełni kwalifikowana nazwa typu zawiera specyfikację nazwy zestawu, specyfikację przestrzeni nazw i nazwę typu. Specyfikacje nazw typów są używane przez metody takie jak <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>, i <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>.
+Musisz określić nazwy typów, aby mieć prawidłowe dane wejściowe różnych operacji odbicia. W pełni kwalifikowana nazwa typu zawiera specyfikację nazwy zestawu, specyfikację przestrzeni nazw i nazwę typu. Specyfikacje nazw typów są używane przez metody takie jak <xref:System.Type.GetType%2A?displayProperty=nameWithType> , <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType> , <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType> , i <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> .
 
 ## <a name="grammar-for-type-names"></a>Gramatyka nazw typów
 
@@ -116,7 +117,7 @@ AssemblyProperty
 
 W nazwie typu identyfikator to dowolna prawidłowa nazwa określona przez reguły języka.
 
-Użyj ukośnika odwrotnego\\() jako znaku ucieczki, aby oddzielić następujące tokeny, gdy są używane jako część identyfikatora.
+Użyj ukośnika odwrotnego ( \\ ) jako znaku ucieczki, aby oddzielić następujące tokeny, gdy są używane jako część identyfikatora.
 
 |Token|Znaczenie|
 |-----------|-------------|
@@ -131,11 +132,11 @@ Użyj ukośnika odwrotnego\\() jako znaku ucieczki, aby oddzielić następujące
 
 Należy pamiętać, że we wszystkich składnikach TypeSpec z wyjątkiem AssemblyNameSpec, spacje są istotne. W AssemblyNameSpec, spacje przed separatorem ', ' są istotne, ale spacje po separatorze ', ' są ignorowane.
 
-Klasy odbicia, takie <xref:System.Type.FullName%2A?displayProperty=nameWithType>jak, zwracają nazwę zniekształcona, aby można było użyć zwracanej nazwy w wywołaniu do <xref:System.Type.GetType%2A>, jako w. `MyType.GetType(myType.FullName)`
+Klasy odbicia, takie jak <xref:System.Type.FullName%2A?displayProperty=nameWithType> , zwracają nazwę zniekształcona, aby można było użyć zwracanej nazwy w wywołaniu do <xref:System.Type.GetType%2A> , jako w `MyType.GetType(myType.FullName)` .
 
-Na przykład w pełni kwalifikowana nazwa dla typu może być `Ozzy.OutBack.Kangaroo+Wallaby,MyAssembly`.
+Na przykład w pełni kwalifikowana nazwa dla typu może być `Ozzy.OutBack.Kangaroo+Wallaby,MyAssembly` .
 
-Jeśli przestrzeń nazw była `Ozzy.Out+Back`, znak plus musi być poprzedzony ukośnikiem odwrotnym. W przeciwnym razie Analizator interpretuje go jako separator zagnieżdżenia. Odbicie emituje ten ciąg `Ozzy.Out\+Back.Kangaroo+Wallaby,MyAssembly`jako.
+Jeśli przestrzeń nazw była `Ozzy.Out+Back` , znak plus musi być poprzedzony ukośnikiem odwrotnym. W przeciwnym razie Analizator interpretuje go jako separator zagnieżdżenia. Odbicie emituje ten ciąg jako `Ozzy.Out\+Back.Kangaroo+Wallaby,MyAssembly` .
 
 ## <a name="specifying-assembly-names"></a>Określanie nazw zestawów
 
@@ -146,8 +147,8 @@ Minimalnymi informacjami wymaganymi w specyfikacji nazwy zestawu jest nazwa teks
 |**Wersja**|Numer wersji zestawu|*Główna. pomocnicza. kompilacja. poprawka*, gdzie *główna*, *pomocnicza*, *kompilacja*i *poprawka* są liczbami całkowitymi z zakresu od 0 do 65535 włącznie.|
 |**PublicKey**|Pełny klucz publiczny|Wartość ciągu pełnego klucza publicznego w formacie szesnastkowym. Określ odwołanie o wartości null (**Nothing** w Visual Basic), aby jawnie wskazać prywatny zestaw.|
 |**PublicKeyToken**|Token klucza publicznego (skrót 8-bajtowy pełnego klucza publicznego)|Wartość ciągu tokenu klucza publicznego w formacie szesnastkowym. Określ odwołanie o wartości null (**Nothing** w Visual Basic), aby jawnie wskazać prywatny zestaw.|
-|**Dziedzinie**|Kultura zestawu|Kultura zestawu w formacie RFC-1766 lub "neutralna" dla zestawów niezależnych od języka (niesatelity).|
-|**Niestandardowy**|Niestandardowy duży obiekt binarny (BLOB). Jest to obecnie używane tylko w zestawach wygenerowanych przez [Generator obrazu natywnego (Ngen)](../tools/ngen-exe-native-image-generator.md).|Niestandardowy ciąg używany przez Narzędzie Generator obrazu macierzystego do powiadamiania pamięci podręcznej zestawów, że instalowany zestaw jest obrazem natywnym i dlatego jest instalowany w pamięci podręcznej obrazów natywnych. Nazywana również ciągiem zap.|
+|**Kultura**|Kultura zestawu|Kultura zestawu w formacie RFC-1766 lub "neutralna" dla zestawów niezależnych od języka (niesatelity).|
+|**Niestandardowe**|Niestandardowy duży obiekt binarny (BLOB). Jest to obecnie używane tylko w zestawach wygenerowanych przez [Generator obrazu natywnego (Ngen)](../tools/ngen-exe-native-image-generator.md).|Niestandardowy ciąg używany przez Narzędzie Generator obrazu macierzystego do powiadamiania pamięci podręcznej zestawów, że instalowany zestaw jest obrazem natywnym i dlatego jest instalowany w pamięci podręcznej obrazów natywnych. Nazywana również ciągiem zap.|
 
 W poniższym przykładzie pokazano element **AssemblyName** dla jednoplikowego zestawu z domyślną kulturą.
 
@@ -187,19 +188,19 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
 
 ## <a name="specifying-generic-types"></a>Określanie typów ogólnych
 
-SimpleTypeSpec\`numer reprezentuje otwarty typ ogólny z od 1 do *n* parametrów typu ogólnego. Aby na przykład uzyskać odwołanie do\<listy otwartych typów ogólnych T> lub zamkniętego ciągu listy\<typów ogólnych>, użyj ``Type.GetType("System.Collections.Generic.List`1")`` , aby uzyskać odwołanie do słownika\<typu ogólnego TKey, TValue>, użyj. ``Type.GetType("System.Collections.Generic.Dictionary`2")``
+SimpleTypeSpec \` numer reprezentuje otwarty typ ogólny z od 1 do *n* parametrów typu ogólnego. Aby na przykład uzyskać odwołanie do listy otwartych typów ogólnych \<T> lub zamkniętej listy typów ogólnych \<String> , użyj parametru, ``Type.GetType("System.Collections.Generic.List`1")`` Aby uzyskać odwołanie do słownika typu ogólnego \<TKey,TValue> , użyj ``Type.GetType("System.Collections.Generic.Dictionary`2")`` .
 
 ## <a name="specifying-pointers"></a>Określanie wskaźników
 
-SimpleTypeSpec * reprezentuje niezarządzany wskaźnik. Na przykład aby uzyskać wskaźnik do typu MyType, użyj `Type.GetType("MyType*")`. Aby uzyskać wskaźnik do wskaźnika do typu MyType, użyj `Type.GetType("MyType**")`.
+SimpleTypeSpec * reprezentuje niezarządzany wskaźnik. Na przykład aby uzyskać wskaźnik do typu MyType, użyj `Type.GetType("MyType*")` . Aby uzyskać wskaźnik do wskaźnika do typu MyType, użyj `Type.GetType("MyType**")` .
 
 ## <a name="specifying-references"></a>Określanie odwołań
 
-SimpleTypeSpec & reprezentuje zarządzany wskaźnik lub odwołanie. Na przykład aby uzyskać odwołanie do typu MyType, użyj `Type.GetType("MyType &")`. Należy pamiętać, że w przeciwieństwie do wskaźników, odwołania są ograniczone do jednego poziomu.
+SimpleTypeSpec & reprezentuje zarządzany wskaźnik lub odwołanie. Na przykład aby uzyskać odwołanie do typu MyType, użyj `Type.GetType("MyType &")` . Należy pamiętać, że w przeciwieństwie do wskaźników, odwołania są ograniczone do jednego poziomu.
 
 ## <a name="specifying-arrays"></a>Określanie tablic
 
-W BNF gramatyki ReflectionEmitDimension dotyczy tylko niekompletnych definicji typów pobranych przy <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>użyciu. Niekompletne definicje typów <xref:System.Reflection.Emit.TypeBuilder> są obiektami zbudowanymi przy <xref:System.Reflection.Emit?displayProperty=nameWithType> użyciu <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=nameWithType> polecenia, ale nie zostały wywołane. ReflectionDimension można użyć do pobrania dowolnej definicji typu, która została ukończona, czyli typu, który został załadowany.
+W BNF gramatyki ReflectionEmitDimension dotyczy tylko niekompletnych definicji typów pobranych przy użyciu <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType> . Niekompletne definicje typów są <xref:System.Reflection.Emit.TypeBuilder> obiektami zbudowanymi przy użyciu polecenia <xref:System.Reflection.Emit?displayProperty=nameWithType> , ale <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=nameWithType> nie zostały wywołane. ReflectionDimension można użyć do pobrania dowolnej definicji typu, która została ukończona, czyli typu, który został załadowany.
 
 Tablice są dostępne w odbiciu, określając rangę tablicy:
 
@@ -208,13 +209,13 @@ Tablice są dostępne w odbiciu, określając rangę tablicy:
 - `Type.GetType("MyArray[*]")`Pobiera tablicę o pojedynczym wymiarze z nieznanym dolnym granicą.
 - `Type.GetType("MyArray[][]")`Pobiera tablicę dwuwymiarową tablicy.
 
-- `Type.GetType("MyArray[*,*]")`i `Type.GetType("MyArray[,]")` pobiera prostokątną dwuwymiarową tablicę z nieznanymi dolnymi granicami.
+- `Type.GetType("MyArray[*,*]")`i `Type.GetType("MyArray[,]")` Pobiera prostokątną dwuwymiarową tablicę z nieznanymi dolnymi granicami.
 
-Należy pamiętać, że z punktu `MyArray[] != MyArray[*]`widzenia środowiska uruchomieniowego, ale dla tablic wielowymiarowych, dwie notacji są równoważne. Oznacza to, `Type.GetType("MyArray [,]") == Type.GetType("MyArray[*,*]")` że program zwraca **wartość true**.
+Należy pamiętać, że z punktu widzenia środowiska uruchomieniowego, `MyArray[] != MyArray[*]` ale dla tablic wielowymiarowych, dwie notacji są równoważne. Oznacza to, że program `Type.GetType("MyArray [,]") == Type.GetType("MyArray[*,*]")` zwraca **wartość true**.
 
 Dla **ModuleBuilder. GetType** `MyArray[0..5]` wskazuje tablicę jednowymiarową z rozmiarem 6, dolną granicą 0. `MyArray[4…]`wskazuje tablicę z jednym wymiarem o nieznanym rozmiarze i dolną granicę 4.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Reflection.AssemblyName>
 - <xref:System.Reflection.Emit.ModuleBuilder>

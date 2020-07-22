@@ -1,85 +1,86 @@
 ---
-title: Funkcje lokalne — przewodnik programowania języka C#
+title: Funkcje lokalne — Przewodnik programowania w języku C#
+description: Funkcje lokalne w języku C# to metody prywatne, które są zagnieżdżone w innym elemencie członkowskim i mogą być wywoływane z ich składowych.
 ms.date: 06/14/2017
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: 200fbd097b7c71a1cd392d62622955528a80fd66
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 9987d6d5ad57c1dceb3a4bffbae22a81c240c794
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102947"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864530"
 ---
-# <a name="local-functions-c-programming-guide"></a>Funkcje lokalne (Przewodnik programowania języka C#)
+# <a name="local-functions-c-programming-guide"></a>Funkcje lokalne (Przewodnik programowania w języku C#)
 
-Począwszy od języka C# 7.0, C# obsługuje *funkcje lokalne*. Funkcje lokalne są metody prywatne typu, które są zagnieżdżone w innym elementem członkowskim. Można je wywołać tylko od ich zawierającego członka. Funkcje lokalne mogą być zadeklarowane i wywoływane z:
+Począwszy od języka C# 7,0, C# obsługuje *funkcje lokalne*. Funkcje lokalne są prywatnymi metodami typu, które są zagnieżdżone w innym elemencie członkowskim. Mogą być wywoływane tylko z ich składowych. Funkcje lokalne można zadeklarować w i wywołać z:
 
-- Metody, zwłaszcza metody iteratora i metody asynchronizowania
-- Konstruktorów
-- Akcesory
-- Akcesory zdarzeń
+- Metody, zwłaszcza metody iteratorów i metody asynchroniczne
+- Konstruktory
+- Metody dostępu do właściwości
+- Metody dostępu zdarzeń
 - Metody anonimowe
 - Wyrażenia lambda
 - Finalizatory
 - Inne funkcje lokalne
 
-Jednak funkcje lokalne nie można zadeklarować wewnątrz elementu członkowskiego wyrażeń.
+Jednak funkcji lokalnych nie można deklarować wewnątrz elementu członkowskiego będącego w posiadaniu wyrażenia.
 
 > [!NOTE]
-> W niektórych przypadkach można użyć wyrażenia lambda do zaimplementowania funkcji obsługiwanych również przez funkcję lokalną. Dla porównania zobacz [Funkcje lokalne a wyrażenia lambda](#local-functions-vs-lambda-expressions).
+> W niektórych przypadkach można użyć wyrażenia lambda, aby zaimplementować funkcje również obsługiwane przez funkcję lokalną. Aby zapoznać się z porównaniem, zobacz [funkcje lokalne a wyrażenia lambda](#local-functions-vs-lambda-expressions).
 
-Funkcje lokalne sprawiają, że intencja kodu jest wyczyszczona. Każdy, kto czyta kod może zobaczyć, że metoda nie jest wywoływana z wyjątkiem metody zawierającej. W przypadku projektów zespołowych uniemożliwiają one innemu deweloperowi omyłkowo wywołanie metody bezpośrednio z innego miejsca w klasie lub strukturze.
+Funkcje lokalne sprawiają, że zamiar kodu jest przejrzysty. Każda osoba odczytująca kod może zobaczyć, że metoda nie jest wywoływana z wyjątkiem metody zawierającej. W przypadku projektów zespołowych uniemożliwiają one również innym deweloperom błędne wywoływanie metody bezpośrednio z innych miejsc w klasie lub strukturze.
 
-## <a name="local-function-syntax"></a>Składnia funkcji lokalnej
+## <a name="local-function-syntax"></a>Składnia funkcji lokalnych
 
-Funkcja lokalna jest zdefiniowana jako metoda zagnieżdżona wewnątrz elementu członkowskiego zawierającego. Jego definicja ma następującą składnię:
+Funkcja lokalna jest definiowana jako metoda zagnieżdżona wewnątrz składowej zawierającej. Jego definicja ma następującą składnię:
 
 ```csharp
 <modifiers: async | unsafe> <return-type> <method-name> <parameter-list>
 ```
 
-Funkcje lokalne można użyć [modyfikatorów asynchroników](../../language-reference/keywords/async.md) i [niebezpiecznych.](../../language-reference/keywords/unsafe.md)
+Funkcje lokalne mogą używać modyfikatorów [Async](../../language-reference/keywords/async.md) i [UNSAFE](../../language-reference/keywords/unsafe.md) .
 
-Należy zauważyć, że wszystkie zmienne lokalne, które są zdefiniowane w element członkowski zawierający, w tym jego parametry metody, są dostępne w funkcji lokalnej.
+Należy zauważyć, że wszystkie zmienne lokalne, które są zdefiniowane w składowej zawierającej, łącznie z parametrami metody, są dostępne w funkcji lokalnej.
 
-W przeciwieństwie do definicji metody, definicja funkcji lokalnej nie może zawierać modyfikatora dostępu elementu członkowskiego. Ponieważ wszystkie funkcje lokalne są prywatne, w `private` tym modyfikator dostępu, takich jak słowo kluczowe, generuje błąd kompilatora CS0106, "Modyfikator 'private' nie jest prawidłowy dla tego elementu."
+W przeciwieństwie do definicji metody lokalnej definicja funkcji nie może zawierać modyfikatora dostępu do składowej. Ponieważ wszystkie funkcje lokalne są prywatne, łącznie z modyfikatorem dostępu, takim jak `private` słowo kluczowe, generuje błąd kompilatora CS0106 "modyfikator" Private "jest nieprawidłowy dla tego elementu".
 
 > [!NOTE]
-> Przed C# 8.0 funkcje lokalne `static` nie mogą zawierać modyfikatora. W `static` tym słowo kluczowe generuje błąd kompilatora CS0106, "Modyfikator 'statyczny' nie jest prawidłowy dla tego elementu."
+> W systemach wcześniejszych niż C# 8,0 funkcja lokalna nie może zawierać `static` modyfikatora. Włączenie `static` słowa kluczowego generuje błąd kompilatora CS0106, "modyfikator" static "jest nieprawidłowy dla tego elementu".
 
-Ponadto atrybuty nie mogą być stosowane do funkcji lokalnej lub do jej parametrów i parametrów typu.
+Ponadto atrybuty nie mogą być stosowane do funkcji lokalnej ani do jej parametrów i parametrów typu.
 
-Poniższy przykład definiuje funkcję `AppendPathSeparator` lokalną o nazwie, `GetText`która jest prywatna dla metody o nazwie:
+W poniższym przykładzie zdefiniowano funkcję lokalną o nazwie `AppendPathSeparator` , która jest prywatna dla metody o nazwie `GetText` :
 
 [!code-csharp[LocalFunctionExample](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions1.cs)]  
 
-## <a name="local-functions-and-exceptions"></a>Funkcje lokalne i wyjątki
+## <a name="local-functions-and-exceptions"></a>Lokalne funkcje i wyjątki
 
-Jedną z przydatnych funkcji funkcji lokalnych jest to, że mogą one zezwalać na wyjątki do powierzchni natychmiast. W przypadku iteratorów metody wyjątki są wyświetlane tylko wtedy, gdy zwracana sekwencja jest wyliczona, a nie podczas pobierania iteratora. Dla metod asynchronicznych wszelkie wyjątki zgłaszane w metodzie asynchronicznego są obserwowane, gdy zwracane zadanie jest oczekiwane.
+Jedną z użytecznych funkcji lokalnych funkcji jest możliwość natychmiastowego zezwolenia na korzystanie z wyjątków. W przypadku iteratorów metod wyjątki są nakierowane tylko wtedy, gdy zwracana sekwencja jest wyliczana, a nie podczas pobierania iteratora. W przypadku metod asynchronicznych wszystkie wyjątki zgłoszone w metodzie asynchronicznej są zaobserwowane, gdy zwracane zadanie jest oczekiwane.
 
-Poniższy przykład definiuje `OddSequence` metodę, która wylicza liczby nieparzyste między określonym zakresem. Ponieważ przekazuje liczbę większą niż 100 do metody `OddSequence` wyliczacza, metoda zgłasza . <xref:System.ArgumentOutOfRangeException> Jak pokazano na wyjściu z przykładu, wyjątek jest wyświetlany tylko wtedy, gdy iteracji liczb, a nie podczas pobierania wylicznika.
+W poniższym przykładzie zdefiniowano `OddSequence` metodę, która wylicza liczby nieparzyste między określonym zakresem. Ponieważ przekazuje liczbę większą niż 100 do `OddSequence` metody Enumerator, metoda zgłasza <xref:System.ArgumentOutOfRangeException> . Ponieważ dane wyjściowe z przykładu pokazują, powierzchnie wyjątków tylko w przypadku iteracji liczby, a nie podczas pobierania modułu wyliczającego.
 
 [!code-csharp[LocalFunctionIterator1](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator1.cs)]
 
-Zamiast tego można zgłosić wyjątek podczas wykonywania sprawdzania poprawności i przed pobraniem iteratora, zwracając iterator z funkcji lokalnej, jak pokazano w poniższym przykładzie.
+Zamiast tego można zgłosić wyjątek podczas sprawdzania poprawności i przed pobraniem iteratora, zwracając iterator z funkcji lokalnej, jak pokazano w poniższym przykładzie.
 
 [!code-csharp[LocalFunctionIterator2](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator2.cs)]
 
-Funkcje lokalne mogą być używane w podobny sposób do obsługi wyjątków poza operacją asynchronizacyjną. Zwykle wyjątki zgłaszane w metodzie asynchronizowej wymagają zbadania <xref:System.AggregateException>wewnętrznych wyjątków . Funkcje lokalne umożliwiają kod szybko zakończyć się niepowodzeniem i zezwalaj na wyjątek zarówno zgłaszane i obserwowane synchronicznie.
+Funkcji lokalnych można używać w podobny sposób, aby obsługiwać wyjątki poza operacją asynchroniczną. Zwykle wyjątki zgłoszone w metodzie asynchronicznej wymagają sprawdzenia wyjątków wewnętrznych <xref:System.AggregateException> . Funkcje lokalne umożliwiają szybkie i niepowodzenie wykonywania kodu oraz umożliwiają synchroniczną i zaobserwowany wyjątek.
 
-W poniższym przykładzie użyto metody `GetMultipleAsync` asynchroniczne o nazwie do wstrzymania dla określonej liczby sekund i zwracanie wartości, która jest losową wielokrotnością tej liczby sekund. Maksymalne opóźnienie wynosi 5 sekund; wyniki, <xref:System.ArgumentOutOfRangeException> jeśli wartość jest większa niż 5. Jak pokazano w poniższym przykładzie, wyjątek, który jest `GetMultipleAsync` zgłaszany, gdy <xref:System.AggregateException> wartość `GetMultipleAsync` 6 jest przekazywana do metody jest zawijany w po rozpoczęciu wykonywania metody.
+W poniższym przykładzie zastosowano metodę asynchroniczną o nazwie `GetMultipleAsync` do pauzy przez określoną liczbę sekund i zwracają wartość, która jest losowo wielokrotnością tej liczby sekund. Maksymalne opóźnienie wynosi 5 sekund; <xref:System.ArgumentOutOfRangeException>wyniki, jeśli wartość jest większa niż 5. Jak pokazano na poniższym przykładzie, wyjątek, który jest generowany, gdy wartość 6 jest przekazana do `GetMultipleAsync` metody jest opakowany w <xref:System.AggregateException> po `GetMultipleAsync` rozpoczęciu wykonywania metody.
 
 [!code-csharp[LocalFunctionAsync](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async1.cs)]
 
-Podobnie jak w przypadku iteratora metody, możemy refaktoryzację kodu z tego przykładu, aby wykonać sprawdzanie poprawności przed wywołaniem metody asynchroniczne. Jak pokazano na wyjściu z <xref:System.ArgumentOutOfRangeException> poniższego przykładu, nie jest zawijany w . <xref:System.AggregateException>
+Podobnie jak w iteratorze metody, możemy resłużyć kod z tego przykładu, aby przeprowadzić walidację przed wywołaniem metody asynchronicznej. Jak pokazano na poniższym przykładzie, <xref:System.ArgumentOutOfRangeException> nie jest opakowany w <xref:System.AggregateException> .
 
 [!code-csharp[LocalFunctionAsync](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async2.cs)]
 
 ## <a name="local-functions-vs-lambda-expressions"></a>Funkcje lokalne a wyrażenia lambda
 
-Na pierwszy rzut oka funkcje lokalne i [wyrażenia lambda](../statements-expressions-operators/lambda-expressions.md) są bardzo podobne. W wielu przypadkach wybór między używaniem wyrażeń lambda a funkcjami lokalnymi jest kwestią stylu i osobistych preferencji. Istnieją jednak rzeczywiste różnice w tym, gdzie można użyć jednego lub drugiego, że należy pamiętać.
+Na pierwszy rzut oka funkcje lokalne i [wyrażenia lambda](../statements-expressions-operators/lambda-expressions.md) są bardzo podobne. W wielu przypadkach wybór między wyrażeniami lambda i funkcjami lokalnymi jest kwestią stylu i preferencji osobistych. Istnieją jednak rzeczywiste różnice w tym, gdzie można korzystać z jednej z nich lub drugiej.
 
-Przyjrzyjmy się różnice między funkcji lokalnej i implementacji wyrażenia lambda algorytmu faktorialnego. Najpierw wersja przy użyciu funkcji lokalnej:
+Sprawdźmy różnice między funkcją lokalną a implementacją wyrażenia lambda algorytmu silnia. Pierwsza wersja przy użyciu funkcji lokalnej:
 
 [!code-csharp[LocalFunctionFactorial](../../../../samples/snippets/csharp/new-in-7/MathUtilities.cs#37_LocalFunctionFactorial "Recursive factorial using local function")]
 
@@ -87,13 +88,13 @@ Kontrast tej implementacji z wersją, która używa wyrażeń lambda:
 
 [!code-csharp[26_LambdaFactorial](../../../../samples/snippets/csharp/new-in-7/MathUtilities.cs#38_LambdaFactorial "Recursive factorial using lambda expressions")]
 
-Funkcje lokalne mają nazwy. Wyrażenia lambda są metody anonimowe, które są `Func` przypisane do zmiennych, które są lub `Action` typy. Podczas deklarowania funkcji lokalnej typy argumentów i typ zwracany są częścią deklaracji funkcji. Zamiast być częścią treści wyrażenia lambda, typy argumentów i typ zwracany są częścią deklaracji typu zmiennego wyrażenia lambda. Te dwie różnice mogą spowodować jaśniejszy kod.
+Funkcje lokalne mają nazwy. Wyrażenia lambda są metodami anonimowymi przypisanymi do zmiennych, które są `Func` lub `Action` typami. Gdy deklarujesz funkcję lokalną, typy argumentów i typ zwracany są częścią deklaracji funkcji. Zamiast być częścią treści wyrażenia lambda, typy argumentów i typ zwracany są częścią deklaracji typu zmiennej wyrażenia lambda. Te dwie różnice mogą spowodować wyraźniejszy kod.
 
-Funkcje lokalne mają różne reguły dla określonego przypisania niż wyrażenia lambda. Do deklaracji funkcji lokalnej można odwoływać się z dowolnej lokalizacji kodu, w której znajduje się w zakresie. Wyrażenie lambda musi być przypisane do zmiennej delegata, zanim będzie dostępny (lub wywoływane za pośrednictwem pełnomocnika odwołującego się do wyrażenia lambda). Należy zauważyć, że wersja przy użyciu wyrażenia lambda musi `nthFactorial` zadeklarować i zainicjować wyrażenie lambda przed zdefiniowaniem go. Nie powoduje to błąd czasu kompilacji `nthFactorial` do odwoływania się przed przypisaniem go. Różnice te oznaczają, że algorytmy cykliczne są łatwiejsze do tworzenia przy użyciu funkcji lokalnych. Można zadeklarować i zdefiniować funkcję lokalną, która wywołuje się. Wyrażenia Lambda muszą być zadeklarowane i przypisane wartość domyślną, zanim mogą być ponownie przypisane do treści, która odwołuje się do tego samego wyrażenia lambda.
+Funkcje lokalne mają różne reguły dla określonego przypisania niż wyrażenia lambda. Deklaracja funkcji lokalnej może być przywoływana z dowolnego miejsca w kodzie, w którym znajduje się w zakresie. Wyrażenie lambda musi być przypisane do zmiennej delegata, zanim będzie można uzyskać do niej dostęp (lub wywołać za pomocą delegata odwołującego się do wyrażenia lambda). Należy zauważyć, że wersja używająca wyrażenia lambda musi deklarować i inicjować wyrażenie lambda `nthFactorial` przed jego zdefiniowaniem. Nie powoduje to błędu czasu kompilacji dla odwołania `nthFactorial` przed przypisaniem. Różnice te oznaczają, że algorytmy cykliczne są łatwiejsze do tworzenia przy użyciu funkcji lokalnych. Można zadeklarować i zdefiniować funkcję lokalną, która wywołuje samą siebie. Wyrażenia lambda muszą być zadeklarowane i przypisane do wartości domyślnej przed ponownym przypisaniem do treści, która odwołuje się do tego samego wyrażenia lambda.
 
-Reguły określonego przypisania mają również wpływ na wszystkie zmienne, które są przechwytywane przez funkcję lokalną lub wyrażenie lambda. Zarówno funkcje lokalne, jak i reguły wyrażenia lambda wymagają, aby wszystkie przechwycone zmienne były zdecydowanie przypisywane w punkcie, gdy funkcja lokalna lub wyrażenie lambda jest konwertowane na pełnomocnika. Różnica polega na tym, że wyrażenia lambda są konwertowane na delegatów, gdy są one zadeklarowane. Funkcje lokalne są konwertowane na delegatów tylko wtedy, gdy jest używany jako pełnomocnik. Jeśli deklarujesz funkcję lokalną i odwołujesz się tylko do niej, wywołując ją jak metodę, nie zostanie ona przekonwertowana na pełnomocnika. Ta reguła umożliwia zadeklarowanie funkcji lokalnej w dowolnej dogodnej lokalizacji w jej otaczającym zakresie. Jest to typowe do deklarowania funkcji lokalnych na końcu metody nadrzędnej, po wszelkich instrukcji zwracanych.
+Określone reguły przypisywania mają wpływ na wszystkie zmienne, które są przechwytywane przez funkcję lokalną lub wyrażenie lambda. Zarówno funkcja lokalna, jak i reguły wyrażenia lambda wymagają, aby wszystkie przechwycone zmienne były ostatecznie przypisane w punkcie, gdy funkcja lokalna lub wyrażenie lambda są konwertowane na delegata. Różnica polega na tym, że wyrażenia lambda są konwertowane na delegatów po ich zadeklarowaniu. Funkcja lokalna jest konwertowana na delegatów tylko wtedy, gdy jest używana jako delegat. Jeśli zadeklarujesz funkcję lokalną i odwołujesz się do niej tylko przez wywołanie jej jako metody, nie zostanie ona przekonwertowana na delegata. Ta reguła umożliwia zadeklarować funkcję lokalną w dowolnej wygodnej lokalizacji w jej zasięgu. Często deklaruje funkcje lokalne na końcu metody nadrzędnej po dowolnych instrukcjach Return.
 
-Po trzecie kompilator może wykonywać analizę statyczną, która umożliwia funkcjom lokalnym zdecydowanie przypisać przechwycone zmienne w otaczającym zakresie. Rozważmy następujący przykład:
+Po trzecie kompilator może wykonać analizę statyczną, która umożliwia lokalne funkcje, aby ostatecznie przypisywać przechwycone zmienne w zakresie otaczającym. Rozważmy następujący przykład:
 
 ```csharp
 int M()
@@ -106,27 +107,27 @@ int M()
 }
 ```
 
-Kompilator można `LocalFunction` określić, `y` że zdecydowanie przypisuje, gdy wywoływane. Ponieważ `LocalFunction` jest wywoływana przed instrukcją, `return` `y` `return` jest zdecydowanie przypisany do instrukcji.
+Kompilator może określić, że jest on `LocalFunction` przypisywany, `y` gdy jest wywoływany. Ponieważ `LocalFunction` jest wywoływana przed `return` instrukcją, `y` jest ostatecznie przypisana do `return` instrukcji.
 
-Analiza, która umożliwia analizę przykładu umożliwia czwartą różnicę. W zależności od ich użycia funkcje lokalne można uniknąć alokacji sterty, które są zawsze niezbędne dla wyrażeń lambda. Jeśli funkcja lokalna nigdy nie jest konwertowana na pełnomocnika, a żadna ze zmiennych przechwyconych przez funkcję lokalną nie jest przechwytywany przez inne funkcje lambdas lub lokalne, które są konwertowane na delegatów, kompilator może uniknąć alokacji sterty.
+Analiza, która umożliwia przykładową analizę, włącza czwartą różnicę. W zależności od ich użycia funkcje lokalne mogą uniknąć przydziałów sterty, które są zawsze niezbędne dla wyrażeń lambda. Jeśli funkcja lokalna nigdy nie jest konwertowana na delegata, a żadna ze zmiennych przechwyconych przez funkcję lokalną nie zostanie przechwycona przez inne wyrażenia lambda lub funkcje lokalne, które są konwertowane na delegatów, kompilator może uniknąć przydziałów sterty.
 
-Rozważmy ten przykład asynchronii:
+Rozważmy ten przykład asynchroniczny:
 
 [!code-csharp[TaskLambdaExample](../../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#36_TaskLambdaExample "Task returning method with lambda expression")]
 
-Zamknięcie dla tego wyrażenia lambda `index` `name` zawiera `address`, i zmienne. W przypadku funkcji lokalnych obiekt, który implementuje zamknięcie `struct` może być typem. Ten typ struktury będzie przekazywana przez odwołanie do funkcji lokalnej. Ta różnica we wdrażaniu zaoszczędziłaby na alokacji.
+Zamknięcie tego wyrażenia lambda zawiera `address` `index` zmienne, i `name` . W przypadku funkcji lokalnych obiekt implementujący zamknięcie może być `struct` typem. Ten typ struktury zostałby przesłany przez odwołanie do funkcji lokalnej. Różnica w implementacji spowodowałaby zapisanie alokacji.
 
-Wystąpienie niezbędne dla wyrażeń lambda oznacza dodatkowe alokacje pamięci, które mogą być czynnikiem wydajności w ścieżek kodu krytycznego w czasie. Funkcje lokalne nie ponoszą tego obciążenia. W powyższym przykładzie wersja funkcji lokalnych ma 2 mniej alokacji niż wersja wyrażenia lambda.
+Wystąpienie niezbędne dla wyrażeń lambda oznacza dodatkowe alokacje pamięci, które mogą być czynnikiem wydajności w ścieżkach kodu o kluczowym znaczeniu. Funkcja lokalna nie wiąże się z tym obciążeniem. W powyższym przykładzie wersja funkcji lokalnych ma 2 mniejsze alokacje niż wersja wyrażenia lambda.
 
 > [!NOTE]
-> Lokalny odpowiednik funkcji tej metody również używa klasy do zamknięcia. Czy zamknięcie dla funkcji lokalnej jest `class` implementowana `struct` jako lub a jest szczegół implementacji. Funkcja lokalna może `struct` używać natomiast lambda zawsze `class`będzie używać .
+> Funkcja lokalna równoważna tej metody używa również klasy do zamykania. Czy zamknięcie funkcji lokalnej jest zaimplementowane jako `class` `struct` szczegóły implementacji. Funkcja lokalna może używać `struct` wyrażenia lambda, które zawsze będzie używać `class` .
 
 [!code-csharp[TaskLocalFunctionExample](../../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
-Jedną z zalet końcowych nie wykazane w tym przykładzie jest, że `yield return` funkcje lokalne mogą być implementowane jako iteratory, przy użyciu składni do tworzenia sekwencji wartości. Instrukcja `yield return` nie jest dozwolona w wyrażeniach lambda.
+Jedną z końcowych zalet nie pokazanych w tym przykładzie jest to, że funkcje lokalne można zaimplementować jako Iteratory, używając `yield return` składni w celu utworzenia sekwencji wartości. `yield return`Instrukcja jest niedozwolona w wyrażeniach lambda.
 
-Podczas gdy funkcje lokalne mogą wydawać się zbędne do wyrażeń lambda, w rzeczywistości służą różnym celom i mają różne zastosowania. Funkcje lokalne są bardziej wydajne dla przypadku, gdy chcesz napisać funkcję, która jest wywoływana tylko z kontekstu innej metody.
+Podczas gdy funkcje lokalne mogą wydawać się nadmiarowe w wyrażeniach lambda, są one w rzeczywistości wykorzystywane do różnych celów i mają różne zastosowania. Funkcje lokalne są wydajniejsze w przypadku, gdy chcesz napisać funkcję, która jest wywoływana tylko z kontekstu innej metody.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Metody](methods.md)

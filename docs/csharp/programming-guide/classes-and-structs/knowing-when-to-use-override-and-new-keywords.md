@@ -1,23 +1,24 @@
 ---
-title: Wiedząc, kiedy używać zastępowania i nowych słów kluczowych - Przewodnik programowania C#
+title: Zaznanie sytuacji, w których należy użyć przesłonięć i nowych słów kluczowych — Przewodnik programowania w języku C#
+description: Użyj słowa kluczowego new i override w języku C#, aby określić, jak metody o tej samej nazwie w klasie podstawowej i pochodnej współdziałają z nimi.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - override keyword [C#]
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: 493c6c5f5bf47c6b2cd140ac0f6922f91ca4252b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 732a37c08b4c7bb998a7cc5dcfbd00d4e706b06c
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170263"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864543"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Użycie przesłonięć i nowych słów kluczowych (Przewodnik programowania w języku C#)
 
-W języku C#metoda w klasie pochodnej może mieć taką samą nazwę jak metoda w klasie podstawowej. Można określić, jak metody współdziałają przy użyciu [nowych](../../language-reference/keywords/new-modifier.md) i [zastąpić](../../language-reference/keywords/override.md) słowa kluczowe. Modyfikator `override` *rozszerza* metodę `virtual` klasy podstawowej, a `new` modyfikator *ukrywa* metodę dostępnej klasy podstawowej. Różnica jest zilustrowana w przykładach w tym temacie.  
+W języku C# Metoda w klasie pochodnej może mieć taką samą nazwę jak metoda w klasie bazowej. Możesz określić sposób działania metod przy użyciu słów kluczowych [New](../../language-reference/keywords/new-modifier.md) i [override](../../language-reference/keywords/override.md) . `override`Modyfikator *rozszerza* metodę klasy bazowej `virtual` , a `new` modyfikator *ukrywa* dostępną metodę klasy bazowej. Różnica przedstawiono w przykładach w tym temacie.  
   
- W aplikacji konsoli zadeklarować następujące `BaseClass` dwie `DerivedClass`klasy i . `DerivedClass`dziedziczy `BaseClass`z .  
+ W aplikacji konsoli Zadeklaruj poniższe dwie klasy `BaseClass` i `DerivedClass` . `DerivedClass`dziedziczy z `BaseClass` .  
   
 ```csharp  
 class BaseClass  
@@ -37,15 +38,15 @@ class DerivedClass : BaseClass
 }  
 ```  
   
- W `Main` metodzie deklaruj `bc`zmienne , `dc`i `bcdc`.  
+ W `Main` metodzie Zadeklaruj zmienne `bc` , `dc` , i `bcdc` .  
   
-- `bc`jest typu, `BaseClass`a jego wartość `BaseClass`jest typu .  
+- `bc`jest typu `BaseClass` , a jego wartość jest typu `BaseClass` .  
   
-- `dc`jest typu, `DerivedClass`a jego wartość `DerivedClass`jest typu .  
+- `dc`jest typu `DerivedClass` , a jego wartość jest typu `DerivedClass` .  
   
-- `bcdc`jest typu, `BaseClass`a jego wartość `DerivedClass`jest typu . Jest to zmienna, na jaką należy zwrócić uwagę.  
+- `bcdc`jest typu `BaseClass` , a jego wartość jest typu `DerivedClass` . Jest to zmienna, do której należy zwrócić uwagę.  
   
- Ponieważ `bc` `bcdc` i `BaseClass`mają typ , `Method1`mogą uzyskać bezpośredni dostęp , chyba że używasz odlewania. Zmienna `dc` może `Method1` `Method2`uzyskać dostęp do obu i . Te relacje są wyświetlane w poniższym kodzie.  
+ Ze względu na to, że `bc` i `bcdc` mają typ `BaseClass` , mogą oni jedynie bezpośrednio uzyskać dostęp `Method1` , chyba że używasz rzutowania. Zmienna `dc` ma dostęp do obu `Method1` i `Method2` . Te relacje są pokazane w poniższym kodzie.  
   
 ```csharp  
 class Program  
@@ -69,7 +70,7 @@ class Program
 }  
 ```  
   
- Następnie dodaj `Method2` następującą `BaseClass`metodę do . Podpis tej metody jest zgodny `Method2` z `DerivedClass`podpisem metody w pliku .  
+ Następnie Dodaj następującą `Method2` metodę do `BaseClass` . Podpis tej metody jest zgodny z podpisem `Method2` metody w `DerivedClass` .  
   
 ```csharp  
 public void Method2()  
@@ -78,7 +79,7 @@ public void Method2()
 }  
 ```  
   
- Ponieważ `BaseClass` teraz `Method2` ma metodę, można dodać drugą `BaseClass` instrukcję wywołującą dla zmiennych `bc` i `bcdc`, jak pokazano w poniższym kodzie.  
+ Ponieważ `BaseClass` ma teraz `Method2` metodę, można dodać drugą instrukcję wywołującą dla `BaseClass` zmiennych `bc` i `bcdc` , jak pokazano w poniższym kodzie.  
   
 ```csharp  
 bc.Method1();  
@@ -89,9 +90,9 @@ bcdc.Method1();
 bcdc.Method2();  
 ```  
   
- Podczas tworzenia projektu, widać, że dodanie `Method2` metody `BaseClass` powoduje ostrzeżenie. Ostrzeżenie mówi, `Method2` że `DerivedClass` metoda w `Method2` ukrywa `BaseClass`metodę w . Zaleca się użycie `new` słowa kluczowego w `Method2` definicji, jeśli zamierzasz spowodować ten wynik. Alternatywnie można zmienić nazwę jednej `Method2` z metod, aby rozwiązać ostrzeżenie, ale nie zawsze jest to praktyczne.  
+ Podczas kompilowania projektu, zobaczysz, że dodanie `Method2` metody w `BaseClass` powoduje ostrzeżenie. Ostrzeżenie oznacza, że `Method2` Metoda w programie `DerivedClass` ukrywa `Method2` metodę w `BaseClass` . Zaleca się użycie `new` słowa kluczowego w `Method2` definicji, jeśli zamierzasz mieć ten wynik. Alternatywnie można zmienić nazwę jednej z `Method2` metod, aby rozwiązać ostrzeżenie, ale nie zawsze jest to praktycznie możliwe.  
   
- Przed `new`dodaniem uruchom program, aby wyświetlić dane wyjściowe wytwarzane przez dodatkowe instrukcje wywołujące. Zostaną wyświetlone następujące wyniki.  
+ Przed dodaniem `new` programu Uruchom program, aby zobaczyć dane wyjściowe generowane przez dodatkowe instrukcje wywoływania. Zostaną wyświetlone następujące wyniki.  
   
 ```csharp  
 // Output:  
@@ -103,9 +104,9 @@ bcdc.Method2();
 // Base - Method2  
 ```  
   
- Słowo `new` kluczowe zachowuje relacje, które produkują, że dane wyjściowe, ale pomija ostrzeżenie. Zmienne, które mają `BaseClass` typ, nadal `BaseClass`uzyskują dostęp do `DerivedClass` elementów członkowskich , `DerivedClass` a zmienna, która ma `BaseClass`typ, nadal uzyskuje dostęp do elementów członkowskich w pierwszej kolejności, a następnie do rozważenia członków dziedziczonych z .  
+ `new`Słowo kluczowe zachowuje relacje, które tworzą dane wyjściowe, ale pomija ostrzeżenie. Zmienne, które mają typ `BaseClass` , nadal uzyskują dostęp do elementów członkowskich `BaseClass` , a zmienna, która ma typ, `DerivedClass` nadal uzyskuje dostęp do członków w `DerivedClass` pierwszej kolejności, a następnie do rozważania członków dziedziczonych z `BaseClass` .  
   
- Aby pominąć ostrzeżenie, `new` dodaj modyfikator do definicji `Method2` w `DerivedClass`, jak pokazano w poniższym kodzie. Modyfikator można dodać `public`przed lub po .  
+ Aby pominąć ostrzeżenie, Dodaj `new` modyfikator do definicji `Method2` w `DerivedClass` , jak pokazano w poniższym kodzie. Modyfikator można dodać przed lub po `public` .  
   
 ```csharp  
 public new void Method2()  
@@ -114,9 +115,9 @@ public new void Method2()
 }  
 ```  
   
- Uruchom program ponownie, aby sprawdzić, czy dane wyjściowe nie uległy zmianie. Sprawdź również, czy ostrzeżenie nie jest już wyświetlane. Za `new`pomocą , potwierdzasz, że są świadomi, że element członkowski, który modyfikuje ukrywa element członkowski, który jest dziedziczony z klasy podstawowej. Aby uzyskać więcej informacji na temat ukrywania nazw w dziedziczeniu, zobacz [nowy modyfikator](../../language-reference/keywords/new-modifier.md).  
+ Ponownie uruchom program, aby sprawdzić, czy dane wyjściowe nie uległy zmianie. Sprawdź również, czy ostrzeżenie nie jest już wyświetlane. Przy użyciu `new` , potwierdzasz, że użytkownik ma świadomość, że modyfikowany członek ukrywa element członkowski, który jest Dziedziczony z klasy bazowej. Aby uzyskać więcej informacji na temat ukrywania nazw poprzez dziedziczenie, zobacz [New modyfikator](../../language-reference/keywords/new-modifier.md).  
   
- Aby porównać to zachowanie z `override`efektami używania, `DerivedClass`dodaj następującą metodę do . Modyfikator `override` można dodać `public`przed lub po .  
+ Aby w przeciwieństwie do efektów używania, należy `override` dodać następującą metodę do `DerivedClass` . `override`Modyfikator można dodać przed lub po `public` .  
   
 ```csharp  
 public override void Method1()  
@@ -125,7 +126,7 @@ public override void Method1()
 }  
 ```  
   
- Dodaj `virtual` modyfikator do `Method1` `BaseClass`definicji w . Modyfikator `virtual` można dodać `public`przed lub po .  
+ Dodaj `virtual` modyfikator do definicji elementu `Method1` w `BaseClass` . `virtual`Modyfikator można dodać przed lub po `public` .  
   
 ```csharp  
 public virtual void Method1()  
@@ -134,7 +135,7 @@ public virtual void Method1()
 }  
 ```  
   
- Uruchom ponownie projekt. Zwróć uwagę zwłaszcza na ostatnie dwa wiersze następujących danych wyjściowych.  
+ Uruchom ponownie projekt. Zwróć uwagę na szczególnie ostatnie dwa wiersze następujących danych wyjściowych.  
   
 ```csharp  
 // Output:  
@@ -146,7 +147,7 @@ public virtual void Method1()
 // Base - Method2  
 ```  
   
- Użycie `override` modyfikatora `bcdc` umożliwia `Method1` dostęp do metody `DerivedClass`zdefiniowanej w programie . Zazwyczaj jest to pożądane zachowanie w hierarchiach dziedziczenia. Chcesz, aby obiekty, które mają wartości, które są tworzone z klasy pochodnej, aby użyć metod, które są zdefiniowane w klasie pochodnej. Można osiągnąć to `override` zachowanie przy użyciu rozszerzenia metody klasy podstawowej.  
+ Użycie `override` modyfikatora umożliwia dostęp do `bcdc` `Method1` metody, która jest zdefiniowana w `DerivedClass` . Zwykle jest to wymagane zachowanie w hierarchiach dziedziczenia. Obiekty mające wartości, które są tworzone na podstawie klasy pochodnej, są używane do używania metod, które są zdefiniowane w klasie pochodnej. To zachowanie można osiągnąć za pomocą polecenia, `override` Aby zwiększyć metodę klasy bazowej.  
   
  Poniższy kod zawiera pełny przykład.  
   
@@ -218,7 +219,7 @@ namespace OverrideAndNew
 }  
 ```  
   
- Poniższy przykład ilustruje podobne zachowanie w innym kontekście. W przykładzie zdefiniowano trzy klasy: klasę podstawową o `Car` nazwie `ConvertibleCar` `Minivan`i dwie klasy, które pochodzą z niego i . Klasa podstawowa `DescribeCar` zawiera metodę. Metoda wyświetla podstawowy opis samochodu, a `ShowDetails` następnie wywołuje dodatkowe informacje. Każda z trzech klas `ShowDetails` definiuje metodę. Modyfikator `new` służy `ShowDetails` do `ConvertibleCar` definiowania w klasie. Modyfikator `override` służy `ShowDetails` do `Minivan` definiowania w klasie.  
+ Poniższy przykład ilustruje podobne zachowanie w innym kontekście. W przykładzie zdefiniowano trzy klasy: Klasa bazowa o nazwie `Car` i dwie klasy, które są od niej pochodne `ConvertibleCar` i `Minivan` . Klasa bazowa zawiera `DescribeCar` metodę. Metoda wyświetla podstawowy opis samochodu, a następnie wywołuje `ShowDetails` w celu podania dodatkowych informacji. Każda z tych trzech klas definiuje `ShowDetails` metodę. `new`Modyfikator służy do definiowania `ShowDetails` w `ConvertibleCar` klasie. `override`Modyfikator służy do definiowania `ShowDetails` w `Minivan` klasie.  
   
 ```csharp  
 // Define the base class, Car. The class defines two methods,  
@@ -262,7 +263,7 @@ class Minivan : Car
 }  
 ```  
   
- Przykład testuje, `ShowDetails` która wersja jest wywoływana. Następująca metoda `TestCars1`, deklaruje wystąpienie każdej klasy, `DescribeCar` a następnie wywołuje każde wystąpienie.  
+ Przykład sprawdza, która wersja programu `ShowDetails` jest wywoływana. Poniższa metoda, `TestCars1` deklaruje wystąpienie każdej klasy, a następnie wywołuje `DescribeCar` każde wystąpienie.  
   
 ```csharp  
 public static void TestCars1()  
@@ -288,7 +289,7 @@ public static void TestCars1()
 }  
 ```  
   
- `TestCars1`wytwarza następujące dane wyjściowe. Zwróć uwagę `car2`zwłaszcza na wyniki dla , które prawdopodobnie nie są to, czego się spodziewałeś. Typ `ConvertibleCar`obiektu jest , `DescribeCar` ale nie ma `ShowDetails` dostępu do wersji, `ConvertibleCar` która jest zdefiniowana `new` w klasie, `override` ponieważ ta metoda jest zadeklarowana za pomocą modyfikatora, a nie modyfikatora. W rezultacie `ConvertibleCar` obiekt wyświetla ten sam `Car` opis jako obiekt. Kontrast wyniki `car3`dla , `Minivan` który jest obiektem. W takim przypadku `ShowDetails` metoda, która `Minivan` jest zadeklarowana `ShowDetails` w klasie zastępuje `Car` metodę, która jest zadeklarowana w klasie, a opis, który jest wyświetlany opisuje minivan.  
+ `TestCars1`tworzy następujące dane wyjściowe. Zwróć uwagę na szczególnie wyniki dla `car2` , które prawdopodobnie nie są oczekiwane. Typ obiektu to `ConvertibleCar` , ale nie `DescribeCar` uzyskuje dostępu do wersji `ShowDetails` , która jest zdefiniowana w `ConvertibleCar` klasie, ponieważ ta metoda jest zadeklarowana z `new` modyfikatorem, a nie `override` modyfikatorem. W efekcie `ConvertibleCar` obiekt wyświetla ten sam opis, co `Car` obiekt. Umożliwia odróżnienie wyników dla `car3` , które jest `Minivan` obiektem. W tym przypadku metoda, `ShowDetails` która jest zadeklarowana w `Minivan` klasie przesłania `ShowDetails` metodę zadeklarowaną w `Car` klasie, a wyświetlany opis opisuje minivan.  
   
 ```csharp  
 // TestCars1  
@@ -304,7 +305,7 @@ public static void TestCars1()
 // ----------  
 ```  
   
- `TestCars2`tworzy listę obiektów, które `Car`mają typ . Wartości obiektów są tworzone z `Car`, `ConvertibleCar`i `Minivan` klas. `DescribeCar`jest wywoływana na każdym elemencie listy. Poniższy kod przedstawia definicję . `TestCars2`  
+ `TestCars2`tworzy listę obiektów, które mają typ `Car` . Wartości obiektów są tworzone na podstawie `Car` `ConvertibleCar` klas,, i `Minivan` . `DescribeCar`jest wywoływana dla każdego elementu listy. Poniższy kod przedstawia definicję `TestCars2` .  
   
 ```csharp  
 public static void TestCars2()  
@@ -323,7 +324,7 @@ public static void TestCars2()
 }  
 ```  
   
- Zostanie wyświetlone następujące dane wyjściowe. Należy zauważyć, że jest taka sama jak `TestCars1`dane wyjściowe, które są wyświetlane przez . Metoda `ShowDetails` `ConvertibleCar` klasy nie jest wywoływana, niezależnie od tego, `ConvertibleCar`czy typ `TestCars1`obiektu `Car`jest `TestCars2`, jak w , lub , jak w . I `car3` odwrotnie `ShowDetails` wywołuje metodę `Minivan` z klasy w obu `Minivan` przypadkach, `Car`czy ma typ lub typ .  
+ Wyświetlane są następujące dane wyjściowe. Zwróć uwagę, że jest to taka sama jak wartość wyjściowa wyświetlana przez `TestCars1` . `ShowDetails`Metoda `ConvertibleCar` klasy nie jest wywoływana, niezależnie od tego, czy typ obiektu to `ConvertibleCar` , jak w `TestCars1` , lub `Car` , jak w `TestCars2` . Odwrotnie, `car3` wywołuje `ShowDetails` metodę z `Minivan` klasy w obu przypadkach, niezależnie od tego, czy ma typ `Minivan` lub typ `Car` .  
   
 ```csharp  
 // TestCars2  
@@ -339,7 +340,7 @@ public static void TestCars2()
 // ----------  
 ```  
   
- Metody `TestCars3` i `TestCars4` wypełnić przykład. Te metody `ShowDetails` wywołać bezpośrednio, najpierw z `ConvertibleCar` `Minivan` obiektów`TestCars3`zadeklarowanych jako typ `Car` i`TestCars4`( ), a następnie z obiektów zadeklarowanych jako typu ( ). Poniższy kod definiuje te dwie metody.  
+ Metody `TestCars3` i `TestCars4` Dokończ przykład. Metody te są wywoływane `ShowDetails` bezpośrednio, najpierw z obiektów zadeklarowanych jako typu `ConvertibleCar` i `Minivan` ( `TestCars3` ), a następnie z obiektów zadeklarowanych jako typu `Car` ( `TestCars4` ). Poniższy kod definiuje te dwie metody.  
   
 ```csharp  
 public static void TestCars3()  
@@ -363,7 +364,7 @@ public static void TestCars4()
 }  
 ```  
   
- Metody dają następujące dane wyjściowe, co odpowiada wynikom z pierwszego przykładu w tym temacie.  
+ Metody te generują następujące dane wyjściowe, które odpowiadają wynikom z pierwszego przykładu w tym temacie.  
   
 ```csharp  
 // TestCars3  
@@ -377,7 +378,7 @@ public static void TestCars4()
 // Carries seven people.  
 ```  
   
- Poniższy kod przedstawia cały projekt i jego dane wyjściowe.  
+ Poniższy kod przedstawia kompletny projekt i jego dane wyjściowe.  
   
 ```csharp  
 using System;  
@@ -542,10 +543,10 @@ namespace OverrideAndNew2
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../index.md)
 - [Klasy i struktury](./index.md)
 - [Przechowywanie wersji przesłonięć i nowych słów kluczowych](./versioning-with-the-override-and-new-keywords.md)
 - [base](../../language-reference/keywords/base.md)
-- [Abstrakcja](../../language-reference/keywords/abstract.md)
+- [streszczeń](../../language-reference/keywords/abstract.md)

@@ -1,5 +1,6 @@
 ---
-title: Ograniczanie ułatwień dostępu — przewodnik programowania języka C#
+title: Ograniczanie dostępności metody dostępu — Przewodnik programowania w języku C#
+description: Metody dostępu get i set właściwości w języku C# mają ten sam poziom widoczności lub dostępu domyślnie, jak właściwość, do której należą. Można ograniczyć dostęp.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - read-only properties [C#]
@@ -9,63 +10,63 @@ helpviewer_keywords:
 - asymmetric accessor accessibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: a332fef814f0c81914eb7b8c308de68f719fbaac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 18fd1d58dc6125b5180118b2e0d3edc885a4b971
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714694"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863971"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Ograniczanie dostępności metody dostępu (Przewodnik programowania w języku C#)
-[Get](../../language-reference/keywords/get.md) i [set](../../language-reference/keywords/set.md) części właściwości lub indeksatora są nazywane *akcesorów*. Domyślnie te akcesory mają taką samą widoczność lub poziom dostępu właściwości lub indeksatora, do którego należą. Aby uzyskać więcej informacji, zobacz [poziomy ułatwień dostępu](../../language-reference/keywords/accessibility-levels.md). Jednak czasami warto ograniczyć dostęp do jednego z tych akcesorów. Zazwyczaj wiąże się to z ograniczeniem dostępności `set` akcesora, przy jednoczesnym zachowaniu `get` akcesor publicznie dostępne. Przykład:  
+Fragmenty [Get](../../language-reference/keywords/get.md) i [Set](../../language-reference/keywords/set.md) właściwości lub indeksatora są nazywane metodyą *dostępu*. Domyślnie te metody dostępu mają ten sam poziom widoczności lub dostępu do właściwości lub indeksatora, do którego należą. Aby uzyskać więcej informacji, zobacz [poziomy ułatwień dostępu](../../language-reference/keywords/accessibility-levels.md). Jednak czasami warto ograniczyć dostęp do jednego z tych metod dostępu. Zazwyczaj obejmuje to ograniczenie dostępności `set` metody dostępu, zachowując `get` publicznie dostępną metodę dostępu. Na przykład:  
   
  [!code-csharp[csProgGuideIndexers#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#6)]  
   
- W tym przykładzie właściwość `Name` o `get` nazwie `set` definiuje a i akcesor. Akcesor `get` odbiera poziom ułatwień `public` dostępu samej właściwości, w tym przypadku, podczas gdy `set` akcesor jest jawnie ograniczony przez zastosowanie modyfikatora dostępu [chronionego](../../language-reference/keywords/protected.md) do samego akcesora.  
+ W tym przykładzie właściwość o nazwie `Name` definiuje `get` a i `set` akcesor. `get`Metoda dostępu odbiera poziom dostępności samej właściwości, `public` w tym przypadku, gdy `set` metoda dostępu jest jawnie ograniczona przez zastosowanie modyfikatora dostępu [chronionego](../../language-reference/keywords/protected.md) do samej metody dostępu.  
   
-## <a name="restrictions-on-access-modifiers-on-accessors"></a>Ograniczenia dotyczące modyfikatorów dostępu w programach akcesorów  
- Korzystanie modyfikatorów akcesora na właściwości lub indeksatorów podlega następujących warunkach:  
+## <a name="restrictions-on-access-modifiers-on-accessors"></a>Ograniczenia dotyczące modyfikatorów dostępu w przypadku metod dostępu  
+ Używanie modyfikatorów metody dostępu we właściwościach lub indeksatorach podlega następujących warunkom:  
   
-- Nie można użyć modyfikatorów akcesora w interfejsie lub implementacji elementu członkowskiego [interfejsu](../../language-reference/keywords/interface.md) jawnego.  
+- Nie można używać modyfikatorów metody dostępu dla interfejsu lub jawnej implementacji elementu członkowskiego [interfejsu](../../language-reference/keywords/interface.md) .  
   
-- Modyfikatory akcesora można używać tylko `set` `get` wtedy, gdy właściwość lub indeksator ma zarówno i akcesorów. W takim przypadku modyfikator jest dozwolone tylko na jednym z dwóch akcesorów.  
+- Modyfikatory metody dostępu można używać tylko wtedy, gdy właściwość lub indeksator ma zarówno metody `set` dostępu, jak i `get` . W takim przypadku modyfikator jest dozwolony tylko dla jednego z dwóch metod dostępu.  
   
-- Jeśli właściwość lub indeksator ma modyfikator [zastępowania,](../../language-reference/keywords/override.md) modyfikator akcesormusi odpowiadać akcesor akcesor, jeśli istnieje.  
+- Jeśli właściwość lub indeksator ma modyfikator [przesłonięcia](../../language-reference/keywords/override.md) , modyfikator metody dostępu musi być zgodny z akcesorem przesłoniętej metody dostępu, jeśli istnieje.  
   
-- Poziom ułatwień dostępu na akcesor musi być bardziej restrykcyjne niż poziom ułatwień dostępu na właściwości lub indeksatora się.  
+- Poziom dostępności na metodzie dostępu musi być bardziej restrykcyjny niż poziom dostępności właściwości lub indeksatora.  
   
-## <a name="access-modifiers-on-overriding-accessors"></a>Modyfikatory dostępu na zalegające akcesory  
- Po zastąpieniu właściwości lub indeksatora, zastąpione akcesory muszą być dostępne dla kodu nadrzędnego. Ponadto dostępność zarówno właściwości/indeksatora i jego akcesorów musi odpowiadać odpowiedniej właściwości zastąpione/indeksator i jego akcesorów. Przykład:  
+## <a name="access-modifiers-on-overriding-accessors"></a>Modyfikatory dostępu podczas zastępowania metod dostępu  
+ Podczas przesłonięcia właściwości lub indeksatora zastępowane metody dostępu muszą być dostępne dla zastępujący kod. Ponadto dostępność właściwości/indeksatora i jego metod dostępu musi być zgodna z odpowiadającą jej przesłoniętą właściwością/indeksatorem oraz jej metod dostępu. Na przykład:  
   
  [!code-csharp[csProgGuideIndexers#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#7)]  
   
 ## <a name="implementing-interfaces"></a>Implementowanie interfejsów  
- Korzystając z akcesora do zaimplementowania interfejsu, akcesor może nie mieć modyfikator dostępu. Jednak jeśli zaimplementujesz interfejs przy użyciu `get`jednego akcesora, takich jak , inny akcesor może mieć modyfikator dostępu, jak w poniższym przykładzie:  
+ W przypadku użycia metody dostępu do zaimplementowania interfejsu metoda dostępu może nie mieć modyfikatora dostępu. Jednak w przypadku zaimplementowania interfejsu przy użyciu jednej metody dostępu, takiej jak `get` , inna metoda dostępu może mieć Modyfikator dostęp, jak w poniższym przykładzie:  
   
  [!code-csharp[csProgGuideIndexers#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#8)]  
   
-## <a name="accessor-accessibility-domain"></a>Domena ułatwień dostępu  
- Jeśli używasz modyfikatora dostępu na akcesor, [domena ułatwień dostępu](../../language-reference/keywords/accessibility-domain.md) jest określana przez ten modyfikator.  
+## <a name="accessor-accessibility-domain"></a>Domena dostępności metody dostępu  
+ Jeśli używasz modyfikatora dostępu do akcesora, [domena dostępności](../../language-reference/keywords/accessibility-domain.md) metody dostępu jest określana przez ten modyfikator.  
   
- Jeśli nie używasz modyfikatora dostępu w akcesorze, domena ułatwień dostępu jest określana przez poziom ułatwień dostępu właściwości lub indeksatora.  
+ Jeśli nie używasz modyfikatora dostępu do akcesora, domena dostępności metody dostępu jest określana na podstawie poziomu dostępności właściwości lub indeksatora.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład zawiera trzy `BaseClass` `DerivedClass`klasy, `MainClass`, , i . Istnieją dwie właściwości na `BaseClass` `Name` , `Id` i na obu klasach. W przykładzie pokazano, `Id` `DerivedClass` jak właściwość na `Id` mogą `BaseClass` być ukryte przez właściwość podczas korzystania z modyfikatora dostępu restrykcyjnego, takich jak [chronione](../../language-reference/keywords/protected.md) lub [prywatne](../../language-reference/keywords/private.md). W związku z tym po przypisaniu `BaseClass` wartości do tej właściwości, właściwość na klasy jest wywoływana zamiast. Zastąpienie modyfikatora dostępu [publicznie](../../language-reference/keywords/public.md) spowoduje, że właściwość będzie dostępna.  
+ Poniższy przykład zawiera trzy klasy, `BaseClass` , `DerivedClass` , i `MainClass` . Istnieją dwie właściwości w `BaseClass` `Name` i `Id` dla obu klas. W przykładzie pokazano, jak Właściwość `Id` włączona `DerivedClass` może być ukryta przez właściwość `Id` w `BaseClass` przypadku używania ograniczonego modyfikatora dostępu, takiego jak [Protected](../../language-reference/keywords/protected.md) lub [Private](../../language-reference/keywords/private.md). W związku z tym podczas przypisywania wartości do tej właściwości `BaseClass` zamiast niej wywoływana jest właściwość klasy. Zastąpienie modyfikatora dostępu [publicznego](../../language-reference/keywords/public.md) spowoduje udostępnienie właściwości.  
   
- W przykładzie pokazano również, że modyfikator dostępu `set` ograniczającego, `Name` takich `DerivedClass` jak `private` lub `protected`, na akcesor właściwości w uniemożliwia dostęp do akcesora i generuje błąd po przypisaniu do niego.  
+ W przykładzie pokazano również, że restrykcyjny modyfikator dostępu, taki jak `private` lub `protected` , w `set` metodzie dostępu `Name` właściwości w programie `DerivedClass` uniemożliwia dostęp do akcesora i generuje błąd podczas przypisywania do niego.  
   
  [!code-csharp[csProgGuideIndexers#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#5)]  
   
 ## <a name="comments"></a>Komentarze  
- Należy zauważyć, że `new private string Id` jeśli `new public string Id`zastąpisz deklarację przez , otrzymasz dane wyjściowe:  
+ Zwróć uwagę, że w przypadku zastąpienia deklaracji `new private string Id` przez, otrzymujesz `new public string Id` dane wyjściowe:  
   
  `Name and ID in the base class: Name-BaseClass, ID-BaseClass`  
   
  `Name and ID in the derived class: John, John123`  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../index.md)
 - [Właściwości](./properties.md)
-- [Indexers](../indexers/index.md) (Indeksatory)
+- [Indexers (Indeksatory)](../indexers/index.md)
 - [Modyfikatory dostępu](./access-modifiers.md)

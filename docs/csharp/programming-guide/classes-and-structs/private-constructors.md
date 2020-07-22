@@ -1,44 +1,45 @@
 ---
-title: Konstruktory prywatne — przewodnik programowania c#
+title: Konstruktory prywatne — Przewodnik programowania w języku C#
+description: Konstruktor prywatny jest specjalnym konstruktorem wystąpienia w języku C# używanym do ograniczania sposobu tworzenia obiektu. Mogą być używane z metodami fabryki lub innymi idiomy konstrukcyjnymi.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, private constructors
 - private constructors [C#]
 ms.assetid: 29eeaa7d-8d81-453c-94b9-0e2800172621
-ms.openlocfilehash: 2f8b93fbeb7c2996f3e2683fe86f159fbfa61a92
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6b86ccb870da0262bcbc516e176e00d17724f9f
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705447"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864062"
 ---
 # <a name="private-constructors-c-programming-guide"></a>Konstruktory prywatne (Przewodnik programowania w języku C#)
-Konstruktora prywatnego jest konstruktorem instancji specjalne. Zazwyczaj jest używany w klasach, które zawierają tylko elementy członkowskie statyczne. Jeśli klasa ma jeden lub więcej prywatnych konstruktorów i nie konstruktorów publicznych, inne klasy (z wyjątkiem klas zagnieżdżonych) nie można utworzyć wystąpienia tej klasy. Przykład:  
+Konstruktor prywatny jest specjalnym konstruktorem wystąpień. Jest on zazwyczaj używany w klasach, które zawierają tylko statyczne elementy członkowskie. Jeśli klasa ma jeden lub więcej konstruktorów prywatnych i nie ma konstruktorów publicznych, inne klasy (poza klasami zagnieżdżonymi) nie mogą tworzyć wystąpień tej klasy. Na przykład:  
   
  [!code-csharp[csProgGuideObjects#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#11)]  
   
- Deklaracja pustego konstruktora uniemożliwia automatyczne generowanie konstruktora bezparametrowego. Należy zauważyć, że jeśli nie używasz modyfikatordostępu z konstruktorem nadal będzie prywatny domyślnie. Jednak [prywatny](../../language-reference/keywords/private.md) modyfikator jest zwykle używany jawnie, aby wyjaśnić, że klasa nie może być tworzone.  
+ Deklaracja pustego konstruktora uniemożliwia automatyczne generowanie konstruktora bez parametrów. Należy pamiętać, że jeśli nie używasz modyfikatora dostępu z konstruktorem, będzie on nadal domyślnie prywatny. Jednak modyfikator [prywatny](../../language-reference/keywords/private.md) jest zwykle używany jawnie, aby wyczyścił, że nie można utworzyć wystąpienia klasy.  
   
- Konstruktory prywatne są używane do zapobiegania tworzeniu wystąpień klasy, gdy nie <xref:System.Math> ma pól lub metod wystąpienia, takich jak klasa lub gdy metoda jest wywoływana w celu uzyskania wystąpienia klasy. Jeśli wszystkie metody w klasie są statyczne, należy rozważyć uczynienie pełnej klasy statyczne. Aby uzyskać więcej informacji, zobacz [Klasy statyczne i Elementy członkowskie klasy statycznej](./static-classes-and-static-class-members.md).  
+ Konstruktory prywatne są używane do zapobiegania tworzeniu wystąpień klasy w przypadku braku pól lub metod wystąpienia, takich jak <xref:System.Math> Klasa, lub gdy wywoływana jest metoda w celu uzyskania wystąpienia klasy. Jeśli wszystkie metody w klasie są statyczne, należy rozważyć uczynienie kompletnej klasy statycznej. Aby uzyskać więcej informacji [, zobacz klasy statyczne i statyczne elementy członkowskie klas](./static-classes-and-static-class-members.md).  
   
 ## <a name="example"></a>Przykład  
- Poniżej przedstawiono przykład klasy przy użyciu konstruktora prywatnego.  
+ Poniżej znajduje się przykład klasy korzystającej z konstruktora prywatnego.  
   
  [!code-csharp[csProgGuideObjects#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#12)]  
   
- Należy zauważyć, że jeśli odkomentować następującą instrukcję z przykładu, wygeneruje błąd, ponieważ konstruktor jest niedostępny ze względu na jego poziom ochrony:  
+ Zwróć uwagę, że jeśli dodasz komentarz z następującej instrukcji z przykładu, zostanie wygenerowany błąd, ponieważ Konstruktor jest niedostępny z powodu swojego poziomu ochrony:  
   
  [!code-csharp[csProgGuideObjects#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#13)]  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
 
-Aby uzyskać więcej informacji, zobacz [Konstruktory prywatne](~/_csharplang/spec/classes.md#private-constructors) w [specyfikacji języka Języka C#](/dotnet/csharp/language-reference/language-specification/introduction). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
+Aby uzyskać więcej informacji, zobacz [prywatne konstruktory](~/_csharplang/spec/classes.md#private-constructors) w [specyfikacji języka C#](/dotnet/csharp/language-reference/language-specification/introduction). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../index.md)
 - [Klasy i struktury](./index.md)
 - [Konstruktory](./constructors.md)
 - [Finalizatory](./destructors.md)
-- [Prywatny](../../language-reference/keywords/private.md)
-- [Publicznego](../../language-reference/keywords/public.md)
+- [private](../../language-reference/keywords/private.md)
+- [public](../../language-reference/keywords/public.md)

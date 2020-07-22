@@ -1,5 +1,6 @@
 ---
 title: 'Porady: tworzenie klasy za pomocą modelu CodeDOM'
+description: Zobacz szczegółowy przykład, w którym wyjaśniono, jak utworzyć klasę przy użyciu Code Document Object Model (CodeDOM).
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +12,21 @@ helpviewer_keywords:
 - CodeDOM, creating classes
 - CodeDOM, graphs
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
-ms.openlocfilehash: ff7c9d1593c8e75f9bcaeda6577c7cb941719749
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3d7151d384402dba6fbb5da8fe54621346251f7b
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130195"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865310"
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>Porady: tworzenie klasy za pomocą modelu CodeDOM
 Poniższe procedury ilustrują sposób tworzenia i kompilowania wykresu CodeDOM, który generuje klasę zawierającą dwa pola, trzy właściwości, metodę, Konstruktor i punkt wejścia.  
   
 1. Utwórz aplikację konsolową, która będzie używać kodu CodeDOM do generowania kodu źródłowego dla klasy.  
   
-     W tym przykładzie Klasa generująca ma nazwę `Sample`, a wygenerowany kod jest klasą o `CodeDOMCreatedClass` nazwie SampleCode.  
+     W tym przykładzie Klasa generująca ma nazwę `Sample` , a wygenerowany kod jest klasą o nazwie `CodeDOMCreatedClass` SampleCode.  
   
-2. W klasie generującej zainicjuj wykres CodeDOM i użyj metod CodeDOM, aby zdefiniować elementy członkowskie, Konstruktor i punkt wejścia (`Main` metodę) wygenerowanej klasy.  
+2. W klasie generującej zainicjuj wykres CodeDOM i użyj metod CodeDOM, aby zdefiniować elementy członkowskie, Konstruktor i punkt wejścia ( `Main` metodę) wygenerowanej klasy.  
   
      W tym przykładzie wygenerowana Klasa ma dwa pola, trzy właściwości, Konstruktor, metodę i `Main` metodę.  
   
@@ -37,7 +38,7 @@ Poniższe procedury ilustrują sposób tworzenia i kompilowania wykresu CodeDOM,
   
 ### <a name="to-create-the-application-that-will-execute-the-codedom-code"></a>Aby utworzyć aplikację, która będzie wykonywała kod CodeDOM  
   
-- Utwórz klasę aplikacji konsoli, która będzie zawierać kod CodeDOM. Zdefiniuj pola globalne, które mają być używane w klasie, aby odwołać się do zestawu<xref:System.CodeDom.CodeCompileUnit>() i klasy<xref:System.CodeDom.CodeTypeDeclaration>(), określ nazwę wygenerowanego pliku źródłowego i Zadeklaruj `Main` metodę.  
+- Utwórz klasę aplikacji konsoli, która będzie zawierać kod CodeDOM. Zdefiniuj pola globalne, które mają być używane w klasie, aby odwołać się do zestawu ( <xref:System.CodeDom.CodeCompileUnit> ) i klasy ( <xref:System.CodeDom.CodeTypeDeclaration> ), określ nazwę wygenerowanego pliku źródłowego i Zadeklaruj `Main` metodę.  
   
      [!code-csharp[CodeDOM Class Sample Main#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample Main/CS/program.cs#1)]
      [!code-vb[CodeDOM Class Sample Main#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample Main/VB/program.vb#1)]  
@@ -85,7 +86,7 @@ Poniższe procedury ilustrują sposób tworzenia i kompilowania wykresu CodeDOM,
   
 ### <a name="to-create-the-graph-and-generate-the-code"></a>Aby utworzyć Graf i wygenerować kod  
   
-1. Dodaj metody utworzone w poprzednich krokach do `Main` metody zdefiniowanej w pierwszym kroku.  
+1. Dodaj metody utworzone w poprzednich `Main` krokach do metody zdefiniowanej w pierwszym kroku.  
   
      [!code-csharp[CodeDOM Class Sample#9](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#9)]
      [!code-vb[CodeDOM Class Sample#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#9)]  
@@ -114,9 +115,9 @@ The object:
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
-- Ten przykład kodu wymaga pomyślnego wykonania zestawu `FullTrust` uprawnień.  
+- Ten przykład kodu wymaga `FullTrust` pomyślnego wykonania zestawu uprawnień.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Używanie modelu CodeDOM](using-the-codedom.md)
 - [Generowanie i kompilowanie kodu źródłowego z wykresu CodeDOM](generating-and-compiling-source-code-from-a-codedom-graph.md)

@@ -1,15 +1,16 @@
 ---
 title: Jak zaimplementować i wywołać metodę rozszerzenia niestandardowego — Przewodnik programowania w języku C#
+description: Dowiedz się, jak zaimplementować metody rozszerzenia dla dowolnego typu .NET. Kod klienta może korzystać z metod przez dodanie odwołania do biblioteki DLL i dodanie dyrektywy using.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: f9937c4b7c6e66af0ee3bc6f6d9ef3b3b1edd530
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 7856e78713648a42d1c961f50f7e83f2f7ef05b7
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241828"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865063"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Implementowanie i wywoływanie niestandardowej metody rozszerzenia (Przewodnik programowania w języku C#)
 W tym temacie przedstawiono sposób implementacji własnych metod rozszerzenia dla dowolnego typu .NET. Kod klienta może korzystać z metod rozszerzenia przez dodanie odwołania do biblioteki DLL, która zawiera te metody, i dodanie dyrektywy [using](../../language-reference/keywords/using-directive.md) , która określa przestrzeń nazw, w której są zdefiniowane metody rozszerzenia.  
@@ -38,10 +39,10 @@ W tym temacie przedstawiono sposób implementacji własnych metod rozszerzenia d
 ## <a name="net-security"></a>Zabezpieczenia platformy .NET  
  Metody rozszerzające nie stwarzają określonych luk w zabezpieczeniach. Nigdy nie mogą być używane do personifikacji istniejących metod dla typu, ponieważ wszystkie kolizje nazw są rozwiązywane na korzyść wystąpienia lub statycznej metody zdefiniowanej przez sam typ. Metody rozszerzające nie mogą uzyskać dostępu do żadnych prywatnych danych w klasie rozszerzonej.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../index.md)
-- [Metody rozszerzania](./extension-methods.md)
+- [Metody rozszerzające](./extension-methods.md)
 - [LINQ (zapytanie zintegrowane z językiem)](../../linq/linq-in-csharp.md)
 - [Klasy statyczne i statyczni członkowie klas](./static-classes-and-static-class-members.md)
 - [protected](../../language-reference/keywords/protected.md)

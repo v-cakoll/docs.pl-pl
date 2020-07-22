@@ -1,5 +1,6 @@
 ---
-title: 'Porady: ładowanie zestawów do kontekstu Reflection-Only'
+title: 'Instrukcje: Ładowanie zestawów do kontekstu Reflection-Only'
+description: Zapoznaj się z przykładem ładowania zestawów do kontekstu tylko odbicie w programie .NET. Należy zapoznać się z zestawami skompilowanymi dla innych platform lub wersji platformy .NET.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,27 +13,27 @@ helpviewer_keywords:
 - assemblies [.NET Framework], reflection-only loader context
 - reflection-only loader context
 ms.assetid: 9818b660-52f5-423d-a9af-e75163aa7068
-ms.openlocfilehash: cac6b3b3adf070ad6070e5c5941653f20dedd907
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 92f847f6c61ba39bf8621af6080baccfdabe514a
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130103"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865076"
 ---
-# <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Porady: ładowanie zestawów do kontekstu Reflection-Only
+# <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Instrukcje: Ładowanie zestawów do kontekstu Reflection-Only
 
 Kontekst ładowania tylko odbicie umożliwia badanie zestawów skompilowanych dla innych platform lub dla innych wersji .NET Framework. Kod załadowany do tego kontekstu może być badany tylko; nie można go wykonać. Oznacza to, że nie można tworzyć obiektów, ponieważ nie można wykonać konstruktorów. Ponieważ kod nie może zostać wykonany, zależności nie są ładowane automatycznie. Jeśli musisz je przeanalizować, musisz załadować je samodzielnie.
 
 ## <a name="to-load-an-assembly-into-the-reflection-only-load-context"></a>Aby załadować zestaw do kontekstu ładowania tylko odbicie
 
-1. Użyj przeciążenia <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.String%29> metody, aby załadować zestaw przy użyciu jego nazwy wyświetlanej, lub <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> metodę ładowania zestawu przy użyciu jej ścieżki. Jeśli zestaw jest obrazem binarnym, Użyj przeciążenia <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.Byte%5B%5D%29> metody.
+1. Użyj <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.String%29> przeciążenia metody, aby załadować zestaw przy użyciu jego nazwy wyświetlanej, lub <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> metodę ładowania zestawu przy użyciu jej ścieżki. Jeśli zestaw jest obrazem binarnym, użyj <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.Byte%5B%5D%29> przeciążenia metody.
 
     > [!NOTE]
-    > Nie można użyć kontekstu tylko odbicia do załadowania wersji biblioteki mscorlib. dll z wersji .NET Framework innej niż wersja w kontekście wykonania.
+    > Nie można użyć kontekstu tylko odbicia do załadowania wersji mscorlib.dll z wersji .NET Framework innej niż wersja w kontekście wykonania.
 
-2. Jeśli zestaw ma zależności, <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> Metoda nie ładuje ich. Jeśli musisz je przeanalizować, musisz załadować je samodzielnie.
+2. Jeśli zestaw ma zależności, metoda nie <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> ładuje ich. Jeśli musisz je przeanalizować, musisz załadować je samodzielnie.
 
-3. Ustal, czy zestaw jest ładowany do kontekstu tylko odbicie przy użyciu <xref:System.Reflection.Assembly.ReflectionOnly%2A> właściwości zestawu.
+3. Ustal, czy zestaw jest ładowany do kontekstu tylko odbicie przy użyciu <xref:System.Reflection.Assembly.ReflectionOnly%2A> Właściwości zestawu.
 
 4. Jeśli atrybuty zostały zastosowane do zestawu lub do typów w zestawie, sprawdź te atrybuty przy użyciu <xref:System.Reflection.CustomAttributeData> klasy, aby upewnić się, że nie podjęto próby wykonania kodu w kontekście "tylko odbicie". Użyj odpowiedniego przeciążenia <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> metody w celu uzyskania <xref:System.Reflection.CustomAttributeData> obiektów reprezentujących atrybuty zastosowane do zestawu, elementu członkowskiego, modułu lub parametru.
 
@@ -52,7 +53,7 @@ Przykładowy kod definiuje atrybut niestandardowy z dwoma konstruktorami i jedn�
 [!code-csharp[CustomAttributeData#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
 [!code-vb[CustomAttributeData#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
 - <xref:System.Reflection.Assembly.ReflectionOnly%2A>

@@ -1,49 +1,50 @@
 ---
-title: Korzystanie z konstruktorów — przewodnik programowania C#
+title: Używanie konstruktorów — Przewodnik programowania w języku C#
+description: Ten przykład pokazuje, jak Klasa jest tworzona przy użyciu operatora new w języku C#. Prosty Konstruktor jest wywoływany po przydzieleniu pamięci dla nowego obiektu.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 7c227b61c6d5b4ead00fced0dba046b90683fde1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6b441b04bd6bfcb5564f40a90718e822f56ac21e
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626415"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863958"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Używanie konstruktorów (Przewodnik programowania w języku C#)
 
-Po utworzeniu [klasy](../../language-reference/keywords/class.md) lub [struktury,](../../language-reference/builtin-types/struct.md) jego konstruktor jest wywoływana. Konstruktorzy mają taką samą nazwę jak klasy lub struktury i zwykle inicjowania członków danych nowego obiektu.  
+Gdy tworzona jest [Klasa](../../language-reference/keywords/class.md) lub [Struktura](../../language-reference/builtin-types/struct.md) , jego Konstruktor jest wywoływany. Konstruktory mają taką samą nazwę jak Klasa lub struktura i zazwyczaj inicjują elementy członkowskie danych nowego obiektu.  
   
- W poniższym przykładzie klasa `Taxi` o nazwie jest zdefiniowana przy użyciu prostego konstruktora. Ta klasa jest następnie tworzone z [nowym](../../language-reference/operators/new-operator.md) operatorem. Konstruktor `Taxi` jest wywoływany przez `new` operatora natychmiast po przydzielonym pamięci dla nowego obiektu.  
+ W poniższym przykładzie Klasa o nazwie `Taxi` jest definiowana przy użyciu prostego konstruktora. Ta klasa jest następnie tworzona przy użyciu operatora [New](../../language-reference/operators/new-operator.md) . `Taxi`Konstruktor jest wywoływany przez `new` operatora natychmiast po przydzieleniu pamięci dla nowego obiektu.  
   
  [!code-csharp[csProgGuideObjects#53](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#53)]  
   
- Konstruktor, który nie przyjmuje żadnych parametrów jest nazywany *konstruktorem bezparametrów*. Konstruktory bezparametrów są wywoływane za każdym razem, `new` gdy obiekt jest tworzony `new`przy użyciu operatora i nie podano żadnych argumentów . Aby uzyskać więcej informacji, zobacz [Konstruktora wystąpień](./instance-constructors.md).  
+ Konstruktor, który nie pobiera parametrów, jest nazywany *konstruktorem bez parametrów*. Konstruktory bez parametrów są wywoływane za każdym razem, gdy obiekt jest skonkretyzowany przy użyciu `new` operatora i nie ma żadnych argumentów `new` . Aby uzyskać więcej informacji, zobacz [konstruktory wystąpień](./instance-constructors.md).  
   
- Chyba że klasa jest [statyczna](../../language-reference/keywords/static.md), klasy bez konstruktorów są podane konstruktora public parameterless przez kompilator C#, aby umożliwić wystąpienia klasy. Aby uzyskać więcej informacji, zobacz [Klasy statyczne i elementy członkowskie klasy statycznej](./static-classes-and-static-class-members.md).  
+ O ile Klasa nie jest [statyczna](../../language-reference/keywords/static.md), klasy bez konstruktorów otrzymują publiczny Konstruktor bezparametrowy przez kompilator języka C# w celu włączenia tworzenia wystąpienia klasy. Aby uzyskać więcej informacji, zobacz [klasy statyczne i statyczne elementy członkowskie klas](./static-classes-and-static-class-members.md).  
   
- Można zapobiec klasy z wystąpienia przez co konstruktora prywatnych, w następujący sposób:  
+ Można zapobiec tworzeniu wystąpienia klasy przez uczynienie konstruktora prywatnym w następujący sposób:  
   
  [!code-csharp[csProgGuideObjects#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#11)]  
   
- Aby uzyskać więcej informacji, zobacz [Konstruktory prywatne](./private-constructors.md).  
+ Aby uzyskać więcej informacji, zobacz [prywatne konstruktory](./private-constructors.md).  
   
- Konstruktory dla typów [struktur](../../language-reference/builtin-types/struct.md) przypominają konstruktory klas, ale `structs` nie może zawierać jawny konstruktor bezparametrów, ponieważ jeden jest dostarczany automatycznie przez kompilator. Ten konstruktor inicjuje `struct` każde pole w [wartości domyślnej.](../../language-reference/builtin-types/default-values.md) Jednak ten konstruktor bez parametrów `struct` jest wywoływany tylko `new`wtedy, gdy jest tworzony za pomocą . Na przykład ten kod używa konstruktora bezparametrów dla <xref:System.Int32>, dzięki czemu masz pewność, że liczba całkowita jest inicjowana:  
+ Konstruktory dla typów [struktur](../../language-reference/builtin-types/struct.md) przypominają konstruktory klas, ale `structs` nie mogą zawierać jawnego konstruktora bez parametrów, ponieważ jeden jest dostarczany automatycznie przez kompilator. Ten konstruktor inicjuje każde pole w `struct` [wartości domyślnej](../../language-reference/builtin-types/default-values.md). Jednak ten konstruktor bez parametrów jest wywoływany tylko wtedy, gdy `struct` jest tworzone wystąpienie z `new` . Na przykład, ten kod używa konstruktora bez parametrów dla <xref:System.Int32> , aby mieć pewność, że liczba całkowita została zainicjowana:  
   
 ```csharp  
 int i = new int();  
 Console.WriteLine(i);  
 ```  
   
- Poniższy kod powoduje jednak błąd kompilatora, `new`ponieważ nie używa , a ponieważ próbuje użyć obiektu, który nie został zainicjowany:  
+ Poniższy kod powoduje jednak błąd kompilatora, ponieważ nie używa `new` i ponieważ próbuje użyć obiektu, który nie został zainicjowany:  
   
 ```csharp  
 int i;  
 Console.WriteLine(i);  
 ```  
   
- Alternatywnie obiekty oparte `structs` na (w tym wszystkie wbudowane typy liczbowe) mogą być inicjowane lub przypisywane, a następnie używane w poniższym przykładzie:  
+ Alternatywnie obiekty oparte na `structs` (w tym wszystkie wbudowane typy liczbowe) mogą być inicjowane lub przypisane, a następnie używane jak w poniższym przykładzie:  
   
 ```csharp  
 int a = 44;  // Initialize the value type...  
@@ -52,9 +53,9 @@ b = 33;      // Or assign it before using it.
 Console.WriteLine("{0}, {1}", a, b);  
 ```  
   
- Tak więc wywołanie konstruktora bez parametrów dla typu wartości nie jest wymagane.  
+ Wywołanie konstruktora bez parametrów dla typu wartości nie jest wymagane.  
   
- Obie klasy `structs` i można zdefiniować konstruktory, które przyjmują parametry. Konstruktory, które przyjmują parametry `new` muszą być wywoływane za pośrednictwem instrukcji lub [instrukcji podstawowej.](../../language-reference/keywords/base.md) Klasy `structs` i można również zdefiniować wiele konstruktorów i nie jest wymagane do definiowania konstruktora bezparametrów. Przykład:  
+ Obie klasy i `structs` mogą definiować konstruktory, które pobierają parametry. Konstruktory, które pobierają parametry, muszą być wywoływane za pomocą `new` instrukcji lub [podstawowej](../../language-reference/keywords/base.md) instrukcji. Klasy i `structs` mogą także definiować wiele konstruktorów, a żaden z nich nie jest wymagany do definiowania konstruktora bez parametrów. Na przykład:  
   
  [!code-csharp[csProgGuideObjects#54](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#54)]  
   
@@ -62,39 +63,39 @@ Console.WriteLine("{0}, {1}", a, b);
   
  [!code-csharp[csProgGuideObjects#55](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#55)]  
   
- Konstruktor można `base` użyć słowa kluczowego do wywołania konstruktora klasy podstawowej. Przykład:  
+ Konstruktor może użyć `base` słowa kluczowego do wywołania konstruktora klasy bazowej. Na przykład:  
   
  [!code-csharp[csProgGuideObjects#56](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#56)]  
   
- W tym przykładzie konstruktora dla klasy podstawowej jest wywoływana przed blok dla konstruktora jest wykonywana. Słowa `base` kluczowego można używać z parametrami lub bez. Wszystkie parametry do konstruktora mogą być `base`używane jako parametry do , lub jako część wyrażenia. Aby uzyskać więcej informacji, zobacz [podstawa](../../language-reference/keywords/base.md).  
+ W tym przykładzie Konstruktor klasy bazowej jest wywoływany przed wykonaniem bloku dla konstruktora. `base`Słowo kluczowe może być używane z parametrami lub bez nich. Wszystkie parametry konstruktora mogą służyć jako parametry do `base` , lub jako część wyrażenia. Aby uzyskać więcej informacji, zobacz temat [Base](../../language-reference/keywords/base.md).  
   
- W klasie pochodnej, jeśli konstruktor klasy podstawowej nie `base` jest wywoływany jawnie przy użyciu słowa kluczowego, konstruktor bezparametrów, jeśli istnieje, jest wywoływany niejawnie. Oznacza to, że następujące deklaracje konstruktorów są skutecznie takie same:  
+ W klasie pochodnej, jeśli Konstruktor klasy bazowej nie jest jawnie wywoływany za pomocą `base` słowa kluczowego, Konstruktor bez parametrów, jeśli istnieje, jest wywoływana niejawnie. Oznacza to, że następujące deklaracje konstruktora są efektywnie takie same:  
   
  [!code-csharp[csProgGuideObjects#58](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#58)]  
   
  [!code-csharp[csProgGuideObjects#57](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#57)]  
   
- Jeśli klasa podstawowa nie oferuje konstruktora bezparametrów, klasa pochodna musi jawne `base`wywołanie konstruktora podstawowego przy użyciu .  
+ Jeśli klasa bazowa nie oferuje konstruktora bez parametrów, Klasa pochodna musi jawnie wywołać konstruktora podstawowego przy użyciu `base` .  
   
- Konstruktor może wywołać innego konstruktora w tym samym obiekcie przy użyciu [tego](../../language-reference/keywords/this.md) słowa kluczowego. Podobnie `base` `this` jak , może być używany z parametrami lub bez, a wszystkie `this`parametry w konstruktorze są dostępne jako parametry do , lub jako część wyrażenia. Na przykład drugi konstruktor w poprzednim przykładzie `this`można przepisać przy użyciu:  
+ Konstruktor może wywołać innego konstruktora w tym samym obiekcie za pomocą słowa kluczowego [this](../../language-reference/keywords/this.md) . Na przykład `base` , `this` może być używany z parametrami lub bez nich, a wszystkie parametry w Konstruktorze są dostępne jako parametry do `this` , lub jako część wyrażenia. Na przykład Drugi Konstruktor w poprzednim przykładzie można napisać ponownie przy użyciu `this` :  
   
  [!code-csharp[csProgGuideObjects#59](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#59)]  
   
- Użycie `this` słowa kluczowego w poprzednim przykładzie powoduje, że ten konstruktor ma być wywoływany:  
+ Użycie `this` słowa kluczowego w poprzednim przykładzie powoduje, że ten konstruktor jest wywoływany:  
   
  [!code-csharp[csProgGuideObjects#60](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#60)]  
   
- Konstruktorzy mogą być oznaczani jako [publiczni,](../../language-reference/keywords/public.md) [prywatni, chronieni,](../../language-reference/keywords/protected.md) [private](../../language-reference/keywords/private.md) [wewnętrzni,](../../language-reference/keywords/internal.md) [chronieni wewnętrznie](../../language-reference/keywords/protected-internal.md) lub [prywatnie.](../../language-reference/keywords/private-protected.md) Te modyfikatory dostępu definiują sposób, w jaki użytkownicy klasy mogą konstruować klasę. Aby uzyskać więcej informacji, zobacz [Modyfikatory dostępu](./access-modifiers.md).  
+ Konstruktory mogą być oznaczone jako [publiczne](../../language-reference/keywords/public.md), [prywatne](../../language-reference/keywords/private.md), [chronione](../../language-reference/keywords/protected.md), [wewnętrzne](../../language-reference/keywords/internal.md), [chronione wewnętrznie](../../language-reference/keywords/protected-internal.md) lub [chronione prywatnie](../../language-reference/keywords/private-protected.md). Te Modyfikatory dostępu definiują sposób, w jaki użytkownicy klasy mogą tworzyć klasy. Aby uzyskać więcej informacji, zobacz [Modyfikatory dostępu](./access-modifiers.md).  
   
- Konstruktora można zadeklarować statyczne przy użyciu [statycznego](../../language-reference/keywords/static.md) słowa kluczowego. Konstruktory statyczne są wywoływane automatycznie, bezpośrednio przed dostępem do jakichkolwiek pól statycznych i są zwykle używane do inicjowania statycznych elementów członkowskich klasy. Aby uzyskać więcej informacji, zobacz [Konstruktora statyczne](./static-constructors.md).  
+ Konstruktor może być zadeklarowany jako statyczny za pomocą słowa kluczowego [static](../../language-reference/keywords/static.md) . Konstruktory statyczne są wywoływane automatycznie, bezpośrednio przed uzyskaniem dostępu do dowolnych pól statycznych i są zwykle używane do inicjowania statycznych elementów członkowskich klas. Aby uzyskać więcej informacji, zobacz [statyczne konstruktory](./static-constructors.md).  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
 
-Aby uzyskać więcej informacji, zobacz [Konstruktory wystąpienia](~/_csharplang/spec/classes.md#instance-constructors) i [konstruktory statyczne](~/_csharplang/spec/classes.md#static-constructors) w [specyfikacji języka Języka C#.](/dotnet/csharp/language-reference/language-specification/introduction) Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
+Aby uzyskać więcej informacji, zobacz [konstruktory wystąpień](~/_csharplang/spec/classes.md#instance-constructors) i [konstruktory statyczne](~/_csharplang/spec/classes.md#static-constructors) w [specyfikacji języka C#](/dotnet/csharp/language-reference/language-specification/introduction). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../index.md)
 - [Klasy i struktury](./index.md)
 - [Konstruktory](./constructors.md)
 - [Finalizatory](./destructors.md)

@@ -1,5 +1,6 @@
 ---
 title: Klasy statyczne i statyczne elementy członkowskie klasy — Przewodnik programowania w języku C#
+description: Nie można utworzyć wystąpienia klas statycznych w języku C#. Dostęp do elementów członkowskich klasy statycznej można uzyskać przy użyciu samej nazwy klasy.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, static members
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 71cbf8278b3a8092e93a8ae3d8be291540f16cc3
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 4f187d772d2f2e4375fbe3cfdc8c48af691f1c7c
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990096"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863880"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Klasy statyczne i statyczni członkowie klas (Przewodnik programowania w języku C#)
 
@@ -88,7 +89,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 
 Aby uzyskać więcej informacji, zobacz [klasy statyczne](~/_csharplang/spec/classes.md#static-classes) i [elementy członkowskie statyczne i wystąpienia](~/_csharplang/spec/classes.md#static-and-instance-members) w [specyfikacji języka C#](/dotnet/csharp/language-reference/language-specification/introduction). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [static](../../language-reference/keywords/static.md)

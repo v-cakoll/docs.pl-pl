@@ -1,16 +1,17 @@
 ---
 title: Przechowywanie wersji przy użyciu przesłonięć i nowych słów kluczowych — Przewodnik programowania w języku C#
+description: Dowiedz się więcej na temat przechowywania wersji klas podstawowych i pochodnych w języku C# oraz sposób określania, czy metoda jest przeznaczona do przesłonięcia lub ukrycia metody dziedziczonej.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 7bcc7e68810c97142cebca7595266a0e4a69ed51
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c2630741e1055a14dd5b9e4445d660cfd68891b0
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207940"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863867"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Przechowywanie wersji przesłonięć i nowych słów kluczowych (Przewodnik programowania w języku C#)
 Język C# został zaprojektowany tak, aby przechowywanie wersji między klasą [podstawową](../../language-reference/keywords/base.md) i pochodną w różnych bibliotekach można było rozwijać i obsługiwać zgodność z poprzednimi wersjami. Oznacza to, na przykład, że wprowadzenie nowego elementu członkowskiego w [klasie](../../language-reference/keywords/class.md) bazowej o takiej samej nazwie jak element członkowski w klasie pochodnej jest w pełni obsługiwane przez język C# i nie prowadzi do nieoczekiwanego zachowania. Oznacza to również, że klasa musi jawnie określać, czy metoda jest przeznaczona do przesłania dziedziczonej metody lub czy metoda jest nową metodą, która ukrywa podobną metodę o nazwie dziedziczone.  
@@ -68,17 +69,17 @@ Język C# został zaprojektowany tak, aby przechowywanie wersji między klasą [
   
  [!code-csharp[csProgGuideInheritance#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#32)]  
   
- Gdy `DoWork` jest wywoływana w wystąpieniu programu `Derived` , kompilator języka C# najpierw podejmie próbę wykonania wywołania zgodnego z wersjami `DoWork` zadeklarowanymi oryginalnie `Derived` . Metody override nie są uznawane za zadeklarowane w klasie, są to nowe implementacje metody zadeklarowanej w klasie bazowej. Tylko wtedy, gdy kompilator języka C# nie może dopasować wywołania metody do oryginalnej metody w programie `Derived` , podejmie próbę dopasowania wywołania do zastąpionej metody z tą samą nazwą i zgodnymi parametrami. Przykład:  
+ Gdy `DoWork` jest wywoływana w wystąpieniu programu `Derived` , kompilator języka C# najpierw podejmie próbę wykonania wywołania zgodnego z wersjami `DoWork` zadeklarowanymi oryginalnie `Derived` . Metody override nie są uznawane za zadeklarowane w klasie, są to nowe implementacje metody zadeklarowanej w klasie bazowej. Tylko wtedy, gdy kompilator języka C# nie może dopasować wywołania metody do oryginalnej metody w programie `Derived` , podejmie próbę dopasowania wywołania do zastąpionej metody z tą samą nazwą i zgodnymi parametrami. Na przykład:  
   
  [!code-csharp[csProgGuideInheritance#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#33)]  
   
- Ponieważ zmienna `val` może być konwertowana na podwójnie niejawnie, wywołania kompilatora C# `DoWork(double)` zamiast `DoWork(int)` . Istnieją dwa sposoby, aby tego uniknąć. Najpierw należy unikać deklarowania nowych metod o takiej samej nazwie jak metody wirtualne. Następnie można nakazać kompilatorowi języka C# wywoływanie metody wirtualnej, przeszukiwanie listy metod klasy podstawowej przez rzutowanie wystąpienia `Derived` na `Base` . Ponieważ metoda jest wirtualna, implementacja metody `DoWork(int)` on `Derived` zostanie wywołana. Przykład:  
+ Ponieważ zmienna `val` może być konwertowana na podwójnie niejawnie, wywołania kompilatora C# `DoWork(double)` zamiast `DoWork(int)` . Istnieją dwa sposoby, aby tego uniknąć. Najpierw należy unikać deklarowania nowych metod o takiej samej nazwie jak metody wirtualne. Następnie można nakazać kompilatorowi języka C# wywoływanie metody wirtualnej, przeszukiwanie listy metod klasy podstawowej przez rzutowanie wystąpienia `Derived` na `Base` . Ponieważ metoda jest wirtualna, implementacja metody `DoWork(int)` on `Derived` zostanie wywołana. Na przykład:  
   
  [!code-csharp[csProgGuideInheritance#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#34)]  
   
  Aby uzyskać więcej przykładów dla `new` i `override` , zobacz artykuł [wiedzą, kiedy używać przesłonięć i nowych słów kluczowych](./knowing-when-to-use-override-and-new-keywords.md).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Klasy i struktury](./index.md)

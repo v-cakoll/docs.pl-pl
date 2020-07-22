@@ -1,5 +1,6 @@
 ---
 title: 'Instrukcje: uzyskiwanie informacji o typie i elemencie członkowskim za pomocą odbicia'
+description: Dowiedz się, jak uzyskać informacje o typie i elemencie członkowskim za pomocą odbicia przy użyciu przestrzeni nazw System. odbicie.
 ms.date: 09/03/2019
 helpviewer_keywords:
 - reflection, obtaining member information
@@ -9,15 +10,15 @@ dev_langs:
 - cpp
 - csharp
 - vb
-ms.openlocfilehash: 9ffc173bbd0ed12eedea0c191f6d39baf181793a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fa7af39c0addb328944a03236c26982301caf722
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130214"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865323"
 ---
 # <a name="how-to-get-type-and-member-information-by-using-reflection"></a>Instrukcje: uzyskiwanie informacji o typie i elemencie członkowskim za pomocą odbicia
-<xref:System.Reflection> Przestrzeń nazw zawiera wiele metod uzyskiwania informacji na temat typów i ich członków. W tym artykule przedstawiono jedną z tych metod <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>. Aby uzyskać dodatkowe informacje, zobacz [Omówienie odbicia](reflection.md).
+<xref:System.Reflection>Przestrzeń nazw zawiera wiele metod uzyskiwania informacji na temat typów i ich członków. W tym artykule przedstawiono jedną z tych metod <xref:System.Type.GetMembers%2A?displayProperty=nameWithType> . Aby uzyskać dodatkowe informacje, zobacz [Omówienie odbicia](reflection.md).
   
 ## <a name="example"></a>Przykład
 
@@ -27,7 +28,7 @@ Poniższy przykład pobiera informacje o typie i elemencie członkowskim za pomo
 [!code-csharp[Get type members](../../../samples/snippets/standard/reflection/memberinfo/gettypemembers.cs)]
 [!code-vb[Get type members](../../../samples/snippets/standard/reflection/memberinfo/gettypemembers.vb)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Program z domenami aplikacji](../app-domains/application-domains.md#programming-with-application-domains)
 - [Odbicie](reflection.md)

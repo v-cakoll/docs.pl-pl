@@ -1,67 +1,68 @@
 ---
-title: Konstruktory instancji — przewodnik programowania C#
+title: Konstruktory wystąpień — Przewodnik programowania w języku C#
+description: Konstruktory wystąpień w języku C# Utwórz i zainicjuj wszystkie zmienne Członkowskie wystąpienia w przypadku użycia nowego wyrażenia do utworzenia obiektu klasy.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: 621b8ca7510b0b9916c9c46f201ff77402c3c655
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d70e786446fb198afb4e0311757cacb65b706f47
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75964738"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864205"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Konstruktory wystąpień (Przewodnik programowania w języku C#)
 
-Konstruktory wystąpienia są używane do tworzenia i inicjowania zmiennych członkowskich wystąpienia, gdy nowe [wyrażenie](../../language-reference/operators/new-operator.md) służy do tworzenia obiektu [klasy](../../language-reference/keywords/class.md). Aby zainicjować klasę [statyczną](../../language-reference/keywords/static.md) lub zmienne statyczne w klasie niestatycznej, należy zdefiniować konstruktora statycznego. Aby uzyskać więcej informacji, zobacz [Konstruktora statyczne](./static-constructors.md).  
+Konstruktory wystąpień są używane do tworzenia i inicjowania wszelkich zmiennych składowych wystąpienia podczas używania [nowego](../../language-reference/operators/new-operator.md) wyrażenia do tworzenia obiektu [klasy](../../language-reference/keywords/class.md). Aby zainicjować klasę [statyczną](../../language-reference/keywords/static.md) lub zmienne statyczne w klasie niestatycznej, należy zdefiniować Konstruktor statyczny. Aby uzyskać więcej informacji, zobacz [statyczne konstruktory](./static-constructors.md).  
   
- W poniższym przykładzie przedstawiono konstruktora wystąpienia:  
+ Poniższy przykład pokazuje Konstruktor wystąpienia:  
   
  [!code-csharp[csProgGuideObjects#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#5)]  
   
 > [!NOTE]
-> Dla jasności ta klasa zawiera pola publiczne. Korzystanie z pól publicznych nie jest zalecaną praktyką programowania, ponieważ umożliwia dowolną metodę w dowolnym miejscu w programie nieograniczony i niezweryfikowany dostęp do wewnętrznego działania obiektu. Elementy członkowskie danych zazwyczaj powinny być prywatne i powinny być dostępne tylko za pośrednictwem metod i właściwości klasy.  
+> Dla jasności Ta klasa zawiera pola publiczne. Korzystanie z pól publicznych nie jest zalecanym sposobem programowania, ponieważ umożliwia jakąkolwiek metodę w dowolnym miejscu w programie bez ograniczeń i niezweryfikowany dostęp do wewnętrznych zadań roboczych obiektu. Elementy członkowskie danych powinny być ogólnie prywatne i powinny być dostępne tylko za poorednictwem metod i właściwości klasy.  
   
- To wystąpienie konstruktora jest wywoływana `Coords` za każdym razem, gdy obiekt oparty na klasie jest tworzony. Konstruktora, jak ten, który nie przyjmuje żadnych argumentów, jest nazywany *konstruktorem bezparametrów*. Jednak często jest przydatne, aby zapewnić dodatkowe konstruktory. Na przykład możemy dodać konstruktora do `Coords` klasy, która pozwala nam określić początkowe wartości dla elementów członkowskich danych:  
+ Ten konstruktor wystąpienia jest wywoływany za każdym razem, gdy `Coords` tworzony jest obiekt oparty na klasie. Konstruktor podobny do tego, który nie przyjmuje argumentów, jest nazywany *konstruktorem bez parametrów*. Jednak często przydatne jest zapewnienie dodatkowych konstruktorów. Na przykład możemy dodać konstruktora do `Coords` klasy, która umożliwia określenie wartości początkowych elementów członkowskich danych:  
   
  [!code-csharp[csProgGuideObjects#76](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#76)]  
   
- Dzięki `Coords` temu obiekty mogą być tworzone z domyślnymi lub określonymi wartościami początkowymi, takimi jak ten:  
+ Pozwala to `Coords` na tworzenie obiektów z domyślnymi lub określonymi wartościami początkowymi, takimi jak:  
   
  [!code-csharp[csProgGuideObjects#77](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#77)]  
   
- Jeśli klasa nie ma konstruktora, konstruktor bezparametrów jest generowany automatycznie, a wartości domyślne są używane do inicjowania pól obiektów. Na przykład [int](../../language-reference/builtin-types/integral-numeric-types.md) jest inicjowany do 0. Aby uzyskać informacje o wartościach domyślnych typu, zobacz [Wartości domyślne typów Języka C#](../../language-reference/builtin-types/default-values.md). W związku `Coords` z tym ponieważ klasy konstruktora bez parametrów inicjuje wszystkie elementy członkowskie danych do zera, można usunąć całkowicie bez zmiany sposobu działania klasy. Pełny przykład przy użyciu wielu konstruktorów znajduje się w przykładzie 1 w dalszej części tego tematu, a przykład automatycznie generowanekonstruktora znajduje się w przykładzie 2.  
+ Jeśli Klasa nie ma konstruktora, zostaje automatycznie wygenerowany Konstruktor bez parametrów, a wartości domyślne są używane do inicjowania pól obiektu. Na przykład liczba [całkowita](../../language-reference/builtin-types/integral-numeric-types.md) jest inicjowana do wartości 0. Aby uzyskać informacje na temat typów wartości domyślnych, zobacz [domyślne wartości typów języka C#](../../language-reference/builtin-types/default-values.md). W związku z tym, ponieważ `Coords` Konstruktor bezparametrowy klasy inicjuje wszystkie elementy członkowskie danych jako zero, można go usunąć całkowicie bez zmiany sposobu działania klasy. Kompletny przykład z użyciem wielu konstruktorów znajduje się w przykładzie 1 w dalszej części tego tematu, a przykład wygenerowanego automatycznie konstruktora jest dostępny w przykładzie 2.  
   
- Konstruktorów wystąpienia można również wywołać konstruktory wystąpienia klas podstawowych. Konstruktor klasy może wywołać konstruktora klasy podstawowej za pośrednictwem inicjatora, w następujący sposób:  
+ Konstruktorów wystąpień można także używać do wywoływania konstruktorów wystąpień klas bazowych. Konstruktor klasy może wywoływać konstruktora klasy podstawowej za pomocą inicjatora w następujący sposób:  
   
  [!code-csharp[csProgGuideObjects#78](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#78)]  
   
- W tym przykładzie `Circle` klasa przekazuje wartości reprezentujące promień i `Shape` wysokość `Circle` do konstruktora dostarczonego przez którego pochodzi. Pełny przykład `Shape` przy `Circle` użyciu i pojawia się w tym temacie jako przykład 3.  
+ W tym przykładzie `Circle` Klasa przekazuje wartości reprezentujące promień i wysokość do konstruktora dostarczonego przez, `Shape` z którego pochodzi `Circle` . Kompletny przykład korzystania z `Shape` i `Circle` pojawia się w tym temacie jako przykład 3.  
   
 ## <a name="example-1"></a>Przykład 1  
- W poniższym przykładzie przedstawiono klasę z dwoma konstruktorami klas, jeden bez argumentów i jeden z dwoma argumentami.  
+ Poniższy przykład ilustruje klasę z dwoma konstruktorami klas, jeden bez argumentów i jeden z dwoma argumentami.  
   
  [!code-csharp[csProgGuideObjects#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#4)]  
   
 ## <a name="example-2"></a>Przykład 2  
- W tym przykładzie `Person` klasa nie ma żadnych konstruktorów, w którym to przypadku konstruktor bezparametrów jest automatycznie dostarczany, a pola są inicjowane do ich wartości domyślnych.  
+ W tym przykładzie Klasa nie `Person` ma żadnych konstruktorów, w tym przypadku jest automatycznie dostarczany Konstruktor bez parametrów i pola są inicjowane do ich wartości domyślnych.  
   
  [!code-csharp[csProgGuideObjects#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#8)]  
   
- Należy zauważyć, że `age` `0` wartością domyślną `name` `null`jest i wartość domyślna jest .
+ Zwróć uwagę, że wartość domyślna `age` to `0` i wartość domyślna `name` to `null` .
   
 ## <a name="example-3"></a>Przykład 3  
- W poniższym przykładzie przedstawiono przy użyciu inicjatora klasy podstawowej. Klasa `Circle` jest pochodną klasy `Shape`ogólnej, `Cylinder` a klasa jest `Circle` pochodną klasy. Konstruktor na każdej klasy pochodnej używa jego inicjatorklasy podstawowej.  
+ Poniższy przykład ilustruje użycie inicjatora klasy bazowej. `Circle`Klasa pochodzi od klasy ogólnej `Shape` , a `Cylinder` Klasa pochodzi od `Circle` klasy. Konstruktor dla każdej klasy pochodnej używa jej inicjatora klasy bazowej.  
   
  [!code-csharp[csProgGuideObjects#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#9)]  
   
- Aby uzyskać więcej przykładów na wywoływanie konstruktorów klasy podstawowej, zobacz [wirtualne](../../language-reference/keywords/virtual.md), [zastąpić](../../language-reference/keywords/override.md)i [base](../../language-reference/keywords/base.md).  
+ Aby uzyskać więcej przykładów dotyczących wywoływania konstruktorów klasy bazowej, zobacz [Virtual](../../language-reference/keywords/virtual.md), [override](../../language-reference/keywords/override.md)i [Base](../../language-reference/keywords/base.md).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania języka C#](../index.md)
+- [Przewodnik programowania w języku C#](../index.md)
 - [Klasy i struktury](./index.md)
 - [Konstruktory](./constructors.md)
 - [Finalizatory](./destructors.md)
-- [Statyczne](../../language-reference/keywords/static.md)
+- [static](../../language-reference/keywords/static.md)

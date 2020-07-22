@@ -1,5 +1,6 @@
 ---
 title: Zasoby w aplikacjach .NET
+description: Informacje o zasobach w aplikacjach .NET. Zasób to wszystkie niewykonywalne dane, które są logicznie wdrożone z aplikacją.
 ms.date: 07/25/2018
 helpviewer_keywords:
 - deploying applications [.NET Framework], resources
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-ms.openlocfilehash: 0620cb16c3233f8ba2a665c9c4cb5f44bc5d5e84
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 105325170389917bfb2022314791aa1ed5923db3
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645680"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865167"
 ---
 # <a name="resources-in-net-apps"></a>Zasoby w aplikacjach .NET
 
@@ -28,7 +29,7 @@ Aby uzyskać informacje o zasobach w programie ASP.NET, zobacz [ASP.NET — Omó
 
 ## <a name="create-and-localize-resources"></a>Tworzenie i lokalizowanie zasobów
 
-W aplikacji niezlokalizowanej można używać plików zasobów jako repozytorium dla danych aplikacji, szczególnie w przypadku ciągów, które w przeciwnym razie mogą być zakodowane w wielu lokalizacjach w kodzie źródłowym. Najczęściej można utworzyć zasoby jako pliki tekstowe (. txt) lub XML (. resx), a następnie użyć [Resgen. exe (Generator plików zasobów)](../tools/resgen-exe-resource-file-generator.md) do skompilowania ich do plików binarnych. resources. Te pliki mogą być następnie osadzone w pliku wykonywalnym aplikacji przez kompilator języka. Aby uzyskać więcej informacji na temat tworzenia zasobów, zobacz [Tworzenie plików zasobów](creating-resource-files-for-desktop-apps.md).
+W aplikacji niezlokalizowanej można używać plików zasobów jako repozytorium dla danych aplikacji, szczególnie w przypadku ciągów, które w przeciwnym razie mogą być zakodowane w wielu lokalizacjach w kodzie źródłowym. Najczęściej można utworzyć zasoby jako pliki tekstowe (. txt) lub XML (. resx), a następnie użyć [Resgen.exe (Generator plików zasobów)](../tools/resgen-exe-resource-file-generator.md) do skompilowania ich do plików binarnych. resources. Te pliki mogą być następnie osadzone w pliku wykonywalnym aplikacji przez kompilator języka. Aby uzyskać więcej informacji na temat tworzenia zasobów, zobacz [Tworzenie plików zasobów](creating-resource-files-for-desktop-apps.md).
 
 Możesz również lokalizować zasoby aplikacji dla określonych kultur. Dzięki temu można tworzyć zlokalizowane (tłumaczone) wersje aplikacji. Podczas tworzenia aplikacji korzystającej z zlokalizowanych zasobów należy określić kulturę, która służy jako kultura neutralna lub rezerwowa, której zasoby są używane, jeśli nie są dostępne odpowiednie zasoby. Zazwyczaj zasoby kultury neutralnej są przechowywane w pliku wykonywalnym aplikacji. Pozostałe zasoby dla poszczególnych zlokalizowanych kultur są przechowywane w autonomicznych zestawach satelickich. Aby uzyskać więcej informacji, zobacz [Tworzenie zestawów satelickich](creating-satellite-assemblies-for-desktop-apps.md).
 
@@ -42,27 +43,27 @@ Aby uzyskać więcej informacji, zobacz artykuł [pakowanie i wdrażanie zasobó
 
 ## <a name="retrieve-resources"></a>Pobieranie zasobów
 
-W czasie wykonywania aplikacja ładuje odpowiednie zlokalizowane zasoby dla poszczególnych wątków na podstawie kultury określonej przez <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> właściwość. Ta wartość właściwości jest pochodna w następujący sposób:
+W czasie wykonywania aplikacja ładuje odpowiednie zlokalizowane zasoby dla poszczególnych wątków na podstawie kultury określonej przez <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> Właściwość. Ta wartość właściwości jest pochodna w następujący sposób:
 
 - Przez bezpośrednie przypisanie <xref:System.Globalization.CultureInfo> obiektu, który reprezentuje zlokalizowaną kulturę do <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> właściwości.
 
 - Jeśli kultura nie jest jawnie przypisana, pobierając domyślną kulturę interfejsu użytkownika wątku z <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> właściwości.
 
-- Jeśli domyślna kultura interfejsu użytkownika wątku nie jest jawnie przypisana, pobierając kulturę dla bieżącego użytkownika na komputerze lokalnym. Implementacje platformy .NET działające w systemie Windows to przez [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) wywołanie funkcji systemu Windows.
+- Jeśli domyślna kultura interfejsu użytkownika wątku nie jest jawnie przypisana, pobierając kulturę dla bieżącego użytkownika na komputerze lokalnym. Implementacje platformy .NET działające w systemie Windows to przez wywołanie funkcji systemu Windows [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) .
 
 Aby uzyskać więcej informacji na temat sposobu ustawiania bieżącej kultury interfejsu użytkownika, zobacz <xref:System.Globalization.CultureInfo> i <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> strony odniesienia.
 
 Następnie można pobrać zasoby dla bieżącej kultury interfejsu użytkownika lub dla określonej kultury przy użyciu <xref:System.Resources.ResourceManager?displayProperty=nameWithType> klasy. Chociaż <xref:System.Resources.ResourceManager> Klasa jest najczęściej używana do pobierania zasobów, <xref:System.Resources?displayProperty=nameWithType> przestrzeń nazw zawiera dodatkowe typy, których można użyć do pobierania zasobów. Należą do nich:
 
-- <xref:System.Resources.ResourceReader> Klasa, która umożliwia Wyliczenie zasobów osadzonych w zestawie lub przechowywanych w autonomicznym pliku Binary. resources. Jest to przydatne, gdy nie znasz dokładnych nazw zasobów, które są dostępne w czasie wykonywania.
+- <xref:System.Resources.ResourceReader>Klasa, która umożliwia Wyliczenie zasobów osadzonych w zestawie lub przechowywanych w autonomicznym pliku Binary. resources. Jest to przydatne, gdy nie znasz dokładnych nazw zasobów, które są dostępne w czasie wykonywania.
 
-- <xref:System.Resources.ResXResourceReader> Klasa, która umożliwia pobieranie zasobów z pliku XML (. resx).
+- <xref:System.Resources.ResXResourceReader>Klasa, która umożliwia pobieranie zasobów z pliku XML (. resx).
 
-- <xref:System.Resources.ResourceSet> Klasa, która umożliwia pobieranie zasobów określonej kultury bez przestrzegania reguł powrotu. Zasoby mogą być przechowywane w zestawie lub autonomiczny plik binarny. resources. Możesz również opracować <xref:System.Resources.IResourceReader> implementację, która umożliwia korzystanie z <xref:System.Resources.ResourceSet> klasy do pobierania zasobów z innego źródła.
+- <xref:System.Resources.ResourceSet>Klasa, która umożliwia pobieranie zasobów określonej kultury bez przestrzegania reguł powrotu. Zasoby mogą być przechowywane w zestawie lub autonomiczny plik binarny. resources. Możesz również opracować <xref:System.Resources.IResourceReader> implementację, która umożliwia korzystanie z <xref:System.Resources.ResourceSet> klasy do pobierania zasobów z innego źródła.
 
-- <xref:System.Resources.ResXResourceSet> Klasa, która umożliwia pobranie wszystkich elementów w pliku zasobów XML do pamięci.
+- <xref:System.Resources.ResXResourceSet>Klasa, która umożliwia pobranie wszystkich elementów w pliku zasobów XML do pamięci.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Globalization.CultureInfo>
 - <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>

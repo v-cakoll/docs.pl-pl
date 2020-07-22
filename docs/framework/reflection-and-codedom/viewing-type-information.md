@@ -1,5 +1,6 @@
 ---
 title: Wyświetlanie informacji o typie
+description: Wyświetlanie informacji o typie przy użyciu typu System. Type, który stanowi centralne odbicie w programie .NET. Przejrzyj ConstructorInfo, MemberInfo, MethodInfo, FieldInfo i PropertyInfo.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - viewing type information
 - reflection, viewing type information
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
-ms.openlocfilehash: bf119ff547df59cd369d688fd81ab058893614f2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cd74021e1f1a79626e171db13def98e546cd51df
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130016"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865206"
 ---
 # <a name="viewing-type-information"></a>Wyświetlanie informacji o typie
-<xref:System.Type?displayProperty=nameWithType> Klasa jest centralną odbiciem. Środowisko uruchomieniowe języka wspólnego tworzy **Typ** załadowanego typu podczas odbicia żądania. Możesz użyć metod, pól, właściwości i klas zagnieżdżonych obiektu **typu** , aby dowiedzieć się wszystkiego o tym typie.  
+<xref:System.Type?displayProperty=nameWithType>Klasa jest centralną odbiciem. Środowisko uruchomieniowe języka wspólnego tworzy **Typ** załadowanego typu podczas odbicia żądania. Możesz użyć metod, pól, właściwości i klas zagnieżdżonych obiektu **typu** , aby dowiedzieć się wszystkiego o tym typie.  
   
- Użyj <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> lub <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> , aby uzyskać obiekty **typu** z zestawów, które nie zostały załadowane, przekazując nazwę żądanego typu lub typów. Służy <xref:System.Type.GetType%2A?displayProperty=nameWithType> do pobierania obiektów **typu** z zestawu, który jest już załadowany. Użyj <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType> i <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType> , aby uzyskać obiekty **typu** modułu.  
+ Użyj <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> lub <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> , aby uzyskać obiekty **typu** z zestawów, które nie zostały załadowane, przekazując nazwę żądanego typu lub typów. Służy <xref:System.Type.GetType%2A?displayProperty=nameWithType> do pobierania obiektów **typu** z zestawu, który jest już załadowany. Użyj <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType> i, <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType> Aby uzyskać obiekty **typu** modułu.  
   
 > [!NOTE]
 > Jeśli chcesz sprawdzić typy ogólne i metody i manipulować nimi, zapoznaj się z dodatkowymi informacjami podanymi w obszarze [odbicie i typy ogólne](reflection-and-generic-types.md) oraz [jak: sprawdzanie i Tworzenie wystąpień typów ogólnych za pomocą odbicia](how-to-examine-and-instantiate-generic-types-with-reflection.md).  
@@ -52,7 +53,7 @@ ms.locfileid: "73130016"
  [!code-vb[Conceptual.Types.ViewInfo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source1.vb#1)]  
   
 ## <a name="memberinfo-methodinfo-fieldinfo-and-propertyinfo"></a>MemberInfo, MethodInfo, FieldInfo i PropertyInfo  
- Uzyskaj informacje na temat metod, właściwości, zdarzeń i pól typu, przy użyciu <xref:System.Reflection.MemberInfo>obiektów <xref:System.Reflection.MethodInfo>, <xref:System.Reflection.FieldInfo>,, <xref:System.Reflection.PropertyInfo> lub.  
+ Uzyskaj informacje na temat metod, właściwości, zdarzeń i pól typu, przy użyciu <xref:System.Reflection.MemberInfo> obiektów,, <xref:System.Reflection.MethodInfo> <xref:System.Reflection.FieldInfo> , lub <xref:System.Reflection.PropertyInfo> .  
   
  Poniższy przykład używa **MemberInfo** , aby wyświetlić listę elementów członkowskich w klasie **System. IO. File** i używa <xref:System.Type.IsPublic%2A> właściwości, aby określić widoczność klasy.  
   
@@ -66,13 +67,13 @@ ms.locfileid: "73130016"
  [!code-csharp[Conceptual.Types.ViewInfo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source3.cs#3)]
  [!code-vb[Conceptual.Types.ViewInfo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source3.vb#3)]  
   
- W poniższym przykładzie są wykorzystywane wszystkie klasy ** \*informacji** odbicia wraz <xref:System.Reflection.BindingFlags> z programem, aby wyświetlić listę wszystkich członków (konstruktorów, pól, właściwości, zdarzeń i metod) określonej klasy, dzieląc elementy członkowskie na kategorie statyczne i wystąpienia.  
+ W poniższym przykładzie są wykorzystywane wszystkie klasy ** \* informacji** odbicia wraz z programem <xref:System.Reflection.BindingFlags> , aby wyświetlić listę wszystkich członków (konstruktorów, pól, właściwości, zdarzeń i metod) określonej klasy, dzieląc elementy członkowskie na kategorie statyczne i wystąpienia.  
   
  [!code-cpp[Conceptual.Types.ViewInfo#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source4.cpp#4)]
  [!code-csharp[Conceptual.Types.ViewInfo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source4.cs#4)]
  [!code-vb[Conceptual.Types.ViewInfo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source4.vb#4)]  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Reflection.BindingFlags>
 - <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>

@@ -1,16 +1,17 @@
 ---
 title: Niejawnie wpisane zmienne lokalne — Przewodnik programowania w języku C#
+description: Słowo kluczowe var w języku C# instruuje kompilator do wywnioskowania typu zmiennej z wyrażenia po prawej stronie instrukcji inicjującej.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 842f73b7af9671157495df961f5db22702ae897e
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 6badb8588dedda80227ab38bee027cf2890c8672
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240710"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864218"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Niejawnie wpisane zmienne lokalne (Przewodnik programowania w języku C#)
 
@@ -90,14 +91,14 @@ Może się okazać, że `var` może być również przydatne w przypadku wyraże
 
 Korzystanie z programu `var` ułatwia uproszczenie kodu, ale jego użycie powinno być ograniczone do przypadków, w których jest wymagane, lub gdy ułatwia odczytywanie kodu. Aby uzyskać więcej informacji o tym, kiedy należy `var` prawidłowo używać, zobacz sekcję [niejawnie wpisane zmienne lokalne](../inside-a-program/coding-conventions.md#implicitly-typed-local-variables) w artykule wytyczne dotyczące kodowania w języku C#.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Odwołanie w C#](../../language-reference/index.md)
 - [Niejawnie wpisane tablice](../arrays/implicitly-typed-arrays.md)
 - [Porada: użycie niejawnie wpisanych zmiennych lokalnych i tablic w wyrażeniu zapytania](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
 - [Typy anonimowe](anonymous-types.md)
 - [Inicjatory obiektów i kolekcji](object-and-collection-initializers.md)
-- [funkcję](../../language-reference/keywords/var.md)
+- [var](../../language-reference/keywords/var.md)
 - [LINQ w C#](../../linq/index.md)
 - [LINQ (zapytanie zintegrowane z językiem)](../../linq/index.md)
 - [dla](../../language-reference/keywords/for.md)

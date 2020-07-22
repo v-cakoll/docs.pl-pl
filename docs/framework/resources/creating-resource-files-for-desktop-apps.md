@@ -1,5 +1,6 @@
 ---
 title: Tworzenie plików zasobów dla aplikacji .NET
+description: Utwórz pliki zasobów dla aplikacji .NET. Twórz pliki tekstowe z użyciem zasobów ciągów, plików XML lub obiektów binarnych programowo lub plików XML, których dane są ciągami, obrazami lub obiektami.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,24 +11,24 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-ms.openlocfilehash: b679539be1aeb593124eb35a235bcc578decb4c0
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 4730a14e499c75176d7ba7c8378626070d5211e9
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111780"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865180"
 ---
 # <a name="create-resource-files-for-net-apps"></a>Tworzenie plików zasobów dla aplikacji .NET
 
 Zasoby, takie jak ciągi, obrazy lub dane obiektów, można uwzględnić w plikach zasobów, aby były one łatwo dostępne dla aplikacji. .NET Framework oferuje pięć metod tworzenia plików zasobów:
 
-- Utwórz plik tekstowy, który zawiera zasoby ciągu. Przy użyciu [generatora plików zasobów (Resgen. exe)](../tools/resgen-exe-resource-file-generator.md) można skonwertować plik tekstowy do pliku zasobów binarnych (Resources). Następnie można osadzić plik zasobów binarnych w pliku wykonywalnym aplikacji lub bibliotece aplikacji przy użyciu kompilatora języka lub osadzić go w zestawie satelitarnym za pomocą [konsolidatora zestawu (Al. exe)](../tools/al-exe-assembly-linker.md). Aby uzyskać więcej informacji, zobacz sekcję [zasoby w plikach tekstowych](creating-resource-files-for-desktop-apps.md#TextFiles) .
+- Utwórz plik tekstowy, który zawiera zasoby ciągu. Przy użyciu [generatora plików zasobów (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) można skonwertować plik tekstowy do pliku zasobów binarnych (Resources). Następnie można osadzić plik zasobów binarnych w pliku wykonywalnym aplikacji lub bibliotece aplikacji przy użyciu kompilatora języka lub osadzić go w zestawie satelitarnym za pomocą [konsolidatora zestawu (Al.exe)](../tools/al-exe-assembly-linker.md). Aby uzyskać więcej informacji, zobacz sekcję [zasoby w plikach tekstowych](creating-resource-files-for-desktop-apps.md#TextFiles) .
 
-- Utwórz plik zasobów XML (resx), który zawiera ciąg, obraz lub dane obiektu. Przy użyciu [generatora plików zasobów (Resgen. exe)](../tools/resgen-exe-resource-file-generator.md) można skonwertować plik resx do pliku zasobów binarnych (Resources). Następnie można osadzić plik zasobów binarnych w pliku wykonywalnym aplikacji lub bibliotece aplikacji przy użyciu kompilatora języka lub osadzić go w zestawie satelitarnym za pomocą [konsolidatora zestawu (Al. exe)](../tools/al-exe-assembly-linker.md). Aby uzyskać więcej informacji, zobacz sekcję [zasoby w plikach resx](creating-resource-files-for-desktop-apps.md#ResxFiles) .
+- Utwórz plik zasobów XML (resx), który zawiera ciąg, obraz lub dane obiektu. Przy użyciu [generatora plików zasobów (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) można skonwertować plik resx do pliku zasobów binarnych (Resources). Następnie można osadzić plik zasobów binarnych w pliku wykonywalnym aplikacji lub bibliotece aplikacji przy użyciu kompilatora języka lub osadzić go w zestawie satelitarnym za pomocą [konsolidatora zestawu (Al.exe)](../tools/al-exe-assembly-linker.md). Aby uzyskać więcej informacji, zobacz sekcję [zasoby w plikach resx](creating-resource-files-for-desktop-apps.md#ResxFiles) .
 
 - Utwórz programowo plik zasobów XML (resx) przy użyciu typów w <xref:System.Resources> przestrzeni nazw. Można utworzyć plik resx, wyliczyć jego zasoby i pobrać określone zasoby według nazwy. Aby uzyskać więcej informacji, zobacz [Praca z plikami resx programowo](working-with-resx-files-programmatically.md).
 
-- Utwórz programowo plik zasobów binarnych (Resources). Następnie można osadzić plik w pliku wykonywalnym aplikacji lub bibliotece aplikacji przy użyciu kompilatora języka lub osadzić go w zestawie satelitarnym za pomocą [konsolidatora zestawu (Al. exe)](../tools/al-exe-assembly-linker.md). Aby uzyskać więcej informacji, zobacz sekcję [Resources in. resources Files](creating-resource-files-for-desktop-apps.md#ResourcesFiles) .
+- Utwórz programowo plik zasobów binarnych (Resources). Następnie można osadzić plik w pliku wykonywalnym aplikacji lub bibliotece aplikacji przy użyciu kompilatora języka lub osadzić go w zestawie satelickim za pomocą [konsolidatora zestawu (Al.exe)](../tools/al-exe-assembly-linker.md). Aby uzyskać więcej informacji, zobacz sekcję [Resources in. resources Files](creating-resource-files-for-desktop-apps.md#ResourcesFiles) .
 
 - Użyj [programu Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) , aby utworzyć plik zasobów i uwzględnić go w projekcie. Program Visual Studio udostępnia Edytor zasobów, który pozwala dodawać, usuwać i modyfikować zasoby. W czasie kompilacji plik zasobów jest automatycznie konwertowany na plik binarny. resources i osadzony w zestawie aplikacji lub w zestawie satelickim. Aby uzyskać więcej informacji, zobacz sekcję [pliki zasobów w programie Visual Studio](creating-resource-files-for-desktop-apps.md#VSResFiles) .
 
@@ -58,7 +59,7 @@ name2=value2
 
  Format pliku zasobów. txt i. restext jest identyczny. Rozszerzenie pliku. restext służy tylko do wprowadzania plików tekstowych, które mają być bezpośrednio identyfikowane jako pliki zasobów tekstowych.
 
- Zasoby ciągów są wyświetlane jako pary *nazwa/wartość* , gdzie *name* jest ciągiem, który identyfikuje zasób, a *wartość* to ciąg zasobu, który jest zwracany w przypadku przekazania *nazwy* do metody pobierania zasobu, takiej jak <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>. *Nazwa* i *wartość* muszą być rozdzielone znakiem równości (=). Przykład:
+ Zasoby ciągów są wyświetlane jako pary *nazwa/wartość* , gdzie *name* jest ciągiem, który identyfikuje zasób, a *wartość* to ciąg zasobu, który jest zwracany w przypadku przekazania *nazwy* do metody pobierania zasobu, takiej jak <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> . *Nazwa* i *wartość* muszą być rozdzielone znakiem równości (=). Na przykład:
 
 ```text
 FileMenuName=File
@@ -70,19 +71,19 @@ HelpMenuName=Help
 > [!CAUTION]
 > Nie należy używać plików zasobów do przechowywania haseł, informacji o zabezpieczeniach ani danych prywatnych.
 
- Puste ciągi (czyli zasób, którego wartość jest <xref:System.String.Empty?displayProperty=nameWithType>) są dozwolone w plikach tekstowych. Przykład:
+ Puste ciągi (czyli zasób, którego wartość jest <xref:System.String.Empty?displayProperty=nameWithType> ) są dozwolone w plikach tekstowych. Na przykład:
 
 ```text
 EmptyString=
 ```
 
- Począwszy od .NET Framework 4,5 i we wszystkich wersjach programu .NET Core, pliki tekstowe obsługują kompilację warunkową `#ifdef`z *symbolem*... `#endif` i `#if !` *symbol*... `#endif` konstrukcje. Następnie można użyć `/define` przełącznika z [generatorem plików zasobów (Resgen. exe)](../tools/resgen-exe-resource-file-generator.md) do definiowania symboli. Każdy zasób wymaga własnego `#ifdef` *symbolu*... `#endif` lub `#if !` *symbol*... `#endif` konstrukcja. Jeśli używasz `#ifdef` instrukcji i *symbol* jest zdefiniowany, skojarzony zasób zostanie uwzględniony w pliku Resources. w przeciwnym razie nie jest uwzględniony. Jeśli używasz `#if !` instrukcji i *symbol* nie jest zdefiniowany, skojarzony zasób zostanie uwzględniony w pliku Resources. w przeciwnym razie nie jest uwzględniony.
+ Począwszy od .NET Framework 4,5 i we wszystkich wersjach programu .NET Core pliki tekstowe obsługują kompilację warunkową z `#ifdef` *symbolem*... `#endif` i `#if !` *symbolem*... `#endif` konstrukcje. Następnie można użyć `/define` przełącznika z [generatorem plików zasobów (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) do definiowania symboli. Każdy zasób wymaga własnego `#ifdef` *symbolu*... `#endif` lub `#if !` *symbolu*... `#endif` konstrukcja. Jeśli używasz `#ifdef` instrukcji i *symbol* jest zdefiniowany, skojarzony zasób zostanie uwzględniony w pliku Resources; w przeciwnym razie nie jest uwzględniony. Jeśli używasz `#if !` instrukcji i *symbol* nie jest zdefiniowany, skojarzony zasób zostanie uwzględniony w pliku Resources; w przeciwnym razie nie jest uwzględniony.
 
- Komentarze są opcjonalne w plikach tekstowych i poprzedzane średnikami (;) lub znakiem krzyżyka (#) na początku wiersza. Wiersze zawierające Komentarze można umieścić w dowolnym miejscu w pliku. Komentarze nie są uwzględniane w skompilowanym pliku Resources, który jest tworzony przy użyciu [generatora plików zasobów (Resgen. exe)](../tools/resgen-exe-resource-file-generator.md).
+ Komentarze są opcjonalne w plikach tekstowych i poprzedzane średnikami (;) lub znakiem krzyżyka (#) na początku wiersza. Wiersze zawierające Komentarze można umieścić w dowolnym miejscu w pliku. Komentarze nie są uwzględniane w skompilowanym pliku Resources, który jest tworzony przy użyciu [generatora plików zasobów (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md).
 
  Wszystkie puste wiersze w plikach tekstowych są uważane za białe znaki i są ignorowane.
 
- W poniższym przykładzie zdefiniowano dwa zasoby ciągu `OKButton` o `CancelButton`nazwie i.
+ W poniższym przykładzie zdefiniowano dwa zasoby ciągu o nazwie `OKButton` i `CancelButton` .
 
 ```text
 #Define resources for buttons in the user interface.
@@ -90,15 +91,15 @@ OKButton=OK
 CancelButton=Cancel
 ```
 
- Jeśli plik tekstowy zawiera zduplikowane wystąpienia *nazwy*, [Generator plików zasobów (Resgen. exe)](../tools/resgen-exe-resource-file-generator.md) wyświetla ostrzeżenie i ignoruje drugą nazwę.
+ Jeśli plik tekstowy zawiera zduplikowane wystąpienia *nazwy*, [Generator plików zasobów (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) wyświetla ostrzeżenie i ignoruje drugą nazwę.
 
- *wartość* nie może zawierać znaków nowego wiersza, ale można użyć znaków ucieczki w stylu języka C, `\n` takich jak do reprezentowania nowego wiersza `\t` i reprezentowania karty. Możesz również uwzględnić znak ukośnika odwrotnego, jeśli zostanie on zmieniony (na przykład "\\\\"). Ponadto dozwolony jest pusty ciąg.
+ *wartość* nie może zawierać znaków nowego wiersza, ale można użyć znaków ucieczki w stylu języka C, takich jak `\n` do reprezentowania nowego wiersza i `\t` reprezentowania karty. Możesz również uwzględnić znak ukośnika odwrotnego, jeśli zostanie on zmieniony (na przykład " \\ \\ "). Ponadto dozwolony jest pusty ciąg.
 
- Zapisz zasoby w formacie pliku tekstowego przy użyciu kodowania UTF-8 lub kodowania UTF-16 w kolejności bajtów little-endian lub big-endian. Jednak [Generator plików zasobów (Resgen. exe)](../tools/resgen-exe-resource-file-generator.md), który konwertuje plik txt na plik resources, domyślnie traktuje pliki jako UTF-8. Jeśli chcesz, aby program Resgen. exe rozpoznał plik, który został zakodowany przy użyciu kodowania UTF-16, musisz dołączyć znak kolejności bajtów Unicode (U + FEFF) na początku pliku.
+ Zapisz zasoby w formacie pliku tekstowego przy użyciu kodowania UTF-8 lub kodowania UTF-16 w kolejności bajtów little-endian lub big-endian. Jednak [Generator plików zasobów (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md), który konwertuje plik txt na plik resources, domyślnie traktuje pliki jako UTF-8. Jeśli chcesz, aby Resgen.exe rozpoznać plik, który został zakodowany przy użyciu kodowania UTF-16, musisz dołączyć znak kolejności bajtów Unicode (U + FEFF) na początku pliku.
 
- Aby osadzić plik zasobów w formacie tekstowym w zestawie .NET, należy przekonwertować plik do pliku zasobów binarnych (. resources) przy użyciu [generatora plików zasobów (Resgen. exe)](../tools/resgen-exe-resource-file-generator.md). Następnie można osadzić plik resources w zestawie .NET przy użyciu kompilatora języka lub osadzić go w zestawie satelitarnym za pomocą [konsolidatora zestawu (Al. exe)](../tools/al-exe-assembly-linker.md).
+ Aby osadzić plik zasobów w formacie tekstowym w zestawie .NET, należy przekonwertować plik do pliku zasobów binarnych (. resources) przy użyciu [generatora plików zasobów (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md). Następnie można osadzić plik resources w zestawie .NET przy użyciu kompilatora języka lub osadzić go w zestawie satelickim za pomocą [konsolidatora zestawu (Al.exe)](../tools/al-exe-assembly-linker.md).
 
- Poniższy przykład używa pliku zasobu w formacie tekstowym o nazwie GreetingResources. txt dla prostej aplikacji konsolowej "Hello world". Plik tekstowy definiuje dwa ciągi `prompt` i `greeting`, który monituje użytkownika o wprowadzenie jego nazwy i wyświetlenie powitania.
+ Poniższy przykład używa pliku zasobu w formacie tekstowym o nazwie GreetingResources.txt dla prostej aplikacji konsolowej "Hello world". Plik tekstowy definiuje dwa ciągi `prompt` i `greeting` , który monituje użytkownika o wprowadzenie jego nazwy i wyświetlenie powitania.
 
 ```text
 # GreetingResources.txt
@@ -135,9 +136,9 @@ csc greeting.cs -resource:GreetingResources.resources
 
 <a name="ResxFiles"></a>
 ## <a name="resources-in-resx-files"></a>Zasoby w plikach resx
- W przeciwieństwie do plików tekstowych, które mogą przechowywać tylko zasoby ciągów, pliki zasobów XML (. resx) mogą przechowywać ciągi, dane binarne, takie jak obrazy, ikony i klipy audio i obiekty programistyczne. Plik. resx zawiera standardowy nagłówek, który opisuje format wpisów zasobów i określa informacje o wersji dla pliku XML, który jest używany do analizy danych. Dane pliku zasobu są zgodne z nagłówkiem XML. Każdy element danych składa się z pary nazwa/wartość, które znajdują `data` się w tagu. Jego `name` atrybut definiuje nazwę zasobu, a zagnieżdżony `value` tag zawiera wartość zasobu. W przypadku danych ciągu `value` tag zawiera ciąg.
+ W przeciwieństwie do plików tekstowych, które mogą przechowywać tylko zasoby ciągów, pliki zasobów XML (. resx) mogą przechowywać ciągi, dane binarne, takie jak obrazy, ikony i klipy audio i obiekty programistyczne. Plik. resx zawiera standardowy nagłówek, który opisuje format wpisów zasobów i określa informacje o wersji dla pliku XML, który jest używany do analizy danych. Dane pliku zasobu są zgodne z nagłówkiem XML. Każdy element danych składa się z pary nazwa/wartość, które znajdują się w `data` tagu. Jego `name` atrybut definiuje nazwę zasobu, a zagnieżdżony `value` tag zawiera wartość zasobu. W przypadku danych ciągu `value` tag zawiera ciąg.
 
- Na przykład następujący `data` tag definiuje zasób ciągu o nazwie `prompt` , którego wartość to "Wprowadź nazwę:".
+ Na przykład następujący `data` tag definiuje zasób ciągu o nazwie, `prompt` którego wartość to "Wprowadź nazwę:".
 
 ```xml
 <data name="prompt" xml:space="preserve">
@@ -148,7 +149,7 @@ csc greeting.cs -resource:GreetingResources.resources
 > [!WARNING]
 > Nie należy używać plików zasobów do przechowywania haseł, informacji o zabezpieczeniach ani danych prywatnych.
 
- W przypadku obiektów zasobów tag **danych** zawiera `type` atrybut wskazujący typ danych zasobu. W przypadku obiektów, które składają się z danych `data` binarnych, tag `mimetype` zawiera również atrybut, który `base64` wskazuje typ danych binarnych.
+ W przypadku obiektów zasobów tag **danych** zawiera `type` atrybut wskazujący typ danych zasobu. W przypadku obiektów, które składają się z danych binarnych, `data` tag zawiera również `mimetype` atrybut, który wskazuje `base64` Typ danych binarnych.
 
 > [!NOTE]
 > Wszystkie pliki RESX używają binarnego programu formatującego serializacji, aby generować i analizować dane binarne dla określonego typu. W związku z tym plik resx może stać się nieprawidłowy, jeśli format serializacji binarnej obiektu zmienia się w niezgodny sposób.
@@ -175,9 +176,9 @@ csc greeting.cs -resource:GreetingResources.resources
 <a name="ResourcesFiles"></a>
 ## <a name="resources-in-resources-files"></a>Zasoby w plikach. resources
 
-Można użyć <xref:System.Resources.ResourceWriter?displayProperty=nameWithType> klasy do programistycznego tworzenia pliku zasobów binarnych (Resources) bezpośrednio w kodzie. Można również użyć [generatora plików zasobów (Resgen. exe)](../tools/resgen-exe-resource-file-generator.md) , aby utworzyć plik resources z pliku tekstowego lub resx. Plik resources może zawierać dane binarne (tablice bajtowe) i dane obiektu oprócz danych ciągu. Programowe tworzenie pliku resources wymaga wykonania następujących czynności:
+Można użyć <xref:System.Resources.ResourceWriter?displayProperty=nameWithType> klasy do programistycznego tworzenia pliku zasobów binarnych (Resources) bezpośrednio w kodzie. Przy użyciu [generatora plików zasobów (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) można również utworzyć plik resources z pliku tekstowego lub pliku resx. Plik resources może zawierać dane binarne (tablice bajtowe) i dane obiektu oprócz danych ciągu. Programowe tworzenie pliku resources wymaga wykonania następujących czynności:
 
-1. Utwórz <xref:System.Resources.ResourceWriter> obiekt z unikatową nazwą pliku. Można to zrobić, określając nazwę pliku lub strumień pliku do konstruktora <xref:System.Resources.ResourceWriter> klasy.
+1. Utwórz <xref:System.Resources.ResourceWriter> obiekt z unikatową nazwą pliku. Można to zrobić, określając nazwę pliku lub strumień pliku do <xref:System.Resources.ResourceWriter> konstruktora klasy.
 
 2. Wywołaj jedno z przeciążeń <xref:System.Resources.ResourceWriter.AddResource%2A?displayProperty=nameWithType> metody dla każdego nazwanego zasobu, aby dodać je do pliku. Zasób może być ciągiem, obiektem lub kolekcją danych binarnych (tablicą bajtową).
 
@@ -186,12 +187,12 @@ Można użyć <xref:System.Resources.ResourceWriter?displayProperty=nameWithType
 > [!NOTE]
 > Nie należy używać plików zasobów do przechowywania haseł, informacji o zabezpieczeniach ani danych prywatnych.
 
- Poniższy przykład programowo tworzy plik resources o nazwie CarResources. resources, który przechowuje sześć ciągów, ikonę i dwa obiekty zdefiniowane przez aplikację ( `Automobile` dwa obiekty). `Automobile` Klasa, która jest zdefiniowana i tworzona w przykładzie, jest oznaczona przy użyciu <xref:System.SerializableAttribute> atrybutu, co umożliwia jego utrwalanie przez program formatujący serializacji binarnej.
+ Poniższy przykład programowo tworzy plik resources o nazwie CarResources. resources, który przechowuje sześć ciągów, ikonę i dwa obiekty zdefiniowane przez aplikację (dwa `Automobile` obiekty). `Automobile`Klasa, która jest zdefiniowana i tworzona w przykładzie, jest oznaczona przy użyciu <xref:System.SerializableAttribute> atrybutu, co umożliwia jego utrwalanie przez program formatujący serializacji binarnej.
 
  [!code-csharp[Conceptual.Resources.Resources#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resources/cs/resources1.cs#1)]
  [!code-vb[Conceptual.Resources.Resources#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resources/vb/resources1.vb#1)]
 
- Po utworzeniu pliku Resources można go osadzić w pliku wykonywalnym lub bibliotece w czasie wykonywania, dołączając `/resource` przełącznik kompilatora języka lub osadzić go w zestawie satelitarnym za pomocą [konsolidatora zestawu (Al. exe)](../tools/al-exe-assembly-linker.md).
+ Po utworzeniu pliku Resources można go osadzić w pliku wykonywalnym lub bibliotece środowiska uruchomieniowego, dołączając przełącznik kompilatora języka `/resource` lub osadzić go w zestawie satelitarnym za pomocą [konsolidatora zestawu (Al.exe)](../tools/al-exe-assembly-linker.md).
 
 <a name="VSResFiles"></a>
 ## <a name="resource-files-in-visual-studio"></a>Pliki zasobów w programie Visual Studio
@@ -202,7 +203,7 @@ W przypadku dodawania zlokalizowanych zasobów nadaj im taką samą nazwę pliku
 
 W czasie kompilacji program Visual Studio najpierw konwertuje pliki resx w projekcie na pliki zasobów binarnych (. resources) i zapisuje je w podkatalogu katalogu *obj* projektu. Program Visual Studio osadza wszystkie pliki zasobów, które nie zawierają zlokalizowanych zasobów w zestawie głównym, który jest generowany przez ten projekt. Jeśli jakiekolwiek pliki zasobów zawierają zlokalizowane zasoby, program Visual Studio osadzi je w oddzielnych zestawach satelickich dla każdej zlokalizowanej kultury. Następnie przechowuje każdy zestaw satelicki w katalogu, którego nazwa odpowiada zlokalizowanej kulturze. Na przykład zlokalizowane zasoby w języku angielskim (Stany Zjednoczone) są przechowywane w zestawie satelity w podkatalogu en-US.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Resources>
 - [Zasoby w aplikacjach klasycznych](index.md)

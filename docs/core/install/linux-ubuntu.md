@@ -4,12 +4,12 @@ description: Ilustruje różne sposoby instalowania zestaw .NET Core SDK i środ
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: ed4f5b914d03cfb072ee4ba168c67262e0d40c08
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: c590bd89b718a5cd31dae9f83049eac910cb4049
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619432"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863894"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-ubuntu"></a>Zainstaluj zestaw .NET Core SDK lub środowisko uruchomieniowe platformy .NET Core w systemie Ubuntu
 
@@ -30,7 +30,7 @@ Poniższa tabela zawiera listę obecnie obsługiwanych wersji programu .NET Core
 | Ubuntu                   | .NET Core 2.1 | .NET Core 3,1 | .NET 5 (wersja zapoznawcza) (tylko instalacja ręczna) |
 |--------------------------|---------------|---------------|----------------|
 | ✔️ [20,04 (LTS)](#2004-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 — wersja zapoznawcza |
-| ✔️ [19,10](#1910-)       | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 — wersja zapoznawcza |
+| ❌[19,10](#1910-)       | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 — wersja zapoznawcza |
 | ❌[19,04](#1904-)       | ✔️ 2,1        | ✔️ 3,1        | ❌wersja zapoznawcza 5,0 |
 | ❌[18,10](#1810-)       | ✔️ 2,1        | ❌3,1        | ❌wersja zapoznawcza 5,0 |
 | ✔️ [18,04 (LTS)](#1804-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 — wersja zapoznawcza |
@@ -43,7 +43,7 @@ Następujące wersje programu .NET Core nie są już obsługiwane. Pliki do pobr
 
 - 3.0
 - 2.2
-- 2.0
+- 2,0
 
 ## <a name="how-to-install-other-versions"></a>Jak zainstalować inne wersje
 
@@ -60,7 +60,9 @@ sudo dpkg -i packages-microsoft-prod.deb
 
 [!INCLUDE [linux-apt-install-31](includes/linux-install-31-apt.md)]
 
-## <a name="1910-"></a>19,10 ✔️
+## <a name="1910-"></a>19,10❌
+
+[!INCLUDE [linux-not-supported](includes/linux-not-supported-ubuntu.md)]
 
 [!INCLUDE [linux-prep-intro-apt](includes/linux-prep-intro-apt.md)]
 

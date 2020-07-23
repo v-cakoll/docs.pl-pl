@@ -1,13 +1,14 @@
 ---
 title: Asynchroniczne typy zwracane (C#)
+description: Dowiedz się więcej na temat typów zwracanych, które metody asynchroniczne mogą znajdować się w języku C# z przykładami kodu dla każdego typu i dodatkowych zasobów.
 ms.date: 04/14/2020
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: c2584f1e285a7ab76eb43f9a211a8d2a51c2c55e
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 954e449356819595a3a974a6dece5349e53ec88a
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761879"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925387"
 ---
 # <a name="async-return-types-c"></a>Asynchroniczne typy zwracane (C#)
 
@@ -21,7 +22,7 @@ Metody asynchroniczne mogą mieć następujące typy zwracane:
 
 Aby uzyskać więcej informacji na temat metod asynchronicznych, zobacz [programowanie asynchroniczne z Async i Await (C#)](./index.md).  
   
-## <a name="tasktresult-return-type"></a>\< \> Typ zwracany TResult zadania  
+## <a name="tasktresult-return-type"></a>\<TResult\>Typ zwracany zadania  
 <xref:System.Threading.Tasks.Task%601>Typ zwracany jest używany dla metody asynchronicznej, która zawiera instrukcję [Return](../../../language-reference/keywords/return.md) (C#), w której operandem jest `TResult` .  
   
 W poniższym przykładzie `GetLeisureHours` Metoda async zawiera `return` instrukcję zwracającą liczbę całkowitą. W związku z tym Deklaracja metody musi określać zwracany typ `Task<int>` .  <xref:System.Threading.Tasks.Task.FromResult%2A>Metoda async jest symbolem zastępczym dla operacji zwracającej ciąg.
@@ -64,7 +65,7 @@ W poniższym przykładzie pokazano zachowanie programu obsługi zdarzeń asynchr
 
 :::code language="csharp" source="./snippets/async-return-types/async-returns3.cs":::
 
-## <a name="generalized-async-return-types-and-valuetasktresult"></a>Uogólnione asynchroniczne typy zwracane i ValueTask \< TResult\>
+## <a name="generalized-async-return-types-and-valuetasktresult"></a>Uogólnione asynchroniczne typy zwracane i ValueTask\<TResult\>
 
 Począwszy od języka C# 7,0, Metoda asynchroniczna może zwracać dowolny typ, który ma dostępną `GetAwaiter` metodę.
 
@@ -74,7 +75,7 @@ Platforma .NET udostępnia <xref:System.Threading.Tasks.ValueTask%601?displayPro
   
 :::code language="csharp" source="./snippets/async-return-types/async-valuetask.cs":::
 
-## <a name="async-streams-with-iasyncenumerablet"></a>Strumienie asynchroniczne z IAsyncEnumerable \< T\>
+## <a name="async-streams-with-iasyncenumerablet"></a>Strumienie asynchroniczne z IAsyncEnumerable\<T\>
 
 Począwszy od języka C# 8,0, Metoda asynchroniczna może zwracać *strumień asynchroniczny*reprezentowany przez <xref:System.Collections.Generic.IAsyncEnumerable%601> . Strumień asynchroniczny umożliwia Wyliczenie elementów odczytanych ze strumienia, gdy elementy są generowane w fragmentach z powtarzalnymi wywołaniami asynchronicznymi. Poniższy przykład przedstawia metodę asynchroniczną generującą strumień asynchroniczny:
 
@@ -82,7 +83,7 @@ Począwszy od języka C# 8,0, Metoda asynchroniczna może zwracać *strumień as
 
 Poprzedni przykład odczytuje wiersze z ciągu asynchronicznie. Po odczytaniu każdego wiersza kod wylicza każdy wyraz w ciągu. Obiekty wywołujące spowodują Wyliczenie każdego wyrazu przy użyciu `await foreach` instrukcji. Metoda oczekuje, gdy musi asynchronicznie odczytać następny wiersz z ciągu źródłowego.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
 - [Przewodnik: uzyskiwanie dostępu do sieci Web za pomocą Async i Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)

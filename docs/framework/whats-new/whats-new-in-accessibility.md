@@ -1,5 +1,6 @@
 ---
 title: Co nowego w ułatwieniach dostępu w .NET Framework
+description: Zobacz, co nowego w programie .NET Accessibility, począwszy od .NET Framework 4.7.1. Funkcje ułatwień dostępu pozwalają aplikacji zapewnić odpowiednie środowisko dla użytkowników technologii pomocniczej.
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 8a85614e441ba6e5782cbbbf5fe12432c053a101
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 593591ca340cc130a3a6d1daa015a849b8eca0f8
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244156"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925842"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Co nowego w ułatwieniach dostępu w .NET Framework
 
@@ -472,11 +473,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 **High contrast** (Wysoki kontrast)
 
-Począwszy od .NET Framework 4.7.1, wprowadzono ulepszenia w różnych kontrolkach WPF. Są one teraz widoczne po <xref:System.Windows.SystemParameters.HighContrast%2A> ustawieniu motywu. Należą do nich następujące elementy:
+Począwszy od .NET Framework 4.7.1, wprowadzono ulepszenia w różnych kontrolkach WPF. Są one teraz widoczne po <xref:System.Windows.SystemParameters.HighContrast%2A> ustawieniu motywu. Należą do nich:
 
 - <xref:System.Windows.Controls.Expander>kontroli
 
-  Wizualizacja fokusu dla <xref:System.Windows.Controls.Expander> kontrolki jest teraz widoczna. Wizualizacje klawiatury dla <xref:System.Windows.Controls.ComboBox> , <xref:System.Windows.Controls.ListBox> i <xref:System.Windows.Controls.RadioButton> kontrolki są również widoczne. Przykład:
+  Wizualizacja fokusu dla <xref:System.Windows.Controls.Expander> kontrolki jest teraz widoczna. Wizualizacje klawiatury dla <xref:System.Windows.Controls.ComboBox> , <xref:System.Windows.Controls.ListBox> i <xref:System.Windows.Controls.RadioButton> kontrolki są również widoczne. Na przykład:
 
   Przed:
 
@@ -488,7 +489,7 @@ Począwszy od .NET Framework 4.7.1, wprowadzono ulepszenia w różnych kontrolka
 
 - <xref:System.Windows.Controls.CheckBox>i <xref:System.Windows.Controls.RadioButton> kontrolki
 
-  Tekst w <xref:System.Windows.Controls.CheckBox> <xref:System.Windows.Controls.RadioButton> kontrolkach i jest teraz łatwiejszy do sprawdzenia, gdy wybrane są motywy o dużym kontraście. Przykład:
+  Tekst w <xref:System.Windows.Controls.CheckBox> <xref:System.Windows.Controls.RadioButton> kontrolkach i jest teraz łatwiejszy do sprawdzenia, gdy wybrane są motywy o dużym kontraście. Na przykład:
 
   Przed:
 
@@ -500,7 +501,7 @@ Począwszy od .NET Framework 4.7.1, wprowadzono ulepszenia w różnych kontrolka
 
 - <xref:System.Windows.Controls.ComboBox>kontroli
 
-  Począwszy od .NET Framework 4.7.1, obramowanie wyłączonej <xref:System.Windows.Controls.ComboBox> kontrolki ma taki sam kolor jak wyłączony tekst. Przykład:
+  Począwszy od .NET Framework 4.7.1, obramowanie wyłączonej <xref:System.Windows.Controls.ComboBox> kontrolki ma taki sam kolor jak wyłączony tekst. Na przykład:
 
   Przed:
 
@@ -520,7 +521,7 @@ Począwszy od .NET Framework 4.7.1, wprowadzono ulepszenia w różnych kontrolka
 
   ![Zrzut ekranu przedstawiający niebieski przycisk z czarnym tekstem, który mówi mnie.](./media/whats-new-in-accessibility/button-theme-colors-after.png)
 
-  Na koniec, w .NET Framework 4,7 i wcześniejszych wersjach, ustawienie <xref:System.Windows.Controls.ComboBox> stylu kontrolki tak, aby `Toolbar.ComboBoxStyleKey` powodowała, że strzałka listy rozwijanej ma być niewidoczna. Ten problem został rozwiązany, rozpoczynając od .NET Framework 4.7.1. Przykład:
+  Na koniec, w .NET Framework 4,7 i wcześniejszych wersjach, ustawienie <xref:System.Windows.Controls.ComboBox> stylu kontrolki tak, aby `Toolbar.ComboBoxStyleKey` powodowała, że strzałka listy rozwijanej ma być niewidoczna. Ten problem został rozwiązany, rozpoczynając od .NET Framework 4.7.1. Na przykład:
 
   Przed:
 
@@ -532,7 +533,7 @@ Począwszy od .NET Framework 4.7.1, wprowadzono ulepszenia w różnych kontrolka
 
 - <xref:System.Windows.Controls.DataGrid>kontroli
 
-  Począwszy od .NET Framework 4.7.1, strzałka sortowania w <xref:System.Windows.Controls.DataGrid> kontrolkach używa teraz poprawnych kolorów motywu. Przykład:
+  Począwszy od .NET Framework 4.7.1, strzałka sortowania w <xref:System.Windows.Controls.DataGrid> kontrolkach używa teraz poprawnych kolorów motywu. Na przykład:
 
   Przed:
 
@@ -577,7 +578,7 @@ Niektóre przykłady zmian wysokiego kontrastu obejmują:
 
 - Tekst w wybranym <xref:System.Windows.Forms.Button> formancie różni się od koloru zaznaczenia.
 
-- Wyłączony tekst jest łatwiejszy do odczytania. Przykład:
+- Wyłączony tekst jest łatwiejszy do odczytania. Na przykład:
 
   Przed:
 
@@ -707,6 +708,6 @@ Zmiany ułatwień dostępu w Projektant przepływu pracy obejmują następujące
 
 - Użytkownicy, którzy wybierają duży kontrast motywy zobaczą wiele ulepszeń w zakresie widoczności Projektant przepływu pracy i jej kontrolek, takich jak lepsze współczynniki kontrastu między elementami i bardziej zauważalne pola wyboru używane do elementów fokusu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Co nowego w .NET Framework](index.md)
+- [Co nowego w programie .NET Framework](index.md)

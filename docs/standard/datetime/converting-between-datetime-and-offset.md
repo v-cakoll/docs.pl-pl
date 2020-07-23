@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Date data type, converting
 - local time conversions
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
-ms.openlocfilehash: cf55db7c22ad2495bdbeb3202fcefb89bae42d69
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 86f2c982d7f87e83102933d1de73d6e13086dc87
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768680"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924906"
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>Konwertowanie pomiędzy DateTime i DateTimeOffset
 
@@ -105,7 +105,7 @@ Można również użyć właściwości, <xref:System.DateTimeOffset.LocalDateTim
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#10](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#10)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#10)]
 
-Po pobraniu <xref:System.DateTime> wartości przy użyciu <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> właściwości `get` metoda dostępu do właściwości najpierw KONWERTUJE <xref:System.DateTimeOffset> wartość na UTC, a następnie konwertuje ją na czas lokalny, wywołując <xref:System.DateTimeOffset.ToLocalTime%2A> metodę. Oznacza to, że można pobrać wartość z właściwości, <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> Aby wykonać konwersję strefy czasowej w tym samym czasie, w którym wykonywana jest konwersja typu. Oznacza to również, że reguły dostosowania lokalnej strefy czasowej są stosowane podczas konwersji. Poniższy kod ilustruje użycie <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> właściwości do wykonania konwersji typu i strefy czasowej.
+Po pobraniu <xref:System.DateTime> wartości przy użyciu <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> właściwości `get` metoda dostępu do właściwości najpierw KONWERTUJE <xref:System.DateTimeOffset> wartość na UTC, a następnie konwertuje ją na czas lokalny, wywołując <xref:System.DateTimeOffset.ToLocalTime%2A> metodę. Oznacza to, że można pobrać wartość z właściwości, <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> Aby wykonać konwersję strefy czasowej w tym samym czasie, w którym wykonywana jest konwersja typu. Oznacza to również, że reguły dostosowania lokalnej strefy czasowej są stosowane podczas konwersji. Poniższy kod ilustruje użycie <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> właściwości do wykonania konwersji typu i strefy czasowej. Przykładowe dane wyjściowe dotyczą komputera ustawionego na strefę czasu pacyficznego (USA i Kanada). Data listopadu to Pacyfik (czas standardowy), który jest UTC-8, a Data w czerwcu to czas UTC-7.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#11](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#11)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#11)]
@@ -128,6 +128,6 @@ Należy zauważyć, że ten kod tworzy dwa założenia, które w zależności od
 
 - Przyjęto założenie, że data i godzina, o której przesunięcie jest równe, dla lokalnej strefy czasowej reprezentuje lokalną strefę czasową. Ponieważ wartości daty i godziny są odłączone od oryginalnej strefy czasowej, może to nie być przypadek; Data i godzina mogą pochodzić z innej strefy czasowej z tym samym przesunięciem.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Daty, godziny i strefy czasowe](index.md)

@@ -1,5 +1,6 @@
 ---
-title: 'Porady: debugowanie aplikacji usług systemu Windows'
+title: 'Instrukcje: Debugowanie aplikacji usług systemu Windows'
+description: Informacje na temat debugowania aplikacji usług systemu Windows, które nie są proste do debugowania jako inne typy aplikacji programu Visual Studio.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging Windows Service applications
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 860f2ae22eb6510dc1f1a454ae3e51ccb366078b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: fb58f2ff4f480347f0f233ecd9a619cf287cfdfd
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053627"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925764"
 ---
-# <a name="how-to-debug-windows-service-applications"></a>Porady: debugowanie aplikacji usług systemu Windows
+# <a name="how-to-debug-windows-service-applications"></a>Instrukcje: Debugowanie aplikacji usług systemu Windows
 Usługa musi być uruchomiona w kontekście menedżera kontroli usług, a nie z poziomu programu Visual Studio. Z tego powodu debugowanie usługi nie jest tak proste jak debugowanie innych typów aplikacji programu Visual Studio. Aby debugować usługę, należy ją uruchomić, a następnie dołączyć debuger do procesu, w którym jest uruchomiony. Następnie można debugować aplikację przy użyciu wszystkich standardowych funkcji debugowania programu Visual Studio.  
   
 > [!CAUTION]
@@ -77,7 +78,7 @@ Usługa musi być uruchomiona w kontekście menedżera kontroli usług, a nie z 
   
 #### <a name="how-to-run-a-windows-service-as-a-console-application"></a>Instrukcje: uruchamianie usługi systemu Windows jako aplikacji konsolowej  
   
-1. Dodaj metodę do usługi, która uruchamia metody <xref:System.ServiceProcess.ServiceBase.OnStart%2A> i: <xref:System.ServiceProcess.ServiceBase.OnStop%2A>  
+1. Dodaj metodę do usługi, która uruchamia <xref:System.ServiceProcess.ServiceBase.OnStart%2A> <xref:System.ServiceProcess.ServiceBase.OnStop%2A> metody i:  
   
     ```csharp  
     internal void TestStartupAndStop(string[] args)  
@@ -113,9 +114,9 @@ Usługa musi być uruchomiona w kontekście menedżera kontroli usług, a nie z 
   
  W niektórych przypadkach, na przykład gdy chcesz debugować problem, który występuje tylko podczas uruchamiania systemu, musisz użyć debugera systemu Windows. [Pobierz zestaw sterowników systemu Windows (WDK)](/windows-hardware/drivers/download-the-wdk) i zobacz, [jak debugować usługi systemu Windows](https://support.microsoft.com/kb/824344).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Wprowadzenie do aplikacji usług systemu Windows](introduction-to-windows-service-applications.md)
-- [Instrukcje: instalowanie i odinstalowywanie usług](how-to-install-and-uninstall-services.md)
-- [Instrukcje: uruchamianie usług](how-to-start-services.md)
+- [Instrukcje: Instalowanie i odinstalowywanie usług](how-to-install-and-uninstall-services.md)
+- [Instrukcje: Uruchamianie usług](how-to-start-services.md)
 - [Debugowanie usługi](/windows/desktop/Services/debugging-a-service)

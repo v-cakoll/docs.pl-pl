@@ -2,12 +2,12 @@
 title: polecenie listy narzędzi dotnet
 description: Polecenie Lista narzędzi dotnet zawiera listę narzędzi .NET Core zainstalowanych na komputerze.
 ms.date: 02/14/2020
-ms.openlocfilehash: 7ca894ab0f5daf0118ff92fb39e0118b952b3d83
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 4035c5be233232e53c6d7150485f737108c1e18d
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768277"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925465"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -37,7 +37,7 @@ dotnet tool list -h|--help
 
 * Aby wyświetlić narzędzia globalne zainstalowane w lokalizacji domyślnej, użyj `--global` opcji
 * Aby wyświetlić narzędzia globalne zainstalowane w niestandardowej lokalizacji, użyj `--tool-path` opcji.
-* Aby wyświetlić listę lokalnych narzędzi, narzędzia lokalnego. Użyj `--local` opcji lub Pomiń `--global` `--tool-path` Opcje,, i `--local` .
+* Aby wyświetlić listę lokalnych narzędzi, użyj `--local` opcji lub Pomiń `--global` Opcje, `--tool-path` i `--local` .
 
 **Narzędzia lokalne są dostępne począwszy od zestaw .NET Core SDK 3,0.**
 
@@ -77,7 +77,7 @@ dotnet tool list -h|--help
 
   Wyświetla listę wszystkich narzędzi lokalnych dostępnych w bieżącym katalogu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Narzędzia .NET Core](global-tools.md)
 - [Samouczek: Instalowanie i używanie narzędzia globalnego platformy .NET Core przy użyciu interfejs wiersza polecenia platformy .NET Core](global-tools-how-to-use.md)

@@ -1,13 +1,14 @@
 ---
 title: Obsługa współużytkowania wątkowości w aplikacjach asynchronicznych (C#)
+description: Dowiedz się, jak obsłużyć współużytkowania wątkowości w aplikacjach asynchronicznych C#, które odwołują się do przeprowadzenia operacji asynchronicznej przed zakończeniem z możliwymi nieoczekiwanymi wynikami.
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: e03e0f6ecd8e74dd8518f84ec03c76c1ef5b9ee6
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: fdd440d167b95268a5ae6de0e57a32f0fad66b7c
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241815"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925244"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Obsługa współużytkowania wątkowości w aplikacjach asynchronicznych (C#)
 
@@ -728,7 +729,7 @@ Poniższa sekcja zawiera kod służący do kompilowania przykładu jako aplikacj
 
 12. Wprowadź zmiany, aby [wyłączyć przycisk Start](#BKMK_DisableTheStartButton), [anulować i ponownie uruchomić operację](#BKMK_CancelAndRestart)albo [uruchomić wiele operacji i kolejkować dane wyjściowe](#BKMK_RunMultipleOperations) , aby obsłużyć współużytkowania wątkowości.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik: uzyskiwanie dostępu do sieci Web za pomocą Async i Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Programowanie asynchroniczne z Async i Await (C#)](./index.md)

@@ -2,12 +2,12 @@
 title: polecenie dotnet restore
 description: Informacje o sposobie przywracania zależności i narzędzi specyficznych dla projektu przy użyciu polecenia dotnet restore.
 ms.date: 02/27/2020
-ms.openlocfilehash: 276fad896a6a8a647ed05a9de8c582d463d9ab8f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 7b456e28505a07c03936c9006c8631848fd4672c
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005323"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925479"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -46,12 +46,12 @@ Czasami może być niewygodne uruchamianie niejawnego przywracania NuGet przy u�
 
 ### <a name="specify-feeds"></a>Określ źródła danych
 
-Aby przywrócić zależności, program NuGet potrzebuje kanałów informacyjnych, w których znajdują się pakiety. Kanały informacyjne są zazwyczaj udostępniane za pośrednictwem pliku konfiguracyjnego *NuGet. config* . Domyślny plik konfiguracji jest dostarczany, gdy zainstalowano zestaw .NET Core SDK. Aby określić dodatkowe źródła danych, wykonaj jedną z następujących czynności:
+Aby przywrócić zależności, program NuGet potrzebuje kanałów informacyjnych, w których znajdują się pakiety. Kanały informacyjne są zazwyczaj udostępniane za pośrednictwem pliku konfiguracji *nuget.config* . Domyślny plik konfiguracji jest dostarczany, gdy zainstalowano zestaw .NET Core SDK. Aby określić dodatkowe źródła danych, wykonaj jedną z następujących czynności:
 
-- Utwórz własny plik *NuGet. config* w katalogu projektu. Aby uzyskać więcej informacji, zobacz [typowe konfiguracje NuGet](/nuget/consume-packages/configuring-nuget-behavior) i [NuGet. config różnice](#nugetconfig-differences) w dalszej części tego artykułu.
+- Utwórz własny plik *nuget.config* w katalogu projektu. Aby uzyskać więcej informacji, zobacz [typowe konfiguracje NuGet](/nuget/consume-packages/configuring-nuget-behavior) i [nuget.config różnice](#nugetconfig-differences) w dalszej części tego artykułu.
 - Użyj `dotnet nuget` poleceń, takich jak [`dotnet nuget add source`](dotnet-nuget-add-source.md) .
 
-Można zastąpić źródła danych *NuGet. config* `-s` opcją.
+Można zastąpić *nuget.config* kanałów informacyjnych `-s` opcją.
 
 Informacje o sposobach korzystania z uwierzytelnionych źródeł danych znajdują się w temacie Używanie [pakietów z uwierzytelnionych kanałów informacyjnych](/nuget/consume-packages/consuming-packages-authenticated-feeds).
 
@@ -63,9 +63,9 @@ W przypadku zależności można określić miejsce, w którym przywrócone pakie
 
 W przypadku narzędzi specyficznych dla projektu program `dotnet restore` najpierw przywraca pakiet, w którym narzędzie jest spakowane, a następnie przechodzi do przywracania zależności narzędzia, jak określono w pliku projektu.
 
-### <a name="nugetconfig-differences"></a>różnice NuGet. config
+### <a name="nugetconfig-differences"></a>Różnice nuget.config
 
-Zachowanie `dotnet restore` polecenia ma wpływ na ustawienia w pliku *NuGet. config* , jeśli jest obecny. Na przykład ustawienie `globalPackagesFolder` w *pliku NuGet. config* powoduje umieszczenie przywróconych pakietów NuGet w określonym folderze. Jest to alternatywa dla określenia `--packages` opcji `dotnet restore` polecenia. Aby uzyskać więcej informacji, zobacz [Dokumentacja NuGet. config](/nuget/schema/nuget-config-file).
+Na zachowanie `dotnet restore` polecenia są zależne od ustawień w pliku *nuget.config* , jeśli istnieją. Na przykład ustawienie `globalPackagesFolder` w *nuget.config* powoduje umieszczenie przywróconych pakietów NuGet w określonym folderze. Jest to alternatywa dla określenia `--packages` opcji `dotnet restore` polecenia. Aby uzyskać więcej informacji, zobacz [informacje dotyczącenuget.config](/nuget/schema/nuget-config-file).
 
 Istnieją trzy określone ustawienia, które `dotnet restore` ignorują:
 
@@ -91,7 +91,7 @@ Istnieją trzy określone ustawienia, które `dotnet restore` ignorują:
 
 - **`--configfile <FILE>`**
 
-  Plik konfiguracji NuGet (*NuGet. config*) do użycia podczas operacji przywracania.
+  Plik konfiguracji NuGet (*nuget.config*) do użycia podczas operacji przywracania.
 
 - **`--disable-parallel`**
 
@@ -99,7 +99,7 @@ Istnieją trzy określone ustawienia, które `dotnet restore` ignorują:
 
 - **`--force`**
 
-  Wymusza rozpoznanie wszystkich zależności, nawet jeśli ostatnie przywracanie zakończyło się pomyślnie. Określenie tej flagi jest takie samo jak usuwanie pliku *Project. assets. JSON* .
+  Wymusza rozpoznanie wszystkich zależności, nawet jeśli ostatnie przywracanie zakończyło się pomyślnie. Określenie tej flagi jest takie samo jak usuwanie *project.assets.jsw* pliku.
 
 - **`--force-evaluate`**
 
@@ -119,7 +119,7 @@ Istnieją trzy określone ustawienia, które `dotnet restore` ignorują:
 
 - **`--lock-file-path <LOCK_FILE_PATH>`**
 
-  Lokalizacja wyjściowa, w której jest zapisywana plik blokady projektu. Domyślnie jest to *PROJECT_ROOT \packages.Lock.JSON*.
+  Lokalizacja wyjściowa, w której jest zapisywana plik blokady projektu. Domyślnie jest to *PROJECT_ROOT\packages.lock.js*.
 
 - **`--locked-mode`**
 
@@ -143,7 +143,7 @@ Istnieją trzy określone ustawienia, które `dotnet restore` ignorują:
 
 - **`-s|--source <SOURCE>`**
 
-  Określa identyfikator URI źródła pakietu NuGet do użycia podczas operacji przywracania. To ustawienie zastępuje wszystkie źródła określone w plikach *NuGet. config* . Można podać wiele źródeł, określając tę opcję wiele razy.
+  Określa identyfikator URI źródła pakietu NuGet do użycia podczas operacji przywracania. To ustawienie przesłania wszystkie źródła określone w plikach *nuget.config* . Można podać wiele źródeł, określając tę opcję wiele razy.
 
 - **`--use-lock-file`**
 
@@ -164,7 +164,7 @@ Istnieją trzy określone ustawienia, które `dotnet restore` ignorują:
 - Przywróć zależności i narzędzia dla `app1` projektu Znalezione w danej ścieżce:
 
   ```dotnetcli
-  dotnet restore ~/projects/app1/app1.csproj
+  dotnet restore ./projects/app1/app1.csproj
   ```
 
 - Przywróć zależności i narzędzia dla projektu w bieżącym katalogu przy użyciu ścieżki pliku dostarczonej jako Źródło:

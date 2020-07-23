@@ -1,21 +1,22 @@
 ---
-title: Jak utworzyć związek C/C++ przy użyciu atrybutów (C#)
+title: Jak utworzyć Unię C/C++ za pomocą atrybutów (C#)
+description: Dowiedz się, jak używać atrybutów, aby dostosować sposób, w jaki struktury są ułożone w pamięci w języku C#. Ten przykład implementuje odpowiednik Unii z C/C++.
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-ms.openlocfilehash: ff8ce560444581a28b257820573224f89a274cd9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 766a070105441630dfd8fecf7b9f68fa6818fe50
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141576"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925075"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Jak utworzyć związek C/C++ przy użyciu atrybutów (C#)
+# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Jak utworzyć Unię C/C++ za pomocą atrybutów (C#)
 
-Za pomocą atrybutów, można dostosować sposób struktur są rozmieszczone w pamięci. Na przykład można utworzyć, co jest znane jako unii w `StructLayout(LayoutKind.Explicit)` Języku C++ przy użyciu i `FieldOffset` atrybutów.
+Przy użyciu atrybutów można dostosować sposób, w jaki struktury są ułożone w pamięci. Na przykład, można utworzyć elementy znane jako Unia w C/C++ za pomocą `StructLayout(LayoutKind.Explicit)` `FieldOffset` atrybutów i.
 
 ## <a name="example"></a>Przykład
 
-W tym segmencie kodu wszystkie `TestUnion` pola start w tej samej lokalizacji w pamięci.
+W tym segmencie kodu wszystkie pola, które są `TestUnion` uruchamiane w tej samej lokalizacji w pamięci.
 
 ```csharp
 // Add a using directive for System.Runtime.InteropServices.
@@ -39,7 +40,7 @@ struct TestUnion
 
 ## <a name="example"></a>Przykład
 
-Poniżej przedstawiono inny przykład, w którym pola zaczynają się od różnych jawnie ustawionych lokalizacji.
+Poniżej znajduje się kolejny przykład, w którym pola zaczynają się od różnych jawnie ustawionych lokalizacji.
 
 ```csharp
 // Add a using directive for System.Runtime.InteropServices.
@@ -67,13 +68,13 @@ struct TestExplicit
 }
 ```
 
-Dwa pola całkowite `i1` i `i2`, współużytkują te `lg`same lokalizacje pamięci co . Ten rodzaj kontroli nad układem struktury jest przydatne podczas korzystania z wywołania platformy.
+Dwa pola liczb całkowitych `i1` i `i2` , współużytkują te same lokalizacje pamięci co `lg` . Ten rodzaj kontroli nad układem struktury jest przydatny podczas korzystania z wywołania platformy.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Przewodnik programowania języka C#](../../index.md)
+- [Przewodnik programowania w języku C#](../../index.md)
 - [Atrybuty](../../../../standard/attributes/index.md)
 - [Odbicie (C#)](../reflection.md)
 - [Atrybuty (C#)](index.md)

@@ -1,13 +1,14 @@
 ---
 title: Model programowania asynchronicznego zadań (TAP) z Async i Await (C#)
+description: Dowiedz się, kiedy i jak używać programowania asynchronicznego opartego na zadaniach, uproszczone podejście do programowania asynchronicznego w języku C#.
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 90bee745a393ac35ac968e9f4f6b6c83ad8fbb46
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: ddda97e9c77473120ed32b0e224b07d7c4d71b1e
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990077"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925140"
 ---
 # <a name="task-asynchronous-programming-model"></a>Model programowania asynchronicznego zadań (APM)
 
@@ -261,7 +262,7 @@ Poniższy kod jest plikiem *MainWindow.XAML.cs* z aplikacji WPF, którą omówio
 
 [!code-csharp[async](~/samples/snippets/standard/async/async-and-await/cs/MainWindow.xaml.cs)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [async](../../../language-reference/keywords/async.md)
 - [await](../../../language-reference/operators/await.md)

@@ -5,12 +5,12 @@ ms.topic: reference
 ms.date: 06/01/2020
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: d9eb5560ef33f8f80dbe53e17087c606a8697378
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8622b580b7925adfd7895317815021f57960e9ee
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289476"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924581"
 ---
 # <a name="model-builder-azure-training-resources"></a>Model Builder — zasoby szkoleniowe platformy Azure
 
@@ -54,9 +54,9 @@ Aby utworzyć obszar roboczy Azure Machine Learning, wymagane są następujące 
   - Niski priorytet: odpowiednie dla zadań o krótszym czasie wykonywania. Może mieć wpływ na przerwy i brak dostępności. Zwykle koszty są tańsze, ponieważ wykorzystuje nadwyżkowe możliwości na platformie Azure.
   - Dedykowane: odpowiednie do zadań dowolnego czasu trwania, ale szczególnie długotrwałych zadań. Brak wpływu na przerwy lub brak dostępności. Zazwyczaj koszty są droższe, ponieważ rezerwuje dedykowany zestaw zasobów obliczeniowych na platformie Azure na potrzeby zadań.
 
-## <a name="training"></a>Szkolenia
+## <a name="training"></a>Szkolenie
 
-Szkolenie na platformie Azure jest dostępne tylko dla scenariusza klasyfikacji obrazu konstruktora modeli. Algorytm używany do uczenia tych modeli jest głębokiej sieci neuronowych na podstawie architektury ResNet50. Proces uczenia zajmuje trochę czasu, a ilość czasu może się różnić w zależności od rozmiaru wybranych obliczeń oraz ilości danych. Przy pierwszym szkoleniu modelu można oczekiwać nieco dłuższego czasu uczenia się, ponieważ zasoby muszą być inicjowane. Postęp przebiegów można śledzić, wybierając link "Monitoruj bieżące uruchomienia w Azure Portal" w programie Visual Studio.
+Szkolenie na platformie Azure jest dostępne tylko dla scenariusza klasyfikacji obrazu konstruktora modeli. Algorytm używany do uczenia tych modeli jest głębokiej sieci neuronowych na podstawie architektury ResNet50. Proces uczenia zajmuje trochę czasu, a ilość czasu może się różnić w zależności od rozmiaru wybranych obliczeń oraz ilości danych. Postęp przebiegów można śledzić, wybierając link "Monitoruj bieżące uruchomienia w Azure Portal" w programie Visual Studio.
 
 ## <a name="results"></a>Wyniki
 
@@ -66,8 +66,8 @@ Po zakończeniu szkolenia dwa projekty są dodawane do rozwiązania przy użyciu
 - *Model*: aplikacja w języku C# .NET Standard, która zawiera modele danych definiujące schemat danych wejściowych i wyjściowych modelu oraz następujące zasoby:
 
   - bestModel. Onnx: serializowana wersja modelu w formacie Open neuronowych Network Exchange (ONNX). ONNX to format typu open source dla modeli AI, który obsługuje współdziałanie między strukturami, takimi jak ML.NET, PyTorch i TensorFlow.
-  - bestModelMap. JSON: Lista kategorii używanych podczas prognozowania w celu mapowania danych wyjściowych modelu do kategorii tekstu.
-  - MLModel. zip: szeregowana wersja potoku prognozowania ML.NET, która używa serializowanej wersji modelu *bestModel. Onnx* , aby tworzyć prognozy i mapy dane wyjściowe przy użyciu `bestModelMap.json` pliku.
+  - bestModelMap.js: Lista kategorii używanych podczas prognozowania w celu mapowania danych wyjściowych modelu do kategorii tekst.
+  - MLModel.zip: szeregowana wersja potoku przewidywania ML.NET, która używa serializowanej wersji modelu *bestModel. Onnx* , aby tworzyć prognozy i mapy dane wyjściowe przy użyciu `bestModelMap.json` pliku.
 
 ## <a name="use-the-machine-learning-model"></a>Korzystanie z modelu uczenia maszynowego
 

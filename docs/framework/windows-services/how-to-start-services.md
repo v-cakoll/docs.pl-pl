@@ -1,19 +1,20 @@
 ---
-title: 'Porady: uruchamianie usług'
+title: 'Instrukcje: Uruchamianie usług'
+description: Poznaj kilka sposobów uruchamiania usług. Po zainstalowaniu usługi należy ją uruchomić. Rozpoczynanie wywoływania metody OnStart w klasie usługi.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, starting
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: 75fd3aba88bdffbe536ad5dab14996913d0a9d22
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4a2f9b291e60b12b1465fbb6bbbd1604572359a7
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053574"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925725"
 ---
-# <a name="how-to-start-services"></a>Porady: uruchamianie usług
+# <a name="how-to-start-services"></a>Instrukcje: Uruchamianie usług
 
 Po zainstalowaniu usługi należy ją uruchomić. Rozpoczęcie wywołuje <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metodę w klasie usługi. Zwykle <xref:System.ServiceProcess.ServiceBase.OnStart%2A> Metoda definiuje przydatną służbę wykonywaną przez usługę. Po uruchomieniu usługa pozostaje aktywna, dopóki nie zostanie ręcznie wstrzymana lub zatrzymana.
 
@@ -22,9 +23,9 @@ Usługi można skonfigurować do automatycznego uruchamiania lub ręcznie. Usłu
 > [!NOTE]
 > Domyślnie usługi utworzone za pomocą programu Visual Studio są ustawiane jako uruchamiane ręcznie.
 
-Istnieje kilka sposobów, aby ręcznie uruchomić usługę — od **Eksplorator serwera**, z **Menedżera sterowania usługami**lub z kodu przy użyciu składnika o nazwie <xref:System.ServiceProcess.ServiceController>.
+Istnieje kilka sposobów, aby ręcznie uruchomić usługę — od **Eksplorator serwera**, z **Menedżera sterowania usługami**lub z kodu przy użyciu składnika o nazwie <xref:System.ServiceProcess.ServiceController> .
 
-Należy ustawić <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> właściwość w klasie, <xref:System.ServiceProcess.ServiceInstaller> aby określić, czy usługa powinna być uruchamiana ręcznie czy automatycznie.
+Należy ustawić <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> Właściwość w klasie, <xref:System.ServiceProcess.ServiceInstaller> Aby określić, czy usługa powinna być uruchamiana ręcznie czy automatycznie.
 
 ### <a name="to-specify-how-a-service-should-start"></a>Aby określić sposób uruchamiania usługi
 
@@ -32,20 +33,20 @@ Należy ustawić <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> wła
 
 2. W projektancie kliknij Instalatora usługi dla usługi, z którą pracujesz.
 
-3. W oknie **Właściwości** Ustaw <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> właściwość na jedną z następujących opcji:
+3. W oknie **Właściwości** Ustaw <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> Właściwość na jedną z następujących opcji:
 
     |Aby zainstalować usługę|Ustaw tę wartość|
     |----------------------------------|--------------------|
-    |Po ponownym uruchomieniu komputera|**Automatyczny**|
-    |Po uruchomieniu przez jawną akcję użytkownika|**Ręcznie**|
+    |Po ponownym uruchomieniu komputera|**Automatyczne**|
+    |Po uruchomieniu przez jawną akcję użytkownika|**Ręczne**|
 
     > [!TIP]
-    > Aby zapobiec uruchamianiu usługi w ogóle, można ustawić <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> właściwość na wartość **wyłączone**. Można to zrobić, jeśli zamierzasz ponownie uruchomić serwer kilka razy i chcesz zaoszczędzić czas, zapobiegając usługom, które normalnie zaczynają się od uruchamiania.
+    > Aby zapobiec uruchamianiu usługi w ogóle, można ustawić <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> Właściwość na wartość **wyłączone**. Można to zrobić, jeśli zamierzasz ponownie uruchomić serwer kilka razy i chcesz zaoszczędzić czas, zapobiegając usługom, które normalnie zaczynają się od uruchamiania.
 
     > [!NOTE]
     > Te i inne właściwości można zmienić po zainstalowaniu usługi.
 
-    Istnieje kilka sposobów, w których można uruchomić usługę, która ma <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> swój proces ustawiony na **ręczny** — od **Eksplorator serwera**, z **Menedżera sterowania usługami systemu Windows**lub z kodu. Należy pamiętać, że nie wszystkie te metody faktycznie uruchamiają usługę w kontekście **Menedżera kontroli usług**. **Eksplorator serwera** i programowe metody uruchamiania usługi faktycznie manipulują kontrolerem.
+    Istnieje kilka sposobów, w których można uruchomić usługę, która ma swój <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> proces ustawiony na **ręczny** — od **Eksplorator serwera**, z **Menedżera sterowania usługami systemu Windows**lub z kodu. Należy pamiętać, że nie wszystkie te metody faktycznie uruchamiają usługę w kontekście **Menedżera kontroli usług**. **Eksplorator serwera** i programowe metody uruchamiania usługi faktycznie manipulują kontrolerem.
 
 ### <a name="to-manually-start-a-service-from-server-explorer"></a>Aby ręcznie uruchomić usługę z Eksplorator serwera
 
@@ -78,8 +79,8 @@ Należy ustawić <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> wła
 
 2. Wywołaj <xref:System.ServiceProcess.ServiceController.Start%2A> metodę, aby uruchomić usługę.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Wprowadzenie do aplikacji usług systemu Windows](introduction-to-windows-service-applications.md)
-- [Porady: tworzenie usług systemu Windows](how-to-create-windows-services.md)
-- [Porady: dodawanie instalatorów od aplikacji usług](how-to-add-installers-to-your-service-application.md)
+- [Instrukcje: Tworzenie usług systemu Windows](how-to-create-windows-services.md)
+- [Instrukcje: Dodawanie instalatorów od aplikacji usług](how-to-add-installers-to-your-service-application.md)

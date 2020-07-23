@@ -1,5 +1,6 @@
 ---
-title: 'Porady: określanie kontekstu zabezpieczeń dla usług'
+title: 'Instrukcje: Określanie kontekstu zabezpieczeń dla usług'
+description: Określ kontekst zabezpieczeń usług. Usługi są uruchamiane w domyślnym kontekście konta systemowego mają inne prawa dostępu do zasobów systemowych niż zalogowany użytkownik.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, security
@@ -11,15 +12,15 @@ helpviewer_keywords:
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
-ms.openlocfilehash: dd2a9c4485e151d4cb1c9d5ae3a95a69fcc416d4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4ed531cb520a781fd38f8bf5491da6948901a1d5
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053580"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925738"
 ---
-# <a name="how-to-specify-the-security-context-for-services"></a>Porady: określanie kontekstu zabezpieczeń dla usług
-Domyślnie usługi są uruchamiane w innym kontekście zabezpieczeń niż zalogowany użytkownik. Usługi są uruchamiane w kontekście domyślnego konta systemowego o nazwie `LocalSystem`, które daje im różne uprawnienia dostępu do zasobów systemowych niż użytkownik. Możesz zmienić to zachowanie, aby określić inne konto użytkownika, w ramach którego ma zostać uruchomiona usługa.  
+# <a name="how-to-specify-the-security-context-for-services"></a>Instrukcje: Określanie kontekstu zabezpieczeń dla usług
+Domyślnie usługi są uruchamiane w innym kontekście zabezpieczeń niż zalogowany użytkownik. Usługi są uruchamiane w kontekście domyślnego konta systemowego o nazwie `LocalSystem` , które daje im różne uprawnienia dostępu do zasobów systemowych niż użytkownik. Możesz zmienić to zachowanie, aby określić inne konto użytkownika, w ramach którego ma zostać uruchomiona usługa.  
   
  Kontekst zabezpieczeń jest ustawiany przez manipulowanie <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> właściwością procesu, w którym działa usługa. Ta właściwość umożliwia ustawienie jednego z czterech typów kont:  
   
@@ -40,12 +41,12 @@ Domyślnie usługi są uruchamiane w innym kontekście zabezpieczeń niż zalogo
 2. W projektancie uzyskaj dostęp do `ProjectInstaller` klasy i kliknij Instalatora procesów usługi dla usługi, z którą pracujesz.  
   
     > [!NOTE]
-    > Dla każdej aplikacji usługi w `ProjectInstaller` klasie istnieją co najmniej dwa składniki instalacyjne — jedną, która instaluje procesy dla wszystkich usług w projekcie, oraz jeden Instalator dla każdej usługi zawierającej daną aplikację. W tym przypadku należy wybrać opcję <xref:System.ServiceProcess.ServiceProcessInstaller>.  
+    > Dla każdej aplikacji usługi w klasie istnieją co najmniej dwa składniki instalacyjne `ProjectInstaller` — jedną, która instaluje procesy dla wszystkich usług w projekcie, oraz jeden Instalator dla każdej usługi zawierającej daną aplikację. W tym przypadku należy wybrać opcję <xref:System.ServiceProcess.ServiceProcessInstaller> .  
   
 3. W oknie **Właściwości** Ustaw <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> odpowiednią wartość.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Wprowadzenie do aplikacji usług systemu Windows](introduction-to-windows-service-applications.md)
-- [Porady: dodawanie instalatorów od aplikacji usług](how-to-add-installers-to-your-service-application.md)
-- [Porady: tworzenie usług systemu Windows](how-to-create-windows-services.md)
+- [Instrukcje: Dodawanie instalatorów od aplikacji usług](how-to-add-installers-to-your-service-application.md)
+- [Instrukcje: Tworzenie usług systemu Windows](how-to-create-windows-services.md)

@@ -1,72 +1,72 @@
 ---
-title: Debugowanie samouczka przecieku pamięci
-description: Dowiedz się, jak debugować przeciek pamięci w .NET Core.
+title: Debuguj samouczek przecieku pamięci
+description: Informacje o debugowaniu przecieku pamięci w programie .NET Core.
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: d47992bab9dab64cf7f88ff679eef407dd891b5a
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: ff684f9b9402cb8b7b648e792a1d37ddcc96b399
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021359"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924893"
 ---
-# <a name="tutorial-debug-a-memory-leak-in-net-core"></a>Samouczek: Debugowanie przecieku pamięci w rdzeniu .NET
+# <a name="debug-a-memory-leak-in-net-core"></a>Debugowanie przecieku pamięci w programie .NET Core
 
-**Ten artykuł dotyczy:** ✔️.NET Core 3.0 SDK i nowszych wersjach
+**Ten artykuł ma zastosowanie do:** ✔️ .net Core 3,1 SDK i nowszych wersjach
 
-W tym samouczku przedstawiono narzędzia do analizowania przecieku pamięci .NET Core.
+W tym samouczku przedstawiono narzędzia służące do analizowania przecieków pamięci w środowisku .NET Core.
 
-W tym samouczku użyto przykładowej aplikacji, która jest przeznaczona do celowo przeciek pamięci. Próbka jest dostarczana jako ćwiczenie. Można analizować aplikację, która jest przypadkowo przecieka pamięci zbyt.
+Ten samouczek korzysta z przykładowej aplikacji, która została zaprojektowana w celu celowego przecieku pamięci. Przykład jest udostępniany jako ćwiczenie. Można przeanalizować aplikację, która powoduje zbyt przypadkowe przecieki pamięci.
 
-W tym samouczku zostaną wykonane następujące czynności:
+W tym samouczku wykonasz następujące czynności:
 
 > [!div class="checklist"]
 >
-> - Sprawdź użycie pamięci zarządzanej za pomocą [liczników dotnet](dotnet-counters.md).
-> - Generowanie pliku zrzutu.
-> - Analizowanie użycia pamięci przy użyciu pliku zrzutu.
+> - Sprawdzanie użycia pamięci zarządzanej przy użyciu [liczników dotnet-Counters](dotnet-counters.md).
+> - Generuj plik zrzutu.
+> - Analizuj użycie pamięci za pomocą pliku zrzutu.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-W samouczku użyto:
+Samouczek używa:
 
-- [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) lub nowszej wersji.
-- [dotnet-trace](dotnet-trace.md) do listy procesów.
-- [liczniki dotnet,](dotnet-counters.md) aby sprawdzić użycie pamięci zarządzanej.
-- [dotnet-dump](dotnet-dump.md) do zbierania i analizowania pliku zrzutu.
-- Przykładowa aplikacja [docelowa debugowania](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) do zdiagnozowania.
+- [.NET Core 3,1 SDK](https://dotnet.microsoft.com/download/dotnet-core) lub nowsza wersja.
+- [dotnet-Trace](dotnet-trace.md) , aby wyświetlić listę procesów.
+- [dotnet-Counters](dotnet-counters.md) , aby sprawdzić użycie pamięci zarządzanej.
+- [dotnet-dump](dotnet-dump.md) , aby zebrać i przeanalizować plik zrzutu.
+- [Przykładowa](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) aplikacja do debugowania do diagnozowania.
 
-Samouczek zakłada, że przykład i narzędzia są zainstalowane i gotowe do użycia.
+W samouczku założono, że przykład i narzędzia są zainstalowane i gotowe do użycia.
 
 ## <a name="examine-managed-memory-usage"></a>Sprawdzanie użycia pamięci zarządzanej
 
-Przed rozpoczęciem zbierania danych diagnostycznych, aby pomóc nam główną przyczyną tego scenariusza, należy upewnić się, że rzeczywiście widzisz przeciek pamięci (wzrost pamięci). Aby to potwierdzić, można użyć narzędzia [liczników dotnet.](dotnet-counters.md)
+Przed rozpoczęciem zbierania danych diagnostycznych, aby pomóc nam w tym scenariuszu, należy się upewnić, że faktycznie widzisz przeciek pamięci (przyrost pamięci). Za pomocą narzędzia [dotnet-Counters](dotnet-counters.md) można potwierdzić, że.
 
-Otwórz okno konsoli i przejdź do katalogu, w którym pobrano i rozpakowałeś [przykładowy cel debugowania](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/). Uruchom cel:
+Otwórz okno konsoli i przejdź do katalogu, w którym został pobrany i rozpakowany [przykładowy element docelowy debugowania](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/). Uruchom obiekt docelowy:
 
 ```dotnetcli
 dotnet run
 ```
 
-W osobnej konsoli znajdź identyfikator procesu za pomocą narzędzia [dotnet-trace:](dotnet-trace.md)
+W oddzielnym konsoli Znajdź identyfikator procesu za pomocą narzędzia do [śledzenia dotnet](dotnet-trace.md) :
 
 ```console
 dotnet-trace ps
 ```
 
-Dane wyjściowe powinny być podobne do:
+Dane wyjściowe powinny wyglądać podobnie do:
 
 ```console
 4807 DiagnosticScena /home/user/git/samples/core/diagnostics/DiagnosticScenarios/bin/Debug/netcoreapp3.0/DiagnosticScenarios
 ```
 
-Teraz sprawdź użycie pamięci zarządzanej za pomocą narzędzia [liczniki dotnet.](dotnet-counters.md) Określa `--refresh-interval` liczbę sekund między odświeżeniami:
+Teraz Sprawdź użycie pamięci zarządzanej za pomocą narzędzia [dotnet-Counters](dotnet-counters.md) . `--refresh-interval`Określa liczbę sekund między odświeżeniami:
 
 ```console
 dotnet-counters monitor --refresh-interval 1 -p 4807
 ```
 
-Dane wyjściowe na żywo powinny być podobne do:
+Na żywo dane wyjściowe powinny wyglądać podobnie do:
 
 ```console
 Press p to pause, r to resume, q to quit.
@@ -94,61 +94,61 @@ Press p to pause, r to resume, q to quit.
     Working Set (MB)                                  83
 ```
 
-Koncentrując się na tej linii:
+Skoncentrowanie się na tym wierszu:
 
 ```console
     GC Heap Size (MB)                                  4
 ```
 
-Widać, że pamięć zarządzanego sterty jest 4 MB zaraz po uruchomieniu.
+Po uruchomieniu programu można zobaczyć, że pamięć sterty zarządzanej ma 4 MB.
 
-Teraz naciśnij adres `http://localhost:5000/api/diagscenario/memleak/20000`URL .
+Teraz naciśnij adres URL `https://localhost:5001/api/diagscenario/memleak/20000` .
 
-Należy zauważyć, że użycie pamięci wzrosła do 30 MB.
+Zwróć uwagę, że użycie pamięci wystąpiło do 30 MB.
 
 ```console
     GC Heap Size (MB)                                 30
 ```
 
-Obserwując użycie pamięci, można bezpiecznie powiedzieć, że pamięć rośnie lub przecieka. Następnym krokiem jest zebranie odpowiednich danych do analizy pamięci.
+Obserwując użycie pamięci, można bezpiecznie powiedzieć, że pamięć jest zwiększana lub wycieka. Następnym krokiem jest zebranie odpowiednich danych na potrzeby analizy pamięci.
 
-### <a name="generate-memory-dump"></a>Generowanie zrzutu pamięci
+### <a name="generate-memory-dump"></a>Generuj zrzut pamięci
 
-Podczas analizowania możliwych przecieków pamięci, należy uzyskać dostęp do sterty pamięci aplikacji. Następnie można analizować zawartość pamięci. Patrząc na relacje między obiektami, można tworzyć teorie na temat tego, dlaczego pamięć nie jest zwalniana. Typowym źródłem danych diagnostycznych jest zrzut pamięci w systemie Windows lub równoważny zrzut rdzenia w systemie Linux. Aby wygenerować zrzut aplikacji .NET Core, można użyć narzędzia [dotnet-dump).](dotnet-dump.md)
+Podczas analizowania potencjalnych przecieków pamięci potrzebny jest dostęp do sterty pamięci aplikacji. Następnie można analizować zawartość pamięci. Analizując relacje między obiektami, tworzysz teorie na Dlaczego pamięć nie jest zwalniana. Typowym źródłem danych diagnostyki jest zrzut pamięci w systemie Windows lub równoważny zrzut rdzenia w systemie Linux. Aby wygenerować zrzut aplikacji .NET Core, można użyć narzędzia [dotnet-dump)](dotnet-dump.md) .
 
-Przy użyciu [przykładowego obiektu docelowego debugowania](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) wcześniej rozpoczęte, uruchom następujące polecenie do generowania zrzutu rdzenia Systemu Linux:
+Używając wcześniej uruchomionego [przykładowego elementu Debug](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) , uruchom następujące polecenie, aby wygenerować podstawowy zrzut systemu Linux:
 
 ```dotnetcli
 dotnet-dump collect -p 4807
 ```
 
-Wynikiem jest zrzut podstawowy znajdujący się w tym samym folderze.
+Wynik jest podstawowym zrzutem znajdującym się w tym samym folderze.
 
 ```console
 Writing minidump with heap to ./core_20190430_185145
 Complete
 ```
 
-### <a name="restart-the-failed-process"></a>Ponowne uruchamianie procesu nie powiodło się
+### <a name="restart-the-failed-process"></a>Uruchom ponownie proces zakończony niepowodzeniem
 
-Po zebraniu zrzutu należy mieć wystarczające informacje, aby zdiagnozować nieudany proces. Jeśli nieudany proces jest uruchomiony na serwerze produkcyjnym, teraz jest to idealny czas na krótkoterminowe korygowanie przez ponowne uruchomienie procesu.
+Po zebraniu zrzutu należy dysponować wystarczającą ilością informacji, aby zdiagnozować proces zakończony niepowodzeniem. Jeśli proces zakończony niepowodzeniem jest uruchomiony na serwerze produkcyjnym, teraz jest idealnym czasem do krótkoterminowego korygowania przez ponowne uruchomienie procesu.
 
-W tym samouczku, teraz zrobić z [przykładowego obiektu docelowego debugowania](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) i można go zamknąć. Przejdź do terminalu, który `Control-C`uruchomił serwer i naciśnij przycisk .
+W ramach tego samouczka nastąpi przetworzenie [przykładowego celu debugowania](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) i można go zamknąć. Przejdź do terminalu, który uruchomił serwer, i naciśnij <kbd>klawisze CTRL + C</kbd>.
 
-### <a name="analyze-the-core-dump"></a>Analizowanie zrzutu rdzenia
+### <a name="analyze-the-core-dump"></a>Analizowanie zrzutu rdzeni
 
-Teraz, gdy masz wygenerowany zrzut rdzenia, użyj narzędzia [dotnet-dump](dotnet-dump.md) do analizy zrzutu:
+Teraz, gdy masz wygenerowany podstawowy zrzut, użyj narzędzia [dotnet-dump](dotnet-dump.md) do przeanalizowania zrzutu:
 
 ```dotnetcli
 dotnet-dump analyze core_20190430_185145
 ```
 
-Gdzie `core_20190430_185145` jest nazwa zrzutu podstawowego, który chcesz przeanalizować.
+Gdzie `core_20190430_185145` to nazwa zrzutu podstawowego, który ma zostać przeanalizowany.
 
 > [!NOTE]
-> Jeśli zostanie wyświetlony błąd narzekający, że nie można odnaleźć *libdl.so,* może być trzeba zainstalować pakiet *libc6-dev.* Aby uzyskać więcej informacji, zobacz [Wymagania wstępne dla platformy .NET Core w systemie Linux](../install/dependencies.md?pivots=os-linux).
+> Jeśli zostanie wyświetlony błąd z skargą, że nie można znaleźć *libdl.so* , może być konieczne zainstalowanie pakietu *libc6-dev* . Aby uzyskać więcej informacji, zobacz [wymagania wstępne dotyczące platformy .NET Core w systemie Linux](../install/dependencies.md?pivots=os-linux).
 
-Zostanie wyświetlony monit, w którym można wprowadzić polecenia SOS. Zazwyczaj pierwszą rzeczą, którą chcesz przyjrzeć się jest ogólny stan zarządzanego stosu:
+Zostanie wyświetlony monit z pytaniem, gdzie można wprowadzić polecenia SOS. Często pierwszym krokiem, jaki ma wyglądać, jest ogólny stan sterty zarządzanej:
 
 ```console
 > dumpheap -stat
@@ -168,9 +168,9 @@ Statistics:
 Total 428516 objects
 ```
 
-Tutaj widać, że większość obiektów `String` `Customer` to obiekty lub obiekty.
+W tym miejscu można zobaczyć, że większość obiektów jest albo `String` `Customer` obiektami.
 
-Można użyć `dumpheap` polecenia ponownie z tabeli metody (MT), aby `String` uzyskać listę wszystkich wystąpień:
+Możesz użyć `dumpheap` polecenia ponownie z tabeli metod (MT), aby uzyskać listę wszystkich `String` wystąpień:
 
 ```console
 > dumpheap -mt 00007faddaa50f90
@@ -191,7 +191,7 @@ Statistics:
 Total 206770 objects
 ```
 
-Teraz można użyć `gcroot` polecenia `System.String` w wystąpieniu, aby zobaczyć, jak i dlaczego obiekt jest zakorzeniony. Bądź cierpliwy, ponieważ to polecenie trwa kilka minut ze stertą 30 MB:
+Teraz można użyć `gcroot` polecenia w `System.String` wystąpieniu, aby zobaczyć, jak i dlaczego obiekt jest odblokowany. Należy poczekać, ponieważ to polecenie zajmie kilka minut z stertą o rozmiarze 30 MB:
 
 ```console
 > gcroot -all 00007f6ad09421f8
@@ -220,26 +220,26 @@ HandleTable:
 Found 2 roots.
 ```
 
-Widać, że `String` jest bezpośrednio utrzymywane `Customer` przez obiekt i `CustomerCache` pośrednio utrzymywane przez obiekt.
+Można sprawdzić, czy `String` jest ono bezpośrednio przechowywane przez `Customer` obiekt i pośrednio przechowywane przez `CustomerCache` obiekt.
 
-Można kontynuować wyrzucanie obiektów, `String` aby zobaczyć, że większość obiektów podąża za podobnym wzorcem. W tym momencie dochodzenie dostarczyło wystarczających informacji, aby zidentyfikować przyczynę w kodzie.
+Można kontynuować zrzucanie obiektów, aby zobaczyć, że większość `String` obiektów ma podobny wzorzec. W tym momencie Badanie dostarczyło wystarczające informacje umożliwiające zidentyfikowanie głównej przyczyny w kodzie.
 
-Ta ogólna procedura pozwala zidentyfikować źródło głównych przecieków pamięci.
+Ta ogólna procedura umożliwia zidentyfikowanie źródła głównych przecieków pamięci.
 
-## <a name="clean-up-resources"></a>Oczyszczanie zasobów
+## <a name="clean-up-resources"></a>Czyszczenie zasobów
 
-W tym samouczku uruchomiono przykładowy serwer sieci web. Ten serwer powinien zostać zamknięty, jak wyjaśniono w sekcji [Uruchom ponownie nieudany proces.](#restart-the-failed-process)
+W tym samouczku uruchomiono przykładowy serwer sieci Web. Ten serwer powinien zostać wyłączony zgodnie z opisem w sekcji [Ponowne uruchamianie procesu zakończonego niepowodzeniem](#restart-the-failed-process) .
 
-Można również usunąć plik zrzutu, który został utworzony.
+Można również usunąć utworzony plik zrzutu.
+
+## <a name="see-also"></a>Zobacz także
+
+- [dotnet-Trace](dotnet-trace.md) do procesów list
+- [dotnet-Counters](dotnet-counters.md) , aby sprawdzić użycie pamięci zarządzanej
+- [dotnet-dump](dotnet-dump.md) aby zebrać i przeanalizować plik zrzutu
+- [dotnet/Diagnostyka](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)
 
 ## <a name="next-steps"></a>Następne kroki
 
-Gratulujemy ukończenia tego samouczka.
-
-Nadal publikujemy więcej samouczków diagnostycznych. Wersje robocze można odczytać na repozytorium [dotnet/diagnostics.](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)
-
-W tym samouczku okryły się podstawy kluczowych narzędzi diagnostycznych platformy .NET. Aby uzyskać użycie zaawansowane, zobacz następującą dokumentację referencyjną:
-
-* [dotnet-trace](dotnet-trace.md) do listy procesów.
-* [liczniki dotnet,](dotnet-counters.md) aby sprawdzić użycie pamięci zarządzanej.
-* [dotnet-dump](dotnet-dump.md) do zbierania i analizowania pliku zrzutu.
+> [!div class="nextstepaction"]
+> [Debugowanie wysokiego procesora CPU w programie .NET Core](debug-highcpu.md)

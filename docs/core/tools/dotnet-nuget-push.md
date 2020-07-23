@@ -3,12 +3,12 @@ title: polecenia wypychania NuGet dotnet
 description: Polecenie polecenia push NuGet narzędzia dotnet wypycha pakiet do serwera i opublikuje go.
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 1e7831de4c041591b3602e405418f89f1d1d27d1
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 608cd05d94dd6b5cdc53d582cfaa0407f011ff37
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895458"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925517"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -22,7 +22,7 @@ ms.locfileid: "82895458"
 
 ```dotnetcli
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output]
-    [--interactive] [-k|--api-key <API_KEY>] [-n|--no-symbols]
+    [--interactive] [-k|--api-key <API_KEY>] [-n|--no-symbols true]
     [--no-service-endpoint] [-s|--source <SOURCE>] [--skip-duplicate]
     [-sk|--symbol-api-key <API_KEY>] [-ss|--symbol-source <SOURCE>]
     [-t|--timeout <TIMEOUT>]
@@ -32,9 +32,9 @@ dotnet nuget push -h|--help
 
 ## <a name="description"></a>Opis
 
-`dotnet nuget push` Polecenie wypycha pakiet do serwera i opublikuje go. Polecenie push używa informacji o serwerze i poświadczeniach znajdujących się w pliku konfiguracyjnym NuGet systemu lub w łańcuchu plików konfiguracji. Aby uzyskać więcej informacji na temat plików konfiguracji, zobacz [Konfigurowanie zachowania NuGet](/nuget/consume-packages/configuring-nuget-behavior). Domyślna konfiguracja narzędzia NuGet jest uzyskiwana przez załadowanie *%AppData%\NuGet\NuGet.config* (Windows) lub *$Home/.local/share* (Linux/macOS), a następnie załadowanie jakichkolwiek *NuGet. config* lub *. NuGet\NuGet.config* , począwszy od katalogu głównego dysku i kończącego się w bieżącym katalogu.
+`dotnet nuget push`Polecenie wypycha pakiet do serwera i opublikuje go. Polecenie push używa informacji o serwerze i poświadczeniach znajdujących się w pliku konfiguracyjnym NuGet systemu lub w łańcuchu plików konfiguracji. Aby uzyskać więcej informacji na temat plików konfiguracji, zobacz [Konfigurowanie zachowania NuGet](/nuget/consume-packages/configuring-nuget-behavior). Domyślna konfiguracja narzędzia NuGet jest uzyskiwana przez załadowanie pliku *% AppData% \NuGet\NuGet.config* (Windows) lub *$Home/.local/share* (Linux/macOS), a następnie załadowanie dowolnych *nuget.config* lub *.nuget\nuget.config* począwszy od katalogu głównego dysku i kończącego się w bieżącym katalogu.
 
-Polecenie wypycha istniejący pakiet. Nie tworzy pakietu. Aby utworzyć pakiet, użyj [`dotnet pack`](dotnet-pack.md).
+Polecenie wypycha istniejący pakiet. Nie tworzy pakietu. Aby utworzyć pakiet, użyj [`dotnet pack`](dotnet-pack.md) .
 
 ## <a name="arguments"></a>Argumenty
 
@@ -64,7 +64,7 @@ Polecenie wypycha istniejący pakiet. Nie tworzy pakietu. Aby utworzyć pakiet, 
 
   Klucz interfejsu API dla serwera programu.
 
-- **`-n|--no-symbols`**
+- **`-n|--no-symbols true`**
 
   Nie Wypychaj symboli (nawet jeśli istnieją).
 
@@ -74,7 +74,7 @@ Polecenie wypycha istniejący pakiet. Nie tworzy pakietu. Aby utworzyć pakiet, 
 
 - **`-s|--source <SOURCE>`**
 
-  Określa adres URL serwera. Ta opcja jest wymagana, `DefaultPushSource` chyba że wartość konfiguracji jest ustawiona w pliku konfiguracyjnym NuGet.
+  Określa adres URL serwera. Ta opcja jest wymagana, chyba że `DefaultPushSource` wartość konfiguracji jest ustawiona w pliku konfiguracyjnym NuGet.
 
 - **`--skip-duplicate`**
 
@@ -106,7 +106,7 @@ Polecenie wypycha istniejący pakiet. Nie tworzy pakietu. Aby utworzyć pakiet, 
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://api.nuget.org/v3/index.json
   ```
   
-  * Wypychanie *foo. nupkg* do niestandardowego źródła `https://customsource`wypychania, określając klucz interfejsu API:
+  * Wypychanie *foo. nupkg* do niestandardowego źródła wypychania `https://customsource` , określając klucz interfejsu API:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/

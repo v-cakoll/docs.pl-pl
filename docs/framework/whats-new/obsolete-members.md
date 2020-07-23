@@ -1,5 +1,6 @@
 ---
 title: Przestarzałe elementy członkowskie — .NET Framework
+description: Zobacz listę elementów członkowskich typu, które są przestarzałe w programie .NET 4,5 i jego nowszych wersjach. Elementy członkowskie typu są pogrupowane według zestawu. Elementy członkowskie przestarzałych typów są wykluczone w tym miejscu.
 ms.custom: updateeachrelease
 ms.date: 10/17/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - members, obsolete in .NET Framework
 - obsolete members [.NET Framework]
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
-ms.openlocfilehash: 64bbcd099016dd3d11fea2eaba81ae4559ba6762
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: c0e320b8499fec0c56d2e3560bf6f64194f73dad
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243079"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925829"
 ---
 # <a name="obsolete-members-in-net-framework"></a>Przestarzałe składowe w .NET Framework
 
@@ -186,7 +187,7 @@ W tym artykule nie wymieniono członków przestarzałych typów. Aby zapoznać s
 > |<xref:System.Threading.ThreadPool?displayProperty=nameWithType>|<xref:System.Threading.ThreadPool.BindHandle%28System.IntPtr%29>|<xref:System.Threading.ThreadPool.BindHandle%28System.IntPtr%29>został uznany za przestarzały. Zamiast tego użyj polecenia cmdlet <xref:System.Threading.ThreadPool.BindHandle%28System.Runtime.InteropServices.SafeHandle%29?displayProperty=nameWithType>.|
 > |<xref:System.Threading.WaitHandle?displayProperty=nameWithType>|<xref:System.Threading.WaitHandle.Handle%2A>|<xref:System.Threading.WaitHandle.SafeWaitHandle%2A?displayProperty=nameWithType>Zamiast tego użyj właściwości.|
 
-## <a name="presentationcoredll"></a>'Presentationcore. dll
+## <a name="presentationcoredll"></a>PresentationCore.dll
 
 > [!div class="mx-tdBreakAll"]
 > |Typ|Członek|Komunikat|
@@ -226,7 +227,7 @@ W tym artykule nie wymieniono członków przestarzałych typów. Aby zapoznać s
 > |<xref:System.Windows.Media.Media3D.Viewport3DVisual?displayProperty=nameWithType>|<xref:System.Windows.Media.Media3D.Viewport3DVisual.BitmapEffect%2A>|Efekty Bitmap są przestarzałe i nie są już działać. Rozważ użycie <xref:System.Windows.Media.Effects.Effect?displayProperty=nameWithType> tam, gdzie jest to odpowiednie.|
 > |<xref:System.Windows.Media.Media3D.Viewport3DVisual?displayProperty=nameWithType>|<xref:System.Windows.Media.Media3D.Viewport3DVisual.BitmapEffectInput%2A>|Efekty Bitmap są przestarzałe i nie są już działać. Rozważ użycie <xref:System.Windows.Media.Effects.Effect?displayProperty=nameWithType> tam, gdzie jest to odpowiednie.|
 
-## <a name="presentationframeworkdll"></a>Platformie docelowej. dll
+## <a name="presentationframeworkdll"></a>PresentationFramework.dll
 
 > [!div class="mx-tdBreakAll"]
 > |Typ|Członek|Komunikat|
@@ -236,7 +237,7 @@ W tym artykule nie wymieniono członków przestarzałych typów. Aby zapoznać s
 > |<xref:System.Windows.Data.CollectionView?displayProperty=nameWithType>|<xref:System.Windows.Data.CollectionView.OnBeginChangeLogging%2A>|Zastąpione przez <xref:System.Windows.Data.CollectionView.OnAllowsCrossThreadChangesChanged%2A?displayProperty=nameWithType> .|
 > |<xref:System.Windows.Data.ListCollectionView?displayProperty=nameWithType>|<xref:System.Windows.Data.ListCollectionView.OnBeginChangeLogging%2A>|Zastąpione przez <xref:System.Windows.Data.ListCollectionView.OnAllowsCrossThreadChangesChanged%2A?displayProperty=nameWithType> .|
 
-## <a name="systemactivitiesdll"></a>System. Activities. dll
+## <a name="systemactivitiesdll"></a>System.Activities.dll
 
 > [!div class="mx-tdBreakAll"]
 > |Typ|Członek|Komunikat|
@@ -244,7 +245,7 @@ W tym artykule nie wymieniono członków przestarzałych typów. Aby zapoznać s
 > |<xref:System.Activities.Debugger.XamlDebuggerXmlReader?displayProperty=nameWithType>|<xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.Xaml.XamlReader%2CSystem.Xaml.IXamlLineInfo%2CSystem.IO.TextReader%29>|Najpierw przestarzałe w .NET Framework 4,5.<br /><br /> Nie używaj tego konstruktora. Użyj polecenia <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%29> or <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%2CSystem.Xaml.XamlSchemaContext%29> .|
 > |<xref:System.Activities.Debugger.XamlDebuggerXmlReader?displayProperty=nameWithType>|<xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.Xaml.XamlReader%2CSystem.IO.TextReader%29>|Najpierw przestarzałe w .NET Framework 4,5.<br /><br /> Nie używaj tego konstruktora. Użyj polecenia <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%29> or <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%2CSystem.Xaml.XamlSchemaContext%29> .|
 
-## <a name="systemactivitiespresentationdll"></a>System. Activities. Presentation. dll
+## <a name="systemactivitiespresentationdll"></a>System.Activities.Presentation.dll
 
 > [!div class="mx-tdBreakAll"]
 > |Typ|Członek|Komunikat|
@@ -324,7 +325,7 @@ W tym artykule nie wymieniono członków przestarzałych typów. Aby zapoznać s
 > |<xref:System.Data.SqlClient.SqlConnectionStringBuilder?displayProperty=nameWithType>|<xref:System.Data.SqlClient.SqlConnectionStringBuilder.ConnectionReset%2A>|<xref:System.Data.SqlClient.SqlConnectionStringBuilder.ConnectionReset%2A>został uznany za przestarzały. <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType>ignoruje słowo kluczowe "Resetowanie połączenia" i zawsze resetuje połączenie.|
 > |<xref:System.Data.SqlClient.SqlParameterCollection?displayProperty=nameWithType>|<xref:System.Data.SqlClient.SqlParameterCollection.Add%28System.String%2CSystem.Object%29>|<xref:System.Data.SqlClient.SqlParameterCollection.Add%28System.String%2CSystem.Object%29>został uznany za przestarzały. Użyj witryny <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A?displayProperty=nameWithType>.|
 
-## <a name="systemdataentitydll"></a>System. Data. Entity. dll
+## <a name="systemdataentitydll"></a>System.Data.Entity.dll
 
 > [!div class="mx-tdBreakAll"]
 > |Typ|Członek|Komunikat|
@@ -343,7 +344,7 @@ W tym artykule nie wymieniono członków przestarzałych typów. Aby zapoznać s
 > |<xref:System.Data.OracleClient.OracleParameter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleParameter.Scale%2A>|<xref:System.Data.OracleClient.OracleParameter.Scale%2A>został uznany za przestarzały. Użyj <xref:System.Math?displayProperty=nameWithType> klas, aby jawnie ustawić skalę dziesiętną.|
 > |<xref:System.Data.OracleClient.OracleParameterCollection?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleParameterCollection.Add%28System.String%2CSystem.Object%29>|<xref:System.Data.OracleClient.OracleParameterCollection.Add%28System.String%2CSystem.Object%29>został uznany za przestarzały. Użyj witryny <xref:System.Data.OracleClient.OracleParameterCollection.AddWithValue%2A?displayProperty=nameWithType>.|
 
-## <a name="systemdesigndll"></a>System. Design. dll
+## <a name="systemdesigndll"></a>System.Design.dll
 
 > [!div class="mx-tdBreakAll"]
 > |Typ|Członek|Komunikat|
@@ -456,7 +457,7 @@ W tym artykule nie wymieniono członków przestarzałych typów. Aby zapoznać s
 > |<xref:System.Diagnostics.EventLogPermissionAccess?displayProperty=nameWithType>|<xref:System.Diagnostics.EventLogPermissionAccess.Instrument>|Ten element członkowski jest przestarzały. Zamiast tego użyj polecenia cmdlet <xref:System.Diagnostics.EventLogPermissionAccess.Write?displayProperty=nameWithType>.|
 > |<xref:System.Diagnostics.InstanceDataCollection?displayProperty=nameWithType>|<xref:System.Diagnostics.InstanceDataCollection.%23ctor%2A>|Ten konstruktor jest przestarzały. Użyj <xref:System.Diagnostics.InstanceDataCollectionCollection.Item%2A?displayProperty=nameWithType> , aby zamiast tego pobrać wystąpienie tej kolekcji.|
 > |<xref:System.Diagnostics.InstanceDataCollectionCollection?displayProperty=nameWithType>|<xref:System.Diagnostics.InstanceDataCollectionCollection.%23ctor%2A>|Ten konstruktor jest przestarzały. Użyj <xref:System.Diagnostics.PerformanceCounterCategory.ReadCategory%2A?displayProperty=nameWithType> , aby zamiast tego pobrać wystąpienie tej kolekcji.|
-> |<xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>|<xref:System.Diagnostics.PerformanceCounter.DefaultFileMappingSize>|To pole jest przestarzałe i nie jest używane. Użyj pliku Machine. config lub plik konfiguracji aplikacji, aby ustawić rozmiar <xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType> mapowania pliku.|
+> |<xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>|<xref:System.Diagnostics.PerformanceCounter.DefaultFileMappingSize>|To pole jest przestarzałe i nie jest używane. Użyj machine.config lub pliku konfiguracji aplikacji, aby ustawić rozmiar <xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType> mapowania pliku.|
 > |<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=nameWithType>|<xref:System.Diagnostics.PerformanceCounterCategory.Create%28System.String%2CSystem.String%2CSystem.Diagnostics.CounterCreationDataCollection%29>|Ta metoda jest przestarzała. Zamiast tego użyj polecenia cmdlet <xref:System.Diagnostics.PerformanceCounterCategory.Create%28System.String%2CSystem.String%2CSystem.Diagnostics.PerformanceCounterCategoryType%2CSystem.Diagnostics.CounterCreationDataCollection%29>.|
 > |<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=nameWithType>|<xref:System.Diagnostics.PerformanceCounterCategory.Create%28System.String%2CSystem.String%2CSystem.String%2CSystem.String%29>|Ta metoda jest przestarzała. Zamiast tego użyj polecenia cmdlet <xref:System.Diagnostics.PerformanceCounterCategory.Create%28System.String%2CSystem.String%2CSystem.Diagnostics.PerformanceCounterCategoryType%2CSystem.String%2CSystem.String%29>.|
 > |<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=nameWithType>|<xref:System.Diagnostics.PerformanceCounterManager.System%23Diagnostics%23ICollectData%23CloseData%2A>|Ta klasa jest przestarzała. Zamiast tego użyj liczników wydajności za pomocą <xref:System.Diagnostics.PerformanceCounter> klasy.|
@@ -508,7 +509,7 @@ W tym artykule nie wymieniono członków przestarzałych typów. Aby zapoznać s
 > |<xref:System.Net.WebSockets.WebSocket?displayProperty=nameWithType>|<xref:System.Net.WebSockets.WebSocket.IsApplicationTargeting45%2A>|Najpierw przestarzałe w .NET Framework 4,5.<br /><br /> Ten element członkowski jest przeznaczony wyłącznie do użytku wewnętrznego i zostanie usunięty w przyszłych wersjach .NET Framework. Nie wywołuj go.|
 > |<xref:System.Security.Claims.DynamicRoleClaimProvider?displayProperty=nameWithType>|<xref:System.Security.Claims.DynamicRoleClaimProvider.AddDynamicRoleClaims%2A>|Najpierw przestarzałe w .NET Framework 4,5.<br /><br /> Użycie tego elementu członkowskiego spowoduje wygenerowanie błędu kompilatora.<br /><br /> Służy <xref:System.Security.Claims.ClaimsAuthenticationManager?displayProperty=nameWithType> do dodawania oświadczeń do <xref:System.Security.Claims.ClaimsIdentity> .|
 
-## <a name="systemdrawingdll"></a>System. Drawing. dll
+## <a name="systemdrawingdll"></a>System.Drawing.dll
 
 > [!div class="mx-tdBreakAll"]
 > |Typ|Członek|Komunikat|
@@ -536,7 +537,7 @@ W tym artykule nie wymieniono członków przestarzałych typów. Aby zapoznać s
 > |<xref:System.ServiceModel.Dispatcher.ClientRuntimeCompatBase?displayProperty=nameWithType>|<xref:System.ServiceModel.Dispatcher.ClientRuntimeCompatBase.Operations%2A>|Najpierw przestarzałe w .NET Framework 4,5.<br /><br /> Użycie tego typu spowoduje wygenerowanie błędu kompilatora.<br /><br /> Ten interfejs API obsługuje infrastrukturę .NET Framework i nie jest przeznaczony do użycia bezpośrednio w kodzie.|
 > |<xref:System.ServiceModel.Security.WindowsClientCredential?displayProperty=nameWithType>|<xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>|Ta właściwość jest przestarzała i jest obsługiwana tylko w celu zapewnienia zgodności z poprzednimi wersjami. Zasady komputera lokalnego będą używane do określenia, czy należy używać protokołu NTLM.|
 
-## <a name="systemservicemodeldiscoverydll"></a>System. ServiceModel. Discovery. dll
+## <a name="systemservicemodeldiscoverydll"></a>System.ServiceModel.Discovery.dll
 
 > [!div class="mx-tdBreakAll"]
 > |Typ|Członek|Komunikat|
@@ -544,26 +545,26 @@ W tym artykule nie wymieniono członków przestarzałych typów. Aby zapoznać s
 > |<xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint?displayProperty=nameWithType>|<xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint.TransportSettings%2A>|Najpierw przestarzałe w .NET Framework 4,5.<br /><br /> <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint.TransportSettings%2A>Właściwość jest przestarzała. Rozważ użycie <xref:System.ServiceModel.Channels.UdpTransportBindingElement?displayProperty=nameWithType> do ustawienia właściwości transportu.|
 > |<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint?displayProperty=nameWithType>|<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A>|Najpierw przestarzałe w .NET Framework 4,5.<br /><br /> <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A>Właściwość jest przestarzała. Rozważ użycie <xref:System.ServiceModel.Channels.UdpTransportBindingElement?displayProperty=nameWithType> do ustawienia właściwości transportu.|
 
-## <a name="systemwebdatavisualizationdll"></a>System. Web. datawizualizacja. dll
+## <a name="systemwebdatavisualizationdll"></a>System.Web.DataVisualization.dll
 
 > [!div class="mx-tdBreakAll"]
 > |Typ|Członek|Komunikat|
 > |----------|------------|-------------|
 > |<xref:System.Web.UI.DataVisualization.Charting.Chart?displayProperty=nameWithType>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A>został uznany za przestarzały. <xref:System.Web.UI.Control.ViewState%2A?displayProperty=nameWithType>Zamiast tego Zbadaj.|
 
-## <a name="systemwebdll"></a>System. Web. dll
+## <a name="systemwebdll"></a>System.Web.dll
 
 > [!div class="mx-tdBreakAll"]
 > |Typ|Członek|Komunikat|
 > |----------|------------|-------------|
-> |<xref:System.Web.HttpContext?displayProperty=nameWithType>|<xref:System.Web.HttpContext.GetAppConfig%2A>|Zalecaną alternatywą jest <xref:System.Web.Configuration.WebConfigurationManager.GetWebApplicationSection%2A?displayProperty=nameWithType> System. Web. dll.|
-> |<xref:System.Web.HttpContext?displayProperty=nameWithType>|<xref:System.Web.HttpContext.GetConfig%2A>|Zalecaną alternatywą jest <xref:System.Web.HttpContext.GetSection%2A?displayProperty=nameWithType> System. Web. dll.|
+> |<xref:System.Web.HttpContext?displayProperty=nameWithType>|<xref:System.Web.HttpContext.GetAppConfig%2A>|Zalecana alternatywa to <xref:System.Web.Configuration.WebConfigurationManager.GetWebApplicationSection%2A?displayProperty=nameWithType> w System.Web.dll.|
+> |<xref:System.Web.HttpContext?displayProperty=nameWithType>|<xref:System.Web.HttpContext.GetConfig%2A>|Zalecana alternatywa to <xref:System.Web.HttpContext.GetSection%2A?displayProperty=nameWithType> w System.Web.dll.|
 > |<xref:System.Web.HttpUtility?displayProperty=nameWithType>|<xref:System.Web.HttpUtility.UrlEncodeUnicode%2A>|Najpierw przestarzałe w .NET Framework 4,5.<br /><br /> Ta metoda tworzy \- \- dane wyjściowe zgodne ze standardami i ma problemy ze współdziałaniem. Preferowana alternatywa to <xref:System.Web.HttpUtility.UrlEncode%28System.String%29> .|
 > |<xref:System.Web.HttpUtility?displayProperty=nameWithType>|<xref:System.Web.HttpUtility.UrlEncodeUnicodeToBytes%2A>|Najpierw przestarzałe w .NET Framework 4,5.<br /><br /> Ta metoda tworzy \- \- dane wyjściowe zgodne ze standardami i ma problemy ze współdziałaniem. Preferowana alternatywa to <xref:System.Web.HttpUtility.UrlEncodeToBytes%28System.String%29> .|
 > |<xref:System.Web.Configuration.AuthenticationMode?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationMode.Passport>|To pole jest przestarzałe. Produkt uwierzytelniania paszportu nie jest już obsługiwany i został zastąpiony przez [konto Microsoft](https://account.microsoft.com/account/Account?destrt=home-index).|
 > |<xref:System.Web.Configuration.AuthenticationSection?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationSection.Passport%2A>|Ta właściwość jest przestarzała. Produkt uwierzytelniania paszportu nie jest już obsługiwany i został zastąpiony przez [konto Microsoft](https://account.microsoft.com/account/Account?destrt=home-index).|
 > |<xref:System.Web.Configuration.HttpCapabilitiesBase?displayProperty=nameWithType>|<xref:System.Web.Configuration.HttpCapabilitiesBase.JavaScript%2A>|Zalecaną alternatywą jest <xref:System.Web.Configuration.HttpCapabilitiesBase.EcmaScriptVersion%2A?displayProperty=nameWithType> Właściwość. <xref:System.Version.Major%2A?displayProperty=nameWithType>Wartość wersji większa lub równa 1 oznacza obsługę języka JavaScript.|
-> |<xref:System.Web.Configuration.SystemWebSectionGroup?displayProperty=nameWithType>|<xref:System.Web.Configuration.SystemWebSectionGroup.MobileControls%2A>|System. Web. Mobile. dll jest przestarzały.|
+> |<xref:System.Web.Configuration.SystemWebSectionGroup?displayProperty=nameWithType>|<xref:System.Web.Configuration.SystemWebSectionGroup.MobileControls%2A>|System.Web.Mobile.dll jest przestarzała.|
 > |<xref:System.Web.Routing.UrlRoutingModule?displayProperty=nameWithType>|<xref:System.Web.Routing.UrlRoutingModule.PostMapRequestHandler%2A>|Ta metoda jest przestarzała. Zastąp <xref:System.Web.Routing.UrlRoutingModule.Init%2A> metodę, aby użyć <xref:System.Web.Routing.UrlRoutingModule.PostMapRequestHandler%2A> zdarzenia.|
 > |<xref:System.Web.Security.FormsAuthentication?displayProperty=nameWithType>|<xref:System.Web.Security.FormsAuthentication.Authenticate%2A>|Najpierw przestarzałe w .NET Framework 4,5.<br /><br /> Zalecaną alternatywą jest korzystanie z <xref:System.Web.Security.Membership?displayProperty=nameWithType> interfejsów API, takich jak <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=nameWithType> .|
 > |<xref:System.Web.Security.FormsAuthentication?displayProperty=nameWithType>|<xref:System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile%2A>|Najpierw przestarzałe w .NET Framework 4,5.<br /><br /> Zalecaną alternatywą jest korzystanie z <xref:System.Web.Security.Membership?displayProperty=nameWithType> interfejsów API, takich jak <xref:System.Web.Security.Membership.CreateUser%2A?displayProperty=nameWithType> .|
@@ -586,14 +587,14 @@ W tym artykule nie wymieniono członków przestarzałych typów. Aby zapoznać s
 > |<xref:System.Web.UI.WebControls.GridView?displayProperty=nameWithType>|<xref:System.Web.UI.WebControls.GridView.CreateAutoGeneratedColumn%2A>|Najpierw przestarzałe w .NET Framework 4,5.<br /><br /> Ta metoda jest utrzymywana w celu zapewnienia zgodności z poprzednimi wersjami. Ten interfejs API nie jest już używany.|
 > |<xref:System.Web.UI.WebControls.Xml?displayProperty=nameWithType>|<xref:System.Web.UI.WebControls.Xml.Document%2A>|Zalecaną alternatywą jest <xref:System.Web.UI.WebControls.Xml.XPathNavigator%2A?displayProperty=nameWithType> Właściwość. Utwórz <xref:System.Xml.XPath.XPathDocument?displayProperty=nameWithType> wywołanie i, <xref:System.Xml.XPath.XPathDocument.CreateNavigator%2A?displayProperty=nameWithType> Aby utworzyć <xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType> .|
 
-## <a name="systemwebdynamicdatadll"></a>System. Web. DynamicData. dll
+## <a name="systemwebdynamicdatadll"></a>System.Web.DynamicData.dll
 
 > [!div class="mx-tdBreakAll"]
 > |Typ|Członek|Komunikat|
 > |----------|------------|-------------|
 > |<xref:System.Web.DynamicData.DynamicDataExtensions?displayProperty=nameWithType>|<xref:System.Web.DynamicData.DynamicDataExtensions.EnablePersistedSelection%2A>|Użyj `EnablePersistedSelection` właściwości w formancie powiązanym z danymi, takim jak <xref:System.Web.UI.WebControls.GridView?displayProperty=nameWithType> lub <xref:System.Web.UI.WebControls.ListView?displayProperty=nameWithType> .|
 
-## <a name="systemwebextensionsdll"></a>System. Web. Extensions. dll
+## <a name="systemwebextensionsdll"></a>System.Web.Extensions.dll
 
 > [!div class="mx-tdBreakAll"]
 > |Typ|Członek|Komunikat|
@@ -615,7 +616,7 @@ W tym artykule nie wymieniono członków przestarzałych typów. Aby zapoznać s
 > |<xref:System.Web.Services.Discovery.DiscoveryClientProtocol?displayProperty=nameWithType>|<xref:System.Web.Services.Discovery.DiscoveryClientProtocol.LoadExternals%2A>|Ta metoda zostanie usunięta z przyszłej wersji. Wywołanie metody nie jest już wymagane do odnajdowania zasobów.|
 > |<xref:System.Web.Services.Protocols.SoapHeaderAttribute?displayProperty=nameWithType>|<xref:System.Web.Services.Protocols.SoapHeaderAttribute.Required%2A>|Ta właściwość zostanie usunięta z przyszłej wersji. Obecność określonego nagłówka w komunikacie protokołu SOAP nie jest już wymuszana.|
 
-## <a name="systemwindowsformsdll"></a>System. Windows. Forms. dll
+## <a name="systemwindowsformsdll"></a>System.Windows.Forms.dll
 
 > [!div class="mx-tdBreakAll"]
 > |Typ|Członek|Komunikat|
@@ -632,7 +633,7 @@ W tym artykule nie wymieniono członków przestarzałych typów. Aby zapoznać s
 > |<xref:System.Windows.Forms.ListBox?displayProperty=nameWithType>|<xref:System.Windows.Forms.ListBox.AddItemsCore%2A>|Ta metoda jest przestarzała. Nie został zastąpiony innym plikiem.|
 > |<xref:System.Windows.Forms.PrintPreviewDialog?displayProperty=nameWithType>|<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>|Ta właściwość jest przestarzała. <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A?displayProperty=nameWithType>Zamiast tego użyj właściwości.|
 
-## <a name="systemxamldll"></a>System. XAML. dll
+## <a name="systemxamldll"></a>System.Xaml.dll
 
 > [!div class="mx-tdBreakAll"]
 > |Typ|Członek|Komunikat|
@@ -662,18 +663,18 @@ W tym artykule nie wymieniono członków przestarzałych typów. Aby zapoznać s
 > |<xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>|<xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%2CSystem.String%2CSystem.Security.Policy.Evidence%29>|Ta metoda jest przestarzała i zostanie usunięta w przyszłej wersji .NET Framework. Użyj <xref:System.Xml.Serialization.XmlSerializer.%23ctor%2A> przeciążenia konstruktora, które nie przyjmuje <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> parametru.|
 > |<xref:System.Xml.Serialization.XmlSerializerFactory?displayProperty=nameWithType>|<xref:System.Xml.Serialization.XmlSerializerFactory.CreateSerializer%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%2CSystem.String%2CSystem.Security.Policy.Evidence%29>|Ta metoda jest przestarzała i zostanie usunięta w przyszłej wersji .NET Framework. Użyj przeciążenia <xref:System.Xml.Serialization.XmlSerializerFactory.CreateSerializer%2A?displayProperty=nameWithType> , które nie przyjmuje <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> parametru.|
 
-## <a name="iehostdll-and-ieexecexe"></a>IEHost. dll i IEExec. exe
+## <a name="iehostdll-and-ieexecexe"></a>IEHost.dll i IEExec.exe
 
-Zestawy IEHost. dll i IEExec. exe zostały usunięte z .NET Framework. Wszystkie typy i ich elementy członkowskie są przestarzałe i nie są obsługiwane w .NET Framework 4,5 i nowszych. Te zestawy zostały użyte do hostowania Windows Forms formantów i uruchamiania plików wykonywalnych w programie Internet Explorer. Alternatywy dla tej technologii obejmują ClickOnce, aplikacje przeglądarki XAML (XBAP) i Microsoft Silverlight.
+Zestawy IEHost.dll i IEExec.exe zostały usunięte z .NET Framework. Wszystkie typy i ich elementy członkowskie są przestarzałe i nie są obsługiwane w .NET Framework 4,5 i nowszych. Te zestawy zostały użyte do hostowania Windows Forms formantów i uruchamiania plików wykonywalnych w programie Internet Explorer. Alternatywy dla tej technologii obejmują ClickOnce, aplikacje przeglądarki XAML (XBAP) i Microsoft Silverlight.
 
-## <a name="isymwrapperdll"></a>ISymWrapper. dll
+## <a name="isymwrapperdll"></a>ISymWrapper.dll
 
 > [!div class="mx-tdBreakAll"]
 > |Typ|Członek|Komunikat|
 > |----------|------------|-------------|
 > |<xref:System.Diagnostics.SymbolStore.SymBinder?displayProperty=nameWithType>|<xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.Int32%2CSystem.String%2CSystem.String%29>|Zalecaną alternatywą jest <xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.IntPtr%2CSystem.String%2CSystem.String%29?displayProperty=nameWithType> . <xref:System.Diagnostics.SymbolStore.ISymbolBinder1.GetReader%2A?displayProperty=nameWithType>przyjmuje wskaźnik interfejsu importera jako <xref:System.IntPtr?displayProperty=nameWithType> zamiast <xref:System.Int32?displayProperty=nameWithType> , i w ten sposób działa na architekturze 32-bitowej i 64-bitowej.|
 
-## <a name="microsoftbuildconversionv40dll"></a>Microsoft. Build. Conversion. v 4.0. dll
+## <a name="microsoftbuildconversionv40dll"></a>Microsoft.Build.Conversion.v4.0.dll
 
 > [!div class="mx-tdBreakAll"]
 > |Typ|Członek|Komunikat|
@@ -683,7 +684,7 @@ Zestawy IEHost. dll i IEExec. exe zostały usunięte z .NET Framework. Wszystkie
 > |<xref:Microsoft.Build.Conversion.ProjectFileConverter?displayProperty=nameWithType>|<xref:Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory%28Microsoft.Build.BuildEngine.Engine%29>|<xref:Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory?displayProperty=nameWithType>Zamiast tego użyj metody bez parametrów.|
 > |<xref:Microsoft.Build.Conversion.ProjectFileConverter?displayProperty=nameWithType>|<xref:Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory%28Microsoft.Build.BuildEngine.Engine%2CMicrosoft.Build.BuildEngine.ProjectLoadSettings%29>|<xref:Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory?displayProperty=nameWithType>Zamiast tego użyj metody bez parametrów.|
 
-## <a name="microsoftbuildenginedll"></a>Microsoft. Build. Engine. dll
+## <a name="microsoftbuildenginedll"></a>Microsoft.Build.Engine.dll
 
 > [!div class="mx-tdBreakAll"]
 > |Typ|Członek|Komunikat|
@@ -691,28 +692,28 @@ Zestawy IEHost. dll i IEExec. exe zostały usunięte z .NET Framework. Wszystkie
 > |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|<xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>|Należy unikać ustawiania <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A> . Jeśli po prostu nastąpiło przekazanie w .NET Framework lokalizacji jako <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A> , nie trzeba wykonywać żadnych innych czynności. W przeciwnym razie Zdefiniuj zestawy narzędzi zamiast w rejestrze lub pliku konfiguracyjnym lub dodając elementy do aparatu <xref:Microsoft.Build.BuildEngine.ToolsetCollection?displayProperty=nameWithType> , aby użyć niestandardowych <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A> .|
 > |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|<xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28System.String%29>|Jeśli po prostu przechodzą w .NET Framework lokalizacji w ramach programu <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A> , wystarczy zmienić konstruktora bez parametrów <xref:Microsoft.Build.BuildEngine.Engine.%23ctor> . W przeciwnym razie można zdefiniować niestandardowe zestawy narzędzi w rejestrze lub pliku konfiguracyjnym lub dodać elementy do aparatu <xref:Microsoft.Build.BuildEngine.ToolsetCollection?displayProperty=nameWithType> . Następnie <xref:Microsoft.Build.BuildEngine.Engine.%23ctor> zamiast tego należy użyć <xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28Microsoft.Build.BuildEngine.ToolsetDefinitionLocations%29> konstruktora or.|
 
-## <a name="microsoftbuildframeworkdll"></a>Microsoft. Build. Framework. dll
+## <a name="microsoftbuildframeworkdll"></a>Microsoft.Build.Framework.dll
 
 > [!div class="mx-tdBreakAll"]
 > |Typ|Członek|Komunikat|
 > |----------|------------|-------------|
 > |<xref:Microsoft.Build.Framework.XamlTypes.ContentType?displayProperty=nameWithType>|<xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemGroupName%2A>|Najpierw przestarzałe w .NET Framework 4,5.<br /><br /> Użycie tego elementu członkowskiego spowoduje wygenerowanie błędu kompilatora.<br /><br /> <xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemType%2A?displayProperty=nameWithType>Zamiast tego użyj właściwości.|
 
-## <a name="microsoftbuildutilitiesv40dll"></a>Microsoft. Build. Utilities. v 4.0. dll
+## <a name="microsoftbuildutilitiesv40dll"></a>Microsoft.Build.Utilities.v4.0.dll
 
 > [!div class="mx-tdBreakAll"]
 > |Typ|Członek|Komunikat|
 > |----------|------------|-------------|
 > |<xref:Microsoft.Build.Utilities.ToolTask?displayProperty=nameWithType>|<xref:Microsoft.Build.Utilities.ToolTask.EnvironmentOverride%2A>|Użyj <xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A?displayProperty=nameWithType> właściwości.|
 
-## <a name="microsoftdataentitybuildtasksdll"></a>Microsoft. Data. Entity. Build. Tasks. dll
+## <a name="microsoftdataentitybuildtasksdll"></a>Microsoft.Data.Entity.Build.Tasks.dll
 
 > [!div class="mx-tdBreakAll"]
 > |Typ|Członek|Komunikat|
 > |----------|------------|-------------|
 > |`Microsoft.Data.Entity.Build.Tasks.EntityDeploy`|`EntityDataModelEmbeddedResources`|Najpierw przestarzałe w .NET Framework 4,5.<br /><br /> Używany tylko w przypadku wersji 3,5 z poprzednią wersją.|
 
-## <a name="microsoftvisualbasicdll"></a>Microsoft. VisualBasic. dll
+## <a name="microsoftvisualbasicdll"></a>Microsoft.VisualBasic.dll
 
 > [!div class="mx-tdBreakAll"]
 > |Typ|Członek|Komunikat|
@@ -730,7 +731,7 @@ Zestawy IEHost. dll i IEExec. exe zostały usunięte z .NET Framework. Wszystkie
 > |<xref:Microsoft.VisualBasic.CompilerServices.Operators?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.CompilerServices.Operators.FallbackInvokeUserDefinedOperator%2A>|Użycie tego elementu członkowskiego spowoduje wygenerowanie błędu kompilatora.<br /><br /> Nie należy używać tej metody.|
 > |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|`DynData`Klucz rejestru działa tylko w systemach Win9x, które nie są obsługiwane przez tę wersję .NET Framework. `PerformanceData`Zamiast tego użyj klucza rejestru. Ta właściwość zostanie usunięta z przyszłej wersji platformy.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Co jest przestarzałe w .NET Framework](whats-obsolete.md)
 - [Przestarzałe typy](obsolete-types.md)

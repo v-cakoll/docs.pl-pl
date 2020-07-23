@@ -1,5 +1,6 @@
 ---
 title: Architektura programowania aplikacji usług
+description: Zrozumienie architektury programowania aplikacji usługi. Aplikacje usług systemu Windows są oparte na klasie, która dziedziczy z elementu System. ServiceProcess. ServiceBase.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: 1c197b487f1cb7596f507f663fe3f1fb83857cbd
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c59ccc5a8b2f11fda9c4734487092c1aabb74908
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053488"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925582"
 ---
 # <a name="service-application-programming-architecture"></a>Architektura programowania aplikacji usług
 Aplikacje usług systemu Windows są oparte na klasie, która dziedziczy z <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> klasy. Zastąpisz metody z tej klasy i zdefiniujesz dla nich funkcję, aby określić sposób zachowania usługi.  
@@ -34,7 +35,7 @@ Aplikacje usług systemu Windows są oparte na klasie, która dziedziczy z <xref
  Ponadto klasy o nazwie <xref:System.ServiceProcess.ServiceController> można użyć do manipulowania samą usługą. Ta klasa nie obejmuje tworzenia usługi, ale może służyć do uruchamiania i zatrzymywania usługi, przekazywania do niej poleceń i zwracania serii wyliczeń.  
   
 ## <a name="defining-your-services-behavior"></a>Definiowanie zachowania usługi  
- W klasie usług przesłonisz funkcje klasy podstawowej, które określają, co się stanie w przypadku zmiany stanu usługi w Menedżerze kontroli usług. <xref:System.ServiceProcess.ServiceBase> Klasa uwidacznia następujące metody, które można przesłonić w celu dodania zachowania niestandardowego.  
+ W klasie usług przesłonisz funkcje klasy podstawowej, które określają, co się stanie w przypadku zmiany stanu usługi w Menedżerze kontroli usług. <xref:System.ServiceProcess.ServiceBase>Klasa uwidacznia następujące metody, które można przesłonić w celu dodania zachowania niestandardowego.  
   
 |Metoda|Przesłoń do|  
 |------------|-----------------|  
@@ -51,22 +52,22 @@ Aplikacje usług systemu Windows są oparte na klasie, która dziedziczy z <xref
   
  Istnieje kilka innych właściwości i metod, które są interesujące. Należą do nich:  
   
-- <xref:System.ServiceProcess.ServiceBase.Run%2A> Metoda <xref:System.ServiceProcess.ServiceBase> klasy. To jest główny punkt wejścia dla usługi. Podczas tworzenia usługi przy użyciu szablonu usługi systemu Windows kod jest wstawiany w `Main` metodzie aplikacji, aby uruchomić usługę. Ten kod wygląda następująco:  
+- <xref:System.ServiceProcess.ServiceBase.Run%2A>Metoda <xref:System.ServiceProcess.ServiceBase> klasy. To jest główny punkt wejścia dla usługi. Podczas tworzenia usługi przy użyciu szablonu usługi systemu Windows kod jest wstawiany w `Main` metodzie aplikacji, aby uruchomić usługę. Ten kod wygląda następująco:  
   
      [!code-csharp[VbRadconService#6](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#6)]
      [!code-vb[VbRadconService#6](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#6)]  
   
     > [!NOTE]
-    > W tych przykładach użyto tablicy typu <xref:System.ServiceProcess.ServiceBase>, w którym można dodać każdą usługę, która zawiera daną aplikację, a następnie można uruchomić wszystkie usługi jednocześnie. Jeśli jednak tworzysz tylko jedną usługę, możesz zrezygnować z używania tablicy i po prostu zadeklarować nowy obiekt Dziedziczony z <xref:System.ServiceProcess.ServiceBase> , a następnie uruchomić go. Aby zapoznać się z przykładem, zobacz [How to: programowe pisanie usług](how-to-write-services-programmatically.md).  
+    > W tych przykładach użyto tablicy typu <xref:System.ServiceProcess.ServiceBase> , w którym można dodać każdą usługę, która zawiera daną aplikację, a następnie można uruchomić wszystkie usługi jednocześnie. Jeśli jednak tworzysz tylko jedną usługę, możesz zrezygnować z używania tablicy i po prostu zadeklarować nowy obiekt Dziedziczony z <xref:System.ServiceProcess.ServiceBase> , a następnie uruchomić go. Aby zapoznać się z przykładem, zobacz [How to: programowe pisanie usług](how-to-write-services-programmatically.md).  
   
-- Seria właściwości <xref:System.ServiceProcess.ServiceBase> klasy. Określają metody, które można wywołać w usłudze. Na przykład, gdy <xref:System.ServiceProcess.ServiceBase.CanStop%2A> właściwość jest ustawiona na `true`, <xref:System.ServiceProcess.ServiceBase.OnStop%2A> Metoda w usłudze może być wywoływana. Gdy <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> właściwość jest ustawiona na `true`, metody <xref:System.ServiceProcess.ServiceBase.OnPause%2A> i <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> mogą być wywoływane. Po ustawieniu jednej z tych właściwości na `true`, należy zastąpić i zdefiniować przetwarzanie dla skojarzonych metod.  
+- Seria właściwości <xref:System.ServiceProcess.ServiceBase> klasy. Określają metody, które można wywołać w usłudze. Na przykład, gdy <xref:System.ServiceProcess.ServiceBase.CanStop%2A> Właściwość jest ustawiona na `true` , <xref:System.ServiceProcess.ServiceBase.OnStop%2A> Metoda w usłudze może być wywoływana. Gdy <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> Właściwość jest ustawiona na `true` , <xref:System.ServiceProcess.ServiceBase.OnPause%2A> <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> metody i mogą być wywoływane. Po ustawieniu jednej z tych właściwości na `true` , należy zastąpić i zdefiniować przetwarzanie dla skojarzonych metod.  
   
     > [!NOTE]
-    > Usługa musi przesłonić co <xref:System.ServiceProcess.ServiceBase.OnStart%2A> najmniej <xref:System.ServiceProcess.ServiceBase.OnStop%2A> i być przydatne.  
+    > Usługa musi przesłonić co najmniej <xref:System.ServiceProcess.ServiceBase.OnStart%2A> i <xref:System.ServiceProcess.ServiceBase.OnStop%2A> być przydatne.  
   
- Można również użyć składnika o nazwie, <xref:System.ServiceProcess.ServiceController> aby komunikować się i kontrolować zachowanie istniejącej usługi.  
+ Można również użyć składnika o nazwie, <xref:System.ServiceProcess.ServiceController> Aby komunikować się i kontrolować zachowanie istniejącej usługi.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Wprowadzenie do aplikacji usług systemu Windows](introduction-to-windows-service-applications.md)
-- [Porady: tworzenie usług systemu Windows](how-to-create-windows-services.md)
+- [Instrukcje: Tworzenie usług systemu Windows](how-to-create-windows-services.md)

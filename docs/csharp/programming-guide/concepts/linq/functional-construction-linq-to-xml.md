@@ -1,24 +1,25 @@
 ---
-title: Konstrukcja funkcjonalna (LINQ do XML) (C#)
+title: Konstrukcja funkcjonalna (LINQ to XML) (C#)
+description: Dowiedz się, w jaki sposób interfejs programowania LINQ to XML umożliwia konstruowanie funkcjonalne, możliwość tworzenia drzewa XML w pojedynczej instrukcji w języku C#.
 ms.date: 07/20/2015
 ms.assetid: 57a82bcf-de03-4f1c-a0c8-9a76e989d542
-ms.openlocfilehash: e55b0010a5f75eee8137d1e9bcefc573b5e07e72
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f209a7ef2a4597ec8eeccb3083b77223a27e7a65
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635759"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103774"
 ---
-# <a name="functional-construction-linq-to-xml-c"></a>Konstrukcja funkcjonalna (LINQ do XML) (C#)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zapewnia potężny sposób tworzenia elementów XML zwanych *konstrukcją funkcjonalną.* Funkcjonalna konstrukcja to możliwość tworzenia drzewa XML w jednej instrukcji.  
+# <a name="functional-construction-linq-to-xml-c"></a>Konstrukcja funkcjonalna (LINQ to XML) (C#)
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zapewnia zaawansowany sposób tworzenia elementów XML o nazwie *konstrukcja funkcjonalna*. Konstrukcja funkcjonalna to możliwość tworzenia drzewa XML w pojedynczej instrukcji.  
   
- Istnieje kilka kluczowych funkcji [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] interfejsu programowania, które umożliwiają funkcjonalną konstrukcję:  
+ Istnieje kilka najważniejszych funkcji [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] interfejsu programowania, które umożliwiają konstruowanie funkcjonalne:  
   
-- Konstruktor <xref:System.Xml.Linq.XElement> przyjmuje różne typy argumentów dla zawartości. Na przykład można przekazać inny <xref:System.Xml.Linq.XElement> obiekt, który staje się elementem podrzędnym. Można przekazać <xref:System.Xml.Linq.XAttribute> obiekt, który staje się atrybutem elementu. Lub można przekazać dowolny inny typ obiektu, który jest konwertowany na ciąg i staje się zawartość tekstową elementu.  
+- <xref:System.Xml.Linq.XElement>Konstruktor ma różne typy argumentów dla zawartości. Na przykład można przekazać inny <xref:System.Xml.Linq.XElement> obiekt, który stanie się elementem podrzędnym. Można przekazać <xref:System.Xml.Linq.XAttribute> obiekt, który stanie się atrybutem elementu. Lub można przekazać każdy inny typ obiektu, który jest konwertowany na ciąg i stanie się zawartością tekstową elementu.  
   
-- Konstruktor <xref:System.Xml.Linq.XElement> `params` przyjmuje tablicę typu, <xref:System.Object>dzięki czemu można przekazać dowolną liczbę obiektów do konstruktora. Dzięki temu można utworzyć element, który ma złożoną zawartość.  
+- <xref:System.Xml.Linq.XElement>Konstruktor pobiera `params` tablicę typu <xref:System.Object> , dzięki czemu można przekazać dowolną liczbę obiektów do konstruktora. Dzięki temu można utworzyć element, który ma złożoną zawartość.  
   
-- Jeśli obiekt implementuje <xref:System.Collections.Generic.IEnumerable%601>, kolekcja w obiekcie jest wyliczana, a wszystkie elementy w kolekcji są dodawane. Jeśli kolekcja <xref:System.Xml.Linq.XElement> zawiera <xref:System.Xml.Linq.XAttribute> lub obiektów, każdy element w kolekcji jest dodawany oddzielnie. Jest to ważne, ponieważ umożliwia przekazywanie wyników kwerendy LINQ do konstruktora.  
+- Jeśli obiekt implementuje <xref:System.Collections.Generic.IEnumerable%601> , kolekcja w obiekcie jest wyliczana i dodawane są wszystkie elementy w kolekcji. Jeśli kolekcja zawiera <xref:System.Xml.Linq.XElement> obiekty lub <xref:System.Xml.Linq.XAttribute> , każdy element w kolekcji zostanie dodany osobno. Jest to ważne, ponieważ umożliwia przekazywanie wyników zapytania LINQ do konstruktora.  
   
  Te funkcje umożliwiają pisanie kodu w celu utworzenia drzewa XML. Poniżej przedstawiono przykład:  
   
@@ -38,7 +39,7 @@ XElement contacts =
     );  
 ```  
   
- Funkcje te umożliwiają również pisanie kodu, który używa wyników kwerend LINQ podczas tworzenia drzewa XML, w następujący sposób:  
+ Te funkcje umożliwiają również pisanie kodu, który używa wyników zapytań LINQ podczas tworzenia drzewa XML w następujący sposób:  
   
 ```csharp  
 XElement srcTree = new XElement("Root",  

@@ -1,13 +1,14 @@
 ---
 title: Jak dodać metody niestandardowe dla zapytań LINQ (C#)
+description: Dowiedz się, jak rozszerzać zestaw metod, których można użyć dla zapytań LINQ przez dodanie metod rozszerzenia do <T> interfejsu IEnumerable w języku C#.
 ms.date: 07/20/2015
 ms.assetid: 1a500f60-2e10-49fb-8b2a-d8d08e4817cb
-ms.openlocfilehash: e3f8ba8810d06a2e79093e6022ad6e79f3599468
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: fac0eb4e14eb3bb36313232a7d7fa3060c0ac171
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447033"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103600"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-c"></a>Jak dodać metody niestandardowe dla zapytań LINQ (C#)
 
@@ -216,7 +217,7 @@ foreach (var element in query)
 */
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Collections.Generic.IEnumerable%601>
-- [Metody rozszerzające](../../classes-and-structs/extension-methods.md)
+- [Metody rozszerzania](../../classes-and-structs/extension-methods.md)

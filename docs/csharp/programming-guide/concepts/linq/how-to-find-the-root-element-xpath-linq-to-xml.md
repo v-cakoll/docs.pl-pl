@@ -1,25 +1,26 @@
 ---
-title: Jak znaleźć element główny (XPath-LINQ do XML) (C#)
+title: Jak znaleźć element główny (XPath-LINQ to XML) (C#)
+description: Ten przykład w języku C# porównuje wyrażenie XPath LINQ to XML, aby uzyskać element główny dla przykładowego dokumentu XML.
 ms.date: 07/20/2015
 ms.assetid: 4fd824e0-4d39-429b-b092-f6a5c046ee6c
-ms.openlocfilehash: 1c5526f436b5b9d88ca359ef7e0fc04c5c3cf43c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 220899823210c5cd6e9834541ca87e4d8394b4ff
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345949"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105190"
 ---
-# <a name="how-to-find-the-root-element-xpath-linq-to-xml-c"></a>Jak znaleźć element główny (XPath-LINQ do XML) (C#)
-W tym temacie pokazano, jak uzyskać [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]element główny z XPath i .  
+# <a name="how-to-find-the-root-element-xpath-linq-to-xml-c"></a>Jak znaleźć element główny (XPath-LINQ to XML) (C#)
+W tym temacie pokazano, jak uzyskać element główny przy użyciu XPath i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] .  
   
- Wyrażenie XPath jest następujące:  
+ Wyrażenie XPath:  
   
  `/PurchaseOrders`  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie znajduje element główny.  
+ Ten przykład umożliwia znalezienie elementu głównego.  
   
- W tym przykładzie użyto następującego dokumentu XML: [Przykładowy plik XML: wiele zamówień zakupu (LINQ do XML).](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: wiele zamówień zakupu (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  

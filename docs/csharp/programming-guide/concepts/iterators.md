@@ -1,13 +1,14 @@
 ---
 title: 'Iterowanie za poorednictwem kolekcji w języku C #'
+description: Dowiedz się, jak korzystać z iteratora, aby przechodzić do kolejnych kolekcji, takich jak listy i tablice. Iteratory są używane z kodu klienta przy użyciu instrukcji foreach lub zapytania LINQ.
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: 15b77fd11c0ff606119425ec7aae8e7127315e82
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 310fff68a242812620357517c212ddd5f053775c
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240697"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104256"
 ---
 # <a name="iterators-c"></a>Iteratory (C#)
 
@@ -334,7 +335,7 @@ W języku C#, `yield` nie jest słowem zastrzeżonym i ma specjalne znaczenie ty
 
 Chociaż należy napisać iterator jako metodę, kompilator tłumaczy go na zagnieżdżoną klasę, która jest, w efekcie, komputera stanu. Ta klasa śledzi pozycję iteratora, tak długo `foreach` Pętla w kodzie klienta jest kontynuowana.
 
-Aby zobaczyć, co robi kompilator, możesz użyć narzędzia Ildasm. exe, aby wyświetlić kod języka pośredniego firmy Microsoft, który został wygenerowany dla metody iteratora.
+Aby zobaczyć, co robi kompilator, możesz użyć narzędzia Ildasm.exe, aby wyświetlić kod języka pośredniego firmy Microsoft, który jest generowany dla metody iterator.
 
 Podczas tworzenia iteratora dla [klasy](../../language-reference/keywords/class.md) lub [struktury](../../language-reference/builtin-types/struct.md)nie trzeba implementować całego <xref:System.Collections.IEnumerator> interfejsu. Gdy kompilator wykryje iterator, automatycznie generuje `Current` `MoveNext` metody,, i `Dispose` <xref:System.Collections.IEnumerator> <xref:System.Collections.Generic.IEnumerator%601> interfejsu.
 

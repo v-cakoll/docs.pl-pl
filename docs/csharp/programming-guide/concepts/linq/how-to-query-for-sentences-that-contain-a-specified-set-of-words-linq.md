@@ -1,16 +1,17 @@
 ---
-title: Jak wysyłać zapytania do zdań zawierających określony zestaw słów (LINQ) (C#)
+title: Jak wykonać zapytanie o zdania zawierające określony zestaw wyrazów (LINQ) (C#)
+description: Dowiedz się, jak używać LINQ w języku C#, aby znaleźć zdania w pliku tekstowym zawierającym dopasowania dla każdego zestawu słów, które mogą być wypełnione w czasie wykonywania.
 ms.date: 07/20/2015
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-ms.openlocfilehash: df279f57d9965d796397cbcf7a0f3ba05bf9e5c1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c334c7948f19fb857709ff04a83e1dae56fc69da
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168859"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104526"
 ---
-# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>Jak wysyłać zapytania do zdań zawierających określony zestaw słów (LINQ) (C#)
-W tym przykładzie pokazano, jak znaleźć zdania w pliku tekstowym, które zawierają dopasowania dla każdego z określonego zestawu słów. Mimo że tablica wyszukiwanych terminów jest zakodowana w tym przykładzie, może być również wypełniana dynamicznie w czasie wykonywania. W tym przykładzie kwerenda zwraca zdania zawierające słowa "Historycznie", "dane" i "zintegrowane".  
+# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>Jak wykonać zapytanie o zdania zawierające określony zestaw wyrazów (LINQ) (C#)
+Ten przykład pokazuje, jak znaleźć zdania w pliku tekstowym zawierającym dopasowania dla każdego z określonych wyrazów. Mimo że tablica terminów wyszukiwania jest zakodowana w tym przykładzie, można ją również wypełnić dynamicznie w czasie wykonywania. W tym przykładzie zapytanie zwraca zdania zawierające słowa "historyczne", "dane" i "zintegrowane".  
   
 ## <a name="example"></a>Przykład  
   
@@ -62,12 +63,12 @@ Historically, the world of data and the world of objects have not been well inte
 */  
 ```  
   
- Kwerenda działa najpierw dzieląc tekst na zdania, a następnie dzieląc zdania na tablicę ciągów, które zawierają każdy wyraz. Dla każdej z tych <xref:System.Linq.Enumerable.Distinct%2A> tablic metoda usuwa wszystkie zduplikowane wyrazy, a następnie kwerenda wykonuje operację <xref:System.Linq.Enumerable.Intersect%2A> na tablicy słów i tablicy. `wordsToMatch` Jeśli liczba przecięcia jest taka sama jak `wordsToMatch` liczba tablicy, wszystkie wyrazy zostały znalezione w słowach i oryginalne zdanie jest zwracany.  
+ Zapytanie działa przez pierwsze dzielenie tekstu na zdania, a następnie dzielenie zdań na tablicę ciągów, które zawierają każdy wyraz. Dla każdej z tych tablic <xref:System.Linq.Enumerable.Distinct%2A> Metoda powoduje usunięcie wszystkich zduplikowanych wyrazów, a następnie zapytanie wykonuje <xref:System.Linq.Enumerable.Intersect%2A> operację na tablicy słów i `wordsToMatch` tablicy. Jeśli liczba przedziałów jest taka sama jak liczba `wordsToMatch` tablicy, wszystkie wyrazy zostały znalezione w wyrazach, a zdanie oryginalne zostanie zwrócone.  
   
- W wywołaniu <xref:System.String.Split%2A>, znaki interpunkcyjne są używane jako separatory w celu usunięcia ich z ciągu. Jeśli tego nie zrobisz, na przykład można mieć ciąg "Historycznie", który nie `wordsToMatch` pasuje "Historycznie" w tablicy. Może być konieczne użycie dodatkowych separatorów, w zależności od typów znaków interpunkcyjnych znalezionych w tekście źródłowym.  
+ W wywołaniu do <xref:System.String.Split%2A> , znaki interpunkcyjne są używane jako separatory w celu usunięcia ich z ciągu. Jeśli tego nie zrobiono, na przykład możesz mieć ciąg "historyczny", który nie pasuje do "historycznie" w `wordsToMatch` tablicy. Może być konieczne użycie dodatkowych separatorów, w zależności od typów znaków interpunkcyjnych znalezionych w tekście źródłowym.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
-Utwórz projekt aplikacji konsoli `using` C# z dyrektywami dla system.Linq i System.IO przestrzeni nazw.
+Utwórz projekt aplikacji konsolowej w języku C# z `using` dyrektywami dotyczącymi przestrzeni nazw System. LINQ i system.IO.
 
 ## <a name="see-also"></a>Zobacz też
 

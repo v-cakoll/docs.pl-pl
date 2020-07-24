@@ -1,18 +1,19 @@
 ---
-title: Jak wysyłać zapytania linq do XML przy użyciu XPath (C#)
+title: Jak zbadać LINQ to XML przy użyciu XPath (C#)
+description: Można użyć metod rozszerzających w języku C# do wykonywania zapytań w drzewie XML przy użyciu XPath. Ogólnie rzecz biorąc nie zalecamy używania XPath z LINQ to XML.
 ms.date: 07/20/2015
 ms.assetid: ee5af263-4ab1-45e5-b792-33a3221b426d
-ms.openlocfilehash: 61878febd9b4880872b7bc58e4de04b37cff96f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fff45a93380b5af85aa640fc690783cc95e6298b
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75344810"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104339"
 ---
-# <a name="how-to-query-linq-to-xml-using-xpath-c"></a>Jak wysyłać zapytania linq do XML przy użyciu XPath (C#)
-W tym temacie przedstawiono metody rozszerzenia, które umożliwiają wykonywanie zapytań do drzewa XML przy użyciu xpath. Aby uzyskać szczegółowe informacje na temat <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>korzystania z tych metod rozszerzenia, zobacz .  
+# <a name="how-to-query-linq-to-xml-using-xpath-c"></a>Jak zbadać LINQ to XML przy użyciu XPath (C#)
+W tym temacie przedstawiono metody rozszerzające, które umożliwiają badanie drzewa XML przy użyciu XPath. Aby uzyskać szczegółowe informacje na temat korzystania z tych metod rozszerzających, zobacz <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType> .  
   
- Chyba że masz bardzo konkretny powód do wykonywania zapytań przy użyciu XPath, takich jak szerokie wykorzystanie starszego kodu, przy użyciu XPath z LINQ do XML nie jest zalecane. Kwerendy XPath nie będą [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] wykonywać, jak również kwerendy.  
+ Chyba że masz bardzo konkretny powód wykonywania zapytań przy użyciu XPath, na przykład w przypadku korzystania z starszego kodu, używanie XPath z LINQ to XML nie jest zalecane. Zapytania XPath nie będą wykonywane, a także [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytania.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład tworzy małe drzewo XML i używa <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> do wybierania zestawu elementów.  

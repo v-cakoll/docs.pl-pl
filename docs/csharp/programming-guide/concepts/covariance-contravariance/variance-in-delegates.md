@@ -1,13 +1,14 @@
 ---
 title: Wariancja w delegatach (C#)
+description: Dowiedz się, jak obsługa wariancji w .NET Framework pozwala dopasować sygnatury metod z typami delegatów we wszystkich delegatach.
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 7370813179040f54e65adf3b568a1fd914223f1d
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: ef57a7fa7feaef98a47822e3f1c9242d0205932d
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990037"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105653"
 ---
 # <a name="variance-in-delegates-c"></a>Wariancja w delegatach (C#)
 .NET Framework 3,5 wprowadza obsługę wariancji dla pasujących sygnatur metod z typami delegatów we wszystkich delegatach w języku C#. Oznacza to, że można przypisać do delegatów nie tylko metod, które mają pasujące podpisy, ale również metody, które zwracają więcej typów pochodnych (Kowariancja) lub akceptują parametry, które mają mniej pochodne typy (kontrawariancja) niż określone przez typ delegata. Dotyczy to zarówno delegatów rodzajowych, jak i nieogólnych.  

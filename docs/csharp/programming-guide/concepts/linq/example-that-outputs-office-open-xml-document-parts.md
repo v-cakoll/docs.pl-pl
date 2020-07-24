@@ -1,21 +1,22 @@
 ---
-title: Przykład, który wyprowadza pakiet Office Otwórz części dokumentów XML (C#)
+title: Przykład, który wyprowadza fragmenty dokumentu Office Open XML (C#)
+description: Dowiedz się, jak otworzyć dokument pakietu Office Open XML i uzyskać dostęp do jego części za pomocą LINQ w języku C#. Ten przykład drukuje część dokumentu oraz część stylu dokumentu.
 ms.date: 07/20/2015
 ms.assetid: 6cd37055-89b4-42e8-bf27-5a29717e35f3
-ms.openlocfilehash: be4c0ba2ce2a007fa6e19a65d7d86854d85851c4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5755ad8e8772195c056b0c1c896c914b1a63a55
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66486003"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103915"
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-c"></a>Przykład, który wyprowadza pakiet Office Otwórz części dokumentów XML (C#)
-W tym temacie pokazano, jak otworzyć dokument XML pakietu Office i uzyskać dostęp do części w nim.  
+# <a name="example-that-outputs-office-open-xml-document-parts-c"></a>Przykład, który wyprowadza fragmenty dokumentu Office Open XML (C#)
+W tym temacie przedstawiono sposób otwierania dokumentu Office Open XML i części dostępu w nim.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład otwiera dokument XML otwierania pakietu Office i drukuje część dokumentu i część stylu do konsoli.  
+ Poniższy przykład otwiera dokument Office Open XML i drukuje część dokumentu oraz część stylu do konsoli programu.  
   
- W tym przykładzie użyto klas z zestawu WindowsBase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> obszarze nazw.  
+ W tym przykładzie zastosowano klasy z zestawu 'Windowsbase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  

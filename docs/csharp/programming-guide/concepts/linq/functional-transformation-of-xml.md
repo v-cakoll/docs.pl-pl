@@ -1,19 +1,20 @@
 ---
-title: Transformacja funkcjonalna języka XML (C#)
+title: Przekształcanie funkcjonalne kodu XML (C#)
+description: Dowiedz się, jak modyfikować dokumenty XML przy użyciu czystego podejścia do transformacji funkcjonalnej w języku C# i jak różni się od podejścia proceduralnego.
 ms.date: 07/20/2015
 ms.assetid: 0ccb9251-38d7-44e3-9b84-1b5fe25e4b59
-ms.openlocfilehash: 83ecd97f9319027dc50f346abf7a9888b5c23862
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4ccc6859f3663eb3760c7faeaf115a5e88a2278a
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75336796"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103668"
 ---
-# <a name="functional-transformation-of-xml-c"></a>Transformacja funkcjonalna języka XML (C#)
-W tym temacie omówiono podejście do czystej transformacji funkcjonalnej do modyfikowania dokumentów XML i kontrastuje je z podejściem proceduralnym.  
+# <a name="functional-transformation-of-xml-c"></a>Przekształcanie funkcjonalne kodu XML (C#)
+W tym temacie omówiono ścisłe podejście do transformacji funkcjonalnej w celu modyfikowania dokumentów XML i kontrastu z podejściem proceduralnym.  
   
 ## <a name="modifying-an-xml-document"></a>Modyfikowanie dokumentu XML  
- Jednym z najczęstszych zadań programisty XML jest przekształcanie języka XML z jednego kształtu do drugiego. Kształt dokumentu XML jest strukturą dokumentu, która zawiera następujące elementy:  
+ Jednym z najbardziej typowych zadań dla programisty XML jest przekształcanie XML z jednego kształtu do drugiego. Kształt dokumentu XML jest strukturą dokumentu, która obejmuje następujące elementy:  
   
 - Hierarchia wyrażona w dokumencie.  
   
@@ -21,19 +22,19 @@ W tym temacie omówiono podejście do czystej transformacji funkcjonalnej do mod
   
 - Typy danych elementów i atrybutów.  
   
- Ogólnie rzecz biorąc najbardziej skuteczne podejście do przekształcania XML z jednego kształtu do drugiego jest to, że czystej transformacji funkcjonalnej. W tym podejściu podstawowym zadaniem programisty jest utworzenie transformacji, która jest stosowana do całego dokumentu XML (lub do jednego lub więcej ściśle zdefiniowanych węzłów). Transformacja funkcjonalna jest prawdopodobnie najłatwiejsza do kodu (po programista jest zaznajomiony z podejściem), daje najbardziej konserwacji kodu i jest często bardziej kompaktowy niż alternatywne podejścia.  
+ Ogólnie rzecz biorąc, najbardziej efektywne podejście do przekształcania kodu XML z jednego kształtu na drugi to czysty przekształcenie funkcjonalne. W ramach tego podejścia podstawowe zadanie programisty polega na utworzeniu transformacji, która jest stosowana do całego dokumentu XML (lub do jednego lub większej liczby ściśle zdefiniowanych węzłów). Przekształcanie funkcjonalne jest raczej najłatwiejszym w kodzie (po zapoznaniu się z podejściem programisty), zapewnia najbardziej łatwość obsługi kod i jest często bardziej zwarty niż alternatywne podejścia.  
   
 ### <a name="xml-functional-transformational-technologies"></a>Technologie transformacji funkcjonalnej XML  
- Firma Microsoft oferuje dwie technologie transformacji funkcjonalnej do użycia w dokumentach XML: XSLT i LINQ do XML. XSLT jest obsługiwany <xref:System.Xml.Xsl> w zarządzanym obszarze nazw i w natywnej implementacji COM msxml. Chociaż XSLT jest niezawodną technologią do manipulowania dokumentami XML, wymaga specjalistycznej wiedzy w specjalistycznej domenie, a mianowicie w języku XSLT i jego wspierających interfejsach API.  
+ Firma Microsoft oferuje dwie funkcjonalne technologie przekształcania do użycia w dokumentach XML: XSLT i LINQ to XML. Język XSLT jest obsługiwany w <xref:System.Xml.Xsl> zarządzanej przestrzeni nazw i natywnej implementacji COM programu MSXML. Chociaż XSLT jest niezawodną technologią do manipulowania dokumentami XML, wymaga znajomości specjalistycznej domeny, a mianowicie języka XSLT i obsługujących je interfejsów API.  
   
- LINQ do XML zapewnia narzędzia niezbędne do kodowania czystej transformacji funkcjonalnych w sposób ekspresyjny i potężny, w c# lub visual basic kodu. Na przykład wiele przykładów w dokumentacji LINQ do XML używa czystego podejścia funkcjonalnego. Ponadto w [samouczku: Manipulowanie zawartością w samouczku dokumentu WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md) używamy LINQ do XML w funkcjonalnym podejściu do manipulowania informacjami w dokumencie programu Microsoft Word.  
+ LINQ to XML udostępnia narzędzia niezbędne do kodu przekształceń czystych funkcjonalnie w sposób wyraźny i zaawansowany w kodzie C# lub Visual Basic. Przykładowo wiele przykładów w dokumentacji LINQ to XML używa czystego podejścia funkcjonalnego. Ponadto w [samouczku: manipulowanie zawartością w samouczku WordprocessingML Document (C#)](./shape-of-wordprocessingml-documents.md) używamy LINQ to XML w ramach podejścia funkcjonalnego do manipulowania informacjami w dokumencie programu Microsoft Word.  
   
- Aby uzyskać pełniejsze porównanie linq z XML z innymi technologiami Microsoft XML, zobacz [LINQ do XML vs. Inne technologie XML](./linq-to-xml-vs-other-xml-technologies.md).  
+ Aby zapoznać się z bardziej szczegółowym porównaniem LINQ to XML z innymi technologiami Microsoft XML, zobacz [LINQ to XML a inne technologie XML](./linq-to-xml-vs-other-xml-technologies.md).  
   
-XSLT jest zalecanym narzędziem do przekształceń zorientowanych na dokument, gdy dokument źródłowy ma nieregularną strukturę. Jednak LINQ do XML można również wykonywać przekształcenia zorientowane na dokument. Aby uzyskać więcej informacji, zobacz [Jak używać adnotacji do przekształcania linq do drzew XML w stylu XSLT (C#).](./how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md)
+Język XSLT jest zalecanym narzędziem dla transformacji skoncentrowanych na dokumentach, gdy dokument źródłowy ma nieregularną strukturę. Jednak LINQ to XML mogą również wykonywać transformacje skoncentrowane na dokumentach. Aby uzyskać więcej informacji, zobacz [jak używać adnotacji do przekształcania drzew LINQ to XML w stylu XSLT (C#)](./how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md).
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Wprowadzenie do czystych przemian funkcjonalnych (C#)](./introduction-to-pure-functional-transformations.md)
+- [Wprowadzenie do czystych transformacji funkcjonalnych (C#)](./introduction-to-pure-functional-transformations.md)
 - [Samouczek: manipulowanie zawartością w dokumencie WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)
-- [LINQ do XML w porównaniu z innymi technologiami XML](./linq-to-xml-vs-other-xml-technologies.md)
+- [LINQ to XML a inne technologie XML](./linq-to-xml-vs-other-xml-technologies.md)

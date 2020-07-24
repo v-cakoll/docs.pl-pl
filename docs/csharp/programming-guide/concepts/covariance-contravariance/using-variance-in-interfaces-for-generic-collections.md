@@ -1,13 +1,14 @@
 ---
 title: Korzystanie z wariancji w interfejsach dla kolekcji ogólnych (C#)
+description: Dowiedz się, jak używać interfejsów współvariant i kontrawariantne dla kolekcji ogólnych. Zobacz przykłady konwersji i porównywania kolekcji ogólnych.
 ms.date: 07/20/2015
 ms.assetid: a44f0708-10fa-4c76-82cd-daa6e6b31e8e
-ms.openlocfilehash: 5f5531e17a530ed840108df2cf9bf829b2beb656
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: c2ce849e32520cb91422ff36173e418a010476bd
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241360"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105676"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a>Korzystanie z wariancji w interfejsach dla kolekcji ogólnych (C#)
 Interfejs współdzielny umożliwia metodom Zwracanie większej liczby typów pochodnych niż określone w interfejsie. Interfejs kontrawariantne umożliwia jej metodom akceptowanie parametrów o mniejszych typach pochodnych niż określone w interfejsie.  

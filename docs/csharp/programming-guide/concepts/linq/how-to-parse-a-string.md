@@ -1,21 +1,22 @@
 ---
-title: Jak przeanalizować ciąg znaków (C#)
+title: Jak analizować ciąg (C#)
+description: Dowiedz się, jak analizować ciąg w celu utworzenia drzewa XML w języku C#. Dowiedz się, jak uzyskać dostęp do określonych danych w analizowanym formacie XML.
 ms.date: 07/20/2015
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
-ms.openlocfilehash: 79821eb9e5cd7187ac3c2a93f85eaae45c5c48ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a4664e090b6a44c52c519e61b66ccdc5d59a71f1
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345812"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104814"
 ---
-# <a name="how-to-parse-a-string-c"></a>Jak przeanalizować ciąg znaków (C#)
+# <a name="how-to-parse-a-string-c"></a>Jak analizować ciąg (C#)
 
-W tym temacie pokazano, jak przeanalizować ciąg, aby utworzyć drzewo XML w języku C#.
+W tym temacie pokazano, jak przeanalizować ciąg w celu utworzenia drzewa XML w języku C#.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod Języka C# pokazuje sposób analizowanie ciągu XML:
+Poniższy kod w języku C# pokazuje, jak analizować ciąg XML:
 
 ```csharp
 XElement contacts = XElement.Parse(
@@ -47,7 +48,7 @@ XElement contacts = XElement.Parse(
 Console.WriteLine(contacts);
 ```
 
-Węzeł `Contacts` główny ma `Contact` dwa węzły. Aby uzyskać dostęp do niektórych określonych danych w przeanalizowanym pliku XML, należy użyć metody [XElement.Elements(),](xref:System.Xml.Linq.XContainer.Elements) która w tym przypadku zwraca elementy podrzędne węzła głównego. `Contacts` Poniższy przykład drukuje `Contact` pierwszy węzeł do konsoli:
+Węzeł główny `Contacts` ma dwa `Contact` węzły. Aby uzyskać dostęp do określonych danych w analizowanym formacie XML, należy użyć metody [XElement. elementy ()](xref:System.Xml.Linq.XContainer.Elements) , która w tym przypadku zwraca elementy podrzędne `Contacts` węzła głównego. Poniższy przykład drukuje pierwszy `Contact` węzeł konsoli:
 
 ```csharp
 List<XElement> contactNodes = contacts.Elements("Contact").ToList();

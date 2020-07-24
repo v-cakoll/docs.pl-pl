@@ -1,16 +1,17 @@
 ---
-title: Jak wysyłać zapytania do plików o określonym atrybucie lub nazwie (C#)
+title: Jak wykonać zapytanie o pliki o określonym atrybucie lub nazwie (C#)
+description: Dowiedz się, jak używać LINQ w języku C#, aby znaleźć pliki, które mają określone rozszerzenie nazwy pliku w drzewie katalogów i jak zwrócić najnowszy lub najstarszy plik.
 ms.date: 07/20/2015
 ms.assetid: 560e3879-b0b3-4549-ad02-0a53aff2f83c
-ms.openlocfilehash: fc6456f159887b7ad109e8ad48f0f79999d53e09
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9820b96e19d805b792e18ff242e64dfb6cf4a606
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168872"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104501"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>Jak wysyłać zapytania do plików o określonym atrybucie lub nazwie (C#)
-W tym przykładzie pokazano, jak znaleźć wszystkie pliki, które mają określone rozszerzenie nazwy pliku (na przykład ".txt") w określonym drzewie katalogów. Pokazuje również, jak zwrócić najnowszy lub najstarszy plik w drzewie na podstawie czasu utworzenia.  
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>Jak wykonać zapytanie o pliki o określonym atrybucie lub nazwie (C#)
+Ten przykład pokazuje, jak znaleźć wszystkie pliki, które mają określone rozszerzenie nazwy pliku (na przykład ". txt") w określonym drzewie katalogów. Przedstawiono w nim również, jak zwrócić najnowszy lub najstarszy plik w drzewie na podstawie czasu utworzenia.  
   
 ## <a name="example"></a>Przykład  
   
@@ -64,9 +65,9 @@ class FindFileByExtension
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
-  Utwórz projekt aplikacji konsoli `using` C# z dyrektywami dla system.Linq i System.IO przestrzeni nazw.
+  Utwórz projekt aplikacji konsolowej w języku C# z `using` dyrektywami dotyczącymi przestrzeni nazw System. LINQ i system.IO.
   
 ## <a name="see-also"></a>Zobacz też
 
-- [LINQ do obiektów (C#)](./linq-to-objects.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)
 - [LINQ i katalogi plików (C#)](./linq-and-file-directories.md)

@@ -1,13 +1,14 @@
 ---
 title: Drzewa wyrażeń (C#)
+description: Dowiedz się więcej na temat drzew wyrażeń. Zapoznaj się z tematem kompilowania i uruchamiania kodu reprezentowanego przez te struktury danych, gdzie każdy węzeł jest wyrażeniem.
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: c260e649e7bd285a6bd07b5a1cd7fc1a7f75b82a
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 2fa8577dd945650edebf84459de10c0c3bd04225
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241555"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105577"
 ---
 # <a name="expression-trees-c"></a>Drzewa wyrażeń (C#)
 Drzewa wyrażeń reprezentują kod w strukturze danych przypominającej drzewo, gdzie każdy węzeł jest wyrażeniem, na przykład wywołaniem metody lub operacją binarną, taką jak `x < y` .  

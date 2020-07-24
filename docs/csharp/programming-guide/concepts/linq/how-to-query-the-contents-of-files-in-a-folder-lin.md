@@ -1,16 +1,17 @@
 ---
-title: Jak wysyłać zapytania do zawartości plików tekstowych w folderze (LINQ) (C#)
+title: Jak zbadać zawartość plików tekstowych w folderze (LINQ) (C#)
+description: Dowiedz się, jak za pomocą LINQ w języku C# wykonać zapytania dotyczące wszystkich plików w drzewie katalogów, otworzyć każdy plik i zbadać jego zawartość.
 ms.date: 07/20/2015
 ms.assetid: f5b4dce7-1a34-4eb4-9bf1-60d5bdda264c
-ms.openlocfilehash: 998fddd3f59ee64df9adcee1acc720d82861c3d9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 216edc2ee6fc43fd06a3c89b1b6b73f693f752f8
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168742"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104263"
 ---
-# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>Jak wysyłać zapytania do zawartości plików tekstowych w folderze (LINQ) (C#)
-W tym przykładzie pokazano, jak zapytań o wszystkie pliki w drzewie określonego katalogu, otworzyć każdy plik i sprawdzić jego zawartość. Ten typ techniki może służyć do tworzenia indeksów lub odwrotnej indeksów zawartości drzewa katalogów. Wyszukiwanie ciągów prostych jest wykonywane w tym przykładzie. Jednak bardziej złożone typy dopasowywania wzorców można wykonywać za pomocą wyrażenia regularnego. Aby uzyskać więcej informacji, zobacz [Jak łączyć zapytania LINQ z wyrażeniami regularnymi (C#).](./how-to-combine-linq-queries-with-regular-expressions.md)  
+# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>Jak zbadać zawartość plików tekstowych w folderze (LINQ) (C#)
+Ten przykład pokazuje, jak badać wszystkie pliki w określonym drzewie katalogów, otwierać każdy plik i sprawdzać jego zawartość. Ten typ technika może służyć do tworzenia indeksów lub odwracania indeksów zawartości drzewa katalogów. W tym przykładzie jest wykonywane proste wyszukiwanie ciągu. Jednak bardziej złożone typy dopasowywania do wzorców można wykonać przy użyciu wyrażenia regularnego. Aby uzyskać więcej informacji, zobacz [jak łączyć zapytania LINQ z wyrażeniami regularnymi (C#)](./how-to-combine-linq-queries-with-regular-expressions.md).  
   
 ## <a name="example"></a>Przykład  
   
@@ -71,9 +72,9 @@ class QueryContents
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
-Utwórz projekt aplikacji konsoli `using` C# z dyrektywami dla system.Linq i System.IO przestrzeni nazw.
+Utwórz projekt aplikacji konsolowej w języku C# z `using` dyrektywami dotyczącymi przestrzeni nazw System. LINQ i system.IO.
   
 ## <a name="see-also"></a>Zobacz też
 
 - [LINQ i katalogi plików (C#)](./linq-and-file-directories.md)
-- [LINQ do obiektów (C#)](./linq-to-objects.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)

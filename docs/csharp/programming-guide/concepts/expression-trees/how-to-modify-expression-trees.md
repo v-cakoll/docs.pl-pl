@@ -1,22 +1,23 @@
 ---
 title: Jak zmodyfikować drzewa wyrażeń (C#)
+description: Dowiedz się, jak modyfikować drzewo wyrażeń, tworząc kopię istniejącego drzewa wyrażeń i wprowadzając wymagane zmiany.
 ms.date: 07/20/2015
 ms.assetid: 9b0cd8c2-457e-4833-9e36-31e79545f442
-ms.openlocfilehash: e921c594497d02f5eb16cc60294e947e83636d7a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 45aea18e253811d4e5c60f23f7f8496d4358f64c
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73969903"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105606"
 ---
 # <a name="how-to-modify-expression-trees-c"></a>Jak zmodyfikować drzewa wyrażeń (C#)
-W tym temacie przedstawiono sposób modyfikowania drzewa wyrażeń. Drzewa wyrażeń są niezmienne, co oznacza, że nie można ich modyfikować bezpośrednio. Aby zmienić drzewo wyrażeń, należy utworzyć kopię istniejącego drzewa wyrażeń, a podczas tworzenia kopii należy wprowadzić wymagane zmiany. Klasa służy <xref:System.Linq.Expressions.ExpressionVisitor> do przechodzenia przez istniejące drzewo wyrażeń i skopiować każdy węzeł, który odwiedza.  
+W tym temacie przedstawiono sposób modyfikowania drzewa wyrażenia. Drzewa wyrażeń są niezmienne, co oznacza, że nie można ich modyfikować bezpośrednio. Aby zmienić drzewo wyrażenia, należy utworzyć kopię istniejącego drzewa wyrażeń i utworzyć kopię, wprowadzić wymagane zmiany. Można użyć <xref:System.Linq.Expressions.ExpressionVisitor> klasy do przechodzenia istniejącego drzewa wyrażeń i kopiowania każdego z nich.  
   
-### <a name="to-modify-an-expression-tree"></a>Aby zmodyfikować drzewo wyrażeń  
+### <a name="to-modify-an-expression-tree"></a>Aby zmodyfikować drzewo wyrażenia  
   
-1. Utwórz nowy projekt **aplikacji konsoli.**  
+1. Utwórz nowy projekt **aplikacji konsolowej** .  
   
-2. Dodaj `using` dyrektywę do pliku `System.Linq.Expressions` obszaru nazw.  
+2. Dodaj `using` dyrektywę do pliku dla `System.Linq.Expressions` przestrzeni nazw.  
   
 3. Dodaj `AndAlsoModifier` klasę do projektu.  
   
@@ -44,11 +45,11 @@ W tym temacie przedstawiono sposób modyfikowania drzewa wyrażeń. Drzewa wyra�
     }  
     ```  
   
-     Ta klasa dziedziczy <xref:System.Linq.Expressions.ExpressionVisitor> klasę i specjalizuje się `AND` w modyfikowaniu wyrażeń reprezentujących operacje warunkowe. Zmienia te operacje `AND` z warunkowego na warunkowy `OR`. Aby to zrobić, klasa <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> zastępuje metodę typu podstawowego, ponieważ wyrażenia warunkowe `AND` są reprezentowane jako wyrażenia binarne. W `VisitBinary` metodzie, jeśli wyrażenie, które jest przekazywane `AND` do niego reprezentuje operację warunkową, kod tworzy nowe wyrażenie, które zawiera operator warunkowy `OR` zamiast operatora warunkowego. `AND` Jeśli wyrażenie, które `VisitBinary` jest przekazywane do `AND` nie reprezentuje operacji warunkowej, metoda odracza implementacji klasy podstawowej. Metody klasy podstawowej konstruować węzły, które są jak drzewa wyrażeń, które są przekazywane w, ale węzły mają ich poddrzewa zastąpione drzewa wyrażeń, które są produkowane cyklicznie przez odwiedzającego.  
+     Ta klasa dziedziczy <xref:System.Linq.Expressions.ExpressionVisitor> klasę i jest wyspecjalizowany do modyfikowania wyrażeń, które reprezentują `AND` operacje warunkowe. Zmienia te operacje z warunkowego `AND` na warunkowe `OR` . W tym celu Klasa zastępuje <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> metodę typu podstawowego, ponieważ wyrażenia warunkowe `AND` są reprezentowane jako wyrażenia binarne. W `VisitBinary` metodzie, jeśli wyrażenie, które jest przesyłane do niego reprezentuje operację warunkową `AND` , kod konstruuje nowe wyrażenie zawierające operator warunkowy `OR` zamiast operatora warunkowego `AND` . Jeśli wyrażenie, które jest przesyłane do `VisitBinary` nie reprezentuje operacji warunkowej `AND` , metoda jest uwzględniana w implementacji klasy podstawowej. Metody klasy bazowej konstruują węzły, które są podobne do drzew wyrażeń, które są przenoszone, ale węzły mają swoje poddrzewa zamienione na drzewa wyrażeń, które są tworzone cyklicznie przez odwiedzających.  
   
-4. Dodaj `using` dyrektywę do pliku `System.Linq.Expressions` obszaru nazw.  
+4. Dodaj `using` dyrektywę do pliku dla `System.Linq.Expressions` przestrzeni nazw.  
   
-5. Dodaj kod `Main` do metody w Program.cs pliku, aby utworzyć drzewo wyrażeń i przekazać go do metody, która będzie go modyfikować.  
+5. Dodaj kod do `Main` metody w pliku program.cs, aby utworzyć drzewo wyrażenia i przekazać go do metody, która zmodyfikuje ją.  
   
     ```csharp  
     Expression<Func<string, bool>> expr = name => name.Length > 10 && name.StartsWith("G");  
@@ -66,11 +67,11 @@ W tym temacie przedstawiono sposób modyfikowania drzewa wyrażeń. Drzewa wyra�
     */  
     ```  
   
-     Kod tworzy wyrażenie, które `AND` zawiera operację warunkową. Następnie tworzy wystąpienie `AndAlsoModifier` klasy i przekazuje wyrażenie `Modify` do metody tej klasy. Zarówno oryginalne, jak i zmodyfikowane drzewa wyrażeń są wyprowadzane, aby pokazać zmianę.  
+     Kod tworzy wyrażenie zawierające operację warunkową `AND` . Następnie tworzy wystąpienie `AndAlsoModifier` klasy i przekazuje wyrażenie do `Modify` metody tej klasy. Wszystkie oryginalne i zmodyfikowane drzewa wyrażeń są zwracane w celu wyświetlenia zmiany.  
   
 6. Skompiluj i uruchom aplikację.  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Jak wykonać drzewa wyrażeń (C#)](./how-to-execute-expression-trees.md)
+- [Wykonywanie drzew wyrażeń (C#)](./how-to-execute-expression-trees.md)
 - [Drzewa wyrażeń (C#)](./index.md)

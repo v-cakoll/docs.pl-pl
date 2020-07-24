@@ -1,45 +1,46 @@
 ---
-title: Programowanie funkcjonalne a programowanie proceduralne (LINQ do XML) (C#)
+title: Programowanie funkcjonalne a proceduralne (LINQ to XML) (C#)
+description: W przypadku przetwarzania XML LINQ to XML obsługuje zarówno modyfikacje drzewa XML w pamięci, jak i konstrukcja funkcjonalna, która używa podejścia deklaracyjnego.
 ms.date: 07/20/2015
 ms.assetid: fc64e39c-a487-4882-9169-da4de97917d9
-ms.openlocfilehash: e87114d2edcda4b2df14eb2d84f62ebe9638b5eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e19f9311c56f4fe2c5e7e5f228aca6c03c6fe04d
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69594248"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103651"
 ---
-# <a name="functional-vs-procedural-programming-linq-to-xml-c"></a>Programowanie funkcjonalne a programowanie proceduralne (LINQ do XML) (C#)
-Istnieją różne rodzaje aplikacji XML:  
+# <a name="functional-vs-procedural-programming-linq-to-xml-c"></a>Programowanie funkcjonalne a proceduralne (LINQ to XML) (C#)
+Istnieją różne typy aplikacji XML:  
   
-- Niektóre aplikacje przyjmują źródłowe dokumenty XML i tworzą nowe dokumenty XML, które mają inny kształt niż dokumenty źródłowe.  
+- Niektóre aplikacje pobierają źródłowe dokumenty XML i generują nowe dokumenty XML, które znajdują się w innym kształcie niż dokumenty źródłowe.  
   
-- Niektóre aplikacje przyjmują źródłowe dokumenty XML i tworzą dokumenty wyników w zupełnie innej formie, takiej jak pliki tekstowe HTML lub CSV.  
+- Niektóre aplikacje pobierają źródłowe dokumenty XML i generują dokumenty z wynikami całkowicie różnymi formularzami, takimi jak pliki tekstowe HTML lub CSV.  
   
-- Niektóre aplikacje przyjmują źródłowe dokumenty XML i wstawiają rekordy do bazy danych.  
+- Niektóre aplikacje pobierają źródłowe dokumenty XML i wstawiają rekordy do bazy danych.  
   
-- Niektóre aplikacje przyjmują dane z innego źródła, takiego jak baza danych, i tworzą z niej dokumenty XML.  
+- Niektóre aplikacje pobierają dane z innego źródła, takiego jak baza danych, i tworzy z niego dokumenty XML.  
   
  Nie są to wszystkie typy aplikacji XML, ale są to reprezentatywny zestaw typów funkcji, które programista XML musi zaimplementować.  
   
- W przypadku wszystkich tych typów aplikacji istnieją dwa kontrastujące podejścia, które deweloper może podjąć:  
+ W przypadku wszystkich typów aplikacji istnieją dwie podejścia z kontrastem, które może podjąć Deweloper:  
   
-- Funkcjonalna konstrukcja przy użyciu podejścia deklaratywnego.  
+- Funkcjonalne konstruowanie przy użyciu podejścia deklaratywnego.  
   
-- Modyfikacja drzewa XML w pamięci przy użyciu kodu proceduralnego.  
+- Modyfikowanie drzewa XML w pamięci przy użyciu kodu proceduralnego.  
   
- LINQ do XML obsługuje oba podejścia.  
+ LINQ to XML obsługuje oba podejścia.  
   
- Korzystając z podejścia funkcjonalnego, piszesz przekształcenia, które przyjmują dokumenty źródłowe i generują całkowicie nowe dokumenty wynikowe o pożądanym kształcie.  
+ Korzystając z podejścia funkcjonalnego, należy napisać przekształcenia, które pobierają dokumenty źródłowe i generować zupełnie nowe dokumenty wynikowe z żądanym kształtem.  
   
- Podczas modyfikowania drzewa XML w miejscu, należy napisać kod, który przechodzi i porusza się po węzłach w drzewie XML w pamięci, wstawianie, usuwanie i modyfikowanie węzłów w razie potrzeby.  
+ Podczas modyfikowania drzewa XML w miejscu należy napisać kod, który przechodzi przez węzły w drzewie XML w pamięci, wstawiając, usuwając i modyfikując węzły, w razie potrzeby.  
   
- Linq można użyć do XML z obu podejść. Używasz tych samych klas, a w niektórych przypadkach te same metody. Jednak struktura i cele obu podejść są bardzo różne. Na przykład w różnych sytuacjach jedno lub drugie podejście często mają lepszą wydajność i używać więcej lub mniej pamięci. Ponadto jedno lub drugie podejście będzie łatwiejsze do napisania i przynieść więcej kodu do konserwacji.  
+ Możesz użyć LINQ to XML z dowolnego podejścia. Używasz tych samych klas, a w niektórych przypadkach te same metody. Jednak struktura i cele dwóch metod są bardzo różne. Na przykład w różnych sytuacjach jedno lub inne podejście często ma lepszą wydajność i będzie używać więcej lub mniej pamięci. Ponadto jedno lub inne podejście będzie łatwiejsze do pisania i uzyskania bardziej możliwego do utrzymania kodu.  
   
- Aby zobaczyć dwa podejścia skontrastowane, zobacz [Modyfikacja drzewa XML w pamięci vs. Konstrukcja funkcjonalna (LINQ do XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md).  
+ Aby wyświetlić dwa podejścia z kontrastem, zobacz [Modyfikowanie drzewa XML w pamięci a konstrukcja funkcjonalna (LINQ to XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md).  
   
- Aby zapoznać się z samouczkiem na temat pisania przekształceń funkcjonalnych, zobacz [Czyste transformacje funkcjonalne języka XML (C#).](./introduction-to-pure-functional-transformations.md)  
+ Aby zapoznać się z samouczkiem dotyczącym pisania przekształceń funkcjonalnych, zobacz [czyste działania transformacji XML (C#)](./introduction-to-pure-functional-transformations.md).  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Omówienie programowania LINQ do XML (C#)](./linq-to-xml-overview.md)
+- [Omówienie programowania LINQ to XML (C#)](./linq-to-xml-overview.md)

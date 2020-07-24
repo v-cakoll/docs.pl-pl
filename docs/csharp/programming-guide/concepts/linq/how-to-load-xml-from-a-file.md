@@ -1,28 +1,29 @@
 ---
-title: Jak załadować xml z pliku (C#)
+title: Jak załadować XML z pliku (C#)
+description: Dowiedz się, jak załadować XML z identyfikatora URI przy użyciu metody XElement. Load w języku C#. Ten przykład ładuje plik XML i drukuje drzewo XML do konsoli.
 ms.date: 07/20/2015
 ms.assetid: 3ed38487-8028-4209-9872-c8dce0ed4dfe
-ms.openlocfilehash: 635b338bbaf9c15779bccab4d4c824037858b338
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 29de914139d1e9abcda2097addca9219d44d2696
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169055"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104955"
 ---
-# <a name="how-to-load-xml-from-a-file-c"></a>Jak załadować xml z pliku (C#)
-W tym temacie pokazano, jak załadować <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> XML z identyfikatora URI przy użyciu tej metody.  
+# <a name="how-to-load-xml-from-a-file-c"></a>Jak załadować XML z pliku (C#)
+W tym temacie przedstawiono sposób ładowania kodu XML z identyfikatora URI przy użyciu <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> metody.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak załadować dokument XML z pliku. Poniższy przykład ładuje plik books.xml i wyświetla drzewo XML do konsoli.  
+ Poniższy przykład pokazuje, jak załadować dokument XML z pliku. Poniższy przykład ładuje books.xml i wyprowadza drzewo XML do konsoli.  
   
- W tym przykładzie użyto następującego dokumentu XML: [Przykładowy plik XML: Książki (LINQ do XML)](./sample-xml-file-books-linq-to-xml.md).  
+ Ten przykład używa następującego dokumentu XML: [przykładowy plik XML: Books (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).  
   
 ```csharp  
 XElement booksFromFile = XElement.Load(@"books.xml");  
 Console.WriteLine(booksFromFile);  
 ```  
   
- Ten kod generuje następujące dane wyjściowe:  
+ Ten kod spowoduje wygenerowanie następujących danych wyjściowych:  
   
 ```xml  
 <Catalog>  

@@ -1,19 +1,20 @@
 ---
-title: Jak wysyłać zapytania o całkowitą liczbę bajtów w zestawie folderów (LINQ) (C#)
+title: Jak wykonać zapytanie o całkowitą liczbę bajtów w zestawie folderów (LINQ) (C#)
+description: Dowiedz się, jak używać LINQ w języku C#, aby znaleźć łączną liczbę bajtów używanych przez wszystkie pliki w określonym folderze i jego podfolderach.
 ms.date: 07/20/2015
 ms.assetid: a01bd1d4-133c-4ca2-aa4e-e93e81d6076c
-ms.openlocfilehash: c6bfe6bb6d76e7ce8ea8887eef85cd64f2a025df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 964d92a55599d60388f7add937c7f7338f697817
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75344817"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104295"
 ---
-# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-c"></a>Jak zbadać całkowitą liczbę bajtów w zestawie folderów (LINQ) (C#)
-W tym przykładzie pokazano, jak pobrać całkowitą liczbę bajtów używanych przez wszystkie pliki w określonym folderze i wszystkie jego podfoldery.  
+# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-c"></a>Jak wykonać zapytanie o całkowitą liczbę bajtów w zestawie folderów (LINQ) (C#)
+Ten przykład pokazuje, jak pobrać łączną liczbę bajtów używanych przez wszystkie pliki w określonym folderze i jego podfolderach.  
   
 ## <a name="example"></a>Przykład  
- Metoda <xref:System.Linq.Enumerable.Sum%2A> dodaje wartości wszystkich elementów wybranych `select` w klauzuli. Można łatwo zmodyfikować tę kwerendę, aby pobrać największy lub najmniejszy <xref:System.Linq.Enumerable.Min%2A> <xref:System.Linq.Enumerable.Max%2A> plik w <xref:System.Linq.Enumerable.Sum%2A>określonym drzewie katalogów, wywołując lub metody zamiast .  
+ <xref:System.Linq.Enumerable.Sum%2A>Metoda dodaje wartości wszystkich elementów wybranych w `select` klauzuli. Możesz łatwo zmodyfikować to zapytanie, aby pobrać największy lub najmniejszy plik w określonym drzewie katalogów, wywołując <xref:System.Linq.Enumerable.Min%2A> <xref:System.Linq.Enumerable.Max%2A> metodę or zamiast <xref:System.Linq.Enumerable.Sum%2A> .  
   
 ```csharp  
 class QuerySize  
@@ -69,14 +70,14 @@ class QuerySize
 }  
 ```  
   
- Jeśli trzeba tylko policzyć liczbę bajtów w drzewie określonego katalogu, można to zrobić bardziej efektywnie bez tworzenia kwerendy LINQ, która ponosi obciążenie tworzenia kolekcji listy jako źródła danych. Przydatność podejścia LINQ zwiększa się, gdy kwerenda staje się bardziej złożona lub gdy trzeba uruchomić wiele zapytań względem tego samego źródła danych.  
+ Jeśli musisz tylko policzyć liczbę bajtów w określonym drzewie katalogów, możesz to zrobić bardziej wydajnie bez tworzenia zapytania LINQ, które wiąże się z obciążeniem tworzenia kolekcji list jako źródła danych. Użyteczność podejścia LINQ zwiększa się, gdy zapytanie jest bardziej złożone, lub gdy trzeba uruchomić wiele zapytań względem tego samego źródła danych.  
   
- Kwerenda wywołuje do oddzielnej metody, aby uzyskać długość pliku. Czyni to w celu użycia możliwego wyjątku, który zostanie podniesiony, <xref:System.IO.FileInfo> jeśli plik został usunięty `GetFiles`w innym wątku po utworzeniu obiektu w wywołaniu . Mimo że <xref:System.IO.FileInfo> obiekt został już utworzony, wyjątek może <xref:System.IO.FileInfo> wystąpić, ponieważ <xref:System.IO.FileInfo.Length%2A> obiekt będzie próbował odświeżyć jego właściwość z najbardziej bieżącą długość przy pierwszym dostępie do właściwości. Umieszczając tę operację w bloku try-catch poza kwerendą, kod jest zgodny z regułą unikania operacji w kwerendach, które mogą powodować skutki uboczne. Ogólnie rzecz biorąc należy zachować szczególną ostrożność podczas używania wyjątków, aby upewnić się, że aplikacja nie pozostaje w nieznanym stanie.  
+ Zapytanie wywołuje oddzielną metodę w celu uzyskania długości pliku. Wykonuje to w celu użycia możliwego wyjątku, który zostanie wywołany, jeśli plik został usunięty z innego wątku po <xref:System.IO.FileInfo> utworzeniu obiektu w wywołaniu `GetFiles` . Mimo że <xref:System.IO.FileInfo> obiekt został już utworzony, wyjątek może wystąpić, ponieważ <xref:System.IO.FileInfo> obiekt podejmie próbę odświeżenia swojej <xref:System.IO.FileInfo.Length%2A> właściwości z największą bieżącą długością dostępną do właściwości. Przez umieszczenie tej operacji w bloku try-catch poza zapytania, kod jest zgodny z regułą unikania operacji w zapytaniach, które mogą spowodować skutki uboczne. Ogólnie rzecz biorąc należy zachować szczególną ostrożność podczas korzystania z wyjątków, aby upewnić się, że aplikacja nie jest pozostawiona w nieznanym stanie.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
-Utwórz projekt aplikacji konsoli `using` C# z dyrektywami dla system.Linq i System.IO przestrzeni nazw.
+Utwórz projekt aplikacji konsolowej w języku C# z `using` dyrektywami dotyczącymi przestrzeni nazw System. LINQ i system.IO.
   
 ## <a name="see-also"></a>Zobacz też
 
-- [LINQ do obiektów (C#)](./linq-to-objects.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)
 - [LINQ i katalogi plików (C#)](./linq-and-file-directories.md)

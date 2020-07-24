@@ -1,21 +1,22 @@
 ---
 title: Jak kontrolować typ projekcji (C#)
+description: Dowiedz się, jak kontrolować typ projekcji w LINQ w języku C#, aby tworzyć Kolekcje typów innych niż IEnumerable <T> of XElement.
 ms.date: 07/20/2015
 ms.assetid: e4db6b7e-4cc9-4c8f-af85-94acf32aa348
-ms.openlocfilehash: cb7c272fbe67c0700b5740691befc483993f4e29
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 32b019b5e1574e7160b4dce5fb0322caa3c1ca71
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141352"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103348"
 ---
 # <a name="how-to-control-the-type-of-a-projection-c"></a>Jak kontrolować typ projekcji (C#)
-Projekcja to proces przyjmowania jednego zestawu danych, filtrowania go, zmiany jego kształtu, a nawet zmiany jego typu. Większość wyrażeń zapytań wykonuje projekcje. Większość wyrażeń kwerendy przedstawionych <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement>w tej sekcji ocenia , ale można kontrolować typ projekcji, aby utworzyć kolekcje innych typów. W tym temacie pokazano, jak to zrobić.  
+Projekcja to proces przejmowania jednego zestawu danych, filtrowanie go, zmiana jego kształtu, a nawet zmiana jego typu. Większość wyrażeń zapytania wykonuje projekcje. Większość wyrażeń zapytania przedstawionych w tej sekcji szacuje się <xref:System.Collections.Generic.IEnumerable%601> na <xref:System.Xml.Linq.XElement> , ale można kontrolować typ projekcji, aby tworzyć Kolekcje innych typów. W tym temacie pokazano, jak to zrobić.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład definiuje nowy typ `Customer`. Wyrażenie kwerendy następnie tworzy `Customer` nowe obiekty `Select` w klauzuli. Powoduje to, że typ wyrażenia <xref:System.Collections.Generic.IEnumerable%601> `Customer`kwerendy ma być .  
+ W poniższym przykładzie zdefiniowano nowy typ, `Customer` . Wyrażenie zapytania następnie tworzy wystąpienie nowych `Customer` obiektów w `Select` klauzuli. Powoduje to, że typ wyrażenia zapytania ma być <xref:System.Collections.Generic.IEnumerable%601> `Customer` .  
   
- W tym przykładzie użyto następującego dokumentu XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ do XML).](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Customers i Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 public class Customer  
@@ -60,7 +61,7 @@ class Program
 }  
 ```  
   
- Ten kod generuje następujące dane wyjściowe:  
+ Ten kod spowoduje wygenerowanie następujących danych wyjściowych:  
   
 ```output  
 GREAL:Great Lakes Food Market:Howard Snyder  

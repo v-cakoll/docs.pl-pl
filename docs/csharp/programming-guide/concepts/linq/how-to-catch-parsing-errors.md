@@ -1,21 +1,22 @@
 ---
-title: Jak wychwycić błędy analizy (C#)
+title: Jak przechwytywać błędy analizy (C#)
+description: Ten LINQ to XML przykład w języku C# wykrywa nieprawidłowo sformułowany lub nieprawidłowy kod XML. LINQ to XML używa elementu XmlReader, który zgłasza wyjątek dla nieprawidłowo sformułowanego lub nieprawidłowego kodu XML.
 ms.date: 07/20/2015
 ms.assetid: bfb612d4-5605-48ef-8c93-915cf9d5dcfb
-ms.openlocfilehash: 1a05037892061dec85e7837472e8ec13e076724b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0a891097322ef6acce062ea927692b01cc425e6c
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141479"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105404"
 ---
-# <a name="how-to-catch-parsing-errors-c"></a>Jak wychwycić błędy analizy (C#)
-W tym temacie pokazano, jak wykryć źle utworzony lub nieprawidłowy kod XML.  
+# <a name="how-to-catch-parsing-errors-c"></a>Jak przechwytywać błędy analizy (C#)
+W tym temacie pokazano, jak wykryć źle sformułowany lub nieprawidłowy kod XML.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]jest realizowany <xref:System.Xml.XmlReader>za pomocą . Jeśli źle utworzone lub nieprawidłowy Kod [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]XML jest <xref:System.Xml.XmlReader> przekazywany do , podstawowa klasa zgłosi wyjątek. Różne metody, które analizują XML, takie jak <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, nie przechwycić wyjątek; wyjątek może zostać przechwycony przez aplikację.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]jest zaimplementowany przy użyciu <xref:System.Xml.XmlReader> . Jeśli nieprawidłowo sformułowany lub nieprawidłowy kod XML jest przenoszona do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] , <xref:System.Xml.XmlReader> Klasa bazowa zgłosi wyjątek. Różne metody, które analizują XML, takie jak <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType> , nie przechwytują wyjątku; wyjątek może zostać przechwycony przez aplikację.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod próbuje przeanalizować nieprawidłowy kod XML:  
+ Następujący kod próbuje przeanalizować nieprawidłowego kodu XML:  
   
 ```csharp  
 try {  
@@ -40,5 +41,5 @@ catch (System.Xml.XmlException e)
 The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line 5, position 13.  
 ```  
   
- Aby uzyskać informacje na temat wyjątków, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>których <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> można się spodziewać <xref:System.Xml.XmlReader> <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>, i metody, aby rzucić, zapoznaj się z dokumentacją.  
+ Informacje o wyjątkach, w których można oczekiwać, <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType> , <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType> <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> , i metod zgłaszania <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> , znajdują się w <xref:System.Xml.XmlReader> dokumentacji.  
   

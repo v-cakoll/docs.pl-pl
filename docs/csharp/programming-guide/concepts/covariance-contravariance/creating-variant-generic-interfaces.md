@@ -1,13 +1,14 @@
 ---
 title: Tworzenie interfejsów ogólnych typu Variant (C#)
+description: Dowiedz się, jak tworzyć wariantowe interfejsy ogólne z parametrami typu generycznego lub kontrawariantne.
 ms.date: 07/20/2015
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
-ms.openlocfilehash: a8e3e010c0e5d5490aee35603cad4fd6c1dc29e0
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 38b32784b681e748cd508c3d431fd4b18ec2c81a
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990046"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105716"
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>Tworzenie interfejsów ogólnych typu Variant (C#)
 

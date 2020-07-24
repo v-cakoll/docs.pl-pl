@@ -1,5 +1,6 @@
 ---
 title: Podstawowe operacje zapytań LINQ (C#)
+description: Wprowadź siebie w wyrażeniach zapytań LINQ i niektórych operacji, które możesz wykonać w zapytaniu.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - orderby clause [LINQ in C#]
@@ -17,91 +18,91 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 91c038303c1ad7c2530964d3102aae49090c4c2a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d9653be8b67ef4d971c157b8dd8d82b2ae3c2287
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635941"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105521"
 ---
 # <a name="basic-linq-query-operations-c"></a>Podstawowe operacje zapytań LINQ (C#)
-W tym temacie przedstawiono krótkie wprowadzenie do wyrażeń zapytań LINQ i niektórych typowych rodzajów operacji wykonywanych w kwerendzie. Bardziej szczegółowe informacje znajdują się w następujących tematach:  
+Ten temat zawiera krótkie wprowadzenie do wyrażeń zapytań LINQ i niektórych typowych rodzajów operacji wykonywanych w zapytaniu. Bardziej szczegółowe informacje znajdują się w następujących tematach:  
   
- [Wyrażenia zapytań LINQ](../../../linq/index.md)  
+ [Wyrażenia zapytania LINQ](../../../linq/index.md)  
   
- [Omówienie standardowych operatorów zapytań (C#)](./standard-query-operators-overview.md)  
+ [Standardowe operatory zapytań — Omówienie (C#)](./standard-query-operators-overview.md)  
   
- [Instruktaż: Pisanie zapytań w C #](./walkthrough-writing-queries-linq.md)  
+ [Przewodnik: Pisanie zapytań w języku C #](./walkthrough-writing-queries-linq.md)  
   
 > [!NOTE]
-> Jeśli znasz już język zapytania, taki jak SQL lub XQuery, możesz pominąć większość tego tematu. Przeczytaj o`from` "klauzuli" w następnej sekcji, aby dowiedzieć się o kolejności klauzul w wyrażeniach kwerendlinq.  
+> Jeśli znasz już język zapytań, taki jak SQL lub XQuery, możesz pominąć większość tego tematu. Przeczytaj temat " `from` klauzula" w następnej sekcji, aby dowiedzieć się więcej na temat porządku klauzul w wyrażeniach zapytań LINQ.  
   
 ## <a name="obtaining-a-data-source"></a>Uzyskanie źródła danych  
- W kwerendzie LINQ pierwszym krokiem jest określenie źródła danych. W języku C#, jak w większości języków programowania zmienna musi być zadeklarowana, zanim będzie można użyć. W kwerendzie LINQ `from` klauzula jest na pierwszym miejscu`customers`w celu wprowadzenia`cust`źródła danych ( ) i *zmiennej zakresu* ( ).  
+ W zapytaniu LINQ pierwszym krokiem jest określenie źródła danych. W języku C#, jak w większości języków programowania, zmienna musi być zadeklarowana, zanim będzie można jej użyć. W zapytaniu LINQ `from` klauzula jest najpierw w celu wprowadzenia źródła danych ( `customers` ) i *zmiennej zakresu* ( `cust` ).  
   
  [!code-csharp[csLINQGettingStarted#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#23)]  
   
- Zmienna zakresu jest jak zmienna `foreach` iteracji w pętli, z tą różnicą, że w wyrażeniu kwerendy nie występuje rzeczywista iteracja. Po wykonaniu kwerendy zmienna zakresu będzie służyć jako odwołanie `customers`do każdego kolejnego elementu w programie . Ponieważ kompilator można wywnioskować typ `cust`, nie trzeba go jawnie określić. Dodatkowe zmienne zakresu mogą być `let` wprowadzone przez klauzulę. Aby uzyskać więcej informacji, zobacz [klauzulę let](../../../language-reference/keywords/let-clause.md).  
+ Zmienna zakresu jest jak Zmienna iteracji w `foreach` pętli, z wyjątkiem tego, że w wyrażeniu zapytania nie ma rzeczywistej iteracji. Gdy zapytanie zostanie wykonane, zmienna zakresu będzie traktować jako odwołanie do każdego kolejnego elementu w `customers` . Ponieważ kompilator może wywnioskować typ `cust` , nie trzeba określać go jawnie. Dodatkowe zmienne zakresów można wprowadzać przez `let` klauzulę. Aby uzyskać więcej informacji, zobacz [klauzula Let](../../../language-reference/keywords/let-clause.md).  
   
 > [!NOTE]
-> W przypadku nieogólnych <xref:System.Collections.ArrayList>źródeł danych, takich jak zmienna zakresu, musi być jawnie wpisana. Aby uzyskać więcej informacji, zobacz [Jak wysyłać zapytania do ArrayList z LINQ (C#)](./how-to-query-an-arraylist-with-linq.md) i [z klauzuli](../../../language-reference/keywords/from-clause.md).  
+> W przypadku nieogólnych źródeł danych, takich jak <xref:System.Collections.ArrayList> , zmienna zakresu musi być jawnie wpisana. Aby uzyskać więcej informacji, zobacz [How to Query an ArrayList with LINQ (C#)](./how-to-query-an-arraylist-with-linq.md) i [from](../../../language-reference/keywords/from-clause.md).  
   
 ## <a name="filtering"></a>Filtrowanie  
- Prawdopodobnie najbardziej popularną operacją kwerendy jest zastosowanie filtru w postaci wyrażenia logicznego. Filtr powoduje, że kwerenda zwraca tylko te elementy, dla których wyrażenie jest prawdziwe. Wynik jest tworzony przy `where` użyciu klauzuli. Filtr w efekcie określa, które elementy wykluczyć z sekwencji źródłowej. W poniższym przykładzie `customers` zwracane są tylko osoby, które mają adres w Londynie.  
+ Prawdopodobnie najbardziej typową operacją zapytania jest stosowanie filtru w postaci wyrażenia logicznego. Filtr powoduje, że zapytanie zwraca tylko te elementy, dla których wyrażenie ma wartość true. Wynik jest tworzony przy użyciu `where` klauzuli. Filtr w efekcie określa elementy, które mają zostać wykluczone z sekwencji źródłowej. W poniższym przykładzie zwracane są tylko te `customers` osoby, które mają adres w Londynie.  
   
  [!code-csharp[csLINQGettingStarted#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#24)]  
   
- Za pomocą znanych logicznych `AND` `OR` c# i operatorów, aby zastosować `where` dowolną liczbę wyrażeń filtru, zgodnie z wymogami w klauzuli. Na przykład, aby zwrócić tylko `AND` klientów z "Londynu", którego nazwa jest "Devon", należy napisać następujący kod:  
+ Możesz użyć znanych operatorów logicznych języka C# `AND` , `OR` Aby zastosować dowolną liczbę wyrażeń filtrów w `where` klauzuli. Aby na przykład zwrócić tylko klientów z "Londyn" o `AND` nazwie "Devon", należy napisać następujący kod:  
   
  [!code-csharp[csLINQGettingStarted#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#25)]  
   
- Aby zwrócić klientów z Londynu lub Paryża, należy napisać następujący kod:  
+ Aby zwrócić klientów z Londyn lub Paryż, Napisz następujący kod:  
   
  [!code-csharp[csLINQGettingStarted#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#26)]  
   
- Aby uzyskać więcej informacji, zobacz [gdzie klauzula](../../../language-reference/keywords/where-clause.md).  
+ Aby uzyskać więcej informacji, zobacz [klauzula WHERE](../../../language-reference/keywords/where-clause.md).  
   
 ## <a name="ordering"></a>Szeregowanie  
- Często wygodnie jest sortować zwrócone dane. Klauzula `orderby` spowoduje, że elementy w zwróconej sekwencji mają być sortowane zgodnie z domyślnym porównywarka dla typu są sortowane. Na przykład następującą kwerendę można rozszerzyć, aby `Name` posortować wyniki na podstawie właściwości. Ponieważ `Name` jest to ciąg, domyślny porównywarka wykonuje sortowanie alfabetyczne od A do Z.  
+ Często wygodnie jest posortować zwrócone dane. `orderby`Klauzula spowoduje, że elementy w zwracanej sekwencji będą sortowane zgodnie z domyślną wartością porównującą dla sortowanego typu. Na przykład następujące zapytanie można rozszerzyć, aby posortować wyniki na podstawie `Name` właściwości. Ponieważ `Name` jest ciągiem, domyślna funkcja porównująca wykonuje alfabetyczne sortowanie od a do z.  
   
  [!code-csharp[csLINQGettingStarted#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#27)]  
   
- Aby zamówić wyniki w odwrotnej kolejności, od `orderby…descending` Z do A, użyj klauzuli.  
+ Aby zamówić wyniki w odwrotnej kolejności, od z do A, użyj `orderby…descending` klauzuli.  
   
- Aby uzyskać więcej informacji, zobacz [orderby klauzuli](../../../language-reference/keywords/orderby-clause.md).  
+ Aby uzyskać więcej informacji, zobacz [klauzula OrderBy](../../../language-reference/keywords/orderby-clause.md).  
   
 ## <a name="grouping"></a>Grupowanie  
- Klauzula `group` umożliwia grupowanie wyników na podstawie klucza, który określisz. Na przykład można określić, że wyniki powinny `City` być pogrupowane według tak, aby wszyscy klienci z Londynu lub Paryża byli w poszczególnych grupach. W tym `cust.City` przypadku jest kluczem.  
+ `group`Klauzula pozwala grupować wyniki na podstawie określonego klucza. Można na przykład określić, że wyniki mają być pogrupowane według, `City` aby wszyscy klienci z Londyn lub Paryż w poszczególnych grupach. W tym przypadku `cust.City` jest kluczem.  
   
  [!code-csharp[csLINQGettingStarted#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#28)]  
   
- Po zakończeniu kwerendy `group` z klauzulą, wyniki mają formę listy list. Każdy element na liście jest obiektem, który ma element członkowski `Key` i listę elementów, które są zgrupowane pod tym kluczem. Podczas itetenowania za pomocą kwerendy, która tworzy sekwencję `foreach` grup, należy użyć pętli zagnieżdżonej. Zewnętrzna pętla itere nad każdą grupą, a wewnętrzna pętla iteuje nad członkami każdej grupy.  
+ Po zakończeniu zapytania z `group` klauzulą wyniki mają postać listy list. Każdy element na liście jest obiektem, który ma `Key` element członkowski i listę elementów, które są zgrupowane w tym kluczu. Podczas iteracji w zapytaniu, które tworzy sekwencję grup, należy użyć zagnieżdżonej `foreach` pętli. Pętla zewnętrzna wykonuje iterację dla każdej grupy, a pętla wewnętrzna wykonuje iterację dla wszystkich członków grupy.  
   
- Jeśli musisz odwołać się do wyników operacji `into` grupy, można użyć słowa kluczowego, aby utworzyć identyfikator, który może być przeszukiwany dalej. Następująca kwerenda zwraca tylko te grupy, które zawierają więcej niż dwóch klientów:  
+ Jeśli musisz odwołać się do wyników operacji grupy, możesz użyć `into` słowa kluczowego, aby utworzyć identyfikator, który może być przeszukiwany w dalszej części. Następujące zapytanie zwraca tylko te grupy, które zawierają więcej niż dwóch klientów:  
   
  [!code-csharp[csLINQGettingStarted#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#29)]  
   
- Aby uzyskać więcej informacji, zobacz [klauzulę group](../../../language-reference/keywords/group-clause.md).  
+ Aby uzyskać więcej informacji, zobacz [klauzula](../../../language-reference/keywords/group-clause.md)Group.  
   
 ## <a name="joining"></a>Dołączenie  
- Operacje sprzężenia tworzą skojarzenia między sekwencjami, które nie są jawnie modelowane w źródłach danych. Na przykład można wykonać sprzężenie, aby znaleźć wszystkich klientów i dystrybutorów, którzy mają tę samą lokalizację. W LINQ `join` klauzula zawsze działa przeciwko kolekcje obiektów zamiast tabel bazy danych bezpośrednio.  
+ Operacje Join tworzą skojarzenia między sekwencjami, które nie są jawnie modelowane w źródłach danych. Na przykład możesz wykonać sprzężenie, aby znaleźć wszystkich klientów i dystrybutorów, którzy mają tę samą lokalizację. W LINQ `join` klauzula zawsze działa w odniesieniu do kolekcji obiektów, a nie bezpośrednio w tabelach bazy danych.  
   
  [!code-csharp[csLINQGettingStarted#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#36)]  
   
- W LINQ nie trzeba używać `join` tak często, jak to zrobić w SQL, ponieważ klucze obce w LINQ są reprezentowane w modelu obiektu jako właściwości, które posiadają kolekcję elementów. Na przykład `Customer` obiekt zawiera kolekcję `Order` obiektów. Zamiast wykonywać sprzężenie, można uzyskać dostęp do zamówień za pomocą notacji kropkowej:  
+ W LINQ nie trzeba używać `join` tak często jak w przypadku programu SQL, ponieważ klucze obce w LINQ są reprezentowane w modelu obiektów jako właściwości, które przechowują kolekcję elementów. Na przykład `Customer` obiekt zawiera kolekcję `Order` obiektów. Zamiast wykonywać sprzężenie, uzyskujesz dostęp do zamówień przy użyciu notacji kropkowej:  
   
 ```csharp
 from order in Customer.Orders...  
 ```  
   
- Aby uzyskać więcej informacji, zobacz [klauzulę join .](../../../language-reference/keywords/join-clause.md)  
+ Aby uzyskać więcej informacji, zobacz [Klauzula join](../../../language-reference/keywords/join-clause.md).  
   
 ## <a name="selecting-projections"></a>Zaznaczenie (projekcje)  
- Klauzula `select` daje wyniki kwerendy i określa "kształt" lub typ każdego zwróconego elementu. Na przykład można określić, czy wyniki `Customer` będą składać się z kompletnych obiektów, tylko jeden element członkowski, podzbiór elementów członkowskich lub jakiś zupełnie inny typ wyniku na podstawie obliczeń lub tworzenia nowego obiektu. Gdy `select` klauzula tworzy coś innego niż kopia elementu źródłowego, operacja jest wywoływana *projekcji*. Wykorzystanie projekcji do przekształcania danych jest zaawansowaną możliwością wyrażeń zapytań LINQ. Aby uzyskać więcej informacji, zobacz [Transformacje danych z LINQ (C#)](./data-transformations-with-linq.md) i [wybierz klauzulę](../../../language-reference/keywords/select-clause.md).  
+ `select`Klauzula tworzy wyniki zapytania i określa "kształt" lub typ każdego zwróconego elementu. Można na przykład określić, czy wyniki będą składać się z kompletnych `Customer` obiektów, tylko jednego elementu członkowskiego, podzestawu elementów członkowskich, czy pewnego całkowicie innego typu wyników na podstawie obliczeń lub tworzenia nowego obiektu. Gdy `select` klauzula generuje coś innego niż kopia elementu źródłowego, operacja jest nazywana *projekcją*. Użycie projekcji do przekształcania danych jest zaawansowaną funkcją wyrażeń zapytań LINQ. Aby uzyskać więcej informacji, zobacz [przekształcenia danych za pomocą LINQ (C#)](./data-transformations-with-linq.md) i [SELECT](../../../language-reference/keywords/select-clause.md).  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Wyrażenia zapytań LINQ](../../../linq/index.md)
-- [Instruktaż: Pisanie zapytań w C #](./walkthrough-writing-queries-linq.md)
+- [Wyrażenia zapytania LINQ](../../../linq/index.md)
+- [Przewodnik: Pisanie zapytań w języku C #](./walkthrough-writing-queries-linq.md)
 - [Słowa kluczowe zapytania (LINQ)](../../../language-reference/keywords/query-keywords.md)
 - [Typy anonimowe](../../classes-and-structs/anonymous-types.md)

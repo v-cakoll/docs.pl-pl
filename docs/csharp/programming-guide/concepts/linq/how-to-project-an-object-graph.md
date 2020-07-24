@@ -1,19 +1,20 @@
 ---
-title: Jak wyświetlać wykres obiektu (C#)
+title: Jak projektować Graf obiektów (C#)
+description: Dowiedz się, jak projektować i wypełniać Graf obiektów z XML w języku C#. Przykładowy kod wypełnia Graf obiektów klasami z przykładowego pliku XML.
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: eafb3d9064159c43fc98e0b241f0045465fca824
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c2ea0e06d9a46a1b19236eae021a2a153fea1d4
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168963"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104622"
 ---
-# <a name="how-to-project-an-object-graph-c"></a>Jak wyświetlać wykres obiektu (C#)
-W tym temacie przedstawiono sposób projekcji lub wypełniania wykresu obiektu z języka XML.  
+# <a name="how-to-project-an-object-graph-c"></a>Jak projektować Graf obiektów (C#)
+W tym temacie pokazano, jak projektować i wypełniać Graf obiektów z pliku XML.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod wypełnia wykres obiektu `Address`z `PurchaseOrder`, `PurchaseOrderItem` i klas z [przykładowego pliku XML: Typowe zamówienie zakupu (LINQ do XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML dokumentu.  
+ Poniższy kod wypełnia wykres obiektu za pomocą `Address` `PurchaseOrder` klasy,, i `PurchaseOrderItem` z [przykładowego pliku XML: typowy dokument xml zamówienia zakupu (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) .  
   
 ```csharp  
 class Address  
@@ -214,9 +215,9 @@ class Program {
 }  
 ```  
   
- W tym przykładzie wynik kwerendy LINQ jest <xref:System.Collections.Generic.IEnumerable%601> zwracany jako z `PurchaseOrderItem`. Elementy w `PurchaseOrder` klasie są <xref:System.Collections.Generic.IEnumerable%601> typu `PurchaseOrderItem`. Kod używa <xref:System.Linq.Enumerable.ToList%2A> metody rozszerzenia, <xref:System.Collections.Generic.List%601> aby utworzyć kolekcję na podstawie wyników kwerendy.  
+ W tym przykładzie wynik zapytania LINQ jest zwracany jako <xref:System.Collections.Generic.IEnumerable%601> z `PurchaseOrderItem` . Elementy w `PurchaseOrder` klasie są typu <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem` . Kod używa <xref:System.Linq.Enumerable.ToList%2A> metody rozszerzającej, aby utworzyć <xref:System.Collections.Generic.List%601> kolekcję na podstawie wyników zapytania.  
   
- W przykładzie przedstawiono następujące dane wyjściowe:  
+ Przykład generuje następujące dane wyjściowe:  
   
 ```output  
 PurchaseOrderNumber: 99503  

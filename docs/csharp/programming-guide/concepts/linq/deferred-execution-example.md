@@ -1,19 +1,20 @@
 ---
-title: Przykład odroczonego wykonania (C#)
+title: Przykład wykonania odroczonego (C#)
+description: Zobacz, jak odroczone wykonywanie i Ocena z opóźnieniem wpływają na wykonywanie zapytań LINQ to XML w języku C#.
 ms.date: 07/20/2015
 ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
-ms.openlocfilehash: 0816594ad016f19af4c97198160b4bafb9b4b8b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 65ba4cc150f2fc9d8f44aee352987ea0eeaab0a5
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70204135"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103948"
 ---
-# <a name="deferred-execution-example-c"></a>Przykład odroczonego wykonania (C#)
-W tym temacie pokazano, jak odroczone wykonanie i leniwa ocena wpływa na wykonywanie linq do zapytań XML.  
+# <a name="deferred-execution-example-c"></a>Przykład wykonania odroczonego (C#)
+W tym temacie pokazano, w jaki sposób odroczone wykonywanie i Ocena z opóźnieniem wpływają na wykonywanie zapytań LINQ to XML.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono kolejność wykonywania przy użyciu metody rozszerzenia, która używa odroczonego wykonania. W przykładzie deklaruje tablicy trzech ciągów. Następnie iteruje przez kolekcję `ConvertCollectionToUpperCase`zwróconą przez .  
+ Poniższy przykład pokazuje kolejność wykonywania przy użyciu metody rozszerzenia, która korzysta z odroczonego wykonania. Przykład deklaruje tablicę trzech ciągów. Następnie wykonuje iterację w kolekcji zwróconej przez `ConvertCollectionToUpperCase` .  
   
 ```csharp  
 public static class LocalExtensions  
@@ -55,14 +56,14 @@ ToUpper: source ghi
 Main: str GHI  
 ```  
   
- Należy zauważyć, że podczas iteracji `ConvertCollectionToUpperCase`za pośrednictwem kolekcji zwracanej przez , każdy element jest pobierany z tablicy ciągu źródłowego i konwertowane na wielkie litery przed następnym elementem jest pobierana z tablicy ciągów źródłowych.  
+ Należy zauważyć, że podczas iteracji kolekcji zwróconej przez `ConvertCollectionToUpperCase` , każdy element jest pobierany z tablicy ciągów źródłowych i konwertowany na wielkie przed pobraniem następnego elementu z tablicy ciągów źródłowych.  
   
- Widać, że cała tablica ciągów nie jest konwertowana na wielkie litery, zanim `foreach` każdy `Main`element w zwróconej kolekcji jest przetwarzany w pętli w .  
+ Można zobaczyć, że cała tablica ciągów nie jest konwertowana na wielkie przed każdym elementem w zwróconej kolekcji w `foreach` pętli w `Main` .  
   
- Następny temat w tym samouczku ilustruje łączenie zapytań razem:  
+ W następnym temacie w tym samouczku przedstawiono Łączenie łańcuchowe zapytań:  
   
-- [Przykład kwerend łańcuchowych (C#)](./chaining-queries-example.md)  
+- [Przykład łańcucha zapytań (C#)](./chaining-queries-example.md)  
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Samouczek: Łączenie zapytań razem (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Samouczek: Łączenie łańcuchowe zapytań (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

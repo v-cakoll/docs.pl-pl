@@ -1,21 +1,22 @@
 ---
-title: Jak generować pliki tekstowe z języka XML (C#)
+title: Jak generować pliki tekstowe z pliku XML (C#)
+description: Dowiedz się, jak wygenerować plik CSV na podstawie pliku XML w języku C#. W tym przykładzie użyto składni metody i operatora Aggregate.
 ms.date: 07/20/2015
 ms.assetid: 9ad283f7-7cac-42ff-bf32-92aa866e6883
-ms.openlocfilehash: 9ca76cf955e07bdcc8e095b30f6fadc74edba739
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6e9ce803ddfac3f1609d60a4f51661232cbb2f4
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345927"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105063"
 ---
-# <a name="how-to-generate-text-files-from-xml-c"></a>Jak generować pliki tekstowe z języka XML (C#)
-W tym przykładzie pokazano, jak wygenerować plik wartości oddzielonych przecinkami (CSV) z pliku XML.  
+# <a name="how-to-generate-text-files-from-xml-c"></a>Jak generować pliki tekstowe z pliku XML (C#)
+Ten przykład pokazuje, jak generować plik wartości rozdzielanych przecinkami (CSV) z pliku XML.  
   
 ## <a name="example"></a>Przykład  
- Wersja C# w tym przykładzie używa `Aggregate` składni metody i operatora do generowania pliku CSV z dokumentu XML w jednym wyrażeniu. Aby uzyskać więcej informacji, zobacz [Składnia kwerend i Składnia metody w pliku LINQ](./query-syntax-and-method-syntax-in-linq.md).  
+ Wersja języka C# tego przykładu używa składni metody i `Aggregate` operatora, aby wygenerować plik CSV na podstawie dokumentu XML w jednym wyrażeniu. Aby uzyskać więcej informacji, zobacz [składnia zapytań i składnia metod w LINQ](./query-syntax-and-method-syntax-in-linq.md).  
   
- W tym przykładzie użyto następującego dokumentu XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ do XML).](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Customers i Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement custOrd = XElement.Load("CustomersOrders.xml");  
@@ -44,7 +45,7 @@ string csv =
 Console.WriteLine(csv);  
 ```  
   
- Ten kod generuje następujące dane wyjściowe:  
+ Ten kod spowoduje wygenerowanie następujących danych wyjściowych:  
   
 ```output  
 GREAL,Great Lakes Food Market,Howard Snyder,Marketing Manager,(503) 555-7555,2732 Baker Blvd.,Eugene,OR,97403,USA  
@@ -55,4 +56,4 @@ LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,Sa
   
 ## <a name="see-also"></a>Zobacz też
 
-- [Projekcje i przekształcenia (LINQ do XML) (C#)](how-to-work-with-dictionaries-using-linq-to-xml.md)
+- [Projekcje i przekształcenia (LINQ to XML) (C#)](how-to-work-with-dictionaries-using-linq-to-xml.md)

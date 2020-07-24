@@ -1,19 +1,20 @@
 ---
-title: Jak pobrać kolekcję atrybutów (LINQ do XML) (C#)
+title: Jak pobrać kolekcję atrybutów (LINQ to XML) (C#)
+description: Metoda Attributes w języku C# Pobiera atrybuty elementu. Ten LINQ to XML przykład wykonuje iterację w kolekcji atrybutów elementu.
 ms.date: 07/20/2015
 ms.assetid: a49ee7a3-b2c2-4d49-9b5c-b7c6c41f4f13
-ms.openlocfilehash: 02871b38c3b1a1ed64fa6ca808e193811cd7f721
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5994086db6133530e63eb1328a7b524d30a0797d
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347640"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103383"
 ---
-# <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-c"></a>Jak pobrać kolekcję atrybutów (LINQ do XML) (C#)
-W tym temacie <xref:System.Xml.Linq.XElement.Attributes%2A> przedstawiono metodę. Ta metoda pobiera atrybuty elementu.  
+# <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-c"></a>Jak pobrać kolekcję atrybutów (LINQ to XML) (C#)
+W tym temacie przedstawiono <xref:System.Xml.Linq.XElement.Attributes%2A> metodę. Ta metoda pobiera atrybuty elementu.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak iterate za pośrednictwem kolekcji atrybutów elementu.  
+ Poniższy przykład pokazuje, jak wykonać iterację kolekcji atrybutów elementu.  
   
 ```csharp  
 XElement val = new XElement("Value",  
@@ -28,7 +29,7 @@ foreach (XAttribute a in listOfAttributes)
     Console.WriteLine(a);  
 ```  
   
- Ten kod generuje następujące dane wyjściowe:  
+ Ten kod spowoduje wygenerowanie następujących danych wyjściowych:  
   
 ```output  
 ID="1243"  
@@ -38,4 +39,4 @@ ConvertableTo="double"
   
 ## <a name="see-also"></a>Zobacz też
 
-- [LINQ do osi XML (C#)](./linq-to-xml-axes-overview.md)
+- [Osie LINQ to XML (C#)](./linq-to-xml-axes-overview.md)

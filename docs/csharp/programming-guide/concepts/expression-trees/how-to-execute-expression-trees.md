@@ -1,26 +1,27 @@
 ---
-title: Jak wykonać drzewa wyrażeń (C#)
+title: Wykonywanie drzew wyrażeń (C#)
+description: Dowiedz się, jak wykonać drzewo wyrażenia, aby zwrócić wartość, lub wykonać akcję, taką jak wywołanie metody.
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-ms.openlocfilehash: e7d408ea154572dc8b45d2e67bca3f05837868d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e306da545ba6c6275f36b8f6dd4e98bb91ed54e
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73969881"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105615"
 ---
-# <a name="how-to-execute-expression-trees-c"></a>Jak wykonać drzewa wyrażeń (C#)
-W tym temacie przedstawiono sposób wykonywania drzewa wyrażeń. Wykonywanie drzewa wyrażeń może zwrócić wartość lub może po prostu wykonać akcję, taką jak wywoływanie metody.  
+# <a name="how-to-execute-expression-trees-c"></a>Wykonywanie drzew wyrażeń (C#)
+W tym temacie pokazano, jak wykonać drzewo wyrażenia. Wykonanie drzewa wyrażenia może zwrócić wartość lub może po prostu wykonać akcję, taką jak wywołanie metody.  
   
- Można wykonać tylko drzewa wyrażeń reprezentujące wyrażenia lambda. Drzewa wyrażeń reprezentujące wyrażenia <xref:System.Linq.Expressions.LambdaExpression> lambda są typu lub <xref:System.Linq.Expressions.Expression%601>. Aby wykonać te drzewa <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> wyrażeń, wywołać metodę, aby utworzyć delegata wykonywalnego, a następnie wywołać delegata.  
+ Można wykonywać tylko drzewa wyrażeń, które reprezentują wyrażenia lambda. Drzewa wyrażeń, które reprezentują wyrażenia lambda, są typu <xref:System.Linq.Expressions.LambdaExpression> lub <xref:System.Linq.Expressions.Expression%601> . Aby wykonać te drzewa wyrażeń, wywołaj <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> metodę, aby utworzyć delegata pliku wykonywalnego, a następnie Wywołaj delegata.  
   
 > [!NOTE]
-> Jeśli typ delegata nie jest znany, oznacza to, że wyrażenie <xref:System.Linq.Expressions.LambdaExpression> lambda jest typu, a nie <xref:System.Linq.Expressions.Expression%601>, należy wywołać <xref:System.Delegate.DynamicInvoke%2A> metodę na delegata zamiast wywoływać go bezpośrednio.  
+> Jeśli typ delegata jest nieznany, to oznacza, że wyrażenie lambda jest typu, <xref:System.Linq.Expressions.LambdaExpression> a nie <xref:System.Linq.Expressions.Expression%601> , należy wywołać <xref:System.Delegate.DynamicInvoke%2A> metodę w delegatze zamiast wywoływania jej bezpośrednio.  
   
- Jeśli drzewo wyrażeń nie reprezentuje wyrażenia lambda, można utworzyć nowe wyrażenie lambda, które <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> ma oryginalne drzewo wyrażeń jako jego treść, wywołując metodę. Następnie można wykonać wyrażenie lambda zgodnie z opisem wcześniej w tej sekcji.  
+ Jeśli drzewo wyrażenia nie reprezentuje wyrażenia lambda, można utworzyć nowe wyrażenie lambda, które ma pierwotne drzewo wyrażenia jako jego treść, wywołując <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> metodę. Następnie można wykonać wyrażenie lambda zgodnie z opisem we wcześniejszej części tej sekcji.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie kodu pokazano, jak wykonać drzewo wyrażeń, który reprezentuje podnoszenie liczby do zasilania, tworząc wyrażenie lambda i wykonując go. Wyświetlany jest wynik, który reprezentuje liczbę podniesioną do potęgi.  
+ Poniższy przykład kodu demonstruje, jak wykonać drzewo wyrażenia, które reprezentuje podnoszenie liczby do potęgi przez utworzenie wyrażenia lambda i jego wykonanie. Zostanie wyświetlony wynik, który reprezentuje liczbę podniesioną do potęgi.  
   
 ```csharp  
 // The expression tree to execute.  
@@ -44,7 +45,7 @@ Console.WriteLine(result);
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
-- Dołącz obszar nazw System.Linq.Expressions.  
+- Uwzględnij przestrzeń nazw System. LINQ. Expressions.  
   
 ## <a name="see-also"></a>Zobacz też
 

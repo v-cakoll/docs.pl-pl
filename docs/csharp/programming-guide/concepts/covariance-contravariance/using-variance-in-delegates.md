@@ -1,23 +1,24 @@
 ---
-title: Używanie wariancji w delegatach (C#)
+title: Korzystanie z wariancji w delegatach (C#)
+description: Dowiedz się, jak używać wariancji w delegatach przy użyciu dołączonych przykładów kodu Kowariancja i kontrawariancja.
 ms.date: 07/20/2015
 ms.assetid: 1638c95d-dc8b-40c1-972c-c2dcf84be55e
-ms.openlocfilehash: 83e86e760edb17f6d9ae61864c154062d41416e4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 62b0555ee29c5e7d2ba0954a8949d61596122cc7
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169769"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105685"
 ---
-# <a name="using-variance-in-delegates-c"></a>Używanie wariancji w delegatach (C#)
-Po przypisaniu metody do delegata, *kowariancja* i *contravariance* zapewniają elastyczność dopasowania typu delegata z podpisem metody. Kowariancja pozwala metody mieć zwracany typ, który jest bardziej pochodną niż zdefiniowane w delegata. Contravariance zezwala na metodę, która ma typy parametrów, które są mniej pochodne niż w typie delegata.  
+# <a name="using-variance-in-delegates-c"></a>Korzystanie z wariancji w delegatach (C#)
+Podczas przypisywania metody do delegata, *Kowariancja* i *kontrawariancja* zapewniają elastyczność dla dopasowania typu delegata z sygnaturą metody. Kowariancja zezwala metodzie na typ zwracany, który jest bardziej pochodny niż zdefiniowany w delegatze. Kontrawariancja zezwala na metodę, która ma typy parametrów, które są mniej pochodne niż te w typie delegata.  
   
 ## <a name="example-1-covariance"></a>Przykład 1: Kowariancja  
   
 ### <a name="description"></a>Opis  
- W tym przykładzie pokazano, jak delegatów mogą być używane z metod, które mają typy zwracane, które są uzyskiwane z typu zwracanego w podpisie delegata. Typ danych zwracany `DogsHandler` przez `Dogs`jest typu , `Mammals` który pochodzi od typu, który jest zdefiniowany w pełnomocnika.  
+ Ten przykład pokazuje, jak obiekty delegowane mogą być używane z metodami, które mają typy zwracane, które pochodzą z typu zwracanego w sygnaturze delegata. Typ danych zwracanych przez element `DogsHandler` jest typu `Dogs` , który pochodzi od `Mammals` typu, który jest zdefiniowany w delegacie.  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>Kod  
   
 ```csharp  
 class Mammals {}  
@@ -48,27 +49,27 @@ class Program
 }  
 ```  
   
-## <a name="example-2-contravariance"></a>Przykład 2: Contravariance  
+## <a name="example-2-contravariance"></a>Przykład 2: kontrawariancja  
   
 ### <a name="description"></a>Opis
 
-W tym przykładzie pokazano, jak delegatów mogą być używane z metod, które mają parametry, których typy są typy podstawowe typu typu parametru podpisu delegata. Z contravariance, można użyć jednego programu obsługi zdarzeń zamiast oddzielnych programów obsługi. W poniższym przykładzie korzysta z dwóch delegatów:
+W tym przykładzie pokazano, jak obiekty delegowane mogą być używane z metodami, które mają parametry, których typy są typami podstawowymi typu parametru podpisu delegata. Za pomocą kontrawariancja można użyć jednego programu obsługi zdarzeń zamiast oddzielnych programów obsługi. W poniższym przykładzie użyto dwóch delegatów:
 
-- Pełnomocnik, <xref:System.Windows.Forms.KeyEventHandler> który definiuje podpis [Button.KeyDown](xref:System.Windows.Forms.Control.KeyDown) zdarzenia. Jego podpis jest:
+- <xref:System.Windows.Forms.KeyEventHandler>Delegat definiujący podpis zdarzenia [Button. KeyDown](xref:System.Windows.Forms.Control.KeyDown) . Podpis jest:
 
    ```csharp
    public delegate void KeyEventHandler(object sender, KeyEventArgs e)
    ```
 
-- Pełnomocnik <xref:System.Windows.Forms.MouseEventHandler> definiujący podpis zdarzenia [Button.MouseClick.](xref:System.Windows.Forms.Control.MouseDown) Jego podpis jest:
+- <xref:System.Windows.Forms.MouseEventHandler>Delegat definiujący sygnaturę zdarzenia [Button. MouseClick](xref:System.Windows.Forms.Control.MouseDown) . Podpis jest:
 
    ```csharp
    public delegate void MouseEventHandler(object sender, MouseEventArgs e)
    ```
 
-W przykładzie definiuje program obsługi <xref:System.EventArgs> zdarzeń z parametrem `Button.KeyDown` `Button.MouseClick` i używa go do obsługi zarówno i zdarzenia. Można to zrobić, ponieważ <xref:System.EventArgs> jest <xref:System.Windows.Forms.KeyEventArgs> typem bazowym obu i <xref:System.Windows.Forms.MouseEventArgs>.
+W przykładzie zdefiniowano procedurę obsługi zdarzeń z <xref:System.EventArgs> parametrem i używa jej do obsługi zarówno `Button.KeyDown` zdarzenia, jak i `Button.MouseClick` . Można to zrobić, ponieważ <xref:System.EventArgs> jest typem podstawowym obu <xref:System.Windows.Forms.KeyEventArgs> i <xref:System.Windows.Forms.MouseEventArgs> .
   
-### <a name="code"></a>Code  
+### <a name="code"></a>Kod  
   
 ```csharp  
 // Event handler that accepts a parameter of the EventArgs type.  
@@ -95,4 +96,4 @@ public Form1()
 ## <a name="see-also"></a>Zobacz też
 
 - [Wariancja w delegatach (C#)](./variance-in-delegates.md)
-- [Używanie wariancji dla delegatów ogólnych akcji i akcji (C#)](./using-variance-for-func-and-action-generic-delegates.md)
+- [Korzystanie z wariancji dla delegatów funkcji Func i Action (C#)](./using-variance-for-func-and-action-generic-delegates.md)

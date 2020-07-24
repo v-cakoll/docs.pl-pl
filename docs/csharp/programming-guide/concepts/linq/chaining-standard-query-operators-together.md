@@ -1,29 +1,30 @@
 ---
-title: Łączenie standardowych operatorów zapytań razem (C#)
+title: Łączenie standardowych operatorów zapytań (C#)
+description: Ten przykład pokazuje, jak standardowe operatory zapytań można również łączyć ze sobą w języku C#. Zapytanie nie zmaterializowania wyników pośrednich.
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
-ms.openlocfilehash: 37df654b2bfdcc135460e5ded2ceec1eca33b35a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 41a7e4c7910c783d07181fe16254b0cac6902794
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70204203"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104072"
 ---
-# <a name="chaining-standard-query-operators-together-c"></a>Łączenie standardowych operatorów zapytań razem (C#)
-Jest to ostatni temat w [samouczku: Łączenie zapytań razem (C#).](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)  
+# <a name="chaining-standard-query-operators-together-c"></a>Łączenie standardowych operatorów zapytań (C#)
+Jest to ostatni temat w [samouczku: Tworzenie łańcucha kwerend razem (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md) samouczek.  
   
- Standardowe operatory zapytań mogą być również połączone ze sobą. Na przykład można interject <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> operatora, a także działa w sposób leniwy. Żadne wyniki pośrednie nie są przez nią zmaterializowane.  
+ Standardowe operatory zapytań można również łączyć ze sobą. Na przykład można interject <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> operator, a także działa w sposób opóźniony. Żadne wyniki pośrednie nie są dla niego materiałowe.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie <xref:System.Linq.Enumerable.Where%2A> metoda jest `ConvertCollectionToUpperCase`wywoływana przed wywołaniem . Metoda <xref:System.Linq.Enumerable.Where%2A> działa prawie dokładnie w taki sam sposób, jak metody leniwe `ConvertCollectionToUpperCase` używane `AppendString`w poprzednich przykładach w tym samouczku i .  
+ W tym przykładzie <xref:System.Linq.Enumerable.Where%2A> Metoda jest wywoływana przed wywołaniem `ConvertCollectionToUpperCase` . <xref:System.Linq.Enumerable.Where%2A>Metoda działa w prawie dokładnie taki sam sposób, jak metody opóźnione używane w poprzednich przykładach w tym samouczku `ConvertCollectionToUpperCase` i `AppendString` .  
   
- Jedną z różnic jest to, że w tym przypadku <xref:System.Linq.Enumerable.Where%2A> metoda iteruje za pośrednictwem jego kolekcji źródłowej, określa, że pierwszy element nie przekazuje predykatu, a następnie pobiera następny element, który przechodzi. Następnie daje drugi element.  
+ Jedną z różnic jest to, że w tym przypadku <xref:System.Linq.Enumerable.Where%2A> Metoda iteruje za pomocą kolekcji źródłowej, określa, że pierwszy element nie przekazuje predykatu, a następnie pobiera następny element, który jest przekazywany. Następnie zwraca drugi element.  
   
- Jednak podstawowa idea jest taka sama: kolekcje pośrednie nie są zmaterializowane, chyba że muszą być.  
+ Jednak podstawowe pomysły są takie same: Kolekcje pośrednie nie są oznaczane materiałami, chyba że muszą być.  
   
- Gdy używane są wyrażenia kwerend, są konwertowane na wywołania do standardowych operatorów kwerend i mają zastosowanie te same zasady.  
+ Gdy wyrażenia zapytania są używane, są konwertowane na wywołania do standardowych operatorów zapytań i obowiązują te same zasady.  
   
- Wszystkie przykłady w tej sekcji, które są kwerendy Office Otwarte dokumenty XML używają tej samej zasady. Odroczone wykonanie i oceny z opóźnieniem są niektóre z podstawowych pojęć, które należy zrozumieć, aby skutecznie używać LINQ (i LINQ do XML).  
+ Wszystkie przykłady w tej sekcji, które wykonują zapytania o dokumenty w programie Office Open XML, używają tej samej zasady. Wykonywanie odroczone i Ocena z opóźnieniem to niektóre podstawowe koncepcje, które należy zrozumieć, aby skutecznie używać LINQ (i LINQ to XML).  
   
 ```csharp  
 public static class LocalExtensions  

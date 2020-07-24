@@ -1,19 +1,20 @@
 ---
-title: Jak znaleźć bezpośrednie poprzednie elementy równorzędne (XPath-LINQ do XML) (C#)
+title: Jak znaleźć bezpośredni poprzedni element równorzędny (XPath-LINQ to XML) (C#)
+description: Ten przykład w języku C# porównuje wyrażenie XPath LINQ to XML, aby znaleźć element równorzędny, który bezpośrednio poprzedza węzeł.
 ms.date: 07/20/2015
 ms.assetid: 74c06201-0b1b-4b5e-b3ac-0092980614e6
-ms.openlocfilehash: 1e5aece41021642d43b7f6f7b78bb105156ee4ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eaee7f1205ce0d0b2a9c2c41d96ba532573a1384
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141003"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105199"
 ---
-# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>Jak znaleźć bezpośrednie poprzednie elementy równorzędne (XPath-LINQ do XML) (C#)
-Czasami chcesz znaleźć bezpośrednie poprzedzających rodzeństwo do węzła. Ze względu na różnicę w semantyce predykatów pozycyjnych dla poprzednich osi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]równorzędnych w XPath, w przeciwieństwie do , jest to jedno z ciekawszych porównań.  
+# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>Jak znaleźć bezpośredni poprzedni element równorzędny (XPath-LINQ to XML) (C#)
+Czasami chcesz znaleźć bezpośrednio poprzedni element równorzędny do węzła. Ze względu na różnicę w semantyce predykatów pozycyjnych dla poprzedzających osi elementów równorzędnych w XPath, w przeciwieństwie do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] , jest to jedno z bardziej interesujących porównań.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] kwerenda <xref:System.Linq.Enumerable.Last%2A> używa operatora, aby znaleźć ostatni węzeł <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A>w kolekcji zwrócone przez . Natomiast wyrażenie XPath używa predykatu o wartości 1, aby znaleźć bezpośrednio poprzedzający element.  
+ W tym przykładzie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytanie używa <xref:System.Linq.Enumerable.Last%2A> operatora, aby znaleźć ostatni węzeł w kolekcji zwróconej przez <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A> . Z kolei wyrażenie XPath używa predykatu o wartości 1, aby znaleźć bezpośrednio poprzedzający element.  
   
 ```csharp  
 XElement root = XElement.Parse(  

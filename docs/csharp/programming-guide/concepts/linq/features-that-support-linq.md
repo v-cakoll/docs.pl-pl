@@ -1,15 +1,16 @@
 ---
 title: Funkcje C# obsługujące LINQ
+description: Dowiedz się więcej na temat funkcji języka C# do użycia z kwerendami LINQ i w innych kontekstach. Te konstrukcje języka zostały wprowadzone w języku C# 3,0.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: 32ba8f5e60b3ed2efd813a8ae32e5f4009eb790d
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: f72b82180d794086dcea9f11a7a057dc26ab0b26
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202411"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105422"
 ---
 # <a name="c-features-that-support-linq"></a>Funkcje C# obsługujące LINQ
 
@@ -100,6 +101,6 @@ Aby uzyskać więcej informacji, zobacz:
 
 - [Drzewa wyrażeń (C#)](../expression-trees/index.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Language-Integrated Query (LINQ) (C#)](./index.md)

@@ -1,28 +1,29 @@
 ---
-title: Jak zapytanie ArrayList z LINQ (C#)
+title: Jak zbadać ArrayList za pomocą LINQ (C#)
+description: W tym przykładzie używa LINQ do wykonywania zapytań na ArrayList w języku C#. Należy zadeklarować typ zmiennej zakresu w celu odzwierciedlenia typu obiektów w kolekcji.
 ms.date: 07/20/2015
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-ms.openlocfilehash: fa185ba3793b628b0d65e1f513a70ec68f6f2425
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c251e17de062a4578f06fc1a40ea3ede9f3ab67
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168937"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104608"
 ---
-# <a name="how-to-query-an-arraylist-with-linq-c"></a>Jak zapytanie ArrayList z LINQ (C#)
-Korzystając z LINQ do <xref:System.Collections.IEnumerable> wykonywania <xref:System.Collections.ArrayList>zapytań nieogólnych kolekcji, takich jak , należy jawnie zadeklarować typ zmiennej zakresu, aby odzwierciedlić określony typ obiektów w kolekcji. Na przykład jeśli masz <xref:System.Collections.ArrayList> `Student` obiektów, from [klauzula](../../../language-reference/keywords/from-clause.md) powinna wyglądać tak:  
+# <a name="how-to-query-an-arraylist-with-linq-c"></a>Jak zbadać ArrayList za pomocą LINQ (C#)
+W przypadku korzystania z programu LINQ do wykonywania zapytań dotyczących kolekcji innych niż ogólne <xref:System.Collections.IEnumerable> , takich jak <xref:System.Collections.ArrayList> , należy jawnie zadeklarować typ zmiennej zakresu, aby odzwierciedlała określony typ obiektów w kolekcji. Na przykład jeśli masz <xref:System.Collections.ArrayList> `Student` obiekty, [klauzula FROM](../../../language-reference/keywords/from-clause.md) powinna wyglądać następująco:  
   
 ```csharp
 var query = from Student s in arrList  
 //...
 ```  
   
- Określając typ zmiennej zakresu, rzutujesz każdy element <xref:System.Collections.ArrayList> w `Student`pliku do .  
+ Określenie typu zmiennej zakresu powoduje rzutowanie każdego elementu w <xref:System.Collections.ArrayList> `Student` .  
   
- Użycie jawnie wpisanej zmiennej zakresu w wyrażeniu zapytania jest równoważne wywołaniu <xref:System.Linq.Enumerable.Cast%2A> metody. <xref:System.Linq.Enumerable.Cast%2A>zgłasza wyjątek, jeśli nie można wykonać określonej rzutnie. <xref:System.Linq.Enumerable.Cast%2A>i <xref:System.Linq.Enumerable.OfType%2A> są dwie metody Standardowego operatora kwerendy, które działają na typy nierodzajowe. <xref:System.Collections.IEnumerable> Aby uzyskać więcej informacji, zobacz [Wpisywanie relacji w operacjach kwerend LINQ](./type-relationships-in-linq-query-operations.md).  
+ Użycie jawnie wpisanej zmiennej zakresu w wyrażeniu zapytania jest równoznaczne z wywołaniem <xref:System.Linq.Enumerable.Cast%2A> metody. <xref:System.Linq.Enumerable.Cast%2A>zgłasza wyjątek, jeśli nie można wykonać określonego rzutowania. <xref:System.Linq.Enumerable.Cast%2A>i <xref:System.Linq.Enumerable.OfType%2A> są dwoma standardowymi metodami operatorów zapytań, które działają na typach innych niż ogólne <xref:System.Collections.IEnumerable> . Aby uzyskać więcej informacji, zobacz temat [relacje typu w operacjach zapytań LINQ](./type-relationships-in-linq-query-operations.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono <xref:System.Collections.ArrayList>proste zapytanie za pomocą pliku . Należy zauważyć, że w tym przykładzie używa <xref:System.Collections.ArrayList.Add%2A> inicjatorów obiektów, gdy kod wywołuje metodę, ale nie jest to wymagane.  
+ W poniższym przykładzie pokazano proste zapytanie w <xref:System.Collections.ArrayList> . Należy zauważyć, że w tym przykładzie są używane Inicjatory obiektów, gdy kod wywołuje <xref:System.Collections.ArrayList.Add%2A> metodę, ale nie jest to wymagane.  
   
 ```csharp  
 using System;  
@@ -85,4 +86,4 @@ namespace NonGenericLINQ
   
 ## <a name="see-also"></a>Zobacz też
 
-- [LINQ do obiektów (C#)](./linq-to-objects.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)

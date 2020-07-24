@@ -1,26 +1,27 @@
 ---
 title: Jak wyświetlić listę wszystkich węzłów w drzewie (C#)
+description: Dowiedz się, jak wyświetlić listę wszystkich węzłów w drzewie, uruchamiając wyrażenie XPath przy użyciu LINQ to XML w języku C#. Możesz zobaczyć, jak metoda lub właściwość wpływa na drzewo.
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
-ms.openlocfilehash: e1b37c1d0801f2924e6811e630094524331a0d86
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28400712154138fa474665a796b77572b095fe13
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345879"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104962"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-c"></a>Jak wyświetlić listę wszystkich węzłów w drzewie (C#)
 
-Czasami warto wyświetlić listę wszystkich węzłów w drzewie. Może to być przydatne podczas uczenia się dokładnie, jak metoda lub właściwość wpływa na drzewo. Jednym z podejść do listy wszystkich węzłów w formie tekstowej jest wygenerowanie wyrażenia XPath, które dokładnie i konkretnie identyfikuje dowolny węzeł w drzewie.
+Czasami warto wyświetlić listę wszystkich węzłów w drzewie. Może to być przydatne w przypadku dokładnego uczenia się, jak metoda lub właściwość wpływa na drzewo. Jednym z metod tworzenia listy wszystkich węzłów w postaci tekstowej jest wygenerowanie wyrażenia XPath, które dokładnie i szczególnie identyfikuje każdy węzeł w drzewie.
 
-Wykonywanie wyrażeń XPath przy [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]użyciu wyrażenia XPath przy użyciu . Wyrażenia XPath mają niższą wydajność niż [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytania, a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytania są znacznie bardziej wydajne. Jednak jako sposób identyfikacji węzłów w drzewie XML, XPath działa dobrze.
+Nie jest szczególnie przydatne do wykonywania wyrażeń XPath przy użyciu [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] . Wyrażenia XPath mają niską wydajność niż [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytania, a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytania są znacznie bardziej wydajne. Jednak jako sposób identyfikowania węzłów w drzewie XML, wyrażenie XPath działa prawidłowo.
 
 ## <a name="example"></a>Przykład
- W tym przykładzie `GetXPath` przedstawiono funkcję o nazwie, która generuje określone wyrażenie XPath dla dowolnego węzła w drzewie XML. Generuje odpowiednie wyrażenia XPath nawet wtedy, gdy węzły znajdują się w przestrzeni nazw. Wyrażenia XPath są generowane przy użyciu prefiksów obszaru nazw.
+ Ten przykład pokazuje funkcję o nazwie `GetXPath` generującą określone wyrażenie XPath dla dowolnego węzła w drzewie XML. Generuje odpowiednie wyrażenia XPath nawet wtedy, gdy węzły znajdują się w przestrzeni nazw. Wyrażenia XPath są generowane przy użyciu prefiksów przestrzeni nazw.
 
- W przykładzie następnie tworzy małe drzewo XML, który zawiera przykład kilku typów węzłów. Następnie iteruje przez węzły podrzędne i drukuje wyrażenie XPath dla każdego węzła.
+ Przykład tworzy to małe drzewo XML zawierające przykład kilku typów węzłów. Następnie wykonuje iterację węzłów podrzędnych i drukuje wyrażenie XPath dla każdego węzła.
 
- Można zauważyć, że deklaracja XML nie jest węzłem w drzewie.
+ Zauważ, że deklaracja XML nie jest węzłem drzewa.
 
  Poniżej znajduje się plik XML, który zawiera kilka typów węzłów:
 

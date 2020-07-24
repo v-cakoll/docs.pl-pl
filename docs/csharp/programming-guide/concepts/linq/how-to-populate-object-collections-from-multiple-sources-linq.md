@@ -1,28 +1,29 @@
 ---
 title: Jak wypełnić kolekcje obiektów z wielu źródeł (LINQ) (C#)
+description: Dowiedz się, jak scalać dane z różnych źródeł w sekwencję nowych typów przy użyciu LINQ w języku C#. Te przykłady używają zarówno typów anonimowych, jak i nazwanych.
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: 3d841e5ca25afde94674af0fedc9a824c382be5b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9dc9f98ae09e0fe3437b5d2ccab32b3dbcd93714
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345756"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104716"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Jak wypełnić kolekcje obiektów z wielu źródeł (LINQ) (C#)
 
-W tym przykładzie pokazano, jak scalić dane z różnych źródeł w sekwencję nowych typów.
+Ten przykład pokazuje, jak scalać dane z różnych źródeł w sekwencję nowych typów.
 
 > [!NOTE]
-> Nie próbuj dołączać danych ani danych w pamięci w systemie plików z danymi, które nadal są w bazie danych. Takie sprzężenia między domenami mogą dawać niezdefiniowane wyniki z powodu różnych sposobów, w jaki operacje sprzężenia mogą być zdefiniowane dla kwerend bazy danych i innych typów źródeł. Ponadto istnieje ryzyko, że taka operacja może spowodować wyjątek braku pamięci, jeśli ilość danych w bazie danych jest wystarczająco duża. Aby dołączyć dane z bazy danych do `ToList` danych `ToArray` w pamięci, najpierw wywołać lub na kwerendzie bazy danych, a następnie wykonać sprzężenie na zwróconej kolekcji.
+> Nie należy próbować przyłączyć danych w pamięci lub danych w systemie plików o dane, które są nadal w bazie danych. Takie sprzężenia między domenami mogą dać niezdefiniowane wyniki, ponieważ różne sposoby, w których operacje Join mogą być zdefiniowane dla zapytań bazy danych i innych typów źródeł. Ponadto istnieje ryzyko, że takie działanie może spowodować wyjątek braku pamięci, jeśli ilość danych w bazie danych jest wystarczająco duża. Aby przyłączyć dane z bazy danych do danych znajdujących się w pamięci, najpierw należy wywołać `ToList` lub `ToArray` w kwerendzie bazy danych, a następnie wykonać sprzężenie w zwróconej kolekcji.
 
 ## <a name="to-create-the-data-file"></a>Aby utworzyć plik danych
 
-Skopiuj pliki names.csv i scores.csv do folderu projektu, zgodnie z opisem w [jak dołączyć zawartość z różnych plików (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md).
+Skopiuj pliki names.csv i scores.csv do folderu projektu, zgodnie z opisem w temacie [jak dołączyć zawartość z niepodobnych plików (LINQ) (C#](./how-to-join-content-from-dissimilar-files-linq.md)).
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, `Student` jak używać nazwanego typu do przechowywania scalonych danych z dwóch kolekcji ciągów w pamięci, które symulują dane arkusza kalkulacyjnego w formacie csv. Pierwsza kolekcja ciągów reprezentuje nazwy i identyfikatory uczniów, a druga kolekcja reprezentuje identyfikator ucznia (w pierwszej kolumnie) i cztery wyniki egzaminu. Identyfikator jest używany jako klucz obcy.
+Poniższy przykład pokazuje, jak używać nazwanego typu `Student` do przechowywania scalonych danych z dwóch kolekcji w pamięci ciągów, które symulują dane arkusza kalkulacyjnego w formacie CSV. Pierwszy zbiór ciągów reprezentuje nazwy uczniów i identyfikatory, a druga Kolekcja reprezentuje identyfikator ucznia (w pierwszej kolumnie) i cztery wyniki egzaminu. Identyfikator jest używany jako klucz obcy.
 
 ```csharp
 using System;
@@ -107,9 +108,9 @@ class PopulateCollection
  */
 ```
 
-W [select](../../../language-reference/keywords/select-clause.md) klauzuli inicjatora obiektu jest używany `Student` do tworzenia wystąpienia każdego nowego obiektu przy użyciu danych z dwóch źródeł.
+W klauzuli [SELECT](../../../language-reference/keywords/select-clause.md) Inicjator obiektu jest używany do tworzenia wystąpienia każdego nowego obiektu przy `Student` użyciu danych z dwóch źródeł.
 
-Jeśli nie musisz przechowywać wyniki kwerendy, typy anonimowe mogą być wygodniejsze niż typy nazwane. Nazwane typy są wymagane, jeśli wyniki kwerendy są wymagane poza metodą, w której kwerenda jest wykonywana. Poniższy przykład wykonuje to samo zadanie co poprzedni przykład, ale używa typów anonimowych zamiast nazwanych typów:
+Jeśli nie musisz przechowywać wyników zapytania, typy anonimowe mogą być wygodniejsze niż nazwane typy. Nazwane typy są wymagane, Jeśli przekażesz wyniki zapytania poza metodę, w której jest wykonywane zapytanie. Poniższy przykład wykonuje to samo zadanie jak w poprzednim przykładzie, ale używa typów anonimowych zamiast nazwanych:
 
 ```csharp
 // Merge the data sources by using an anonymous type.

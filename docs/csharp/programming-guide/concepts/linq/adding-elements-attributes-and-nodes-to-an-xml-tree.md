@@ -1,38 +1,39 @@
 ---
 title: Dodawanie elementów, atrybutów i węzłów do drzewa XML (C#)
+description: Dowiedz się więcej o metodach dodawania zawartości, takich jak elementy, atrybuty, komentarze, instrukcje przetwarzania i tekst do istniejącego drzewa XML.
 ms.date: 07/20/2015
 ms.assetid: db911e4f-40aa-499a-9500-a9763bb6df56
-ms.openlocfilehash: 20d8d9d9c592f5f570d7c94298dcee41763c1f1f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78a84401494e2d4280799632fa42dc95574e3e10
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169578"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105548"
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a>Dodawanie elementów, atrybutów i węzłów do drzewa XML (C#)
-Do istniejącego drzewa XML można dodawać zawartość (elementy, atrybuty, komentarze, instrukcje przetwarzania, tekst i CDATA).  
+Możesz dodać zawartość (elementy, atrybuty, komentarze, instrukcje przetwarzania, tekst i CDATA) do istniejącego drzewa XML.  
   
 ## <a name="methods-for-adding-content"></a>Metody dodawania zawartości  
- Następujące metody dodają zawartość <xref:System.Xml.Linq.XElement> podrzędną <xref:System.Xml.Linq.XDocument>do:  
+ Następujące metody dodają zawartość podrzędną do elementu <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XDocument> :  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XContainer.Add%2A>|Dodaje zawartość na końcu zawartości podrzędnej <xref:System.Xml.Linq.XContainer>pliku .|  
-|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|Dodaje zawartość na początku zawartości podrzędnej pliku <xref:System.Xml.Linq.XContainer>.|  
+|<xref:System.Xml.Linq.XContainer.Add%2A>|Dodaje zawartość na końcu zawartości podrzędnej <xref:System.Xml.Linq.XContainer> .|  
+|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|Dodaje zawartość na początku zawartości podrzędnej <xref:System.Xml.Linq.XContainer> .|  
   
- Następujące metody dodają zawartość jako węzły równorzędne pliku <xref:System.Xml.Linq.XNode>. Najczęstszym węzłem, do którego <xref:System.Xml.Linq.XElement>dodajesię zawartość równorzędnej, jest , chociaż <xref:System.Xml.Linq.XText> można <xref:System.Xml.Linq.XComment>dodać prawidłową zawartość równorzędnego do innych typów węzłów, takich jak lub .  
+ Poniższe metody dodają zawartość jako węzły równorzędne <xref:System.Xml.Linq.XNode> . Najbardziej typowym węzłem, do którego dodawana jest zawartość elementu równorzędnego <xref:System.Xml.Linq.XElement> , jest, chociaż można dodać prawidłową zawartość równorzędną do innych typów węzłów, takich jak <xref:System.Xml.Linq.XText> lub <xref:System.Xml.Linq.XComment> .  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|Dodaje zawartość <xref:System.Xml.Linq.XNode>po pliku .|  
-|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|Dodaje zawartość <xref:System.Xml.Linq.XNode>przed .|  
+|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|Dodaje zawartość po <xref:System.Xml.Linq.XNode> .|  
+|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|Dodaje zawartość przed <xref:System.Xml.Linq.XNode> .|  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
  Poniższy przykład tworzy dwa drzewa XML, a następnie modyfikuje jedno z drzew.  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>Kod  
   
 ```csharp  
 XElement srcTree = new XElement("Root",
@@ -62,7 +63,7 @@ Console.WriteLine(xmlTree);
 ```  
   
 ### <a name="comments"></a>Komentarze  
- Ten kod generuje następujące dane wyjściowe:  
+ Ten kod spowoduje wygenerowanie następujących danych wyjściowych:  
   
 ```xml  
 <Root>  

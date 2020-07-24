@@ -1,32 +1,33 @@
 ---
 title: Grupowanie danych (C#)
+description: Grupowanie umieszcza dane w grupach elementów, które współużytkują atrybut. Zapoznaj się ze standardowymi metodami operatorów zapytań w LINQ w języku C#, które grupują elementy danych.
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: 7ef3d3c9097d7a9478605565518ac8975feb9fe2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e1bca1d360b0f44a081cf2770118a0551629b5b
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635746"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103675"
 ---
 # <a name="grouping-data-c"></a>Grupowanie danych (C#)
-Grupowanie odnosi się do działania umieszczania danych w grupach, tak aby elementy w każdej grupie współużytkują wspólny atrybut.  
+Grupowanie odwołuje się do operacji umieszczania danych w grupach, tak aby elementy w każdej grupie miały wspólny atrybut.  
   
- Na poniższej ilustracji przedstawiono wyniki grupowania sekwencji znaków. Kluczem dla każdej grupy jest znak.  
+ Na poniższej ilustracji przedstawiono wyniki grupowania sekwencji znaków. Klucz dla każdej grupy jest znakiem.  
   
- ![Diagram, który pokazuje operację linq grupowanie.](./media/grouping-data/linq-group-operation.png)  
+ ![Diagram przedstawiający operację grupowania LINQ.](./media/grouping-data/linq-group-operation.png)  
   
- Standardowe metody operatora kwerendy, które grupują elementy danych są wymienione w poniższej sekcji.  
+ Standardowe metody operatorów zapytań, które grupują elementy danych, są wymienione w poniższej sekcji.  
   
 ## <a name="methods"></a>Metody  
   
-|Nazwa metody|Opis|Składnia wyrażenia kwerendy c#|Więcej informacji|  
+|Nazwa metody|Opis|Składnia wyrażenia zapytania C#|Więcej informacji|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|GroupBy|Grupje elementy, które mają wspólny atrybut. Każda grupa jest reprezentowana przez obiekt. <xref:System.Linq.IGrouping%602>|`group … by`<br /><br /> — lub —<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
-|Tolookup|Wstawia elementy <xref:System.Linq.Lookup%602> do (słownik jeden-do-wielu) na podstawie funkcji selektora kluczy.|Nie dotyczy.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
+|GroupBy|Grupuje elementy, które mają wspólny atrybut. Każda grupa jest reprezentowana przez <xref:System.Linq.IGrouping%602> obiekt.|`group … by`<br /><br /> -lub-<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
+|ToLookup|Wstawia elementy do <xref:System.Linq.Lookup%602> (słownik jeden-do-wielu) w oparciu o funkcję selektora kluczy.|Nie dotyczy.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
-## <a name="query-expression-syntax-example"></a>Przykład składni wyrażenia kwerendy  
- Poniższy przykład kodu `group by` używa klauzuli do grupowania liczb całkowitych na liście w zależności od tego, czy są one parzyste, czy nieparzyste.  
+## <a name="query-expression-syntax-example"></a>Przykład składni wyrażenia zapytania  
+ Poniższy przykład kodu używa `group by` klauzuli do grupowania liczb całkowitych na liście zgodnie z tym, czy są one parzyste czy nieparzyste.  
   
 ```csharp  
 List<int> numbers = new List<int>() { 35, 44, 200, 84, 3987, 4, 199, 329, 446, 208 };  
@@ -62,8 +63,8 @@ foreach (var group in query)
 ## <a name="see-also"></a>Zobacz też
 
 - <xref:System.Linq>
-- [Omówienie standardowych operatorów zapytań (C#)](./standard-query-operators-overview.md)
-- [group, klauzula](../../../language-reference/keywords/group-clause.md)
+- [Standardowe operatory zapytań — Omówienie (C#)](./standard-query-operators-overview.md)
+- [group — Klauzula](../../../language-reference/keywords/group-clause.md)
 - [Tworzenie grupy zagnieżdżonej](../../../linq/create-a-nested-group.md)
 - [Jak grupować pliki według rozszerzenia (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)
 - [Grupowanie wyników zapytania](../../../linq/group-query-results.md)

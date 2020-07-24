@@ -1,22 +1,23 @@
 ---
-title: Jak znaleźć różnicę między dwiema listami (LINQ) (C#)
+title: Jak znaleźć różnice między dwoma listami (LINQ) (C#)
+description: Dowiedz się, jak za pomocą LINQ w języku C# porównać dwie listy ciągów i wyprowadzić te wiersze, które znajdują się na jednej liście, ale nie w drugim.
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-ms.openlocfilehash: 03fae5451ee395487e73ed7c38d465c3f891e0f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 24509488d91f9861ee9bf84277238bea7031e5f6
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169184"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105079"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a><span data-ttu-id="0aa17-102">Jak znaleźć różnicę między dwiema listami (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="0aa17-102">How to find the set difference between two lists (LINQ) (C#)</span></span>
-<span data-ttu-id="0aa17-103">W tym przykładzie pokazano, jak użyć LINQ do porównania dwóch list ciągów i wyjmować te wiersze, które są w names1.txt, ale nie w names2.txt.</span><span class="sxs-lookup"><span data-stu-id="0aa17-103">This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.</span></span>  
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a><span data-ttu-id="385f3-103">Jak znaleźć różnice między dwoma listami (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="385f3-103">How to find the set difference between two lists (LINQ) (C#)</span></span>
+<span data-ttu-id="385f3-104">Ten przykład pokazuje, jak używać LINQ do porównywania dwóch list ciągów i wyprowadzania tych wierszy, które znajdują się w names1.txt, ale nie w names2.txt.</span><span class="sxs-lookup"><span data-stu-id="385f3-104">This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="0aa17-104">Aby utworzyć pliki danych</span><span class="sxs-lookup"><span data-stu-id="0aa17-104">To create the data files</span></span>  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="385f3-105">Aby utworzyć pliki danych</span><span class="sxs-lookup"><span data-stu-id="385f3-105">To create the data files</span></span>  
   
-1. <span data-ttu-id="0aa17-105">Skopiuj names1.txt i names2.txt do folderu rozwiązania, jak pokazano w [jak połączyć i porównać kolekcje ciągów (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md).</span><span class="sxs-lookup"><span data-stu-id="0aa17-105">Copy names1.txt and names2.txt to your solution folder as shown in [How to combine and compare string collections (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md).</span></span>  
+1. <span data-ttu-id="385f3-106">Skopiuj names1.txt i names2.txt do folderu rozwiązania, jak pokazano w temacie [jak połączyć i porównać kolekcje ciągów (LINQ) (C#](./how-to-combine-and-compare-string-collections-linq.md)).</span><span class="sxs-lookup"><span data-stu-id="385f3-106">Copy names1.txt and names2.txt to your solution folder as shown in [How to combine and compare string collections (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0aa17-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="0aa17-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="385f3-107">Przykład</span><span class="sxs-lookup"><span data-stu-id="385f3-107">Example</span></span>  
   
 ```csharp  
 class CompareLists  
@@ -52,11 +53,11 @@ class CompareLists
      */  
 ```  
   
- <span data-ttu-id="0aa17-107">Niektóre typy operacji kwerend w języku <xref:System.Linq.Enumerable.Distinct%2A> <xref:System.Linq.Enumerable.Union%2A>C#, takie jak <xref:System.Linq.Enumerable.Concat%2A> <xref:System.Linq.Enumerable.Except%2A>, , , i , mogą być wyrażone tylko w składni opartej na metodach.</span><span class="sxs-lookup"><span data-stu-id="0aa17-107">Some types of query operations in C#, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.</span></span>  
+ <span data-ttu-id="385f3-108">Niektóre typy operacji zapytań w języku C#, takie jak <xref:System.Linq.Enumerable.Except%2A> , <xref:System.Linq.Enumerable.Distinct%2A> , <xref:System.Linq.Enumerable.Union%2A> i <xref:System.Linq.Enumerable.Concat%2A> , można wyrazić tylko w składni opartej na metodzie.</span><span class="sxs-lookup"><span data-stu-id="385f3-108">Some types of query operations in C#, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="0aa17-108">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="0aa17-108">Compiling the Code</span></span>  
- <span data-ttu-id="0aa17-109">Utwórz projekt aplikacji konsoli `using` C# z dyrektywami dla system.Linq i System.IO przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="0aa17-109">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="385f3-109">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="385f3-109">Compiling the Code</span></span>  
+ <span data-ttu-id="385f3-110">Utwórz projekt aplikacji konsolowej w języku C# z `using` dyrektywami dotyczącymi przestrzeni nazw System. LINQ i system.IO.</span><span class="sxs-lookup"><span data-stu-id="385f3-110">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0aa17-110">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="0aa17-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="385f3-111">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="385f3-111">See also</span></span>
 
-- [<span data-ttu-id="0aa17-111">LINQ i ciągi (C#)</span><span class="sxs-lookup"><span data-stu-id="0aa17-111">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="385f3-112">LINQ i ciągi (C#)</span><span class="sxs-lookup"><span data-stu-id="385f3-112">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)

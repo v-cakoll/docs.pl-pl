@@ -1,21 +1,22 @@
 ---
-title: Jak wygenerować xml z plików CSV (C#)
+title: Jak generować XML z plików CSV (C#)
+description: Dowiedz się, jak używać LINQ i LINQ to XML w języku C# do generowania XML z pliku CSV. Zapytanie używa klauzuli Let do dzielenia ciągów na tablice pól.
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
-ms.openlocfilehash: 643c05cb440165c4461c3e9c80e69701241ab8d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2fc9954a51fc1f2979c6cce13805ed15cdb88741
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635811"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105180"
 ---
-# <a name="how-to-generate-xml-from-csv-files-c"></a><span data-ttu-id="04771-102">Jak wygenerować xml z plików CSV (C#)</span><span class="sxs-lookup"><span data-stu-id="04771-102">How to generate XML from CSV files (C#)</span></span>
-<span data-ttu-id="04771-103">W tym przykładzie pokazano, jak używać kwerendy zintegrowanej językowo (LINQ) i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] wygenerować plik XML z pliku wartości oddzielonej przecinkami (CSV).</span><span class="sxs-lookup"><span data-stu-id="04771-103">This example shows how to use Language-Integrated Query (LINQ) and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
+# <a name="how-to-generate-xml-from-csv-files-c"></a><span data-ttu-id="13dba-104">Jak generować XML z plików CSV (C#)</span><span class="sxs-lookup"><span data-stu-id="13dba-104">How to generate XML from CSV files (C#)</span></span>
+<span data-ttu-id="13dba-105">Ten przykład pokazuje, jak używać języka Language-Integrated Query (LINQ) i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] do generowania pliku XML z pliku z wartościami rozdzielanymi przecinkami (CSV).</span><span class="sxs-lookup"><span data-stu-id="13dba-105">This example shows how to use Language-Integrated Query (LINQ) and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="04771-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="04771-104">Example</span></span>  
- <span data-ttu-id="04771-105">Poniższy kod wykonuje kwerendę LINQ na tablicy ciągów.</span><span class="sxs-lookup"><span data-stu-id="04771-105">The following code performs a LINQ query on an array of strings.</span></span>  
+## <a name="example"></a><span data-ttu-id="13dba-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="13dba-106">Example</span></span>  
+ <span data-ttu-id="13dba-107">Poniższy kod wykonuje zapytanie LINQ na tablicy ciągów.</span><span class="sxs-lookup"><span data-stu-id="13dba-107">The following code performs a LINQ query on an array of strings.</span></span>  
   
- <span data-ttu-id="04771-106">Kwerenda używa `let` klauzuli, aby podzielić każdy ciąg na tablicę pól.</span><span class="sxs-lookup"><span data-stu-id="04771-106">The query uses the `let` clause to split each string into an array of fields.</span></span>  
+ <span data-ttu-id="13dba-108">Zapytanie używa klauzuli, `let` Aby podzielić każdy ciąg na tablicę pól.</span><span class="sxs-lookup"><span data-stu-id="13dba-108">The query uses the `let` clause to split each string into an array of fields.</span></span>  
   
 ```csharp  
 // Create the text file.  
@@ -48,7 +49,7 @@ XElement cust = new XElement("Root",
 Console.WriteLine(cust);  
 ```  
   
- <span data-ttu-id="04771-107">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="04771-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="13dba-109">Ten kod spowoduje wygenerowanie następujących danych wyjściowych:</span><span class="sxs-lookup"><span data-stu-id="13dba-109">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  

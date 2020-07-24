@@ -1,18 +1,19 @@
 ---
-title: Jak wysyłać zapytania do zawartości plików tekstowych w folderze (LINQ) (C#)
+title: Jak zbadać zawartość plików tekstowych w folderze (LINQ) (C#)
+description: Dowiedz się, jak za pomocą LINQ w języku C# wykonać zapytania dotyczące wszystkich plików w drzewie katalogów, otworzyć każdy plik i zbadać jego zawartość.
 ms.date: 07/20/2015
 ms.assetid: f5b4dce7-1a34-4eb4-9bf1-60d5bdda264c
-ms.openlocfilehash: 998fddd3f59ee64df9adcee1acc720d82861c3d9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 216edc2ee6fc43fd06a3c89b1b6b73f693f752f8
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168742"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104263"
 ---
-# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a><span data-ttu-id="69f2a-102">Jak wysyłać zapytania do zawartości plików tekstowych w folderze (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="69f2a-102">How to query the contents of text files in a folder (LINQ) (C#)</span></span>
-<span data-ttu-id="69f2a-103">W tym przykładzie pokazano, jak zapytań o wszystkie pliki w drzewie określonego katalogu, otworzyć każdy plik i sprawdzić jego zawartość.</span><span class="sxs-lookup"><span data-stu-id="69f2a-103">This example shows how to query over all the files in a specified directory tree, open each file, and inspect its contents.</span></span> <span data-ttu-id="69f2a-104">Ten typ techniki może służyć do tworzenia indeksów lub odwrotnej indeksów zawartości drzewa katalogów.</span><span class="sxs-lookup"><span data-stu-id="69f2a-104">This type of technique could be used to create indexes or reverse indexes of the contents of a directory tree.</span></span> <span data-ttu-id="69f2a-105">Wyszukiwanie ciągów prostych jest wykonywane w tym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="69f2a-105">A simple string search is performed in this example.</span></span> <span data-ttu-id="69f2a-106">Jednak bardziej złożone typy dopasowywania wzorców można wykonywać za pomocą wyrażenia regularnego.</span><span class="sxs-lookup"><span data-stu-id="69f2a-106">However, more complex types of pattern matching can be performed with a regular expression.</span></span> <span data-ttu-id="69f2a-107">Aby uzyskać więcej informacji, zobacz [Jak łączyć zapytania LINQ z wyrażeniami regularnymi (C#).](./how-to-combine-linq-queries-with-regular-expressions.md)</span><span class="sxs-lookup"><span data-stu-id="69f2a-107">For more information, see [How to combine LINQ queries with regular expressions (C#)](./how-to-combine-linq-queries-with-regular-expressions.md).</span></span>  
+# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a><span data-ttu-id="85559-103">Jak zbadać zawartość plików tekstowych w folderze (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="85559-103">How to query the contents of text files in a folder (LINQ) (C#)</span></span>
+<span data-ttu-id="85559-104">Ten przykład pokazuje, jak badać wszystkie pliki w określonym drzewie katalogów, otwierać każdy plik i sprawdzać jego zawartość.</span><span class="sxs-lookup"><span data-stu-id="85559-104">This example shows how to query over all the files in a specified directory tree, open each file, and inspect its contents.</span></span> <span data-ttu-id="85559-105">Ten typ technika może służyć do tworzenia indeksów lub odwracania indeksów zawartości drzewa katalogów.</span><span class="sxs-lookup"><span data-stu-id="85559-105">This type of technique could be used to create indexes or reverse indexes of the contents of a directory tree.</span></span> <span data-ttu-id="85559-106">W tym przykładzie jest wykonywane proste wyszukiwanie ciągu.</span><span class="sxs-lookup"><span data-stu-id="85559-106">A simple string search is performed in this example.</span></span> <span data-ttu-id="85559-107">Jednak bardziej złożone typy dopasowywania do wzorców można wykonać przy użyciu wyrażenia regularnego.</span><span class="sxs-lookup"><span data-stu-id="85559-107">However, more complex types of pattern matching can be performed with a regular expression.</span></span> <span data-ttu-id="85559-108">Aby uzyskać więcej informacji, zobacz [jak łączyć zapytania LINQ z wyrażeniami regularnymi (C#)](./how-to-combine-linq-queries-with-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="85559-108">For more information, see [How to combine LINQ queries with regular expressions (C#)](./how-to-combine-linq-queries-with-regular-expressions.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="69f2a-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="69f2a-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="85559-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="85559-109">Example</span></span>  
   
 ```csharp  
 class QueryContents  
@@ -70,10 +71,10 @@ class QueryContents
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="69f2a-109">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="69f2a-109">Compiling the Code</span></span>  
-<span data-ttu-id="69f2a-110">Utwórz projekt aplikacji konsoli `using` C# z dyrektywami dla system.Linq i System.IO przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="69f2a-110">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="85559-110">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="85559-110">Compiling the Code</span></span>  
+<span data-ttu-id="85559-111">Utwórz projekt aplikacji konsolowej w języku C# z `using` dyrektywami dotyczącymi przestrzeni nazw System. LINQ i system.IO.</span><span class="sxs-lookup"><span data-stu-id="85559-111">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="69f2a-111">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="69f2a-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="85559-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="85559-112">See also</span></span>
 
-- [<span data-ttu-id="69f2a-112">LINQ i katalogi plików (C#)</span><span class="sxs-lookup"><span data-stu-id="69f2a-112">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
-- [<span data-ttu-id="69f2a-113">LINQ do obiektów (C#)</span><span class="sxs-lookup"><span data-stu-id="69f2a-113">LINQ to Objects (C#)</span></span>](./linq-to-objects.md)
+- [<span data-ttu-id="85559-113">LINQ i katalogi plików (C#)</span><span class="sxs-lookup"><span data-stu-id="85559-113">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
+- [<span data-ttu-id="85559-114">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="85559-114">LINQ to Objects (C#)</span></span>](./linq-to-objects.md)

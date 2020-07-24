@@ -304,6 +304,10 @@ items:
         items:
           - name: Debugowanie przecieku pamięci
             href: diagnostics/debug-memory-leak.md
+          - name: Debugowanie wysokiego użycia procesora
+            href: diagnostics/debug-highcpu.md
+          - name: Debugowanie zakleszczenia
+            href: diagnostics/debug-deadlock.md
   - name: Narzędzia dodatkowe platformy .NET Core
     items:
       - name: Omówienie

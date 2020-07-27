@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 2d3ede97b372dd8922a10a377f69155a12f88bda
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5eb9d5127dffd2e80349352ad7a4b57f8848d56b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447137"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165795"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formaty ścieżek plików w systemie Windows
 
@@ -66,7 +66,7 @@ Poniżej przedstawiono kilka przykładów ścieżek UNC:
 |Ścieżka  |Opis  |
 | -- | -- |
 | `\\system07\C$\` | Katalog główny dysku C: na `system07` . |
-| `\\Server2\Share\Test\Foo.txt` | Plik foo. txt w katalogu testu \\ \\ \\ woluminu udziału serwer2.|
+| `\\Server2\Share\Test\Foo.txt` | Plik Foo.txt w katalogu testów \\ \\ \\ woluminu udziału serwer2.|
 
 Ścieżki UNC muszą zawsze być w pełni kwalifikowane. Mogą one zawierać względne segmenty katalogów ( `.` i `..` ), ale muszą być częścią w pełni kwalifikowanej ścieżki. Ścieżek względnych można używać tylko przez mapowanie ścieżki UNC na literę dysku.
 
@@ -96,7 +96,7 @@ Oprócz identyfikowania dysku za pomocą jego litery dysku, można zidentyfikowa
 
    Pierwszy segment ścieżki urządzenia DOS po specyfikator ścieżki urządzenia identyfikuje wolumin lub dysk. (Na przykład `\\?\C:\` i `\\.\BootPartition\` .)
 
-   Istnieje konkretne łącze dla UNCs o nazwie, a nie Surprisingly, `UNC` . Przykład:
+   Istnieje konkretne łącze dla UNCs o nazwie, a nie Surprisingly, `UNC` . Na przykład:
 
   `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`
@@ -124,7 +124,7 @@ Prawie wszystkie ścieżki przesyłane do interfejsów API systemu Windows są z
 
 Ta normalizacja występuje niejawnie, ale można ją jawnie, wywołując <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> metodę, która zawija wywołanie [funkcji GetFullPathName ()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea). Możesz również wywołać [funkcję GetFullPathName systemu Windows ()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) bezpośrednio przy użyciu metody P/Invoke.
 
-### <a name="identifying-the-path"></a>Identyfikowanie ścieżki
+### <a name="identify-the-path"></a>Zidentyfikuj ścieżkę
 
 Pierwszy krok w normalizacji ścieżki identyfikuje typ ścieżki. Ścieżki mieszczą się w jednej z kilku kategorii:
 
@@ -138,13 +138,13 @@ Pierwszy krok w normalizacji ścieżki identyfikuje typ ścieżki. Ścieżki mie
 
 Typ ścieżki Określa, czy bieżący katalog jest stosowany w jakiś sposób. Określa również, jak "root" ścieżki.
 
-### <a name="handling-legacy-devices"></a>Obsługa starszych urządzeń
+### <a name="handle-legacy-devices"></a>Obsługa starszych urządzeń
 
 Jeśli ścieżka to starsze urządzenie systemu DOS, takie jak `CON` , `COM1` lub, `LPT1` jest konwertowane na ścieżkę urządzenia, w zależności od tego `\\.\` i zwraca.
 
 Ścieżka rozpoczynająca się od starszej nazwy urządzenia jest zawsze interpretowana jako starsze urządzenie przez <xref:System.IO.Path.GetFullPath(System.String)?displayProperty=nameWithType> metodę. Na przykład ścieżka urządzenia DOS dla systemu `CON.TXT` ma wartość `\\.\CON` , a ścieżka urządzenia DOS dla systemu `COM1.TXT\file1.txt` to `\\.\COM1` .
 
-### <a name="applying-the-current-directory"></a>Stosowanie bieżącego katalogu
+### <a name="apply-the-current-directory"></a>Zastosuj bieżący katalog
 
 Jeśli ścieżka nie jest w pełni kwalifikowana, system Windows stosuje bieżący katalog. UNCs i ścieżki urządzeń nie mają zastosowanego bieżącego katalogu. Ani nie pełni dysku z separatorem C: \\ .
 
@@ -157,11 +157,11 @@ Jeśli ścieżka zaczyna się od czegoś innego niż separator, zostanie zastoso
 > [!IMPORTANT]
 > Ścieżki względne są niebezpieczne w aplikacjach wielowątkowych (czyli większości aplikacji), ponieważ bieżący katalog jest ustawieniem dla procesu. Dowolny wątek może zmienić bieżący katalog w dowolnym momencie. Począwszy od platformy .NET Core 2,1, można wywołać <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> metodę, aby uzyskać ścieżkę bezwzględną ze ścieżki względnej i ścieżkę bazową (bieżący katalog), dla której chcesz rozwiązać ten problem.
 
-### <a name="canonicalizing-separators"></a>Separatory formę kanoniczną działa
+### <a name="canonicalize-separators"></a>Separatory sprowadź
 
 Wszystkie ukośniki ( `/` ) są konwertowane na standardowy separator systemu Windows, ukośnik odwrotny ( `\` ). Jeśli są obecne, Seria ukośników, które są zgodne z dwoma ukośnikami, jest zwiniętych na pojedynczy ukośnik.
 
-### <a name="evaluating-relative-components"></a>Ocenianie składników względnych
+### <a name="evaluate-relative-components"></a>Oceń składniki względne
 
 W miarę przetwarzania ścieżki są oceniane wszystkie składniki lub segmenty składające się z pojedynczego lub podwójnego okresu ( `.` lub `..` ):
 
@@ -171,7 +171,7 @@ W miarę przetwarzania ścieżki są oceniane wszystkie składniki lub segmenty 
 
    Katalogi nadrzędne są usuwane tylko wtedy, gdy nie znajdują się poza katalogiem głównym ścieżki. Katalog główny ścieżki zależy od typu ścieżki. Jest to dysk ( `C:\` ) dla ścieżek DOS, serwer/udział dla UNCs ( `\\Server\Share` ) oraz prefiks ścieżki urządzenia dla ścieżek urządzeń ( `\\?\` lub `\\.\` ).
 
-### <a name="trimming-characters"></a>Przycinanie znaków
+### <a name="trim-characters"></a>Przytnij znaki
 
 Wraz z uruchomieniami separatorów i segmentów względnych usuniętych wcześniej niektóre dodatkowe znaki są usuwane podczas normalizacji:
 
@@ -184,7 +184,7 @@ Wraz z uruchomieniami separatorów i segmentów względnych usuniętych wcześni
    > [!IMPORTANT]
    > **Nigdy nie** należy tworzyć katalogów ani nazw plików z końcowym miejscem. Spacje końcowe mogą być trudne lub niemożliwe do uzyskania dostępu do katalogu, a aplikacje często kończą się niepowodzeniem podczas próby obsługi katalogów lub plików, których nazwy zawierają spacje końcowe.
 
-## <a name="skipping-normalization"></a>Pomijanie normalizacji
+## <a name="skip-normalization"></a>Pomiń normalizację
 
 Zwykle wszystkie ścieżki przesłane do interfejsu API systemu Windows są (efektywnie) przesyłane do [funkcji GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) i znormalizowane. Istnieje jeden ważny wyjątek: ścieżka urządzenia rozpoczynająca się od znaku zapytania zamiast kropki. Chyba że ścieżka zaczyna się dokładnie od `\\?\` (należy zwrócić uwagę na użycie kanonicznego ukośnika odwrotnego), jest znormalizowana.
 
@@ -217,9 +217,9 @@ Directory.Create("TeStDiReCtOrY");
 Directory.Create("TeStDiReCtOrY")
 ```
 
-tworzy katalog o nazwie TeStDiReCtOrY. Jeśli zmienisz nazwę katalogu lub pliku, aby zmienić jego wielkość liter, nazwa katalogu lub pliku odzwierciedla wielkość liter w ciągu używanym podczas zmiany nazwy. Na przykład poniższy kod zmienia nazwę pliku o nazwie test. txt na test. txt:
+tworzy katalog o nazwie TeStDiReCtOrY. Jeśli zmienisz nazwę katalogu lub pliku, aby zmienić jego wielkość liter, nazwa katalogu lub pliku odzwierciedla wielkość liter w ciągu używanym podczas zmiany nazwy. Na przykład poniższy kod zmienia nazwę pliku o nazwie test.txt na Test.txt:
 
 [!code-csharp[case-and-renaming](~/samples/snippets/standard/io/file-names/cs/rename.cs)]
 [!code-vb[case-and-renaming](~/samples/snippets/standard/io/file-names/vb/rename.vb)]
 
-Jednak porównania nazw katalogów i plików nie uwzględniają wielkości liter. W przypadku wyszukiwania pliku o nazwie "test. txt" interfejsy API systemu plików platformy .NET ignorują wielkość liter w porównaniu. Test. txt, TEST. TXT, test. TXT i wszystkie inne kombinacje wielkich i małych liter będą zgodne z "test. txt".
+Jednak porównania nazw katalogów i plików nie uwzględniają wielkości liter. W przypadku wyszukiwania pliku o nazwie "test.txt" interfejsy API systemu plików platformy .NET ignorują wielkość liter w porównaniu. "Test.txt", "TEST.TXT", "test.TXT" i wszelkie inne kombinacje wielkich i małych liter będą odpowiadały wartości "test.txt".

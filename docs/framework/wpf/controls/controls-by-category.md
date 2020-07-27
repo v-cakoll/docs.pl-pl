@@ -1,15 +1,16 @@
 ---
 title: Kontrolki według kategorii
+description: Przejrzyj kontrolki Windows Presentation Foundation pogrupowane w kategorie, które mogą ułatwić wybór odpowiedniej kontrolki, porównując podobne kontrolki.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: 5958793015d409678b67cdc7eedcb4289f5e885c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 226e037dc26f817b96a5aa869565f08ee6ff6574
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636214"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166296"
 ---
 # <a name="controls-by-category"></a>Kontrolki według kategorii
 Formanty Windows Presentation Foundation (WPF) można logicznie grupować w kilka kategorii. Te kategorie mogą służyć do wybrania odpowiedniej kontrolki dla danego scenariusza, pomagając zobaczyć, które kontrolki mają podobne wzorce użycia lub funkcje.  
@@ -56,7 +57,7 @@ Formanty Windows Presentation Foundation (WPF) można logicznie grupować w kilk
 - <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="buttons"></a>Przyciski  
- Przyciski są jednym z najbardziej podstawowych formantów interfejsu użytkownika. Aplikacje zwykle wykonują kilka zadań w zdarzeniu <xref:System.Windows.Controls.Primitives.ButtonBase.Click> po kliknięciu przez użytkownika.  
+ Przyciski są jednym z najbardziej podstawowych formantów interfejsu użytkownika. Aplikacje zwykle wykonują pewne zadania w <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeniu po kliknięciu przez użytkownika.  
   
 - <xref:System.Windows.Controls.Button>  
   
@@ -161,7 +162,7 @@ Formanty Windows Presentation Foundation (WPF) można logicznie grupować w kilk
   
 - <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="media"></a>Nośnik  
+## <a name="media"></a>Multimedia  
  WPF obejmuje zintegrowaną obsługę obsługiwania zawartości audio i wideo, a także [kodery-dekoder] dla najpopularniejszych formatów obrazów.  
   
 - <xref:System.Windows.Controls.Image>  
@@ -179,4 +180,4 @@ Formanty Windows Presentation Foundation (WPF) można logicznie grupować w kilk
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Biblioteka kontrolek](control-library.md)
+- [Biblioteka formantów](control-library.md)

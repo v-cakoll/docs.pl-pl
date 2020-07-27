@@ -1,21 +1,22 @@
 ---
 title: Clrver.exe (Narzędzie wersji środowiska CLR)
+description: Przejrzyj Clrver.exe, narzędzie wersji środowiska CLR. To narzędzie raportuje wszystkie zainstalowane wersje środowiska uruchomieniowego języka wspólnego (CLR) na komputerze.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Clrver.exe
 - CLR Version tool
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
-ms.openlocfilehash: bfc612ef5455e1b4a03d15fd99a8a1873d2c7c08
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e914034819418df00438c454e209e6c86779ba3c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715798"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167279"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe (Narzędzie wersji środowiska CLR)
 Narzędzia wersji środowiska CLR (Clrver.exe) raportuje wszystkie wersje środowiska uruchomieniowego języka wspólnego (CLR) zainstalowane na komputerze.  
   
- To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersza polecenia dewelopera dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [Wiersze poleceń](developer-command-prompt-for-vs.md).  
+ To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](developer-command-prompt-for-vs.md).  
   
  W wierszu polecenia wpisz następujące polecenie:  
   
@@ -30,7 +31,7 @@ clrver [option]
 |Opcja|Opis|  
 |------------|-----------------|  
 |`-all`|Wyświetla wszystkie procesy na komputerze używające środowiska CLR.|  
-|*Pid*|Wyświetla wersje środowiska CLR używane przez proces, który ma określony identyfikator procesu (PID).|  
+|*identyfikatora*|Wyświetla wersje środowiska CLR używane przez proces, który ma określony identyfikator procesu (PID).|  
 |`-?`|Wyświetla składnię polecenia i opcje narzędzia.|  
   
 ## <a name="remarks"></a>Uwagi  
@@ -54,7 +55,7 @@ clrver [option]
   
  `Clrver -all`  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [narzędzia](index.md)
-- [Wiersz polecenia](developer-command-prompt-for-vs.md)
+- [Narzędzia](index.md)
+- [Wiersze poleceń](developer-command-prompt-for-vs.md)

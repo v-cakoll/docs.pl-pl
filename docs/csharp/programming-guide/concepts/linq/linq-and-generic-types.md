@@ -1,17 +1,18 @@
 ---
 title: LINQ i typy ogólne (C#)
+description: Zapoznaj się z podstawowymi pojęciami dotyczącymi typów ogólnych w języku C#, które obsługują zapytania.  Zapytania LINQ są oparte na typach ogólnych.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], generic types
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: 2cbff0b31cac091a57ea35cbd01535b7d0c4b78a
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 98054a4a21704293faa1194dac342bc48aef138d
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241763"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165644"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ i typy ogólne (C#)
 Zapytania LINQ są oparte na typach ogólnych, które zostały wprowadzone w wersji 2,0 .NET Framework. Przed rozpoczęciem pisania zapytań nie jest potrzebna Szczegółowa wiedza o typach ogólnych. Jednak warto zrozumieć dwa podstawowe koncepcje:  
@@ -36,6 +37,6 @@ Zapytania LINQ są oparte na typach ogólnych, które zostały wprowadzone w wer
   
  `var`Słowo kluczowe jest przydatne, gdy typ zmiennej jest oczywisty lub jeśli nie jest istotny do jawnego określenia zagnieżdżonych typów ogólnych, takich jak te, które są tworzone przez zapytania grupowe. Ogólnie rzecz biorąc, zaleca się, aby w przypadku korzystania z programu `var` pamiętać, że kod może być trudniejszy do odczytania przez inne osoby. Aby uzyskać więcej informacji, zobacz [niejawnie wpisane zmienne lokalne](../../classes-and-structs/implicitly-typed-local-variables.md).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Typy ogólne](../../generics/index.md)

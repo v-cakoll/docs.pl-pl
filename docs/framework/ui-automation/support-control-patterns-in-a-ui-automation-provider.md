@@ -1,5 +1,6 @@
 ---
 title: Obsługa wzorców formantów dostawcy automatyzacji interfejsu użytkownika
+description: Zapoznaj się z implementacją wzorców kontroli obsługi dla dostawcy automatyzacji interfejsu użytkownika, dzięki czemu aplikacje klienckie mogą manipulować kontrolkami i pobierać z nich dane.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,25 +9,25 @@ helpviewer_keywords:
 - control patterns, supporting in UI Automation provider
 - UI Automation, supporting control patterns in provider
 ms.assetid: 0d635c35-ffa8-4dc8-bbc9-12fcd5445776
-ms.openlocfilehash: 1200ebd42884220d2611729b87f4bf51e7a903a1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 82300499520be6b820b361ebdeb56bbf3716afab
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446818"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163513"
 ---
 # <a name="support-control-patterns-in-a-ui-automation-provider"></a>Obsługa wzorców formantów dostawcy automatyzacji interfejsu użytkownika
 
 > [!NOTE]
-> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych klas [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdefiniowanych w przestrzeni nazw <xref:System.Windows.Automation>. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).
+> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).
 
 W tym temacie przedstawiono sposób implementacji co najmniej jednego wzorca kontroli dla dostawcy automatyzacji interfejsu użytkownika, dzięki czemu aplikacje klienckie mogą manipulować kontrolkami i pobierać z nich dane.
 
 ## <a name="support-control-patterns"></a>Obsługa wzorców kontrolek
 
-1. Zaimplementuj odpowiednie interfejsy dla wzorców kontrolek, które element powinien obsługiwać, takich jak <xref:System.Windows.Automation.Provider.IInvokeProvider> <xref:System.Windows.Automation.InvokePattern>.
+1. Zaimplementuj odpowiednie interfejsy dla wzorców kontrolek, które element powinien obsługiwać, na przykład <xref:System.Windows.Automation.Provider.IInvokeProvider> <xref:System.Windows.Automation.InvokePattern> .
 
-2. Zwróć obiekt zawierający implementację każdego interfejsu sterowania w implementacji <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A?displayProperty=nameWithType>
+2. Zwróć obiekt zawierający implementację każdego interfejsu sterowania w implementacji programu<xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A?displayProperty=nameWithType>
 
 ## <a name="example"></a>Przykład
 
@@ -37,7 +38,7 @@ W poniższym przykładzie przedstawiono implementację <xref:System.Windows.Auto
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie przedstawiono implementację <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A>, która zwraca klasę implementującą <xref:System.Windows.Automation.Provider.ISelectionProvider>. Większość formantów pola listy obsługuje inne wzorce, ale w tym przykładzie odwołanie o wartości null (`Nothing` w programie Microsoft Visual Basic .NET) jest zwracane dla wszystkich innych identyfikatorów wzorców.
+W poniższym przykładzie przedstawiono implementację <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A> , która zwraca klasę implementującą <xref:System.Windows.Automation.Provider.ISelectionProvider> . Większość formantów pola listy obsługuje inne wzorce, ale w tym przykładzie odwołanie null ( `Nothing` w Microsoft Visual Basic .NET) jest zwracane dla wszystkich innych identyfikatorów wzorców.
 
 [!code-csharp[UIAFragmentProvider_snip#120](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#120)]
 [!code-vb[UIAFragmentProvider_snip#120](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#120)]

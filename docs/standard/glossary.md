@@ -3,12 +3,12 @@ title: Słownik platformy .NET
 description: Sprawdź znaczenie wybranych terminów używanych w dokumentacji programu .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 11ab0de4757a23c940ae04418a5a82ea79f71761
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 529b1d9142ddf7982a6712c355c10666f0414d73
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287457"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163120"
 ---
 # <a name="net-glossary"></a>Słownik platformy .NET
 
@@ -140,8 +140,6 @@ Słowa Library i [Framework](#framework) są często używane.
 
 Pakiet NuGet, który nie ma własnej biblioteki, ale jest tylko listą zależności. Dołączone pakiety mogą opcjonalnie ustanowić interfejs API dla platformy docelowej.
 
-Zobacz [pakiety, aplikacje i struktury](../core/packages.md)
-
 ## <a name="mono"></a>Mono
 
 Mono to [wieloplatformowa](#cross-platform) implementacja platformy .NET, która jest używana głównie w przypadku, gdy wymagane jest małe środowisko uruchomieniowe. Jest to środowisko uruchomieniowe, które umożliwia aplikacjom platformy Xamarin w systemach Android, Mac, iOS, systemu tvOS i systemu watchOS i koncentruje się głównie na aplikacjach, które wymagają małego rozmiaru.
@@ -174,7 +172,7 @@ Zobacz [interfejs wiersza polecenia platformy .NET Core](../core/tools/index.md)
 
 ## <a name="net-core-sdk"></a>Zestaw .NET Core SDK
 
-Zestaw bibliotek i narzędzi umożliwiających deweloperom tworzenie aplikacji i bibliotek platformy .NET Core. Zawiera [interfejs wiersza polecenia platformy .NET Core](#net-core-cli) do kompilowania aplikacji, bibliotek .NET Core i środowiska uruchomieniowego na potrzeby kompilowania i uruchamiania aplikacji oraz plików wykonywalnych dotnet (*dotnet. exe*), które uruchamiają polecenia CLI i uruchamiają aplikacje.
+Zestaw bibliotek i narzędzi umożliwiających deweloperom tworzenie aplikacji i bibliotek platformy .NET Core. Zawiera [interfejs wiersza polecenia platformy .NET Core](#net-core-cli) do kompilowania aplikacji, bibliotek .NET Core i środowiska uruchomieniowego na potrzeby kompilowania i uruchamiania aplikacji oraz plików wykonywalnych dotnet (*dotnet.exe*), które uruchamiają polecenia CLI i uruchamiają aplikacje.
 
 Zobacz [zestaw .NET Core SDK przegląd](../core/sdk.md).
 

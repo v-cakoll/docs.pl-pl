@@ -1,5 +1,6 @@
 ---
 title: Formanty
+description: Dowiedz się więcej na temat Windows Presentation Foundation wspólnych składników interfejsu użytkownika, nazywanych kontrolkami, ale które mogą nie dziedziczyć z klasy formantów.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,40 +8,40 @@ dev_langs:
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: 2aab0fc8adaf17a8e9820a6269a740ef09540cda
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: c3d9d3a38cf5f84e21df195e113e264e5a4ac025
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646484"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165849"
 ---
 # <a name="controls"></a>Formanty
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]jest dostarczanych z wieloma typowymi składnikami interfejsu użytkownika, <xref:System.Windows.Controls.Button>które <xref:System.Windows.Controls.Label> <xref:System.Windows.Controls.TextBox>są <xref:System.Windows.Controls.Menu>używane w prawie każdej aplikacji systemu Windows, takich jak , , , i <xref:System.Windows.Controls.ListBox>. Historycznie te obiekty były określane jako formanty. Podczas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gdy SDK nadal używać terminu "control", aby luźno oznaczać dowolną klasę, która reprezentuje widoczny obiekt w aplikacji, należy <xref:System.Windows.Controls.Control> pamiętać, że klasa nie musi dziedziczyć z klasy, aby mieć widoczną obecność. Klasy, które <xref:System.Windows.Controls.Control> dziedziczą <xref:System.Windows.Controls.ControlTemplate>z klasy zawierają , co pozwala konsumentowi formantu radykalnie zmienić wygląd formantu bez konieczności tworzenia nowej podklasy.  W tym temacie omówiono, jak formanty (zarówno te, które dziedziczą z <xref:System.Windows.Controls.Control> klasy, jak i te, które nie) są powszechnie używane w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]dostarcza wiele typowych składników interfejsu użytkownika, które są używane w prawie każdej aplikacji systemu Windows, takiej jak <xref:System.Windows.Controls.Button> ,,, <xref:System.Windows.Controls.Label> <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Controls.Menu> i <xref:System.Windows.Controls.ListBox> . Historycznie te obiekty zostały określone jako kontrolki. Mimo że [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zestaw SDK kontynuuje używanie terminu "kontrola" do swobodnego oznaczania każdej klasy, która reprezentuje widoczny obiekt w aplikacji, należy zauważyć, że Klasa nie musi dziedziczyć z <xref:System.Windows.Controls.Control> klasy, aby mieć widoczną obecność. Klasy dziedziczące z <xref:System.Windows.Controls.Control> klasy zawierają element <xref:System.Windows.Controls.ControlTemplate> , który umożliwia konsumentowi kontrolce radykalnie Zmienianie wyglądu kontrolki bez konieczności tworzenia nowej podklasy.  W tym temacie omówiono sposób, w jaki formanty (zarówno te, które dziedziczą z <xref:System.Windows.Controls.Control> klasy, jak i te, które nie są) są często używane w programie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] .  
 
 <a name="creating_an_instance_of_a_control"></a>
-## <a name="creating-an-instance-of-a-control"></a>Tworzenie wystąpienia formantu  
- Formant można dodać do aplikacji za [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] pomocą kodu.  W poniższym przykładzie pokazano, jak utworzyć prostą aplikację, która prosi użytkownika o ich imię i nazwisko.  W tym przykładzie utworzy się sześć formantów: [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]dwie etykiety, dwa pola tekstowe i dwa przyciski w pliku . Wszystkie formanty mogą być tworzone w podobny sposób.  
+## <a name="creating-an-instance-of-a-control"></a>Tworzenie wystąpienia kontrolki  
+ Możesz dodać formant do aplikacji przy użyciu albo [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] kodu.  Poniższy przykład pokazuje, jak utworzyć prostą aplikację, która monituje użytkownika o podanie ich imienia i nazwiska.  Ten przykład tworzy sześć kontrolek: dwie etykiety, dwa pola tekstowe i dwa przyciski w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] . Wszystkie kontrolki można tworzyć podobnie.  
   
  [!code-xaml[ControlsOverview#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/Window1.xaml#1)]  
   
- Poniższy przykład tworzy tę samą aplikację w kodzie. Dla zwięzłości, <xref:System.Windows.Controls.Grid> `grid1`utworzenie , został wykluczony z próbki. `grid1`ma te same definicje kolumn i wierszy, jak pokazano w poprzednim przykładzie. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]  
+ W poniższym przykładzie jest tworzona ta sama aplikacja w kodzie. W przypadku zwięzłości Tworzenie elementu <xref:System.Windows.Controls.Grid> , `grid1` zostało wyłączone z przykładu. `grid1`zawiera te same definicje kolumn i wierszy, jak pokazano w powyższym [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] przykładzie.  
   
  [!code-csharp[ControlsOverview#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#2)]
  [!code-vb[ControlsOverview#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#2)]  
   
 <a name="changing_the_appearance_of_a_control"></a>
-## <a name="changing-the-appearance-of-a-control"></a>Zmiana wyglądu formantu  
- Często zmienia się wygląd formantu, aby dopasować wygląd i działanie aplikacji. Wygląd formantu można zmienić, wykonując jedną z następujących czynności, w zależności od tego, co chcesz osiągnąć:  
+## <a name="changing-the-appearance-of-a-control"></a>Zmiana wyglądu kontrolki  
+ Typowym sposobem zmiany wyglądu kontrolki jest dopasowanie wyglądu i sposobu działania aplikacji. Wygląd formantu można zmienić, wykonując jedną z następujących czynności, w zależności od tego, co chcesz osiągnąć:  
   
 - Zmień wartość właściwości formantu.  
   
-- Utwórz <xref:System.Windows.Style> formantu.  
+- Utwórz <xref:System.Windows.Style> dla kontrolki.  
   
-- Utwórz <xref:System.Windows.Controls.ControlTemplate> nowy dla formantu.  
+- Utwórz nową <xref:System.Windows.Controls.ControlTemplate> kontrolkę.  
   
-### <a name="changing-a-controls-property-value"></a>Zmiana wartości właściwości formantu  
- Wiele formantów ma właściwości, które pozwalają zmienić <xref:System.Windows.Controls.Control.Background%2A> sposób, <xref:System.Windows.Controls.Button>w jaki formant się pojawia, takich jak . Można ustawić właściwości wartości w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] obu i kod. W poniższym <xref:System.Windows.Controls.Control.Background%2A>przykładzie <xref:System.Windows.Controls.Control.FontSize%2A>ustawia , <xref:System.Windows.Controls.Button> i [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] <xref:System.Windows.Controls.Control.FontWeight%2A> właściwości na w .  
+### <a name="changing-a-controls-property-value"></a>Zmiana wartości właściwości kontrolki  
+ Wiele kontrolek ma właściwości, które umożliwiają zmianę sposobu wyświetlania kontrolki, na przykład <xref:System.Windows.Controls.Control.Background%2A> a <xref:System.Windows.Controls.Button> . Można ustawić właściwości wartości w obu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i kodzie. Poniższy przykład ustawia <xref:System.Windows.Controls.Control.Background%2A> <xref:System.Windows.Controls.Control.FontSize%2A> właściwości,, i w <xref:System.Windows.Controls.Control.FontWeight%2A> <xref:System.Windows.Controls.Button> w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] .  
   
  [!code-xaml[ControlsOverview#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#3)]  
   
@@ -49,62 +50,62 @@ ms.locfileid: "81646484"
  [!code-csharp[ControlsOverview#4](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#4)]
  [!code-vb[ControlsOverview#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#4)]  
   
-### <a name="creating-a-style-for-a-control"></a>Tworzenie stylu formantu  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]daje możliwość określenia wyglądu kontroli hurtowych, zamiast ustawiania właściwości dla każdego wystąpienia w <xref:System.Windows.Style>aplikacji, tworząc program . Poniższy przykład <xref:System.Windows.Style> tworzy, który jest <xref:System.Windows.Controls.Button> stosowany do każdego w aplikacji. <xref:System.Windows.Style>definicje są zazwyczaj [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] zdefiniowane <xref:System.Windows.ResourceDictionary>w , <xref:System.Windows.FrameworkElement.Resources%2A> takich <xref:System.Windows.FrameworkElement>jak właściwość .  
+### <a name="creating-a-style-for-a-control"></a>Tworzenie stylu kontrolki  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]zapewnia możliwość określania wyglądu hurtowników kontroli zamiast ustawiania właściwości dla każdego wystąpienia w aplikacji, tworząc <xref:System.Windows.Style> . Poniższy przykład tworzy obiekt <xref:System.Windows.Style> , który jest stosowany do każdego <xref:System.Windows.Controls.Button> w aplikacji. <xref:System.Windows.Style>definicje są zwykle zdefiniowane w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] w, na przykład <xref:System.Windows.ResourceDictionary> <xref:System.Windows.FrameworkElement.Resources%2A> właściwości <xref:System.Windows.FrameworkElement> .  
   
  [!code-xaml[ControlsOverview#5](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#5)]  
   
- Styl można również zastosować tylko do niektórych formantów określonego typu, przypisując klucz `Style` do stylu i określając ten klucz we właściwości formantu.  Aby uzyskać więcej informacji o stylach, zobacz [Stylowanie i tworzenie szablonów](../../../desktop-wpf/fundamentals/styles-templates-overview.md).  
+ Można również zastosować styl tylko do niektórych formantów określonego typu przez przypisanie klucza do stylu i określenie tego klucza we `Style` właściwości formantu.  Aby uzyskać więcej informacji na temat stylów, zobacz [Style i tworzenia szablonów](../../../desktop-wpf/fundamentals/styles-templates-overview.md).  
   
-### <a name="creating-a-controltemplate"></a>Tworzenie panelu sterowania  
- A <xref:System.Windows.Style> umożliwia ustawienie właściwości na wielu formantach naraz, ale czasami można <xref:System.Windows.Controls.Control> dostosować wygląd poza to, <xref:System.Windows.Style>co można zrobić, tworząc program . Klasy, które <xref:System.Windows.Controls.Control> dziedziczą <xref:System.Windows.Controls.ControlTemplate>z klasy mają , który <xref:System.Windows.Controls.Control>definiuje strukturę i wygląd . Właściwość <xref:System.Windows.Controls.Control.Template%2A> a <xref:System.Windows.Controls.Control> jest publiczna, dzięki <xref:System.Windows.Controls.Control> <xref:System.Windows.Controls.ControlTemplate> czemu można podać, że jest inny niż jego domyślny. Często można określić <xref:System.Windows.Controls.ControlTemplate> nowy <xref:System.Windows.Controls.Control> dla zamiast dziedziczenia z formantu, <xref:System.Windows.Controls.Control>aby dostosować wygląd .  
+### <a name="creating-a-controltemplate"></a>Tworzenie ControlTemplate  
+ A <xref:System.Windows.Style> umożliwia ustawianie właściwości w wielu kontrolkach jednocześnie, ale czasami warto dostosować wygląd poza tym, <xref:System.Windows.Controls.Control> co można zrobić, tworząc <xref:System.Windows.Style> . Klasy dziedziczące z <xref:System.Windows.Controls.Control> klasy posiadają <xref:System.Windows.Controls.ControlTemplate> , która definiuje strukturę i wygląd <xref:System.Windows.Controls.Control> . <xref:System.Windows.Controls.Control.Template%2A>Właściwość <xref:System.Windows.Controls.Control> jest publiczna, więc można nadać jej wartość <xref:System.Windows.Controls.Control> <xref:System.Windows.Controls.ControlTemplate> inną niż domyślna. Można często określić nowy <xref:System.Windows.Controls.ControlTemplate> dla elementu <xref:System.Windows.Controls.Control> zamiast dziedziczyć z kontrolki, aby dostosować wygląd <xref:System.Windows.Controls.Control> .  
   
- Rozważmy bardzo wspólną kontrolę, <xref:System.Windows.Controls.Button>.  Podstawowym zachowaniem <xref:System.Windows.Controls.Button> jest umożliwienie aplikacji do podjęcia pewnych działań, gdy użytkownik kliknie go.  Domyślnie <xref:System.Windows.Controls.Button> in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jest wyświetlany jako podniesiony prostokąt.  Podczas tworzenia aplikacji, można skorzystać z zachowania <xref:System.Windows.Controls.Button>--oznacza, że obsługi przycisku kliknij zdarzenia - ale można zmienić wygląd przycisku poza to, co można zrobić, zmieniając właściwości przycisku.  W takim przypadku można utworzyć <xref:System.Windows.Controls.ControlTemplate>nowy program .  
+ Rozważmy bardzo powszechną kontrolę <xref:System.Windows.Controls.Button> .  Podstawowym zachowaniem <xref:System.Windows.Controls.Button> jest umożliwienie aplikacji podejmowania pewnych akcji, gdy użytkownik kliknie ją.  Domyślnie, <xref:System.Windows.Controls.Button> w programie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pojawia się jako podniesiony prostokąt.  Podczas tworzenia aplikacji możesz chcieć skorzystać z zachowania typu <xref:System.Windows.Controls.Button> --, czyli poprzez obsługę zdarzenia kliknięcia przycisku — ale można zmienić wygląd przycisku poza tym, co można zrobić, zmieniając właściwości przycisku.  W takim przypadku można utworzyć nowy <xref:System.Windows.Controls.ControlTemplate> .  
   
- Poniższy przykład <xref:System.Windows.Controls.ControlTemplate> tworzy <xref:System.Windows.Controls.Button>fora .  Tworzy <xref:System.Windows.Controls.ControlTemplate> z <xref:System.Windows.Controls.Button> zaokrąglonymi narożnikami i tłem gradientu.  Zawiera, <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Controls.Border> którego <xref:System.Windows.Controls.Border.Background%2A> jest <xref:System.Windows.Media.LinearGradientBrush> a <xref:System.Windows.Media.GradientStop> z dwoma obiektami.  Pierwszy <xref:System.Windows.Media.GradientStop> używa powiązania danych do <xref:System.Windows.Media.GradientStop.Color%2A> powiązania <xref:System.Windows.Media.GradientStop> właściwości do koloru tła przycisku.  Po ustawieniu <xref:System.Windows.Controls.Control.Background%2A> właściwości <xref:System.Windows.Controls.Button>, kolor tej wartości będzie używany <xref:System.Windows.Media.GradientStop>jako pierwszy . Aby uzyskać więcej informacji na temat powiązania danych, zobacz [Omówienie powiązania danych](../../../desktop-wpf/data/data-binding-overview.md). W <xref:System.Windows.Trigger> przykładzie tworzy również, który <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> zmienia `true`wygląd, gdy jest .  
+ Poniższy przykład tworzy <xref:System.Windows.Controls.ControlTemplate> dla <xref:System.Windows.Controls.Button> .  <xref:System.Windows.Controls.ControlTemplate>Tworzy <xref:System.Windows.Controls.Button> z zaokrąglonymi rogami i tłem gradientowym.  <xref:System.Windows.Controls.ControlTemplate>Zawiera a, <xref:System.Windows.Controls.Border> które <xref:System.Windows.Controls.Border.Background%2A> jest <xref:System.Windows.Media.LinearGradientBrush> z dwoma <xref:System.Windows.Media.GradientStop> obiektami.  Pierwsze <xref:System.Windows.Media.GradientStop> używa powiązania danych, aby powiązać <xref:System.Windows.Media.GradientStop.Color%2A> Właściwość z <xref:System.Windows.Media.GradientStop> kolorem tła przycisku.  Po ustawieniu <xref:System.Windows.Controls.Control.Background%2A> właściwości <xref:System.Windows.Controls.Button> , kolor tej wartości będzie używany jako pierwszy <xref:System.Windows.Media.GradientStop> . Aby uzyskać więcej informacji na temat powiązania danych, zobacz temat [powiązanie danych — omówienie](../../../desktop-wpf/data/data-binding-overview.md). W przykładzie tworzony jest również obiekt <xref:System.Windows.Trigger> , który zmienia wygląd, <xref:System.Windows.Controls.Button> gdy <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> jest `true` .  
   
  [!code-xaml[ControlsOverview#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/Window1.xaml#6)]  
 [!code-xaml[ControlsOverview#7](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#7)]  
   
 > [!NOTE]
-> Właściwość <xref:System.Windows.Controls.Control.Background%2A> musi <xref:System.Windows.Controls.Button> być ustawiona <xref:System.Windows.Media.SolidColorBrush> na przykład, aby działał poprawnie.  
+> Aby <xref:System.Windows.Controls.Control.Background%2A> <xref:System.Windows.Controls.Button> przykład działał prawidłowo, właściwość musi być ustawiona na wartość <xref:System.Windows.Media.SolidColorBrush> .  
   
 <a name="subscribing_to_events"></a>
-## <a name="subscribing-to-events"></a>Subskrybowanie wydarzeń  
- Możesz subskrybować zdarzenie formantu przy [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] użyciu kodu lub kodu, ale można obsługiwać zdarzenie tylko w kodzie.  W poniższym przykładzie pokazano, `Click` jak subskrybować zdarzenie <xref:System.Windows.Controls.Button>.  
+## <a name="subscribing-to-events"></a>Subskrybowanie zdarzeń  
+ Możesz subskrybować zdarzenie kontrolki przy użyciu albo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kodu, ale możesz obsłużyć tylko zdarzenie w kodzie.  Poniższy przykład pokazuje, jak subskrybować `Click` zdarzenie <xref:System.Windows.Controls.Button> .  
   
  [!code-xaml[ControlsOverview#10](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/Window1.xaml#10)]  
   
  [!code-csharp[ControlsOverview#8](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#8)]
  [!code-vb[ControlsOverview#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#8)]  
   
- Poniższy przykład obsługuje `Click` zdarzenie <xref:System.Windows.Controls.Button>.  
+ Poniższy przykład obsługuje `Click` zdarzenie <xref:System.Windows.Controls.Button> .  
   
  [!code-csharp[ControlsOverview#9](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#9)]
  [!code-vb[ControlsOverview#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#9)]  
   
 <a name="rich_content_in_controls"></a>
-## <a name="rich-content-in-controls"></a>Bogata zawartość w formancie  
- Większość klas, które <xref:System.Windows.Controls.Control> dziedziczą z klasy mają zdolność do zawierają zawartość rozszerzoną. Na przykład <xref:System.Windows.Controls.Label> może zawierać dowolny obiekt, taki <xref:System.Windows.Controls.Image>jak ciąg, znak , lub . <xref:System.Windows.Controls.Panel>  Następujące klasy zapewniają obsługę zawartości rozszerzonej i działają jako [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]klasy podstawowe dla większości formantów w .  
+## <a name="rich-content-in-controls"></a>Zawartość rozbudowana w kontrolkach  
+ Większość klas, które dziedziczą z <xref:System.Windows.Controls.Control> klasy, ma pojemność do przechowywania zawartości rozbudowanej. Na przykład <xref:System.Windows.Controls.Label> może zawierać dowolny obiekt, taki jak ciąg, a <xref:System.Windows.Controls.Image> lub <xref:System.Windows.Controls.Panel> .  Poniższe klasy zapewniają obsługę bogatej zawartości i działają jako klasy bazowe dla większości kontrolek w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] .  
   
-- <xref:System.Windows.Controls.ContentControl>-- Niektóre przykłady klas, które <xref:System.Windows.Controls.Label>dziedziczą z tej klasy są , <xref:System.Windows.Controls.Button>i <xref:System.Windows.Controls.ToolTip>.  
+- <xref:System.Windows.Controls.ContentControl>--Przykłady klas, które dziedziczą z tej klasy to <xref:System.Windows.Controls.Label> , <xref:System.Windows.Controls.Button> , i <xref:System.Windows.Controls.ToolTip> .  
   
-- <xref:System.Windows.Controls.ItemsControl>-- Niektóre przykłady klas, które <xref:System.Windows.Controls.ListBox>dziedziczą z tej klasy są , <xref:System.Windows.Controls.Menu>i <xref:System.Windows.Controls.Primitives.StatusBar>.  
+- <xref:System.Windows.Controls.ItemsControl>--Przykłady klas, które dziedziczą z tej klasy to <xref:System.Windows.Controls.ListBox> , <xref:System.Windows.Controls.Menu> , i <xref:System.Windows.Controls.Primitives.StatusBar> .  
   
-- <xref:System.Windows.Controls.HeaderedContentControl>-- Niektóre przykłady klas, które <xref:System.Windows.Controls.TabItem>dziedziczą z tej klasy są , <xref:System.Windows.Controls.GroupBox>i <xref:System.Windows.Controls.Expander>.  
+- <xref:System.Windows.Controls.HeaderedContentControl>--Przykłady klas, które dziedziczą z tej klasy to <xref:System.Windows.Controls.TabItem> , <xref:System.Windows.Controls.GroupBox> , i <xref:System.Windows.Controls.Expander> .  
   
-- <xref:System.Windows.Controls.HeaderedItemsControl>--Niektóre przykłady klas, które dziedziczą <xref:System.Windows.Controls.TreeViewItem>z <xref:System.Windows.Controls.ToolBar>tej klasy są <xref:System.Windows.Controls.MenuItem>, i .  
+- <xref:System.Windows.Controls.HeaderedItemsControl>--Przykłady klas, które dziedziczą z tej klasy to <xref:System.Windows.Controls.MenuItem> , <xref:System.Windows.Controls.TreeViewItem> , i <xref:System.Windows.Controls.ToolBar> .  
 
- Aby uzyskać więcej informacji na temat tych klas podstawowych, zobacz [Model zawartości WPF](wpf-content-model.md).  
+ Aby uzyskać więcej informacji na temat tych klas bazowych, zobacz [WPF content model](wpf-content-model.md).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Kontrolki według kategorii](controls-by-category.md)
 - [Biblioteka formantów](control-library.md)
 - [Szablonowanie danych — omówienie](../data/data-templating-overview.md)
-- [Omówienie powiązania danych](../../../desktop-wpf/data/data-binding-overview.md)
+- [Przegląd powiązań danych](../../../desktop-wpf/data/data-binding-overview.md)
 - [Dane wejściowe](../advanced/input-wpf.md)
 - [Włączanie polecenia](../advanced/how-to-enable-a-command.md)
-- [Przewodnik: tworzenie niestandardowego przycisku animowanego](walkthroughs-create-a-custom-animated-button.md)
-- [Niestandardowe dostosowywanie kontrolki](control-customization.md)
+- [Przewodniki: Tworzenie niestandardowego przycisku animowanego](walkthroughs-create-a-custom-animated-button.md)
+- [Niestandardowe dostosowywanie formantu](control-customization.md)

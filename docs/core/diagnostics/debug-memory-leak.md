@@ -226,7 +226,7 @@ Można kontynuować zrzucanie obiektów, aby zobaczyć, że większość `String
 
 Ta ogólna procedura umożliwia zidentyfikowanie źródła głównych przecieków pamięci.
 
-## <a name="clean-up-resources"></a>Czyszczenie zasobów
+## <a name="clean-up-resources"></a>Oczyszczanie zasobów
 
 W tym samouczku uruchomiono przykładowy serwer sieci Web. Ten serwer powinien zostać wyłączony zgodnie z opisem w sekcji [Ponowne uruchamianie procesu zakończonego niepowodzeniem](#restart-the-failed-process) .
 

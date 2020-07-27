@@ -1,92 +1,93 @@
 ---
 title: Przegląd Okna podręczne
+description: Dowiedz się więcej na temat kontrolki popup Windows Presentation Foundation, która zapewnia sposób wyświetlania zawartości w oknie, które jest przepływane przez bieżącą aplikację.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-ms.openlocfilehash: 911130d52744c5ba54750f214829a5d1900e083c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 84eaddc53366df6d1da1a0a005d3618268f8cce2
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185954"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167541"
 ---
 # <a name="popup-overview"></a>Przegląd Okna podręczne
-Formant <xref:System.Windows.Controls.Primitives.Popup> umożliwia wyświetlanie zawartości w osobnym oknie, które unosi się nad bieżącym oknie aplikacji względem wyznaczonego elementu lub współrzędnych ekranu. W tym temacie <xref:System.Windows.Controls.Primitives.Popup> wprowadzono formant i zawiera informacje na temat jego użycia.  
+<xref:System.Windows.Controls.Primitives.Popup>Kontrolka zapewnia sposób wyświetlania zawartości w osobnym oknie, która jest przestawiana przez bieżące okno aplikacji względem wskazanego elementu lub współrzędnej ekranu. Ten temat wprowadza <xref:System.Windows.Controls.Primitives.Popup> formant i zawiera informacje o jego użyciu.  
 
 <a name="What_Is_a_Popup_"></a>
-## <a name="what-is-a-popup"></a>Co to jest popup?  
- Formant <xref:System.Windows.Controls.Primitives.Popup> wyświetla zawartość w osobnym oknie względem elementu lub punktu na ekranie. Gdy <xref:System.Windows.Controls.Primitives.Popup> jest widoczny, <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> właściwość jest `true`ustawiona na .  
+## <a name="what-is-a-popup"></a>Co to jest podręczny?  
+ <xref:System.Windows.Controls.Primitives.Popup>Kontrolka wyświetla zawartość w osobnym oknie względem elementu lub punktu na ekranie. Gdy <xref:System.Windows.Controls.Primitives.Popup> jest widoczny, <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> Właściwość jest ustawiona na `true` .  
   
 > [!NOTE]
-> A <xref:System.Windows.Controls.Primitives.Popup> nie otwiera się automatycznie, gdy wskaźnik myszy przesuwa się nad jego obiektem nadrzędnym. Jeśli chcesz, <xref:System.Windows.Controls.Primitives.Popup> aby automatycznie otwierać, użyj <xref:System.Windows.Controls.ToolTip> lub <xref:System.Windows.Controls.ToolTipService> klasy. Aby uzyskać więcej informacji, zobacz [Omówienie etykietki narzędzia](tooltip-overview.md).  
+> Element nie jest <xref:System.Windows.Controls.Primitives.Popup> automatycznie otwierany, gdy wskaźnik myszy przesuwa się nad jego obiektem nadrzędnym. Jeśli chcesz <xref:System.Windows.Controls.Primitives.Popup> automatycznie otworzyć, użyj <xref:System.Windows.Controls.ToolTip> <xref:System.Windows.Controls.ToolTipService> klasy or. Aby uzyskać więcej informacji, zobacz [Omówienie etykietki narzędzia](tooltip-overview.md).  
   
 <a name="APopupExample"></a>
 ## <a name="creating-a-popup"></a>Tworzenie okna podręcznego  
- Poniższy przykład pokazuje, <xref:System.Windows.Controls.Primitives.Popup> jak zdefiniować formant, <xref:System.Windows.Controls.Button> który jest elementem podrzędnym formantu. Ponieważ <xref:System.Windows.Controls.Button> element podrzędny może mieć tylko jeden element <xref:System.Windows.Controls.Button> podrzędny, w tym przykładzie umieszcza tekst <xref:System.Windows.Controls.Primitives.Popup> formanty i formanty w pliku <xref:System.Windows.Controls.StackPanel>. Zawartość <xref:System.Windows.Controls.Primitives.Popup> pojawia się w <xref:System.Windows.Controls.TextBlock> formancie, który wyświetla jego tekst w osobnym oknie, które unosi się nad oknem aplikacji w pobliżu powiązanego <xref:System.Windows.Controls.Button> formantu.  
+ Poniższy przykład pokazuje, jak zdefiniować <xref:System.Windows.Controls.Primitives.Popup> formant, który jest elementem podrzędnym <xref:System.Windows.Controls.Button> formantu. Ponieważ <xref:System.Windows.Controls.Button> może mieć tylko jeden element podrzędny, ten przykład umieszcza tekst dla <xref:System.Windows.Controls.Button> i <xref:System.Windows.Controls.Primitives.Popup> kontrolek w <xref:System.Windows.Controls.StackPanel> . Zawartość <xref:System.Windows.Controls.Primitives.Popup> pojawia się w <xref:System.Windows.Controls.TextBlock> kontrolce, która wyświetla tekst w osobnym oknie, które przepływa przez okno aplikacji blisko powiązanej <xref:System.Windows.Controls.Button> kontroli.  
   
  [!code-xaml[PopupSimple#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#1)]  
   
  [!code-xaml[PopupSimple#CreatePopupCodeXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#createpopupcodexaml)]  
   
 <a name="PopupUses"></a>
-## <a name="controls-that-implement-a-popup"></a>Formanty, które implementują wyskakujące okienko  
- Formanty <xref:System.Windows.Controls.Primitives.Popup> można tworzyć w innych formantach. Następujące formanty <xref:System.Windows.Controls.Primitives.Popup> implementują formant dla określonych zastosowań:  
+## <a name="controls-that-implement-a-popup"></a>Kontrolki implementujące okno podręczne  
+ <xref:System.Windows.Controls.Primitives.Popup>Kontrolki można kompilować do innych kontrolek. Następujące kontrolki implementują <xref:System.Windows.Controls.Primitives.Popup> kontrolkę do określonych celów:  
   
-- <xref:System.Windows.Controls.ToolTip>. Jeśli chcesz utworzyć etykietkę narzędzia dla elementu, użyj <xref:System.Windows.Controls.ToolTip> i <xref:System.Windows.Controls.ToolTipService> klas. Aby uzyskać więcej informacji, zobacz [Omówienie etykietki narzędzia](tooltip-overview.md).  
+- <xref:System.Windows.Controls.ToolTip>. Jeśli chcesz utworzyć etykietkę narzędzia dla elementu, użyj <xref:System.Windows.Controls.ToolTip> <xref:System.Windows.Controls.ToolTipService> klas i. Aby uzyskać więcej informacji, zobacz [Omówienie etykietki narzędzia](tooltip-overview.md).  
   
-- <xref:System.Windows.Controls.ContextMenu>. Jeśli chcesz utworzyć menu kontekstowe dla elementu, użyj <xref:System.Windows.Controls.ContextMenu> formantu. Aby uzyskać więcej informacji, zobacz [ContextMenu Overview](contextmenu-overview.md).  
+- <xref:System.Windows.Controls.ContextMenu>. Jeśli chcesz utworzyć menu kontekstowe dla elementu, użyj <xref:System.Windows.Controls.ContextMenu> kontrolki. Aby uzyskać więcej informacji, zobacz temat [Przegląd](contextmenu-overview.md).  
   
-- <xref:System.Windows.Controls.ComboBox>. Jeśli chcesz utworzyć kontrolkę zaznaczenia, która ma pole listy rozwijanej, <xref:System.Windows.Controls.ComboBox> które może być wyświetlane lub ukryte, użyj formantu.  
+- <xref:System.Windows.Controls.ComboBox>. Jeśli chcesz utworzyć formant wyboru, który ma pole listy rozwijanej, które można pokazać lub ukryć, użyj <xref:System.Windows.Controls.ComboBox> kontrolki.  
   
-- <xref:System.Windows.Controls.Expander>. Jeśli chcesz utworzyć formant, który wyświetla nagłówek z zwijanym <xref:System.Windows.Controls.Expander> obszarem, który wyświetla zawartość, użyj formantu. Aby uzyskać więcej informacji, zobacz [Omówienie expandera](expander-overview.md).  
+- <xref:System.Windows.Controls.Expander>. Jeśli chcesz utworzyć formant, który wyświetla nagłówek z obszarem zwijanym, który wyświetla zawartość, użyj <xref:System.Windows.Controls.Expander> kontrolki. Aby uzyskać więcej informacji, zobacz [Omówienie rozwijania](expander-overview.md).  
   
 <a name="PopupBehaviorandAppearance"></a>
-## <a name="popup-behavior-and-appearance"></a>Zachowanie i wygląd wyskakujących okienka  
- Formant <xref:System.Windows.Controls.Primitives.Popup> zapewnia funkcje, które umożliwia dostosowanie jego zachowanie i wygląd. Można na przykład ustawić zachowanie otwierania i zamykania, animację, <xref:System.Windows.Controls.Primitives.Popup> krycie i efekty mapy bitowej oraz rozmiar i położenie.  
+## <a name="popup-behavior-and-appearance"></a>Zachowanie i wygląd okienka podręcznego  
+ <xref:System.Windows.Controls.Primitives.Popup>Formant zawiera funkcje, które umożliwiają dostosowanie jego zachowania i wyglądu. Na przykład można ustawić zachowanie Otwórz i Zamknij, animację, nieprzezroczystość i efekty bitmapy oraz <xref:System.Windows.Controls.Primitives.Popup> rozmiar i położenie.  
   
 <a name="OpenandCloseBehavior"></a>
 ### <a name="open-and-close-behavior"></a>Zachowanie otwierania i zamykania  
- Formant <xref:System.Windows.Controls.Primitives.Popup> wyświetla jego <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> zawartość, gdy `true`właściwość jest ustawiona na . Domyślnie <xref:System.Windows.Controls.Primitives.Popup> pozostaje otwarty, <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> dopóki właściwość `false`nie zostanie ustawiona na . Można jednak zmienić zachowanie domyślne, `false`ustawiając właściwość na <xref:System.Windows.Controls.Primitives.Popup.StaysOpen%2A> . Po ustawieniu tej `false`właściwości, okno <xref:System.Windows.Controls.Primitives.Popup> zawartości ma przechwytywanie myszy. Przechwytuje <xref:System.Windows.Controls.Primitives.Popup> myszy i okno zamyka się, gdy zdarzenie <xref:System.Windows.Controls.Primitives.Popup> myszy występuje za oknem.  
+ <xref:System.Windows.Controls.Primitives.Popup>Kontrolka wyświetla zawartość, gdy <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> Właściwość jest ustawiona na `true` . Domyślnie <xref:System.Windows.Controls.Primitives.Popup> pozostaje otwarty do momentu, gdy <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> Właściwość jest ustawiona na `false` . Można jednak zmienić zachowanie domyślne, ustawiając <xref:System.Windows.Controls.Primitives.Popup.StaysOpen%2A> Właściwość na `false` . Po ustawieniu tej właściwości na `false` , <xref:System.Windows.Controls.Primitives.Popup> okno zawartości ma przechwycić myszą. <xref:System.Windows.Controls.Primitives.Popup>Utraci przechwytywanie myszy i okno jest zamykane, gdy wystąpi zdarzenie myszy poza <xref:System.Windows.Controls.Primitives.Popup> oknem.  
   
- Zdarzenia <xref:System.Windows.Controls.Primitives.Popup.Opened> <xref:System.Windows.Controls.Primitives.Popup.Closed> i są wywoływane, <xref:System.Windows.Controls.Primitives.Popup> gdy okno zawartości jest otwarte lub zamknięte.  
+ <xref:System.Windows.Controls.Primitives.Popup.Opened>Zdarzenia i <xref:System.Windows.Controls.Primitives.Popup.Closed> są wywoływane, gdy <xref:System.Windows.Controls.Primitives.Popup> okno zawartości jest otwarte lub zamknięte.  
   
 <a name="Animation"></a>
 ### <a name="animation"></a>Animacja  
- Formant <xref:System.Windows.Controls.Primitives.Popup> ma wbudowaną obsługę animacji, które są zazwyczaj skojarzone z zachowaniami, takimi jak fade-in i slide-in. Animacje te można włączyć, <xref:System.Windows.Controls.Primitives.Popup.PopupAnimation%2A> ustawiając <xref:System.Windows.Controls.Primitives.PopupAnimation> właściwość na wartość wyliczenia. Aby <xref:System.Windows.Controls.Primitives.Popup> animacje działały poprawnie, <xref:System.Windows.Controls.Primitives.Popup.AllowsTransparency%2A> należy `true`ustawić właściwość na .  
+ <xref:System.Windows.Controls.Primitives.Popup>Kontrolka ma wbudowaną obsługę animacji, które są zwykle skojarzone z zachowaniami, takimi jak zanikanie i przesuwanie. Te animacje można włączyć przez ustawienie <xref:System.Windows.Controls.Primitives.Popup.PopupAnimation%2A> właściwości na <xref:System.Windows.Controls.Primitives.PopupAnimation> wartość wyliczenia. Aby <xref:System.Windows.Controls.Primitives.Popup> animacje działały prawidłowo, należy ustawić <xref:System.Windows.Controls.Primitives.Popup.AllowsTransparency%2A> Właściwość na `true` .  
   
- Można również zastosować animacje, takie jak <xref:System.Windows.Media.Animation.Storyboard> do formantu. <xref:System.Windows.Controls.Primitives.Popup>  
+ Można również zastosować animacje, takie jak <xref:System.Windows.Media.Animation.Storyboard> do <xref:System.Windows.Controls.Primitives.Popup> kontrolki.  
   
 <a name="OpacityandBitmapEffects"></a>
-### <a name="opacity-and-bitmap-effects"></a>Krycie i efekty bitmapy  
- Właściwość <xref:System.Windows.UIElement.Opacity%2A> formantu <xref:System.Windows.Controls.Primitives.Popup> nie ma wpływu na jego zawartość. Domyślnie okno <xref:System.Windows.Controls.Primitives.Popup> zawartości jest nieprzezroczyste. Aby utworzyć <xref:System.Windows.Controls.Primitives.Popup>przezroczystą <xref:System.Windows.Controls.Primitives.Popup.AllowsTransparency%2A> , `true`ustaw właściwość na .  
+### <a name="opacity-and-bitmap-effects"></a>Nieprzezroczystość i efekty mapy bitowej  
+ <xref:System.Windows.UIElement.Opacity%2A>Właściwość <xref:System.Windows.Controls.Primitives.Popup> kontrolki nie ma wpływu na jej zawartość. Domyślnie <xref:System.Windows.Controls.Primitives.Popup> okno zawartości jest nieprzezroczyste. Aby utworzyć przezroczysty <xref:System.Windows.Controls.Primitives.Popup> , ustaw <xref:System.Windows.Controls.Primitives.Popup.AllowsTransparency%2A> Właściwość na `true` .  
   
- Zawartość a <xref:System.Windows.Controls.Primitives.Popup> nie dziedziczy efekty bitmapy, takie jak <xref:System.Windows.Media.Effects.DropShadowBitmapEffect>, <xref:System.Windows.Controls.Primitives.Popup> które można bezpośrednio ustawić na formancie lub na inny element w oknie nadrzędnym. Aby efekty bitmapy były wyświetlane <xref:System.Windows.Controls.Primitives.Popup>w zawartości programu , należy ustawić efekt mapy bitowej bezpośrednio na jego zawartość. Na przykład, jeśli podrzędny <xref:System.Windows.Controls.Primitives.Popup> <xref:System.Windows.Controls.StackPanel>jest , ustawić efekt <xref:System.Windows.Controls.StackPanel>mapy bitowej na .  
+ Zawartość obiektu nie <xref:System.Windows.Controls.Primitives.Popup> dziedziczy efektów mapy bitowej, takich jak <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> , które są bezpośrednio ustawione na <xref:System.Windows.Controls.Primitives.Popup> kontrolce lub na dowolnym innym elemencie w oknie nadrzędnym. Aby efekty mapy bitowej pojawiły się na zawartości <xref:System.Windows.Controls.Primitives.Popup> , należy ustawić efekt mapy bitowej bezpośrednio na jego zawartości. Na przykład, jeśli element podrzędny jest a <xref:System.Windows.Controls.Primitives.Popup> <xref:System.Windows.Controls.StackPanel> , ustaw efekt mapy bitowej na <xref:System.Windows.Controls.StackPanel> .  
   
 <a name="PopupSize"></a>
-### <a name="popup-size"></a>Rozmiar wyskakujących okienka  
- Domyślnie a <xref:System.Windows.Controls.Primitives.Popup> jest automatycznie dopasowywane do jego zawartości. W przypadku automatycznego zmiany rozmiaru niektóre efekty bitmapy mogą być ukryte, ponieważ <xref:System.Windows.Controls.Primitives.Popup> domyślny rozmiar obszaru ekranu zdefiniowanego dla zawartości nie zapewnia wystarczającej ilości miejsca na wyświetlanie efektów bitmapy.  
+### <a name="popup-size"></a>Rozmiar okna podręcznego  
+ Domyślnie <xref:System.Windows.Controls.Primitives.Popup> rozmiar jest automatycznie ustawiany na jego zawartość. Gdy występuje automatyczne ustalanie rozmiaru, niektóre efekty mapy bitowej mogą być ukryte, ponieważ domyślny rozmiar obszaru ekranu, który jest zdefiniowany dla <xref:System.Windows.Controls.Primitives.Popup> zawartości, nie zapewnia wystarczającej ilości miejsca na wyświetlenie efektów mapy bitowej.  
   
- <xref:System.Windows.Controls.Primitives.Popup>zawartość może być również zasłonięte po ustawieniu <xref:System.Windows.UIElement.RenderTransform%2A> zawartości. W tym scenariuszu niektóre treści mogą być <xref:System.Windows.Controls.Primitives.Popup> ukryte, jeśli zawartość przekształcony wykracza poza obszar oryginału <xref:System.Windows.Controls.Primitives.Popup>. Jeśli efekt bitmapy lub przekształcenie wymaga więcej <xref:System.Windows.Controls.Primitives.Popup> miejsca, można zdefiniować margines wokół zawartości, aby zapewnić więcej obszaru dla formantu.  
+ <xref:System.Windows.Controls.Primitives.Popup>zawartość można również zaciemnienie po ustawieniu <xref:System.Windows.UIElement.RenderTransform%2A> dla zawartości. W tym scenariuszu część zawartości może być ukryta, jeśli zawartość przekształconej wykracza <xref:System.Windows.Controls.Primitives.Popup> poza obszar oryginalny <xref:System.Windows.Controls.Primitives.Popup> . Jeśli efekt mapy bitowej lub transformacja wymaga więcej miejsca, można zdefiniować margines wokół <xref:System.Windows.Controls.Primitives.Popup> zawartości, aby zapewnić większy obszar dla formantu.  
   
 <a name="DefiningPopupPosition"></a>
-## <a name="defining-the-popup-position"></a>Definiowanie pozycji wyskakującego  
- Okno podręczne można umieścić, <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>ustawiając <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>właściwości <xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty> , <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, i . Aby uzyskać więcej informacji, zobacz [Zachowanie umieszczania wyskakujących](popup-placement-behavior.md)okienków . Gdy <xref:System.Windows.Controls.Primitives.Popup> jest wyświetlany na ekranie, nie zmienia pozycji się, jeśli jego element nadrzędny jest przestawiany.  
+## <a name="defining-the-popup-position"></a>Definiowanie położenia okienka podręcznego  
+ Możesz ustawić okno podręczne <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> , ustawiając właściwości, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> , <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> , <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> i <xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty> . Aby uzyskać więcej informacji, zobacz [zachowanie podczas umieszczania okienka podręcznego](popup-placement-behavior.md). Gdy <xref:System.Windows.Controls.Primitives.Popup> jest wyświetlany na ekranie, nie zmienia jego położenia, jeśli jego element nadrzędny jest zmieniany.  
   
 <a name="CustomizingPopupPlacement"></a>
-### <a name="customizing-popup-placement"></a>Dostosowywanie umieszczania wyskakujących okienka  
- Położenie <xref:System.Windows.Controls.Primitives.Popup> formantu można dostosować, określając zestaw współrzędnych, <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> które są <xref:System.Windows.Controls.Primitives.Popup> względem miejsca, w którym ma się pojawić.  
+### <a name="customizing-popup-placement"></a>Dostosowywanie rozmieszczenia okienka podręcznego  
+ Można dostosować położenie <xref:System.Windows.Controls.Primitives.Popup> kontrolki, określając zestaw współrzędnych względem miejsca, w <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> którym ma się <xref:System.Windows.Controls.Primitives.Popup> pojawić.  
   
- Aby dostosować położenie, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> ustaw <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>właściwość na . Następnie zdefiniuj pełnomocnika, <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> który zwraca zestaw możliwych punktów umieszczania <xref:System.Windows.Controls.Primitives.Popup>i osi podstawowych (w kolejności preferencji) dla programu . Punkt, który pokazuje największą <xref:System.Windows.Controls.Primitives.Popup> część jest automatycznie zaznaczony. Na przykład zobacz [Określanie niestandardowego położenia wyskakujących](how-to-specify-a-custom-popup-position.md).  
+ Aby dostosować umieszczanie, ustaw <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> Właściwość na <xref:System.Windows.Controls.Primitives.PlacementMode.Custom> . Następnie zdefiniuj <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> delegata, który zwraca zestaw możliwych punktów umieszczania i osie podstawowe (w kolejności preferencji) dla <xref:System.Windows.Controls.Primitives.Popup> . Punkt, który pokazuje największą część elementu, <xref:System.Windows.Controls.Primitives.Popup> jest wybierany automatycznie. Aby zapoznać się z przykładem, zobacz [Określanie niestandardowego położenia okienka podręcznego](how-to-specify-a-custom-popup-position.md).  
   
 <a name="PopupandtheVisualTree"></a>
-## <a name="popup-and-the-visual-tree"></a>Wyskakujące okienko i drzewo wizualne  
- Formant <xref:System.Windows.Controls.Primitives.Popup> nie ma własnego drzewa wizualnego; zamiast tego zwraca rozmiar 0 (zero), <xref:System.Windows.Controls.Primitives.Popup.MeasureOverride%2A> gdy <xref:System.Windows.Controls.Primitives.Popup> wywoływana jest metoda. Jednak po ustawieniu <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> właściwości <xref:System.Windows.Controls.Primitives.Popup> `true`do , nowe okno z własnym drzewem wizualnym jest tworzony. Nowe okno zawiera <xref:System.Windows.Controls.Primitives.Popup.Child%2A> zawartość <xref:System.Windows.Controls.Primitives.Popup>pliku . Szerokość i wysokość nowego okna nie może być większa niż 75 procent szerokości lub wysokości ekranu.  
+## <a name="popup-and-the-visual-tree"></a>Podręczny i drzewo wizualizacji  
+ <xref:System.Windows.Controls.Primitives.Popup>Kontrolka nie ma własnego drzewa wizualnego; zamiast tego zwraca rozmiar 0 (zero), gdy <xref:System.Windows.Controls.Primitives.Popup.MeasureOverride%2A> <xref:System.Windows.Controls.Primitives.Popup> wywoływana jest metoda dla. Jednak po ustawieniu <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> właściwości <xref:System.Windows.Controls.Primitives.Popup> na `true` , nowe okno z własnym drzewem wizualizacji zostanie utworzone. Nowe okno zawiera <xref:System.Windows.Controls.Primitives.Popup.Child%2A> zawartość <xref:System.Windows.Controls.Primitives.Popup> . Szerokość i wysokość nowego okna nie mogą być większe niż 75% szerokości lub wysokości ekranu.  
   
- Formant <xref:System.Windows.Controls.Primitives.Popup> zachowuje odwołanie do <xref:System.Windows.Controls.Primitives.Popup.Child%2A> jego zawartości jako logicznego dziecka. Po utworzeniu nowego okna zawartość <xref:System.Windows.Controls.Primitives.Popup> staje się wizualnym dzieckiem okna i <xref:System.Windows.Controls.Primitives.Popup>pozostaje logicznym dzieckiem programu . Z drugiej <xref:System.Windows.Controls.Primitives.Popup> strony pozostaje logicznym <xref:System.Windows.Controls.Primitives.Popup.Child%2A> elementem nadrzędnym jego zawartości.  
+ <xref:System.Windows.Controls.Primitives.Popup>Kontrolka utrzymuje odwołanie do jego <xref:System.Windows.Controls.Primitives.Popup.Child%2A> zawartości jako logicznego elementu podrzędnego. Po utworzeniu nowego okna zawartość <xref:System.Windows.Controls.Primitives.Popup> zmieni się na Visual podrzędny okna i pozostanie logicznym elementem podrzędnym <xref:System.Windows.Controls.Primitives.Popup> . Z drugiej <xref:System.Windows.Controls.Primitives.Popup> strony, pozostaje logicznym elementem nadrzędnym swojej <xref:System.Windows.Controls.Primitives.Popup.Child%2A> zawartości.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Controls.Primitives.Popup>
 - <xref:System.Windows.Controls.Primitives.PopupPrimaryAxis>
@@ -95,5 +96,5 @@ Formant <xref:System.Windows.Controls.Primitives.Popup> umożliwia wyświetlanie
 - <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [Tematy in jakże](popup-how-to-topics.md)
-- [Tematy in jakże](tooltip-how-to-topics.md)
+- [— Tematy porad](popup-how-to-topics.md)
+- [— Tematy porad](tooltip-how-to-topics.md)

@@ -1,5 +1,6 @@
 ---
 title: DataGrid — Style i szablony
+description: Dowiedz się więcej na temat stylów i szablonów dla formantu Windows Presentation Foundation DataGrid. Zmodyfikuj ControlTemplate, aby nadać formantowi unikatowy wygląd.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - states [WPF], DataGrid
@@ -9,65 +10,65 @@ helpviewer_keywords:
 - styles [WPF], DataGrid
 - parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-ms.openlocfilehash: 066e8c9ce1112399be8128d0821498f0d56a3dc3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: dd526ec64d5077dad58f31c004f47e63c57ec9de
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283803"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168337"
 ---
 # <a name="datagrid-styles-and-templates"></a>DataGrid — Style i szablony
-W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.DataGrid>. Możesz zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate>, aby nadać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
+W tym temacie opisano style i szablony dla <xref:System.Windows.Controls.DataGrid> kontrolki. Można zmienić wartość domyślną, <xref:System.Windows.Controls.ControlTemplate> aby dać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="datagrid-parts"></a>DataGrid — części  
- W poniższej tabeli wymieniono nazwane części formantu <xref:System.Windows.Controls.DataGrid>.  
+ W poniższej tabeli wymieniono nazwane części <xref:System.Windows.Controls.DataGrid> formantu.  
   
-|Części|Type|Opis|  
+|Część|Typ|Opis|  
 |-|-|-|  
 |PART_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|Wiersz zawierający nagłówki kolumn.|  
   
- Po utworzeniu <xref:System.Windows.Controls.ControlTemplate> dla <xref:System.Windows.Controls.DataGrid>szablon może zawierać <xref:System.Windows.Controls.ItemsPresenter> w <xref:System.Windows.Controls.ScrollViewer>. (<xref:System.Windows.Controls.ItemsPresenter> wyświetla każdy element w <xref:System.Windows.Controls.DataGrid>; <xref:System.Windows.Controls.ScrollViewer> umożliwia przewijanie w kontrolce).  Jeśli <xref:System.Windows.Controls.ItemsPresenter> nie jest bezpośrednim elementem podrzędnym <xref:System.Windows.Controls.ScrollViewer>, należy nadać <xref:System.Windows.Controls.ItemsPresenter> nazwę `ItemsPresenter`.  
+ Podczas tworzenia <xref:System.Windows.Controls.ControlTemplate> dla elementu <xref:System.Windows.Controls.DataGrid> , szablon może zawierać <xref:System.Windows.Controls.ItemsPresenter> w obrębie <xref:System.Windows.Controls.ScrollViewer> . ( <xref:System.Windows.Controls.ItemsPresenter> Wyświetla każdy element w <xref:System.Windows.Controls.DataGrid> ; <xref:System.Windows.Controls.ScrollViewer> umożliwia przewijanie w kontrolce).  Jeśli <xref:System.Windows.Controls.ItemsPresenter> nie jest bezpośrednim elementem podrzędnym <xref:System.Windows.Controls.ScrollViewer> , należy podać <xref:System.Windows.Controls.ItemsPresenter> nazwę, `ItemsPresenter` .  
   
- Szablon domyślny <xref:System.Windows.Controls.DataGrid> zawiera kontrolkę <xref:System.Windows.Controls.ScrollViewer>. Aby uzyskać więcej informacji na temat części zdefiniowanych przez <xref:System.Windows.Controls.ScrollViewer>, zobacz [Style i szablony ScrollViewer](scrollviewer-styles-and-templates.md).  
+ Szablon domyślny dla elementu <xref:System.Windows.Controls.DataGrid> zawiera <xref:System.Windows.Controls.ScrollViewer> kontrolkę. Aby uzyskać więcej informacji na temat części zdefiniowanych przez <xref:System.Windows.Controls.ScrollViewer> , zobacz [ScrollViewer style i szablony](scrollviewer-styles-and-templates.md).  
   
 ## <a name="datagrid-states"></a>Stany DataGrid  
- Poniższa tabela zawiera listę stanów wizualnych dla kontrolki <xref:System.Windows.Controls.DataGrid>.  
+ Poniższa tabela zawiera listę stanów wizualnych dla <xref:System.Windows.Controls.DataGrid> kontrolki.  
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
 |Normalne|CommonStates|Stan domyślny.|  
-|Wyłączone|CommonStates|Kontrolka jest wyłączona.|  
+|Disabled|CommonStates|Kontrolka jest wyłączona.|  
 |InvalidFocused|ValidationStates|Formant jest nieprawidłowy i ma fokus.|  
 |InvalidUnfocused|ValidationStates|Formant jest nieprawidłowy i nie ma fokusu.|  
 |Prawidłowe|ValidationStates|Formant jest prawidłowy.|  
   
 ## <a name="datagridcell-parts"></a>DataGridCell części  
- Element <xref:System.Windows.Controls.DataGridCell> nie zawiera żadnych nazwanych części.  
+ <xref:System.Windows.Controls.DataGridCell>Element nie zawiera żadnych nazwanych części.  
   
 ## <a name="datagridcell-states"></a>Stany DataGridCell  
- Poniższa tabela zawiera listę stanów wizualnych elementu <xref:System.Windows.Controls.DataGridCell>.  
+ Poniższa tabela zawiera listę stanów wizualnych <xref:System.Windows.Controls.DataGridCell> elementu.  
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
 |Normalne|CommonStates|Stan domyślny.|  
 |MouseOver|CommonStates|Wskaźnik myszy znajduje się nad komórką.|  
-|Fokus|FocusStates|Komórka ma fokus.|  
+|Ustawiono fokus|FocusStates|Komórka ma fokus.|  
 |Bez fokusu|FocusStates|Komórka nie ma fokusu.|  
-|Obecne|CurrentStates|Komórka jest bieżącą komórką.|  
-|Ustalon|CurrentStates|Komórka nie jest bieżącą komórką.|  
-|Monitor|InteractionStates|Komórka jest w trybie wyświetlania.|  
+|Current|CurrentStates|Komórka jest bieżącą komórką.|  
+|Zwykły|CurrentStates|Komórka nie jest bieżącą komórką.|  
+|Wyświetlanie|InteractionStates|Komórka jest w trybie wyświetlania.|  
 |Edytowanie|InteractionStates|Komórka jest w trybie edycji.|  
-|Wybrane|SelectionStates|Komórka jest zaznaczona.|  
+|Wybrano|SelectionStates|Komórka jest zaznaczona.|  
 |Niezaznaczone|SelectionStates|Komórka nie jest zaznaczona.|  
 |InvalidFocused|ValidationStates|Komórka jest nieprawidłowa i ma fokus.|  
 |InvalidUnfocused|ValidationStates|Komórka jest nieprawidłowa i nie ma fokusu.|  
 |Prawidłowe|ValidationStates|Komórka jest prawidłowa.|  
   
 ## <a name="datagridrow-parts"></a>DataGridRow części  
- Element <xref:System.Windows.Controls.DataGridRow> nie zawiera żadnych nazwanych części.  
+ <xref:System.Windows.Controls.DataGridRow>Element nie zawiera żadnych nazwanych części.  
   
 ## <a name="datagridrow-states"></a>Stany DataGridRow  
- Poniższa tabela zawiera listę stanów wizualnych elementu <xref:System.Windows.Controls.DataGridRow>.  
+ Poniższa tabela zawiera listę stanów wizualnych <xref:System.Windows.Controls.DataGridRow> elementu.  
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
@@ -87,15 +88,15 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 |Prawidłowe|ValidationStates|Formant jest prawidłowy.|  
   
 ## <a name="datagridrowheader-parts"></a>DataGridRowHeader części  
- Poniższa tabela zawiera listę nazwanych elementów dla elementu <xref:System.Windows.Controls.Primitives.DataGridRowHeader>.  
+ Poniższa tabela zawiera listę nazwanych elementów dla <xref:System.Windows.Controls.Primitives.DataGridRowHeader> elementu.  
   
-|Części|Type|Opis|  
+|Część|Typ|Opis|  
 |-|-|-|  
 |PART_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Element, który jest używany do zmiany rozmiaru nagłówka wiersza od góry.|  
 |PART_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Element, który jest używany do zmiany rozmiaru nagłówka wiersza od dołu.|  
   
 ## <a name="datagridrowheader-states"></a>Stany DataGridRowHeader  
- Poniższa tabela zawiera listę stanów wizualnych elementu <xref:System.Windows.Controls.Primitives.DataGridRowHeader>.  
+ Poniższa tabela zawiera listę stanów wizualnych <xref:System.Windows.Controls.Primitives.DataGridRowHeader> elementu.  
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
@@ -120,14 +121,14 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 |Prawidłowe|ValidationStates|Formant jest prawidłowy.|  
   
 ## <a name="datagridcolumnheaderspresenter-parts"></a>DataGridColumnHeadersPresenter części  
- Poniższa tabela zawiera listę nazwanych elementów dla elementu <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>.  
+ Poniższa tabela zawiera listę nazwanych elementów dla <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> elementu.  
   
-|Części|Type|Opis|  
+|Część|Typ|Opis|  
 |-|-|-|  
 |PART_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|Symbol zastępczy nagłówków kolumn.|  
   
 ## <a name="datagridcolumnheaderspresenter-states"></a>Stany DataGridColumnHeadersPresenter  
- Poniższa tabela zawiera listę stanów wizualnych elementu <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>.  
+ Poniższa tabela zawiera listę stanów wizualnych <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> elementu.  
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
@@ -136,21 +137,21 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 |Prawidłowe|ValidationStates|Komórka jest prawidłowa.|  
   
 ## <a name="datagridcolumnheader-parts"></a>DataGridColumnHeader części  
- Poniższa tabela zawiera listę nazwanych elementów dla elementu <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.  
+ Poniższa tabela zawiera listę nazwanych elementów dla <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> elementu.  
   
-|Części|Type|Opis|  
+|Część|Typ|Opis|  
 |-|-|-|  
 |PART_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Element, który jest używany do zmiany rozmiaru nagłówka kolumny z lewej strony.|  
 |PART_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Element, który jest używany do zmiany rozmiaru nagłówka kolumny z prawej strony.|  
   
 ## <a name="datagridcolumnheader-states"></a>Stany DataGridColumnHeader  
- Poniższa tabela zawiera listę stanów wizualnych elementu <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.  
+ Poniższa tabela zawiera listę stanów wizualnych <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> elementu.  
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
 |Normalne|CommonStates|Stan domyślny.|  
 |MouseOver|CommonStates|Wskaźnik myszy znajduje się nad kontrolką.|  
-|Naciśnięto|CommonStates|Kontrolka zostanie naciśnięty.|  
+|Naciśnięte|CommonStates|Kontrolka zostanie naciśnięty.|  
 |SortAscending|SortStates|Kolumna jest sortowana w kolejności rosnącej.|  
 |SortDescending|SortStates|Kolumna jest sortowana w kolejności malejącej.|  
 |Nieposortowane|SortStates|Kolumna nie jest posortowana.|  
@@ -159,7 +160,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 |Prawidłowe|ValidationStates|Formant jest prawidłowy.|  
   
 ## <a name="datagrid-controltemplate-example"></a>Przykład ControlTemplate DataGrid  
- Poniższy przykład pokazuje, jak zdefiniować <xref:System.Windows.Controls.ControlTemplate> dla kontrolki <xref:System.Windows.Controls.DataGrid> i skojarzonych z nią typów.  
+ Poniższy przykład pokazuje, jak zdefiniować <xref:System.Windows.Controls.ControlTemplate> dla <xref:System.Windows.Controls.DataGrid> kontrolki i skojarzonych z nimi typów.  
   
  [!code-xaml[ControlTemplateExamples#DataGrid](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
   
@@ -173,7 +174,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Style i szablony kontrolek](control-styles-and-templates.md)
-- [Niestandardowe dostosowywanie kontrolki](control-customization.md)
+- [Style i szablony formantu](control-styles-and-templates.md)
+- [Niestandardowe dostosowywanie formantu](control-customization.md)
 - [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md)

@@ -1,5 +1,6 @@
 ---
 title: Cert2spc.exe (Narzędzie testowe certyfikatów wydawców oprogramowania)
+description: Użyj Cert2spc.exe, narzędzia testowego certyfikatu wydawcy oprogramowania. To narzędzie tworzy certyfikat wydawcy oprogramowania (SPC) z co najmniej jednego certyfikatu X. 509.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SPC
@@ -8,17 +9,17 @@ helpviewer_keywords:
 - Cert2spc.exe
 - certificates, Software Publisher's Certificate
 ms.assetid: be434d7d-9c0d-46e7-8392-58a9b542d11d
-ms.openlocfilehash: 809b7d0383f172a5fbcb2ac4ac3ffb96ff0b8e20
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2eb6339aa6f5d23a5b87986410cbeaac2dac2bec
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73129887"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167322"
 ---
 # <a name="cert2spcexe-software-publisher-certificate-test-tool"></a>Cert2spc.exe (Narzędzie testowe certyfikatów wydawców oprogramowania)
-Narzędzie testowe certyfikatów wydawców oprogramowania tworzy certyfikat wydawcy oprogramowania (SPC) z co najmniej jednego certyfikatu X.509. Cert2spc.exe służy tylko do celów testowych. Prawidłowy SPC można uzyskać od urzędu certyfikacji, np. VeriSign lub Thawte. Aby uzyskać więcej informacji na temat tworzenia certyfikatów X.509, zobacz [Makecert.exe (Narzędzie do tworzenia certyfikatów).](/windows/desktop/SecCrypto/makecert)  
+Narzędzie testowe certyfikatów wydawców oprogramowania tworzy certyfikat wydawcy oprogramowania (SPC) z co najmniej jednego certyfikatu X.509. Cert2spc.exe służy tylko do celów testowych. Prawidłowy SPC można uzyskać od urzędu certyfikacji, np. VeriSign lub Thawte. Aby uzyskać więcej informacji na temat tworzenia certyfikatów X. 509, zobacz [Makecert.exe (narzędzie tworzenia certyfikatów)](/windows/desktop/SecCrypto/makecert).  
   
- To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersza polecenia dewelopera dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [Wiersze poleceń](developer-command-prompt-for-vs.md).  
+ To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](developer-command-prompt-for-vs.md).  
   
  W wierszu polecenia wpisz następujące polecenie:  
   
@@ -41,20 +42,20 @@ cert2spc cert1.cer | crl1.crl [... certN.cer | crlN.crl] outputSPCfile.spc
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
   
 ## <a name="examples"></a>Przykłady  
- Następujące polecenie tworzy chPL `myCertificate.cer` i `mySPCFile.spc`umieszcza go w pliku .  
+ Następujące polecenie tworzy SPC z `myCertificate.cer` i umieszcza go w `mySPCFile.spc` .  
   
 ```console
 cert2spc myCertificate.cer mySPCFile.spc  
 ```  
   
- Następujące polecenie tworzy chPL z `oneCertificate.cer` i `twoCertificate.cer` `mySPCFile.spc`, i umieszcza go w .  
+ Następujące polecenie tworzy SPC z i i `oneCertificate.cer` `twoCertificate.cer` umieszcza go w `mySPCFile.spc` .  
   
 ```console
 cert2spc oneCertificate.cer twoCertificate.cer mySPCFile.spc  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [narzędzia](index.md)
-- [Plik Makecert.exe (narzędzie do tworzenia certyfikatów)](/windows/desktop/SecCrypto/makecert)
-- [Wiersz polecenia](developer-command-prompt-for-vs.md)
+- [Narzędzia](index.md)
+- [Makecert.exe (narzędzie tworzenia certyfikatów)](/windows/desktop/SecCrypto/makecert)
+- [Wiersze poleceń](developer-command-prompt-for-vs.md)

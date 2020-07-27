@@ -1,5 +1,6 @@
 ---
 title: Subskrybowanie zdarzeń automatyzacji interfejsu użytkownika
+description: Zobacz, jak subskrybować zdarzenia wywoływane przez dostawców automatyzacji interfejsu użytkownika. Przykładowy kod rejestruje procedurę obsługi zdarzeń dla zdarzenia wywoływanego, gdy kontrolka jest wywoływana.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,21 +11,21 @@ helpviewer_keywords:
 - events, subscribing to
 - listening for events
 ms.assetid: b688effa-b3e8-4b05-944d-05ed89a245aa
-ms.openlocfilehash: a5effd1d7a3cfaba5e068087b3008903e58b6739
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8f456702657c70837c6137e3e60335110361bcd9
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432991"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163538"
 ---
 # <a name="subscribe-to-ui-automation-events"></a>Subskrybowanie zdarzeń automatyzacji interfejsu użytkownika
 > [!NOTE]
-> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych klas [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdefiniowanych w przestrzeni nazw <xref:System.Windows.Automation>. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
+> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
   
  W tym temacie pokazano, jak subskrybować zdarzenia wywoływane przez dostawców automatyzacji interfejsu użytkownika.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykładowy kod rejestruje procedurę obsługi zdarzeń dla zdarzenia, które jest zgłaszane, gdy wywoływana jest kontrolka, taka jak przycisk, i usuwa ją po zamknięciu formularza aplikacji. Zdarzenie jest identyfikowane przez <xref:System.Windows.Automation.AutomationEvent> przekazaną jako parametr do <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>.  
+ Poniższy przykładowy kod rejestruje procedurę obsługi zdarzeń dla zdarzenia, które jest zgłaszane, gdy wywoływana jest kontrolka, taka jak przycisk, i usuwa ją po zamknięciu formularza aplikacji. Zdarzenie jest identyfikowane przez <xref:System.Windows.Automation.AutomationEvent> przekazaną jako parametr do <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A> .  
   
  [!code-csharp[UIAClient_snip#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#101)]
  [!code-vb[UIAClient_snip#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#101)]  

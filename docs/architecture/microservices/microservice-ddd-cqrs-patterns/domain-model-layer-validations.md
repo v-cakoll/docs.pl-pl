@@ -2,12 +2,12 @@
 title: Projektowanie reguł weryfikacji w warstwie modelu domeny
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Poznaj kluczowe pojęcia związane z walidacją modelu domeny.
 ms.date: 10/08/2018
-ms.openlocfilehash: 94df2d6441581fbbae479da2524d6ffce2037d68
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: f1e2d7430c642ad47f79cdd34d3a65e2cc70e239
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100915"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164270"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Walidacje projektu w warstwie modelu domeny
 
@@ -15,9 +15,9 @@ W DDD reguły walidacji mogą być traktowane jako nieposiadające wariantów. G
 
 Jednostki domeny powinny być zawsze prawidłowymi jednostkami. Istnieje pewna liczba nieodmian dla obiektu, który powinien mieć zawsze wartość true. Na przykład obiekt elementu Order zawsze musi mieć ilość, która musi być dodatnią liczbą całkowitą oraz nazwę artykułu i cenę. Z tego względu wymuszanie nieistniejące jest odpowiedzialne za jednostki domeny (zwłaszcza w przypadku agregacji głównej), a obiekt jednostki nie powinien być w stanie istnieć. Niezmienne reguły są po prostu wyrażone jako kontrakty, a wyjątki lub powiadomienia są zgłaszane, gdy są naruszane.
 
-Przyczyną tego jest fakt, że występuje wiele usterek, ponieważ obiekty są w stanie, w którym nigdy nie powinny. Poniżej znajduje się dobre wyjaśnienie od Grega młodych w [dyskusji online](https://jeffreypalermo.com/2009/05/the-fallacy-of-the-always-valid-entity/):
+Przyczyną tego jest fakt, że występuje wiele usterek, ponieważ obiekty są w stanie, w którym nigdy nie powinny. Ta [dyskusja online](http://codebetter.com/gregyoung/2009/05/22/always-valid/) jest dobrym wyjaśnieniem z witryny Greg Young.
 
-Zaproponujemy teraz SendUserCreationEmailService, który zajmuje profil użytkownika... Jak możemy usprawnić działanie tej usługi, która nie ma wartości null? Czy sprawdzimy ją ponownie? Lub najkorzystniej... nie bother do sprawdzenia i "Mam nadzieję, że masz nadzieję, że ktoś bothered go przed wysłaniem do Ciebie. Oczywiście przy użyciu usługi TDD jednym z pierwszych testów, które powinny być napisane, jest to, że jeśli wysyłam klientowi nazwę o wartości null, która powinna zgłosić błąd. Jednak po rozpoczęciu pisania tych rodzajów testów w tym czasie zostanie to zrealizowane... "Zaczekaj, jeśli nigdy nie zezwolisz na przełączenie nazwy do wartości null, nie będziemy mieć wszystkich tych testów"
+Zaproponujemy teraz SendUserCreationEmailService, który zajmuje profil użytkownika... Jak możemy usprawnić działanie tej usługi, która nie ma wartości null? Czy sprawdzimy ją ponownie? Lub najkorzystniej... nie bother do sprawdzenia i "Mam nadzieję, że masz nadzieję, że ktoś bothered go przed wysłaniem do Ciebie. Oczywiście przy użyciu usługi TDD jednym z pierwszych testów, które powinny być napisane, jest to, że jeśli wysyłam klientowi nazwę o wartości null, która powinna zgłosić błąd. Jednak po rozpoczęciu pisania tych rodzajów testów w tym czasie zostanie to zrealizowane... "Zaczekaj, jeśli nigdy nie zezwolisz na przełączenie nazwy do wartości null, nie będziemy mieć wszystkich tych testów".
 
 ## <a name="implement-validations-in-the-domain-model-layer"></a>Implementowanie walidacji w warstwie modelu domeny
 

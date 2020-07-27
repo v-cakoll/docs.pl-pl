@@ -1,157 +1,156 @@
 ---
 title: Publikowanie aplikacji
-description: Dowiedz się więcej o sposobach publikowania aplikacji .NET Core. Program .NET Core może publikować aplikacje specyficzne dla platformy lub aplikacje między platformami. Aplikację można opublikować jako niezależną lub zależną od środowiska wykonawczego. Każdy tryb wpływa na sposób, w jaki użytkownik uruchamia aplikację.
+description: Dowiedz się więcej na temat sposobów publikowania aplikacji platformy .NET Core. Platforma .NET Core może publikować aplikacje zależne od platformy lub dla wielu platform. Aplikację można opublikować jako samodzielny lub jako zależny od środowiska uruchomieniowego. Każdy tryb ma wpływ na sposób uruchamiania aplikacji przez użytkownika.
 ms.date: 04/01/2020
-ms.openlocfilehash: a4e5f9fe048d40c751f582bd49732cb903202db4
-ms.sourcegitcommit: 45cced471d59d5dac3f0c92abc9d4849716098a2
+ms.openlocfilehash: 201363ad314373ec3be44eb8496f92a8e0c8e418
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665537"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164939"
 ---
 # <a name="net-core-application-publishing-overview"></a>Omówienie publikowania aplikacji .NET Core
 
-Aplikacje utworzone za pomocą platformy .NET Core można publikować w dwóch różnych trybach, a tryb ma wpływ na sposób, w jaki użytkownik uruchamia aplikację.
+Aplikacje tworzone za pomocą platformy .NET Core mogą być publikowane w dwóch różnych trybach, a tryb ma wpływ na sposób uruchamiania aplikacji przez użytkownika.
 
-Publikowanie aplikacji jako *samodzielnej* tworzy aplikację, która zawiera środowisko uruchomieniowe .NET Core i biblioteki oraz aplikację i jej zależności. Użytkownicy aplikacji można uruchomić go na komputerze, który nie ma zainstalowanego środowiska uruchomieniowego .NET Core.
+Opublikowanie aplikacji jako *samodzielny* powoduje utworzenie aplikacji obejmującej środowisko uruchomieniowe i biblioteki platformy .NET Core oraz aplikację i jej zależności. Użytkownicy aplikacji mogą uruchomić ją na komputerze, na którym nie zainstalowano środowiska uruchomieniowego .NET Core.
 
-Publikowanie aplikacji jako *zależne od środowiska uruchomieniowego* (wcześniej znane jako *zależne od struktury)* tworzy aplikację, która zawiera tylko samą aplikację i jej zależności. Użytkownicy aplikacji muszą oddzielnie zainstalować środowisko uruchomieniowe .NET Core.
+Publikowanie aplikacji jako *zależnej od środowiska uruchomieniowego* (wcześniej znanej jako *zależne od platformy*) tworzy aplikację, która zawiera tylko samą aplikację i jej zależności. Użytkownicy aplikacji muszą oddzielnie zainstalować środowisko uruchomieniowe programu .NET Core.
 
-Oba tryby publikowania domyślnie generują plik wykonywalny specyficzny dla platformy. Aplikacje zależne od środowiska wykonawczego można tworzyć bez pliku wykonywalnego, a te aplikacje są wieloplatformowe.
+Oba tryby publikowania domyślnie generują plik wykonywalny specyficzny dla platformy. Aplikacje zależne od środowiska uruchomieniowego można tworzyć bez pliku wykonywalnego, a te aplikacje są Międzyplatformowe.
 
-Po wykonaniu pliku wykonywalnego można określić platformę docelową za pomocą identyfikatora środowiska uruchomieniowego (RID). Aby uzyskać więcej informacji na temat identyfikatorów RID, zobacz [.NET Core RID Catalog](../rid-catalog.md).
+Gdy tworzony jest plik wykonywalny, można określić platformę docelową z identyfikatorem czasu wykonywania (RID). Aby uzyskać więcej informacji na temat identyfikatorów RID, zobacz [katalog .NET Core RID Catalog](../rid-catalog.md).
 
-W poniższej tabeli przedstawiono polecenia używane do publikowania aplikacji jako zależne od środowiska wykonawczego lub samodzielne, dla wersji SDK:
+Poniższa tabela zawiera opis poleceń używanych do publikowania aplikacji jako zależnej od środowiska uruchomieniowego lub samodzielnego, na wersję zestawu SDK:
 
-| Typ                                                                                 | Zestaw SDK 2.1 | SDK 3.x | Polecenie |
+| Typ                                                                                 | Zestaw SDK 2.1 | Zestaw SDK 3. x | Polecenie |
 | -----------------------------------------------------------------------------------  | ------- | ------- | ------- |
-| [wykonywalny zależny od środowiska uruchomieniowego](#publish-runtime-dependent) dla bieżącej platformy. |         | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
-| [wykonywalny zależny od środowiska uruchomieniowego](#publish-runtime-dependent) dla określonej platformy.  |         | ✔️      | [`dotnet publish -r <RID> --self-contained false`](../tools/dotnet-publish.md) |
-| [zależny od środowiska uruchomię wieloplatformowy plik binarny](#publish-runtime-dependent).               | ✔️      | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
+| [plik wykonywalny zależny od środowiska uruchomieniowego](#publish-runtime-dependent) dla bieżącej platformy. |         | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
+| [plik wykonywalny zależny od środowiska uruchomieniowego](#publish-runtime-dependent) dla określonej platformy.  |         | ✔️      | [`dotnet publish -r <RID> --self-contained false`](../tools/dotnet-publish.md) |
+| [plik binarny dla wielu platform zależnych od środowiska uruchomieniowego](#publish-runtime-dependent).               | ✔️      | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
 | [samodzielny plik wykonywalny](#publish-self-contained).                                | ✔️      | ✔️      | [`dotnet publish -r <RID>`](../tools/dotnet-publish.md) |
 
-Aby uzyskać więcej informacji, zobacz [polecenie .NET Core dotnet publish](../tools/dotnet-publish.md).
+Aby uzyskać więcej informacji, zobacz [polecenie .NET Core dotnet Publish](../tools/dotnet-publish.md).
 
-## <a name="produce-an-executable"></a>Tworzenie pliku wykonywalnego
+## <a name="produce-an-executable"></a>Generuj plik wykonywalny
 
-Pliki wykonywalne nie są międzyplatformowe. Są one specyficzne dla systemu operacyjnego i architektury procesora. Podczas publikowania aplikacji i tworzenia pliku wykonywalnego można opublikować aplikację jako [niezależną](#publish-self-contained) lub [zależną od środowiska wykonawczego](#publish-runtime-dependent). Publikowanie aplikacji jako samodzielnej obejmuje środowisko uruchomieniowe .NET Core z aplikacją, a użytkownicy aplikacji nie muszą się martwić o zainstalowanie programu .NET Core przed uruchomieniem aplikacji. Aplikacje opublikowane jako zależne od środowiska wykonawczego nie obejmują środowiska uruchomieniowego i bibliotek .NET Core; uwzględniane są tylko zależności aplikacji i innych firm.
+Pliki wykonywalne nie są na wielu platformach. Są one specyficzne dla systemu operacyjnego i architektury procesora CPU. Podczas publikowania aplikacji i tworzenia pliku wykonywalnego można opublikować aplikację jako [samodzielną](#publish-self-contained) lub [zależną od środowiska uruchomieniowego](#publish-runtime-dependent). Publikowanie aplikacji jako samodzielnego obejmuje środowisko uruchomieniowe platformy .NET Core z aplikacją, a użytkownicy aplikacji nie muszą martwić się o Instalowanie programu .NET Core przed uruchomieniem aplikacji. Aplikacje publikowane jako zależne od środowiska uruchomieniowego nie obejmują środowiska uruchomieniowego i bibliotek platformy .NET Core; uwzględniane są tylko zależności aplikacji i innych firm.
 
-Następujące polecenia generują plik wykonywalny:
+Następujące polecenia tworzą plik wykonywalny:
 
-| Typ                                                                                 | Zestaw SDK 2.1 | SDK 3.x | Polecenie |
+| Typ                                                                                 | Zestaw SDK 2.1 | Zestaw SDK 3. x | Polecenie |
 | ------------------------------------------------------------------------------------ | ------- | ------- | ------- |
-| [wykonywalny zależny od środowiska uruchomieniowego](#publish-runtime-dependent) dla bieżącej platformy. |         | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
-| [wykonywalny zależny od środowiska uruchomieniowego](#publish-runtime-dependent) dla określonej platformy.  |         | ✔️      | [`dotnet publish -r <RID> --self-contained false`](../tools/dotnet-publish.md) |
+| [plik wykonywalny zależny od środowiska uruchomieniowego](#publish-runtime-dependent) dla bieżącej platformy. |         | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
+| [plik wykonywalny zależny od środowiska uruchomieniowego](#publish-runtime-dependent) dla określonej platformy.  |         | ✔️      | [`dotnet publish -r <RID> --self-contained false`](../tools/dotnet-publish.md) |
 | [samodzielny plik wykonywalny](#publish-self-contained).                                | ✔️      | ✔️      | [`dotnet publish -r <RID>`](../tools/dotnet-publish.md) |
 
-## <a name="produce-a-cross-platform-binary"></a>Tworzenie wieloplatformowego pliku binarnego
+## <a name="produce-a-cross-platform-binary"></a>Tworzenie danych binarnych dla wielu platform
 
-Pliki binarne między platformami są tworzone podczas publikowania aplikacji jako [zależnej od środowiska wykonawczego](#publish-runtime-dependent)w postaci pliku *DLL.* Nazwa pliku *dll* pochodzi od projektu. Na przykład, jeśli masz aplikację o nazwie **word_reader,** tworzony jest plik o nazwie *word_reader.dll.* Aplikacje opublikowane w ten sposób `dotnet <filename.dll>` są uruchamiane za pomocą polecenia i mogą być uruchamiane na dowolnej platformie.
+Pliki binarne dla wielu platform są tworzone podczas publikowania aplikacji jako [zależnej od środowiska uruchomieniowego](#publish-runtime-dependent)w postaci pliku *dll* . Plik *dll* nosi nazwę po projekcie. Na przykład jeśli masz aplikację o nazwie **word_reader**, tworzony jest plik o nazwie *word_reader.dll* . Aplikacje publikowane w ten sposób są uruchamiane za pomocą `dotnet <filename.dll>` polecenia i mogą być uruchamiane na dowolnej platformie.
 
-Pliki binarne między platformami można uruchomić w dowolnym systemie operacyjnym, o ile docelowe środowisko uruchomieniowe .NET Core jest już zainstalowane. Jeśli docelowe środowisko uruchomieniowe .NET Core nie jest zainstalowane, aplikacja może działać przy użyciu nowszego środowiska wykonawczego, jeśli aplikacja jest skonfigurowana do przekazywania do przodu. Aby uzyskać więcej informacji, zobacz [aplikacje zależne od środowiska uruchomieniowego są przewijane do przodu](../versions/selection.md#framework-dependent-apps-roll-forward).
+Pliki binarne dla wielu platform można uruchamiać w dowolnym systemie operacyjnym, o ile jest już zainstalowany przeznaczony do środowiska uruchomieniowego platformy .NET Core. Jeśli nie zainstalowano dostosowanego środowiska uruchomieniowego platformy .NET Core, aplikacja może działać w nowszej wersji środowiska uruchomieniowego, jeśli aplikacja jest skonfigurowana do przesyłania dalej. Aby uzyskać więcej informacji, zobacz [aplikacje zależne od środowiska uruchomieniowego przenoszone do przodu](../versions/selection.md#framework-dependent-apps-roll-forward).
 
-Następujące polecenie tworzy binarny między platformami:
+Następujące polecenie tworzy plik binarny dla wielu platform:
 
-| Typ                                                                                 | Zestaw SDK 2.1 | SDK 3.x | Polecenie |
+| Typ                                                                                 | Zestaw SDK 2.1 | Zestaw SDK 3. x | Polecenie |
 | -----------------------------------------------------------------------------------  | ------- | ------- | ------- |
-| [zależny od środowiska uruchomię wieloplatformowy plik binarny](#publish-runtime-dependent).               | ✔️      | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
+| [plik binarny dla wielu platform zależnych od środowiska uruchomieniowego](#publish-runtime-dependent).               | ✔️      | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
 
 ## <a name="publish-runtime-dependent"></a>Publikowanie zależne od środowiska uruchomieniowego
 
-Aplikacje opublikowane jako zależne od środowiska wykonawczego są wieloplatformowe i nie zawierają środowiska uruchomieniowego .NET Core. Użytkownik aplikacji jest wymagany do zainstalowania środowiska uruchomieniowego .NET Core.
+Aplikacje publikowane jako zależne od środowiska uruchomieniowego są na wielu platformach i nie obejmują środowiska uruchomieniowego .NET Core. Użytkownik aplikacji jest wymagany do zainstalowania środowiska uruchomieniowego platformy .NET Core.
 
-Publikowanie aplikacji jako zależnej od środowiska wykonawczego tworzy [plik binarny między platformami](#produce-a-cross-platform-binary) jako plik *DLL* i [plik wykonywalny specyficzny dla platformy,](#produce-an-executable) który jest przeznaczony dla bieżącej platformy. Biblioteka *DLL* jest wieloplatformowa, podczas gdy plik wykonywalny nie jest. Na przykład, jeśli publikujesz aplikację o nazwie **word_reader** i docelową windows, plik wykonywalny *word_reader.exe* jest tworzony wraz z *word_reader.dll*. Podczas kierowania na Linuksa lub macOS tworzony jest plik wykonywalny *word_reader* wraz z *word_reader.dll*. Aby uzyskać więcej informacji na temat identyfikatorów RID, zobacz [.NET Core RID Catalog](../rid-catalog.md).
+Publikowanie aplikacji jako zależnej od środowiska uruchomieniowego powoduje utworzenie danych [binarnych dla wielu platform](#produce-a-cross-platform-binary) jako pliku *dll* oraz plików [wykonywalnych specyficznych dla platformy](#produce-an-executable) przeznaczonych dla bieżącej platformy. *Biblioteka DLL* jest międzyplatformowa, gdy plik wykonywalny nie jest. Na przykład jeśli opublikujesz aplikację o nazwie **word_reader** i docelowym systemu Windows, zostanie utworzony plik wykonywalny *word_reader.exe* wraz z *word_reader.dll*. W przypadku określania wartości dla systemu Linux lub macOS tworzony jest plik wykonywalny *word_reader* wraz z *word_reader.dll*. Aby uzyskać więcej informacji na temat identyfikatorów RID, zobacz [katalog .NET Core RID Catalog](../rid-catalog.md).
 
 > [!IMPORTANT]
-> .NET Core SDK 2.1 nie generuje plików wykonywalnych specyficznych dla platformy podczas publikowania aplikacji zależnej od środowiska uruchomieniowego.
+> Zestaw .NET Core SDK 2,1 nie produkuje plików wykonywalnych specyficznych dla platformy przy publikowaniu zależnych od środowiska uruchomieniowego aplikacji.
 
-Wieloplatformowy plik binarny aplikacji `dotnet <filename.dll>` można uruchomić za pomocą polecenia i można go uruchomić na dowolnej platformie. Jeśli aplikacja używa pakietu NuGet, który ma implementacje specyficzne dla platformy, wszystkie zależności platformy są kopiowane do folderu publikowania wraz z aplikacją.
+Międzyplatformowe dane binarne aplikacji można uruchomić za pomocą `dotnet <filename.dll>` polecenia i można je uruchomić na dowolnej platformie. Jeśli aplikacja używa pakietu NuGet, który ma implementacje specyficzne dla platformy, wszystkie zależności platformy są kopiowane do folderu publikowania wraz z aplikacją.
 
-Można utworzyć plik wykonywalny `-r <RID> --self-contained false` dla określonej platformy, przekazując parametry do [`dotnet publish`](../tools/dotnet-publish.md) polecenia. Po `-r` pominięciu parametru dla bieżącej platformy jest tworzony plik wykonywalny. Wszystkie pakiety NuGet, które mają zależności specyficzne dla platformy docelowej są kopiowane do folderu publikowania.
+Można utworzyć plik wykonywalny dla określonej platformy, przekazując `-r <RID> --self-contained false` parametry do [`dotnet publish`](../tools/dotnet-publish.md) polecenia. Gdy `-r` parametr zostanie pominięty, tworzony jest plik wykonywalny dla bieżącej platformy. Wszystkie pakiety NuGet, które mają zależności specyficzne dla platformy dla platformy przeznaczonej, są kopiowane do folderu publikowanie.
 
 ### <a name="advantages"></a>Zalety
 
 - **Małe wdrożenie**\
-Tylko aplikacja i jej zależności są dystrybuowane. Środowisko uruchomieniowe core platformy .NET i biblioteki są instalowane przez użytkownika i wszystkie aplikacje współużytkują środowisko wykonawcze.
+Dystrybuowana jest tylko aplikacja i jej zależności. Środowisko uruchomieniowe programu .NET Core i biblioteki są instalowane przez użytkownika, a wszystkie aplikacje współużytkują środowisko uruchomieniowe.
 
-- **Międzyplatformowe**\
-Twoja aplikacja i dowolna . Biblioteka oparta na sieci działa w innych systemach operacyjnych. Nie musisz definiować platformy docelowej dla aplikacji. Aby uzyskać informacje o formacie pliku .NET, zobacz [Format pliku złożenia .NET](../../standard/assembly/file-format.md).
+- **Wiele platform**\
+Twoja aplikacja i wszystkie. Biblioteka oparta na sieci działa w innych systemach operacyjnych. Nie musisz definiować platformy docelowej dla swojej aplikacji. Aby uzyskać informacje na temat formatu pliku .NET, zobacz [Format pliku zestawu .NET](../../standard/assembly/file-format.md).
 
-- **Używa najnowszego poprawionego środowiska uruchomieniowego**\
-Aplikacja korzysta z najnowszego środowiska wykonawczego (w ramach docelowej rodziny głównych-podrzędnych .NET Core) zainstalowanych w systemie docelowym. Oznacza to, że aplikacja automatycznie używa najnowszej poprawionej wersji środowiska uruchomieniowego .NET Core. To domyślne zachowanie można zastąpić. Aby uzyskać więcej informacji, zobacz [aplikacje zależne od środowiska uruchomieniowego są przewijane do przodu](../versions/selection.md#framework-dependent-apps-roll-forward).
+- **Używa najnowszej poprawki środowiska uruchomieniowego**\
+Aplikacja używa najnowszej wersji środowiska uruchomieniowego (w ramach docelowej rodziny głównej platformy .NET Core) zainstalowanej w systemie docelowym. Oznacza to, że aplikacja automatycznie używa najnowszej wersji poprawki środowiska uruchomieniowego platformy .NET Core. To zachowanie domyślne można przesłonić. Aby uzyskać więcej informacji, zobacz [aplikacje zależne od środowiska uruchomieniowego przenoszone do przodu](../versions/selection.md#framework-dependent-apps-roll-forward).
 
 ### <a name="disadvantages"></a>Wady
 
-- **Wymaga wstępnej instalacji środowiska wykonawczego**\
-Aplikacja może działać tylko wtedy, gdy wersja .NET Core obiektów docelowych aplikacji jest już zainstalowana w systemie hosta. Zachowanie przesyłania dalej aplikacji można skonfigurować w taki sposób, aby wymagało określonej wersji programu .NET Core, albo zezwolić na nowszą wersję programu .NET Core. Aby uzyskać więcej informacji, zobacz [aplikacje zależne od środowiska uruchomieniowego są przewijane do przodu](../versions/selection.md#framework-dependent-apps-roll-forward).
+- **Wymaga wstępnego zainstalowania środowiska uruchomieniowego**\
+Aplikacja może działać tylko wtedy, gdy wersja platformy .NET Core, której dotyczy Twoja aplikacja, jest już zainstalowana w systemie hosta. Można skonfigurować zachowanie funkcji przekazywania do przodu dla aplikacji, aby wymagać określonej wersji platformy .NET Core lub zezwolić na nowszą wersję programu .NET Core. Aby uzyskać więcej informacji, zobacz [aplikacje zależne od środowiska uruchomieniowego przenoszone do przodu](../versions/selection.md#framework-dependent-apps-roll-forward).
 
-- **.NET Core może ulec zmianie**\
-Środowisko uruchomieniowe .NET Core i biblioteki mają być aktualizowane na komputerze, na którym jest uruchamiana aplikacja. W rzadkich przypadkach może to zmienić zachowanie aplikacji, jeśli używasz bibliotek .NET Core, które wykonują większość aplikacji. Można skonfigurować sposób korzystania z nowszych wersji programu .NET Core. Aby uzyskać więcej informacji, zobacz [aplikacje zależne od środowiska uruchomieniowego są przewijane do przodu](../versions/selection.md#framework-dependent-apps-roll-forward).
+- **Program .NET Core może ulec zmianie**\
+Jest możliwe, aby środowisko uruchomieniowe i biblioteki platformy .NET Core zostały zaktualizowane na komputerze, na którym uruchomiono aplikację. W rzadkich przypadkach może to zmienić zachowanie aplikacji w przypadku używania bibliotek programu .NET Core, które są w większości aplikacji. Można skonfigurować, w jaki sposób aplikacja używa nowszych wersji platformy .NET Core. Aby uzyskać więcej informacji, zobacz [aplikacje zależne od środowiska uruchomieniowego przenoszone do przodu](../versions/selection.md#framework-dependent-apps-roll-forward).
 
-Następująca wada dotyczy tylko sdk .NET Core 2.1.
+Następująca wada dotyczy tylko zestawu .NET Core 2,1 SDK.
 
 - **Użyj `dotnet` polecenia, aby uruchomić aplikację**\
-Aby uruchomić `dotnet <filename.dll>` aplikację, użytkownicy muszą uruchomić polecenie. .NET Core 2.1 SDK nie tworzy plików wykonywalnych specyficznych dla platformy dla aplikacji opublikowanych w czasie wykonywania zależne.
+`dotnet <filename.dll>`Aby uruchomić aplikację, użytkownicy muszą uruchomić polecenie. Zestaw .NET Core 2,1 SDK nie tworzy plików wykonywalnych specyficznych dla platformy dla aplikacji opublikowanych w środowisku uruchomieniowym.
 
 ### <a name="examples"></a>Przykłady
 
-Publikowanie aplikacji zależne od środowiska uruchomieniowego między platformami. Plik wykonywalny przeznaczony dla bieżącej platformy jest tworzony wraz z plikiem *DLL.*
+Publikowanie aplikacji zależnych od środowiska uruchomieniowego dla wielu platform. Tworzony jest plik wykonywalny, który jest przeznaczony dla bieżącej platformy wraz z plikiem *dll* .
 
 ```dotnet
 dotnet publish
 ```
 
-Publikowanie aplikacji zależne od środowiska uruchomieniowego między platformami. Linux 64-bitowy plik wykonywalny jest tworzony wraz z plikiem *DLL.* To polecenie nie działa z .NET Core SDK 2.1.
+Publikowanie aplikacji zależnych od środowiska uruchomieniowego dla wielu platform. Tworzony jest plik wykonywalny systemu Linux 64-bitowy wraz z plikiem *dll* . To polecenie nie działa z zestaw .NET Core SDK 2,1.
 
 ```dotnet
 dotnet publish -r linux-x64 --self-contained false
 ```
 
-## <a name="publish-self-contained"></a>Publikowanie samodzielnych
+## <a name="publish-self-contained"></a>Publikuj samodzielny
 
-Publikowanie aplikacji jako samodzielnej tworzy plik wykonywalny specyficzny dla platformy. Folder publikowania danych zawiera wszystkie składniki aplikacji, w tym biblioteki .NET Core i docelowy czas wykonywania. Aplikacja jest odizolowana od innych aplikacji .NET Core i nie używa lokalnie zainstalowanego udostępnionego środowiska uruchomieniowego. Użytkownik aplikacji nie jest wymagany do pobierania i instalowania programu .NET Core.
+Publikowanie aplikacji jako samodzielnego powoduje utworzenie pliku wykonywalnego specyficznego dla platformy. Folder publikowania danych wyjściowych zawiera wszystkie składniki aplikacji, w tym biblioteki .NET Core i docelowe środowisko uruchomieniowe. Aplikacja jest odizolowana od innych aplikacji platformy .NET Core i nie korzysta z lokalnie zainstalowanego udostępnionego środowiska uruchomieniowego. Użytkownik aplikacji nie jest wymagany do pobrania i zainstalowania platformy .NET Core.
 
-Plik binarny pliku wykonywalnego jest produkowany dla określonej platformy docelowej. Jeśli na przykład masz aplikację o nazwie **word_reader**i publikujesz samodzielny plik wykonywalny dla systemu Windows, tworzony jest plik *word_reader.exe.* Publikując dla systemu Linux lub macOS, tworzony jest plik *word_reader.* Platforma docelowa i architektura `-r <RID>` jest [`dotnet publish`](../tools/dotnet-publish.md) określona z parametrem dla polecenia. Aby uzyskać więcej informacji na temat identyfikatorów RID, zobacz [.NET Core RID Catalog](../rid-catalog.md).
+Plik binarny wykonywalny jest generowany dla określonej platformy docelowej. Na przykład jeśli masz aplikację o nazwie **word_reader**i opublikujesz plik wykonywalny samodzielnego dla systemu Windows, zostanie utworzony *word_reader.exe* . Publikowanie dla systemu Linux lub macOS, tworzony jest plik *word_reader* . Docelowa platforma i architektura są określone za pomocą `-r <RID>` parametru [`dotnet publish`](../tools/dotnet-publish.md) polecenia. Aby uzyskać więcej informacji na temat identyfikatorów RID, zobacz [katalog .NET Core RID Catalog](../rid-catalog.md).
 
 Jeśli aplikacja ma zależności specyficzne dla platformy, takie jak pakiet NuGet zawierający zależności specyficzne dla platformy, są one kopiowane do folderu publikowania wraz z aplikacją.
 
 ### <a name="advantages"></a>Zalety
 
 - **Sterowanie wersją .NET Core**\
-Można kontrolować, która wersja programu .NET Core jest wdrażana z aplikacją.
+Ty określasz, która wersja programu .NET Core jest wdrażana wraz z Twoją aplikacją.
 
 - **Kierowanie specyficzne dla platformy**\
-Ponieważ musisz opublikować aplikację dla każdej platformy, wiesz, gdzie aplikacja będzie działać. Jeśli program .NET Core wprowadzi nową platformę, użytkownicy nie będą mogli uruchomić aplikacji na tej platformie, dopóki nie wydasz wersji przeznaczonej na tę platformę. Możesz przetestować aplikację pod kątem problemów ze zgodnością, zanim użytkownicy uruchomią aplikację na nowej platformie.
+Ponieważ musisz opublikować aplikację dla każdej platformy, wiesz, gdzie aplikacja będzie działać. Jeśli program .NET Core wprowadza nową platformę, użytkownicy nie będą mogli uruchamiać aplikacji na tej platformie, dopóki nie zostanie wydana wersja przeznaczona dla tej platformy. Możesz przetestować swoją aplikację pod kątem problemów ze zgodnością, zanim użytkownicy będą mogli uruchamiać aplikację na nowej platformie.
 
 ### <a name="disadvantages"></a>Wady
 
 - **Większe wdrożenia**\
-Ponieważ aplikacja zawiera środowisko uruchomieniowe .NET Core i wszystkie zależności aplikacji, wymagany rozmiar pobierania i miejsce na dysku twardym jest większa niż wersja [zależna od środowiska uruchomieniowego.](#publish-runtime-dependent)
+Ponieważ aplikacja zawiera środowisko uruchomieniowe platformy .NET Core i wszystkie zależności aplikacji, wymagany rozmiar i ilość miejsca na dysku twardym są większe niż wersja [zależna od środowiska uruchomieniowego](#publish-runtime-dependent) .
 
   > [!TIP]
-  > Rozmiar wdrożenia w systemach Linux można zmniejszyć o około 28 MB przy użyciu [*trybu niezmiennego globalizacji*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md).NET Core. Zmusza to aplikację do traktowania wszystkich kultur, takich jak [kultura niezmienna.](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)
+  > Możesz zmniejszyć rozmiar wdrożenia w systemach Linux o około 28 MB przy użyciu [*trybu niezmiennej globalizacji*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)platformy .NET Core. Wymusza to aplikacji traktowanie wszystkich kultur, takich jak [Niezmienna kultura](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
 
-- **Trudniej zaktualizować wersję .NET Core**\
-.NET Core Runtime (rozproszone z aplikacją) można uaktualnić tylko przez zwolnienie nowej wersji aplikacji. Użytkownik jest odpowiedzialny za dostarczanie zaktualizowanej wersji aplikacji dla poprawek zabezpieczeń do środowiska uruchomieniowego .NET Core.
+- **Trudniejsze do zaktualizowania wersji platformy .NET Core**\
+Środowisko uruchomieniowe platformy .NET Core (dystrybuowane z aplikacją) można uaktualnić tylko przez wydanie nowej wersji aplikacji. Użytkownik jest odpowiedzialny za dostarczanie zaktualizowanej wersji aplikacji na potrzeby poprawek zabezpieczeń do środowiska uruchomieniowego .NET Core.
 
 ### <a name="examples"></a>Przykłady
 
-Publikowanie aplikacji niezależnej. Tworzony jest 64-bitowy plik wykonywalny systemu macOS.
+Publikuj samodzielną aplikację. Tworzony jest plik wykonywalny macOS 64-bitowy.
 
 ```dotnet
 dotnet publish -r osx-x64
 ```
 
-Publikowanie aplikacji niezależnej. Tworzony jest 64-bitowy plik wykonywalny systemu Windows.
+Publikuj samodzielną aplikację. Tworzony jest plik wykonywalny systemu Windows 64-bitowy.
 
 ```dotnet
 dotnet publish -r win-x64
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Wdrażanie aplikacji .NET Core z rdzeniem .NET Core CLI.](deploy-with-cli.md)
-- [Wdrażanie aplikacji .NET Core w programie Visual Studio.](deploy-with-vs.md)
-- [Pakiety, metapakiety i struktury.](../packages.md)
-- [.NET Core Runtime IDentifier (RID) — katalog.](../rid-catalog.md)
-- [Wybierz wersję .NET Core, której chcesz użyć.](../versions/selection.md)
+- [Wdrażanie aplikacji .NET Core za pomocą interfejs wiersza polecenia platformy .NET Core.](deploy-with-cli.md)
+- [Wdrażanie aplikacji .NET Core za pomocą programu Visual Studio.](deploy-with-vs.md)
+- [Wykaz identyfikatorów środowiska uruchomieniowego platformy .NET Core (RID).](../rid-catalog.md)
+- [Wybierz wersję platformy .NET Core do użycia.](../versions/selection.md)

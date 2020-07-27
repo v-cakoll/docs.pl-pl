@@ -1,19 +1,20 @@
 ---
-title: Materializacja pośrednia (C#)
+title: Pośredni materializację (C#)
+description: Ten przykład w języku C# przedstawia pośredni materializację, gdzie zapytanie powoduje, że AppendString wyliczyć całe Źródło przed uzyskaniem pierwszego elementu.
 ms.date: 07/20/2015
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
-ms.openlocfilehash: af1eb7df7da02d8e72fc102cda4ee5f329dc7974
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 30951aaeea261efbd414205bcc54b63106324344
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253162"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165714"
 ---
-# <a name="intermediate-materialization-c"></a>Materializacja pośrednia (C#)
-Jeśli nie jesteś ostrożny, w niektórych sytuacjach można drastycznie zmienić pamięć i profil wydajności aplikacji, powodując przedwczesne materializacji kolekcji w kwerendach. Niektóre standardowe operatory zapytań powodują materializację ich kolekcji źródłowej przed uzyskaniem pojedynczego elementu. Na przykład <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> najpierw iteruje za pośrednictwem całej kolekcji źródłowej, a następnie sortuje wszystkie elementy, a następnie w końcu daje pierwszy element. Oznacza to, że uzyskanie pierwszego elementu zamówionej kolekcji jest kosztowne; każdy element później nie jest drogie. Ma to sens: byłoby niemożliwe dla tego operatora kwerendy zrobić inaczej.  
+# <a name="intermediate-materialization-c"></a>Pośredni materializację (C#)
+Jeśli nie jest to dokładne, w niektórych sytuacjach można radykalnie zmienić profil pamięci i wydajności aplikacji, powodując przedwcześnie materializację kolekcji w zapytaniach. Niektóre standardowe operatory zapytań powodują materializację kolekcji źródłowej przed uzyskaniem pojedynczego elementu. Na przykład program <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> najpierw wykonuje iterację w całej kolekcji źródłowej, sortuje wszystkie elementy, a następnie zwraca pierwszy element. Oznacza to, że jest kosztowne uzyskanie pierwszego elementu kolekcji uporządkowanej; Każdy element nie jest kosztowny. Jest to zrozumiałe: byłoby niemożliwe dla tego operatora zapytań.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie zmienia poprzedni przykład. Metoda `AppendString` wywołuje <xref:System.Linq.Enumerable.ToList%2A> przed iteracji za pośrednictwem źródła. Powoduje to materializację.  
+ Ten przykład zmienia poprzedni przykład. `AppendString`Metoda wywołuje <xref:System.Linq.Enumerable.ToList%2A> przed iteracją w źródle. Powoduje to materializację.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -80,12 +81,12 @@ AppendString: source >GHI<
 Main: str >GHI!!!<  
 ```  
   
- W tym przykładzie widać, że <xref:System.Linq.Enumerable.ToList%2A> wywołanie przyczyn `AppendString` wyliczyć całe źródło przed uzyskaniem pierwszego elementu. Jeśli źródłem była duża tablica, znacznie zmieniłoby to profil pamięci aplikacji.  
+ W tym przykładzie można zobaczyć, że wywołanie <xref:System.Linq.Enumerable.ToList%2A> powoduje `AppendString` Wyliczenie całego źródła przed uzyskaniem pierwszego elementu. Jeśli źródłem była duża tablica, znacznie zmienia profil pamięci aplikacji.  
   
- Standardowe operatory zapytań mogą być również połączone ze sobą. Ostatni temat w tym samouczku ilustruje to.  
+ Standardowe operatory zapytań można również łączyć ze sobą. Ten samouczek ilustruje ostatni temat w tym samouczku.  
   
-- [Łączenie standardowych operatorów zapytań razem (C#)](./chaining-standard-query-operators-together.md)  
+- [Łączenie standardowych operatorów zapytań (C#)](./chaining-standard-query-operators-together.md)  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Samouczek: Łączenie zapytań razem (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Samouczek: Łączenie łańcuchowe zapytań (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

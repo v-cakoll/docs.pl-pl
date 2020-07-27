@@ -1,5 +1,6 @@
 ---
 title: TextPattern i obiekty osadzone — omówienie
+description: Zapoznaj się z omówieniem sposobu, w jaki Automatyzacja interfejsu użytkownika uwidacznia obiekty osadzone lub elementy podrzędne w obrębie dokumentu tekstowego lub kontenera przy użyciu TextPattern i TextPatternRange.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, TextPattern class
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-ms.openlocfilehash: 7a3338a08d06320acdc2acb0647bc91541448d7d
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 0a06fb72b280fc61faeb12f6f2c3a05d957ec7b9
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201066"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163562"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern i obiekty osadzone — omówienie
 > [!NOTE]
@@ -98,7 +99,7 @@ Przykłady sposobu, w jaki zakres tekstu jest dostosowywany dla operacji Move ()
 |<xref:System.Windows.Automation.Text.TextPatternRange.Move%2A>z parametrami (TextUnit. Word, 1).|Przenosi zakres tekstu do "http", ponieważ tekst hiperlinku składa się z pojedynczych wyrazów. W takim przypadku hiperlink nie jest traktowany jako pojedynczy obiekt.<br /><br /> Adres URL {[http]} jest osadzony w tekście.|  
   
 <a name="Image"></a>
-### <a name="image"></a>Obraz  
+### <a name="image"></a>Image (Obraz)  
  **Przykład 1 — zakres tekstu, który zawiera osadzony obraz**  
   
  { ![Osadzony obraz](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") obrazu jest osadzony w tekście}.  

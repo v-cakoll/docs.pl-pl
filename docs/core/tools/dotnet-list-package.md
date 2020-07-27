@@ -2,12 +2,12 @@
 title: polecenie pakietu list dotnet
 description: Polecenie "pakiet listy dotnet" udostępnia wygodną opcję wyświetlania odwołań do pakietów dla projektu lub rozwiązania.
 ms.date: 02/14/2020
-ms.openlocfilehash: 12d64600d178ea8cf490a0d6917e67bd3d8c6d21
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 7157e56860936d10aa322854a589ae89e2bc0826
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463660"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164757"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -21,6 +21,7 @@ ms.locfileid: "81463660"
 
 ```dotnetcli
 dotnet list [<PROJECT>|<SOLUTION>] package [--config <SOURCE>]
+    [--deprecated]
     [--framework <FRAMEWORK>] [--highest-minor] [--highest-patch]
     [--include-prerelease] [--include-transitive] [--interactive]
     [--outdated] [--source <SOURCE>]
@@ -78,9 +79,13 @@ Plik projektu lub rozwiązania do działania. Jeśli nie zostanie określony, po
 
   Źródła NuGet do użycia podczas wyszukiwania nowszych pakietów. Wymaga `--outdated` opcji.
 
+- **`--deprecated`**
+
+  Wyświetla pakiety, które zostały wycofane.
+
 - **`--framework <FRAMEWORK>`**
 
-  Wyświetla tylko pakiety mające zastosowanie do określonej [platformy docelowej](../../standard/frameworks.md). Aby określić wiele struktur, Powtarzaj tę opcję wiele razy. Na przykład: `--framework netcoreapp2.2 --framework netstandard2.0`.
+  Wyświetla tylko pakiety mające zastosowanie do określonej [platformy docelowej](../../standard/frameworks.md). Aby określić wiele struktur, Powtarzaj tę opcję wiele razy. Przykład: `--framework netcoreapp2.2 --framework netstandard2.0`.
 
 - **`-h|--help`**
 
@@ -88,15 +93,15 @@ Plik projektu lub rozwiązania do działania. Jeśli nie zostanie określony, po
 
 - **`--highest-minor`**
 
-  Podczas wyszukiwania nowszych pakietów uwzględnia tylko te pakiety, które pasują do numeru głównego. Wymaga `--outdated` opcji.
+  Podczas wyszukiwania nowszych pakietów uwzględnia tylko te pakiety, które pasują do numeru głównego. Wymaga `--outdated` opcji lub `--deprecated` .
 
 - **`--highest-patch`**
 
-  Podczas wyszukiwania nowszych pakietów uwzględnia tylko te pakiety, które mają pasujące główne i pomocnicze numery wersji. Wymaga `--outdated` opcji.
+  Podczas wyszukiwania nowszych pakietów uwzględnia tylko te pakiety, które mają pasujące główne i pomocnicze numery wersji. Wymaga `--outdated` opcji lub `--deprecated` .
 
 - **`--include-prerelease`**
 
-  Traktuje pakiety z wersjami wstępnymi podczas wyszukiwania nowszych pakietów. Wymaga `--outdated` opcji.
+  Traktuje pakiety z wersjami wstępnymi podczas wyszukiwania nowszych pakietów. Wymaga `--outdated` opcji lub `--deprecated` .
 
 - **`--include-transitive`**
 
@@ -112,7 +117,7 @@ Plik projektu lub rozwiązania do działania. Jeśli nie zostanie określony, po
 
 - **`-s|--source <SOURCE>`**
 
-  Źródła NuGet do użycia podczas wyszukiwania nowszych pakietów. Wymaga `--outdated` opcji.
+  Źródła NuGet do użycia podczas wyszukiwania nowszych pakietów. Wymaga `--outdated` opcji lub `--deprecated` .
 
 ## <a name="examples"></a>Przykłady
 

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: ef9c62b0378e1064d8cfd90a8c59aed74ea312b2
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 69259b1d47a8e30945c578db10c6d697c81fa261
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84701568"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164404"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio"></a>Samouczek: Tworzenie biblioteki .NET Standard przy użyciu programu Visual Studio
 
@@ -105,13 +105,13 @@ Początkowo nowy projekt aplikacji konsolowej nie ma dostępu do biblioteki klas
 
    ![Okno dialogowe programu Reference Manager z wybraną pozycją StringLibrary](media/library-with-visual-studio/manage-project-references.png)
 
-## <a name="run-the-app"></a>Uruchomienie aplikacji
+## <a name="run-the-app"></a>Uruchamianie aplikacji
 
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **pokazu** i wybierz polecenie **Ustaw jako projekt startowy** w menu kontekstowym.
 
    ![Menu kontekstowe projektu programu Visual Studio, aby ustawić projekt startowy](media/library-with-visual-studio/set-startup-project-context-menu.png)
 
-1. Naciśnij klawisz <kbd>SHIFT</kbd> + <kbd>F5</kbd> , aby skompilować i uruchomić program bez debugowania.
+1. Naciśnij klawisz <kbd>Ctrl</kbd> + <kbd>F5</kbd> , aby skompilować i uruchomić program bez debugowania.
 
    ![Pasek narzędzi projektu programu Visual Studio z widocznym przyciskiem Debuguj](media/library-with-visual-studio/visual-studio-project-toolbar.png)
 

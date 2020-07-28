@@ -1,5 +1,6 @@
 ---
 title: Przegląd Moduły indeksowania układu
+description: Dowiedz się więcej na temat Windows Presentation Foundation modułów definiowania układu, specjalnego typu FrameworkElement, który udostępnia podpowiedzi użytkownikowi, takie jak uchwyty funkcjonalne dla elementów.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,98 +8,98 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: b41c1f10f7e1b7c1799fd27270a3eeb9899ceeb6
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 43d4af9f86c6ae72a61f86d1ca19405c2dcc6cc8
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111182"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167738"
 ---
 # <a name="adorners-overview"></a>Przegląd Moduły indeksowania układu
 
-Adorners są specjalnym <xref:System.Windows.FrameworkElement>typem , używane do dostarczania wizualnych wskazówek dla użytkownika. Wśród innych zastosowań Adorners może służyć do dodawania uchwytów funkcjonalnych do elementów lub podać informacje o stanie formantu.
+Moduły definiowania układu są specjalnym typem <xref:System.Windows.FrameworkElement> , używanym do udostępniania wizualnych podpowiedzi użytkownikowi. Do innych celów, moduły definiowania układu mogą służyć do dodawania dojścia funkcjonalne do elementów lub dostarczania informacji o stanie dla formantu.
 
-## <a name="about-adorners"></a>Więcej o: Adorners
+## <a name="about-adorners"></a>Moduły definiowania układu — informacje
 
-Jest <xref:System.Windows.Documents.Adorner> to <xref:System.Windows.FrameworkElement> zwyczaj, który <xref:System.Windows.UIElement>jest powiązany z . Adorners są renderowane <xref:System.Windows.Documents.AdornerLayer>w programie , który jest powierzchnią renderowania, która jest zawsze na szczycie element zdobione lub kolekcji elementów zdobione. Renderowanie adorner jest niezależna od <xref:System.Windows.UIElement> renderowania, że adorner jest zobowiązany do. Adorner jest zazwyczaj umieszczony względem elementu, do którego jest powiązany, przy użyciu standardowego początku współrzędnych 2D znajduje się w lewym górnym rogu elementu zdobione.
+<xref:System.Windows.Documents.Adorner>Jest to niestandardowa <xref:System.Windows.FrameworkElement> , która jest powiązana z <xref:System.Windows.UIElement> . Moduły definiowania układu są renderowane w <xref:System.Windows.Documents.AdornerLayer> , która jest powierzchnią renderowania, która zawsze znajduje się na wierzchu elementu, lub kolekcji elementów z elementami. Renderowanie modułu definiowania układu jest niezależne od renderowania <xref:System.Windows.UIElement> , z którym jest powiązany moduł definiowania układu. Moduł definiowania układu jest zwykle umieszczony względem elementu, z którym jest powiązany, za pomocą standardowego punktu początkowego współrzędnych 2D w lewym górnym rogu elementu.
 
-Typowe zastosowania adorners obejmują:
+Typowe aplikacje dla modułów definiowania układu obejmują:
 
-- Dodawanie uchwytów funkcjonalnych <xref:System.Windows.UIElement> do, które umożliwiają użytkownikowi manipulowanie elementem w jakiś sposób (zmień rozmiar, obróć, zmień położenie itp.).
-- Przekaż wizualne informacje zwrotne, aby wskazać różne stany lub w odpowiedzi na różne zdarzenia.
-- Nakładaj dekoracje wizualne na . <xref:System.Windows.UIElement>
-- Wizualnie maskować lub zastępować część <xref:System.Windows.UIElement>lub całość pliku .
+- Dodanie dojść funkcjonalnych do obiektu <xref:System.Windows.UIElement> , który umożliwia użytkownikowi manipulowanie elementem w jakiś sposób (zmiana rozmiaru, obracanie, zmianę położenia itp.).
+- Zapewnij wizualną opinię wskazującą różne stany lub w odpowiedzi na różne zdarzenia.
+- Nałóż dekoracyjne elementy wizualne na <xref:System.Windows.UIElement> .
+- Wizualnie Maskuj lub Przesłoń część lub wszystkie <xref:System.Windows.UIElement> .
 
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]zapewnia podstawową strukturę zdobiąc elementy wizualne. W poniższej tabeli wymieniono typy podstawowe używane podczas ozdabiania obiektów i ich przeznaczenie. Kilka przykładów użycia wykonaj następujące:
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]zapewnia podstawową strukturę służącą do definiowania elementów wizualnych. W poniższej tabeli wymieniono typy podstawowe używane podczas tworzenia obiektów i ich przeznaczenia. Poniżej przedstawiono kilka przykładów użycia:
 
 |||
 |-|-|
-|<xref:System.Windows.Documents.Adorner>|Abstrakcyjna klasa podstawowa, z której dziedziczą wszystkie implementacje adornera betonu.|
-|<xref:System.Windows.Documents.AdornerLayer>|Klasa reprezentująca warstwę renderowania dla adorner(ów) jednego lub więcej elementów ozdobionych.|
-|<xref:System.Windows.Documents.AdornerDecorator>|Klasa, która umożliwia adorner warstwy do skojarzenia z kolekcji elementów.|
+|<xref:System.Windows.Documents.Adorner>|Abstrakcyjna klasa bazowa, z której są dziedziczone wszystkie konkretne implementacje modułu definiowania układu.|
+|<xref:System.Windows.Documents.AdornerLayer>|Klasa reprezentująca warstwę renderowania dla modułów definiowania układu dla co najmniej jednego elementu z.|
+|<xref:System.Windows.Documents.AdornerDecorator>|Klasa, która umożliwia skojarzenie warstwy modułu definiowania układu z kolekcją elementów.|
 
-## <a name="implementing-a-custom-adorner"></a>Implementowanie niestandardowego adornera
+## <a name="implementing-a-custom-adorner"></a>Implementowanie niestandardowego modułu definiowania układu
 
-Adorners framework dostarczone [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] przez ma na celu przede wszystkim do obsługi tworzenia niestandardowych adorners. Niestandardowy adorner jest tworzony przez implementowanie klasy, <xref:System.Windows.Documents.Adorner> która dziedziczy z klasy abstrakcyjnej.
+Struktura modułów definiowania układu dostarczana przez program [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] jest przeznaczona głównie do obsługi tworzenia niestandardowych modułów definiowania. Niestandardowy moduł definiowania układu jest tworzony przez implementację klasy, która dziedziczy z klasy abstrakcyjnej <xref:System.Windows.Documents.Adorner> .
 
 > [!NOTE]
-> Element nadrzędny <xref:System.Windows.Documents.Adorner> <xref:System.Windows.Documents.AdornerLayer> jest, który <xref:System.Windows.Documents.Adorner>renderuje , nie element jest zdobione.
+> Elementem nadrzędnym elementu <xref:System.Windows.Documents.Adorner> jest <xref:System.Windows.Documents.AdornerLayer> renderowanie, a <xref:System.Windows.Documents.Adorner> nie element, który jest tworzony.
 
-W poniższym przykładzie pokazano klasy, która implementuje prosty adorner. Przykład adorner po prostu zdobi rogi <xref:System.Windows.UIElement> z okręgów.
+Poniższy przykład przedstawia klasę implementującą prosty moduł definiowania układu. Przykładowy moduł definiowania układu po prostu tworzy rogi <xref:System.Windows.UIElement> z okręgów.
 
 [!code-csharp[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](~/samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_simplecircleadornerbody)]
 [!code-vb[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_simplecircleadornerbody)]
   
-Na poniższej ilustracji przedstawiono simplecircleAdorner zastosowane do <xref:System.Windows.Controls.TextBox>:
+Na poniższej ilustracji przedstawiono SimpleCircleAdorner zastosowany do <xref:System.Windows.Controls.TextBox> :
 
-![Zrzut ekranu przedstawiający pole tekstowe z ozdobami.](./media/adorners-overview/simplecircleadorner-textbox.png)
+![Zrzut ekranu pokazujący pole tekstowe z tekstem.](./media/adorners-overview/simplecircleadorner-textbox.png)
 
-## <a name="rendering-behavior-for-adorners"></a>Zachowanie renderowania dla Adorners
+## <a name="rendering-behavior-for-adorners"></a>Zachowanie renderowania dla modułów definiowania układu
 
-Należy pamiętać, że adorners nie zawierają żadnych nieodłączne zachowanie renderowania; zapewnienie, że adorner renderuje jest odpowiedzialny za implementator adorner. Typowym sposobem implementowania zachowania renderowania jest <xref:System.Windows.UIElement.OnRender%2A> zastąpienie metody i <xref:System.Windows.Media.DrawingContext> użycie jednego lub więcej obiektów do renderowania wizualizacji adorner w razie potrzeby (jak pokazano w powyższym przykładzie).
+Należy zauważyć, że moduły definiowania układu nie uwzględniają nieodłącznego zachowania renderowania; upewnienie się, że moduł definiowania układu jest odpowiedzialny za implementację modułu definiowania układu. Typowym sposobem implementacji zachowania renderowania jest zastąpienie <xref:System.Windows.UIElement.OnRender%2A> metody i użycie jednego lub większej liczby <xref:System.Windows.Media.DrawingContext> obiektów w celu renderowania wizualizacji modułu definiowania układu w miarę potrzeb (jak pokazano w powyższym przykładzie).
 
 > [!NOTE]
-> Wszystko, co znajduje się w warstwie adorner, jest renderowane na pozostałych ustawionych stylach. Innymi słowy adorners są zawsze wizualnie na górze i nie można zastąpić za pomocą z-order.
+> Wszystkie elementy umieszczone w warstwie modułu definiowania układu są renderowane na podstawie pozostałych ustawionych stylów. Innymi słowy, moduły definiowania układu zawsze są widoczne na górze i nie mogą zostać zastąpione przy użyciu kolejności z.
 
 ## <a name="events-and-hit-testing"></a>Testy zdarzeń i trafień
 
-Adorners odbierać zdarzenia wejściowe, podobnie jak każdy inny <xref:System.Windows.FrameworkElement>.  Ponieważ adorner zawsze ma wyższy porządek z niż element, który zdobi, adorner <xref:System.Windows.UIElement.Drop> <xref:System.Windows.UIElement.MouseMove>odbiera zdarzenia wejściowe (takie jak lub ), które mogą być przeznaczone dla podstawowego elementu zdobionego.  Adorner można nasłuchiwać niektórych zdarzeń wejściowych i przekazać je do podstawowego element zdobione przez ponowne podnoszenie zdarzenia.
+Moduły definiowania układu odbierają zdarzenia wejściowe w taki sam sposób jak inne <xref:System.Windows.FrameworkElement> .  Ze względu na to, że moduł definiowania układu zawsze ma wyższy porządek osi z niż element, który jest w jego obszarze, moduł definiowania układu odbiera zdarzenia wejściowe (takie jak <xref:System.Windows.UIElement.Drop> lub <xref:System.Windows.UIElement.MouseMove> ), które mogą być przeznaczone dla bazowego elementu.  Moduł definiowania układu może nasłuchiwać określonych zdarzeń wejściowych i przekazać je do podstawowego elementu z własnym elementem, przez ponowne podnoszenie poziomu zdarzenia.
 
-Aby włączyć pass-through testowania trafień elementów w <xref:System.Windows.UIElement.IsHitTestVisible%2A> adorner, ustaw właściwość testu trafienia **false** na adorner.  Aby uzyskać więcej informacji na temat testowania trafień, zobacz [Testowanie trafień w warstwie wizualnej](../graphics-multimedia/hit-testing-in-the-visual-layer.md).
+Aby włączyć przekazywanie testów trafień elementów pod modułem definiowania układu, ustaw właściwość test trafień na <xref:System.Windows.UIElement.IsHitTestVisible%2A> **false** w programie definiowania układu.  Aby uzyskać więcej informacji na temat testowania trafień, zobacz [test trafień w warstwie wizualnej](../graphics-multimedia/hit-testing-in-the-visual-layer.md).
 
-## <a name="adorning-a-single-uielement"></a>Ozdabianie pojedynczego interfejsu użytkownika
+## <a name="adorning-a-single-uielement"></a>Określanie układu pojedynczego elementu UIElement
 
-Aby powiązać adorner <xref:System.Windows.UIElement>z określonym , wykonaj następujące kroki:
+Aby powiązać moduł definiowania układu z konkretną <xref:System.Windows.UIElement> , wykonaj następujące kroki:
 
-1. Wywołanie metody <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> statycznej, <xref:System.Windows.Documents.AdornerLayer> aby <xref:System.Windows.UIElement> uzyskać obiekt do zdobienia. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>przechodzi w górę drzewa wizualnego, zaczynając od określonego <xref:System.Windows.UIElement>programu i zwraca pierwszą warstwę adorner, która zostanie wynajęta. (Jeśli nie zostaną znalezione żadne warstwy adorner, metoda zwraca wartość null.)
+1. Wywołaj metodę statyczną, <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> Aby uzyskać <xref:System.Windows.Documents.AdornerLayer> obiekt dla elementu <xref:System.Windows.UIElement> do. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>wyszukuje drzewo wizualne, rozpoczynając od określonego <xref:System.Windows.UIElement> i zwraca początkową warstwę modułu definiowania układu. (Jeśli nie zostaną znalezione żadne warstwy modułu definiowania układu, metoda zwróci wartość null).
 
-2. Wywołanie <xref:System.Windows.Documents.AdornerLayer.Add%2A> metody, aby powiązać adorner do obiektu docelowego <xref:System.Windows.UIElement>.
+2. Wywołaj <xref:System.Windows.Documents.AdornerLayer.Add%2A> metodę, aby powiązać moduł definiowania układu z elementem docelowym <xref:System.Windows.UIElement> .
 
- Poniższy przykład wiąże SimpleCircleAdorner (pokazano powyżej) o <xref:System.Windows.Controls.TextBox> nazwie *myTextBox:*
+ Poniższy przykład tworzy powiązanie SimpleCircleAdorner (pokazany powyżej) z <xref:System.Windows.Controls.TextBox> nazwanym obiektem *TextBox*:
 
  [!code-csharp[Adorners_SimpleCircleAdorner#_AdornSingleElement](~/samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_adornsingleelement)]
  [!code-vb[Adorners_SimpleCircleAdorner#_AdornSingleElement](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornsingleelement)]
 
 > [!NOTE]
-> Using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] to bind adorner to another element is currently not supported Using to bind an adorner to another element is currently not supported.
+> Używanie [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] do powiązania modułu definiowania układu z innym elementem nie jest obecnie obsługiwane.
 
-## <a name="adorning-the-children-of-a-panel"></a>Ozdabianie dzieci panelu
+## <a name="adorning-the-children-of-a-panel"></a>Określanie układu elementów podrzędnych panelu
 
-Aby powiązać adorner z <xref:System.Windows.Controls.Panel>elementami podrzędnymi , wykonaj następujące kroki:
+Aby powiązać moduł definiowania układu z elementami podrzędnymi programu <xref:System.Windows.Controls.Panel> , wykonaj następujące kroki:
 
-1. Wywołanie `static` <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> metody, aby znaleźć warstwę adorner dla elementu, którego elementy podrzędne mają być zdobione.
+1. Wywołaj `static` metodę, <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> Aby znaleźć warstwę modułu definiowania układu dla elementu, którego elementy podrzędne mają być podłączane.
 
-2. Wyliczyć za pośrednictwem elementów podrzędnych <xref:System.Windows.Documents.AdornerLayer.Add%2A> elementu nadrzędnego i wywołać metodę powiązania adorner do każdego elementu podrzędnego.
+2. Wylicz elementy podrzędne elementu nadrzędnego i Wywołaj metodę, <xref:System.Windows.Documents.AdornerLayer.Add%2A> Aby powiązać moduł definiowania układu z każdym elementem podrzędnym.
 
-Poniższy przykład wiąże SimpleCircleAdorner (pokazano powyżej) do <xref:System.Windows.Controls.StackPanel> elementów podrzędnych o nazwie *myStackPanel:*
+Poniższy przykład wiąże element SimpleCircleAdorner (pokazany powyżej) z elementem podrzędnym <xref:System.Windows.Controls.StackPanel> o nazwie *myStackPanel*:
 
 [!code-csharp[Adorners_SimpleCircleAdorner#_AdornChildren](~/samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_adornchildren)]
 [!code-vb[Adorners_SimpleCircleAdorner#_AdornChildren](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornchildren)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Media.AdornerHitTestResult>
 - [Przegląd Kształty i podstawowe rysowanie w WPF](../graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](../graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Malowanie obrazami, rysowaniem i Visual](../graphics-multimedia/painting-with-images-drawings-and-visuals.md)
 - [Przegląd Rysowanie obiektów](../graphics-multimedia/drawing-objects-overview.md)
-- [Tematy in jakże](adorners-how-to-topics.md)
+- [— Tematy porad](adorners-how-to-topics.md)

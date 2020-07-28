@@ -1,5 +1,6 @@
 ---
 title: 'Przewodnik: wyświetlanie danych z serwera bazy danych SQL w kontrolce DataGrid'
+description: Dowiedz się, jak pobierać dane z bazy danych SQL Server i wyświetlać je w Windows Presentation Foundation formancie DataGrid przy użyciu tego przewodnika.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: 1398d8408a0b85d6603d638312e92ba35c5e77d3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cc41979c869021c9c363f3f68ce590d4702e068c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591036"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167547"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Przewodnik: wyświetlanie danych z SQL Serverj bazy danych w kontrolce DataGrid
 
@@ -23,7 +24,7 @@ W tym instruktażu pobierasz dane z bazy danych SQL Server i wyświetlają te da
 
 Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
-- Program Visual Studio.
+- Programu Visual Studio.
 
 - Dostęp do uruchomionego wystąpienia SQL Server lub SQL Server Express z dołączoną przykładową bazą danych AdventureWorks. Bazę danych AdventureWorks można pobrać z witryny [GitHub](https://github.com/Microsoft/sql-server-samples/releases).
 
@@ -47,7 +48,7 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
 6. Na ekranie wybierz połączenie danych podaj połączenie z bazą danych AdventureWorksLT2008. Aby uzyskać więcej informacji, zobacz [okno dialogowe Wybieranie połączenia danych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399244(v=vs.100)).
 
-    Upewnij się, że nazwa jest `AdventureWorksLT2008Entities` i że zaznaczono pole wyboru **Zapisz ustawienia połączenia jednostki w pliku App. config jako** zaznaczone, a następnie kliknij przycisk **dalej**.
+    Upewnij się, że nazwa jest `AdventureWorksLT2008Entities` i że zaznaczono pole wyboru **Zapisz ustawienia połączenia jednostki w App.Config jako** , a następnie kliknij przycisk **dalej**.
 
 7. Na ekranie Wybierz obiekty bazy danych rozwiń węzeł tabele, a następnie wybierz tabele **produkt** i **ProductCategory** .
 
@@ -97,6 +98,6 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
      ![DataGrid z danymi z bazy danych SQL](./media/datagrid-sql-ef-step7.png "DataGrid_SQL_EF_Step7")
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Controls.DataGrid>

@@ -1,5 +1,6 @@
 ---
 title: Jak użyć znaku specjalnego w XAML
+description: Dowiedz się więcej o składni kodowania znaków specjalnych w formacie pliku Unicode UTF-8 w programie Visual Studio do użycia w plikach XAML w Windows Presentation Foundation.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Unicode UTF-8 file format
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], special characters
 - special characters [WPF]
 ms.assetid: a57776d1-f353-4794-afa0-bfa3c712ed1c
-ms.openlocfilehash: 59449637bb45f6b75462b6809c354af7972fc2e7
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: ac2388fd96aa26ddd99408ac9f847ce517958568
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740842"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168356"
 ---
 # <a name="how-to-use-special-characters-in-xaml"></a>Jak użyć znaku specjalnego w XAML
 Pliki znaczników, które są tworzone w programie Visual Studio, są automatycznie zapisywane w formacie Unicode UTF-8, co oznacza, że większość znaków specjalnych, takich jak znaki akcentu, jest poprawnie zakodowana. Jednak istnieje zestaw często używanych znaków specjalnych, które są obsługiwane inaczej. Te znaki specjalne są zgodne ze standardem XML organizacja World Wide Web Consortium (W3C) do kodowania.  

@@ -6,4 +6,4 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 05/15/2019
 ms.locfileid: "65670130"
 ---
-<span data-ttu-id="55cf0-101">Interfejs użytkownika</span><span class="sxs-lookup"><span data-stu-id="55cf0-101">UI</span></span>
+<span data-ttu-id="42b99-101">Interfejs użytkownika</span><span class="sxs-lookup"><span data-stu-id="42b99-101">UI</span></span>

@@ -1,5 +1,6 @@
 ---
 title: Automatyzacja interfejsu użytkownika a Microsoft Active Accessibility
+description: Zapoznaj się z różnicami między automatyzacją interfejsu użytkownika i firmą Microsoft Active Accessibility, poprzednim rozwiązaniem do udostępniania aplikacji.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Active Accessibility
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 9aa975cf3c6e60fbcc759adbf5a991930bff36d6
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 0685a3f89a6578433641aaf78717f4ff377ff2f9
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144789"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164069"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>Automatyzacja interfejsu użytkownika a Microsoft Active Accessibility
 > [!NOTE]
@@ -80,7 +81,7 @@ Usługa Active Accessibility jest oparta na Component Object Model (COM) z obsł
 |ROLE_SYSTEM_DOCUMENT|Dokument|  
 |ROLE_SYSTEM_TEXT|Edytuj|  
 |ROLE_SYSTEM_GROUPING|Grupa|  
-|ROLE_SYSTEM_LIST|Header|  
+|ROLE_SYSTEM_LIST|Nagłówek|  
 |ROLE_SYSTEM_COLUMNHEADER|Element nagłówka|  
 |ROLE_SYSTEM_LINK|Hyperlink|  
 |ROLE_SYSTEM_GRAPHIC|Image (Obraz)|  
@@ -94,7 +95,7 @@ Usługa Active Accessibility jest oparta na Component Object Model (COM) z obsł
 |ROLE_SYSTEM_RADIOBUTTON|Przycisk radiowy|  
 |ROLE_SYSTEM_SCROLLBAR|Pasek przewijania|  
 |ROLE_SYSTEM_SEPARATOR|Separator|  
-|ROLE_SYSTEM_SLIDER|Suwak|  
+|ROLE_SYSTEM_SLIDER|Slider|  
 |ROLE_SYSTEM_SPINBUTTON|pokrętło|  
 |ROLE_SYSTEM_SPLITBUTTON|Przycisk podziału|  
 |ROLE_SYSTEM_STATUSBAR|Pasek stanu|  
@@ -251,4 +252,4 @@ Usługa Active Accessibility jest oparta na Component Object Model (COM) z obsł
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Podstawy automatyzacji interfejsu użytkownika](index.md)
+- [Podstawowe założenia automatyzacji interfejsu użytkownika](index.md)

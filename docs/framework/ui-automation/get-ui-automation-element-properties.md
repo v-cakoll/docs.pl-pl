@@ -1,5 +1,6 @@
 ---
 title: Pobierz właściwości elementu automatyzacji interfejsu użytkownika
+description: Zobacz instrukcje i przykład pokazujący, jak pobrać bieżące lub buforowane właściwości elementu automatyzacji interfejsu użytkownika.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,33 +9,33 @@ helpviewer_keywords:
 - properties, retrieving
 - UI Automation, retrieving properties of elements
 ms.assetid: 09576b1a-291f-435c-980e-dee32d899ae1
-ms.openlocfilehash: 1b82302ff89d2e8407871cbfba6c10e8322ac4e7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 277822c9d89046bfbad50df16bce83da7dd45b3b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435499"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164108"
 ---
 # <a name="get-ui-automation-element-properties"></a>Pobierz właściwości elementu automatyzacji interfejsu użytkownika
 > [!NOTE]
-> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych klas [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdefiniowanych w przestrzeni nazw <xref:System.Windows.Automation>. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
+> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](/windows/win32/winauto/entry-uiauto-win32).  
   
- W tym temacie pokazano, jak pobrać właściwości elementu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
+ W tym temacie pokazano, jak pobrać właściwości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elementu.  
   
 ### <a name="get-a-current-property-value"></a>Pobierz bieżącą wartość właściwości  
   
-1. Uzyskaj <xref:System.Windows.Automation.AutomationElement> którego właściwość chcesz uzyskać.  
+1. Uzyskaj właściwość, której chcesz <xref:System.Windows.Automation.AutomationElement> pobrać.  
   
-2. Wywołaj <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>lub Pobierz strukturę właściwości <xref:System.Windows.Automation.AutomationElement.Current%2A> i Pobierz wartość z jednego z jej elementów członkowskich.  
+2. Wywołaj <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> lub Pobierz <xref:System.Windows.Automation.AutomationElement.Current%2A> strukturę właściwości i Pobierz wartość z jednego z jej elementów członkowskich.  
   
 ### <a name="get-a-cached-property-value"></a>Pobierz buforowaną wartość właściwości  
   
-1. Uzyskaj <xref:System.Windows.Automation.AutomationElement> którego właściwość chcesz uzyskać. Właściwość musi być określona w <xref:System.Windows.Automation.CacheRequest>.  
+1. Uzyskaj właściwość, której chcesz <xref:System.Windows.Automation.AutomationElement> pobrać. Właściwość musi być określona w <xref:System.Windows.Automation.CacheRequest> .  
   
-2. Wywołaj <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>lub Pobierz strukturę właściwości <xref:System.Windows.Automation.AutomationElement.Cached%2A> i Pobierz wartość z jednego z jej elementów członkowskich.  
+2. Wywołaj <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A> lub Pobierz <xref:System.Windows.Automation.AutomationElement.Cached%2A> strukturę właściwości i Pobierz wartość z jednego z jej elementów członkowskich.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono różne sposoby pobierania bieżących właściwości <xref:System.Windows.Automation.AutomationElement>.  
+ W poniższym przykładzie pokazano różne sposoby pobierania bieżących właściwości <xref:System.Windows.Automation.AutomationElement> .  
   
  [!code-csharp[UIAClient_snip#170](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#170)]
  [!code-vb[UIAClient_snip#170](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#170)]  

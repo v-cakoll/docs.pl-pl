@@ -2,12 +2,12 @@
 title: polecenie kompilacji dotnet
 description: Polecenie kompilacji dotnet kompiluje projekt i wszystkie jego zależności.
 ms.date: 02/14/2020
-ms.openlocfilehash: 5375df61dbf8e9b4db8772b0e2767e9bca0bb254
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 6f33b449301f40949ff5dfe4077564344a9de8ec
+ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83840913"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87251169"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -23,7 +23,7 @@ ms.locfileid: "83840913"
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
     [-f|--framework <FRAMEWORK>] [--force] [--interactive] [--no-dependencies]
     [--no-incremental] [--no-restore] [--nologo] [-o|--output <OUTPUT_DIRECTORY>]
-    [-r|--runtime <RUNTIME_IDENTIFIER>] [-s|--source <SOURCE>]
+    [-r|--runtime <RUNTIME_IDENTIFIER>] [--source <SOURCE>]
     [-v|--verbosity <LEVEL>] [--version-suffix <VERSION_SUFFIX>]
 
 dotnet build -h|--help
@@ -35,8 +35,8 @@ dotnet build -h|--help
 
 - Plik wykonywalny, który może służyć do uruchamiania aplikacji, jeśli typem projektu jest plik wykonywalny przeznaczony dla platformy .NET Core 3,0 lub nowszego.
 - Pliki symboli używane do debugowania z rozszerzeniem *. pdb* .
-- Plik *. deps. JSON* , który zawiera listę zależności aplikacji lub biblioteki.
-- Plik *. runtimeconfig. JSON* , który określa udostępnione środowisko uruchomieniowe i jego wersję dla aplikacji.
+- *.deps.jsw* pliku, który zawiera listę zależności aplikacji lub biblioteki.
+- *.runtimeconfig.jsw* pliku, który określa udostępnione środowisko uruchomieniowe i jego wersję dla aplikacji.
 - Inne biblioteki, od których zależy projekt (za pośrednictwem odwołań projektu lub pakietów NuGet).
 
 W przypadku projektów wykonywalnych przeznaczonych dla wersji wcześniejszej niż .NET Core 3,0, zależności biblioteki z NuGet nie są zwykle kopiowane do folderu wyjściowego.  Są one rozpoznawane z folderu pakietów globalnych NuGet w czasie wykonywania. Z tego względu produkt `dotnet build` nie jest gotowy do przeniesienia na inną maszynę do uruchomienia. Aby utworzyć wersję aplikacji, którą można wdrożyć, należy ją opublikować (na przykład przy użyciu polecenia [dotnet Publish](dotnet-publish.md) ). Aby uzyskać więcej informacji, zobacz [wdrażanie aplikacji .NET Core](../deploying/index.md).
@@ -45,7 +45,7 @@ W przypadku projektów wykonywalnych przeznaczonych dla platformy .NET Core 3,0 
 
 ### <a name="implicit-restore"></a>Przywracanie niejawne
 
-Kompilowanie wymaga pliku *Project. assets. JSON* , który zawiera listę zależności aplikacji. Plik jest tworzony, gdy [`dotnet restore`](dotnet-restore.md) jest wykonywany. Bez pliku zasobów na miejscu narzędzia nie mogą rozpoznać zestawów referencyjnych, które powodują błędy.
+Kompilowanie wymaga *project.assets.jsw* pliku, który zawiera listę zależności aplikacji. Plik jest tworzony, gdy [`dotnet restore`](dotnet-restore.md) jest wykonywany. Bez pliku zasobów na miejscu narzędzia nie mogą rozpoznać zestawów referencyjnych, które powodują błędy.
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
@@ -87,7 +87,7 @@ Plik projektu lub rozwiązania do skompilowania. Jeśli plik projektu lub rozwi�
 
 - **`--force`**
 
-  Wymusza rozpoznanie wszystkich zależności, nawet jeśli ostatnie przywracanie zakończyło się pomyślnie. Określenie tej flagi jest takie samo jak usuwanie pliku *Project. assets. JSON* .
+  Wymusza rozpoznanie wszystkich zależności, nawet jeśli ostatnie przywracanie zakończyło się pomyślnie. Określenie tej flagi jest takie samo jak usuwanie *project.assets.jsw* pliku.
 
 - **`-h|--help`**
 
@@ -121,7 +121,7 @@ Plik projektu lub rozwiązania do skompilowania. Jeśli plik projektu lub rozwi�
 
   Określa docelowy środowisko uruchomieniowe. Aby uzyskać listę identyfikatorów środowiska uruchomieniowego (RID), zobacz [wykaz identyfikatorów RID](../rid-catalog.md).
 
-- **`-s|--source <SOURCE>`**
+- **`--source <SOURCE>`**
 
   Identyfikator URI źródła pakietu NuGet do użycia podczas operacji przywracania.
 

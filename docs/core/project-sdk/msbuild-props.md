@@ -3,12 +3,12 @@ title: Właściwości programu MSBuild dla Microsoft. NET. Sdk
 description: Odwołanie do właściwości i elementów programu MSBuild, które są zrozumiałe dla zestaw .NET Core SDK.
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: cda56b3e23592a341d9fe672fc1f1530adcdab49
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 115c4f32e856dee64abe0c607b8ee595a65692e6
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206109"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164384"
 ---
 # <a name="msbuild-reference-for-net-core-sdk-projects"></a>Dokumentacja programu MSBuild dla projektów zestaw .NET Core SDK
 
@@ -25,7 +25,7 @@ Ta strona jest odwołaniem do właściwości i elementów programu MSBuild, któ
 
 ### <a name="targetframework"></a>TargetFramework
 
-`TargetFramework`Właściwość określa wersję platformy docelowej dla aplikacji, która niejawnie odwołuje się do [pakietu](../packages.md#metapackages). Aby zapoznać się z listą prawidłowych monikerów platformy docelowej, zobacz [platformę docelową w projektach w stylu zestawu SDK](../../standard/frameworks.md#supported-target-framework-versions).
+`TargetFramework`Właściwość określa wersję platformy docelowej dla aplikacji. Aby zapoznać się z listą prawidłowych monikerów platformy docelowej, zobacz [platformę docelową w projektach w stylu zestawu SDK](../../standard/frameworks.md#supported-target-framework-versions).
 
 ```xml
 <PropertyGroup>
@@ -55,7 +55,7 @@ Aby uzyskać więcej informacji, zobacz [Platformy docelowe w projektach w stylu
 > [!NOTE]
 > Ta właściwość ma zastosowanie tylko do projektów korzystających z programu `netstandard1.x` . Nie dotyczy to projektów, które używają `netstandard2.x` .
 
-Użyj `NetStandardImplicitPackageVersion` właściwości, aby określić wersję platformy, która jest starsza niż wersja [pakietu](../packages.md#metapackages) . Plik projektu w poniższym przykładzie docelowym `netstandard1.3` , ale używa wersji 1.6.0 `NETStandard.Library` .
+Użyj `NetStandardImplicitPackageVersion` właściwości, aby określić wersję platformy, która jest starsza niż wersja pakietu. Plik projektu w poniższym przykładzie docelowym `netstandard1.3` , ale używa wersji 1.6.0 `NETStandard.Library` .
 
 ```xml
 <PropertyGroup>
@@ -275,7 +275,7 @@ Niektóre zachowania w czasie wykonywania można skonfigurować, określając w�
 - [AssetTargetFallback](#assettargetfallback)
 - [PackageReference](#packagereference)
 - [Elementu ProjectReference](#projectreference)
-- [Dokumentacja](#reference)
+- [Odwołanie](#reference)
 - [Właściwości przywracania](#restore-properties)
 
 ### <a name="assettargetfallback"></a>AssetTargetFallback
@@ -292,7 +292,7 @@ Można ustawić `AssetTargetFallback` Właściwość na co najmniej jedną [doce
 
 ### <a name="packagereference"></a>PackageReference
 
-`PackageReference`Element definiuje odwołanie do pakietu NuGet. Na przykład możesz chcieć odwołać się do pojedynczego pakietu zamiast [pakietu](../packages.md#metapackages).
+`PackageReference`Element definiuje odwołanie do pakietu NuGet.
 
 Ten `Include` atrybut określa identyfikator pakietu. Ten `Version` atrybut określa wersję lub zakres wersji. Aby uzyskać informacje na temat określania minimalnej wersji, maksymalnej wersji, zakresu lub dokładnego dopasowania, zobacz [zakres wersji](/nuget/concepts/package-versioning#version-ranges). Można również dodać następujące metadane do odwołania do projektu: `IncludeAssets` , `ExcludeAssets` , i `PrivateAssets` .
 
@@ -344,7 +344,7 @@ Przywracanie przywoływanego pakietu instaluje wszystkie jego bezpośrednie zale
 </PropertyGroup>
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Odwołanie do schematu programu MSBuild](/visualstudio/msbuild/msbuild-project-file-schema-reference)
 - [Typowe właściwości programu MSBuild](/visualstudio/msbuild/common-msbuild-project-properties)

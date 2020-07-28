@@ -2,12 +2,12 @@
 title: polecenie dotnet publish
 description: Dotnet publish polecenie publikuje projekt .NET Core lub rozwiązanie w katalogu.
 ms.date: 02/24/2020
-ms.openlocfilehash: 61cfcf06586f3ac66526de69a17b8aef3cf0c795
-ms.sourcegitcommit: 63bb83322814f5e5e5c5b69939b14a3139a6ca7e
+ms.openlocfilehash: 59fdbfa875dad13963ae198acc6a31b537279dfe
+ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85365586"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87251182"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -54,10 +54,12 @@ dotnet publish -h|--help
 `dotnet publish`Polecenie akceptuje Opcje programu MSBuild, takie jak `-p` Ustawienia właściwości i `-l` definiowania rejestratora. Na przykład można ustawić właściwość programu MSBuild przy użyciu formatu: `-p:<NAME>=<VALUE>` . Można również ustawić właściwości związane z publikowaniem, odwołując się do pliku *. pubxml* , na przykład:
 
 ```dotnetcli
-dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
+dotnet publish -p:PublishProfile=FolderProfile
 ```
 
-Więcej informacji zawierają następujące zasoby:
+W poprzednim przykładzie został użyty plik *FolderProfile. pubxml* , który znajduje się w folderze * \<project_folder> /Properties/PublishProfiles* . Jeśli określisz ścieżkę i rozszerzenie pliku podczas ustawiania `PublishProfile` właściwości, zostaną one zignorowane. Program MSBuild domyślnie wyszukuje w folderze *Properties/PublishProfiles* i przyjmuje rozszerzenie pliku *pubxml* . Aby określić ścieżkę i nazwę pliku, łącznie z rozszerzeniem, należy ustawić `PublishProfileFullPath` właściwość zamiast `PublishProfile` właściwości.
+
+Więcej informacji można znaleźć w następujących zasobach:
 
 - [Dokumentacja wiersza polecenia programu MSBuild](/visualstudio/msbuild/msbuild-command-line-reference)
 - [Profile publikacji programu Visual Studio (. pubxml) dla wdrożenia aplikacji ASP.NET Core](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
@@ -225,7 +227,7 @@ Więcej informacji zawierają następujące zasoby:
   dotnet publish --no-dependencies
   ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Omówienie publikowania aplikacji .NET Core](../deploying/index.md)
 - [Publikowanie aplikacji platformy .NET Core za pomocą interfejs wiersza polecenia platformy .NET Core](../deploying/deploy-with-cli.md)
